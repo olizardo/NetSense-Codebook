@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>15&nbsp; Dorm Distances – NetSense Study Codebook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Metadata and Mappings/DormValueLabels.html" rel="next">
+<link href="../Metadata and Mappings/Data Summary (1-18-16).html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-fee066a00baa590e8925199ba1c8ceb4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Metadata and Mappings/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Metadata and Mappings/Dorm Distances.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">NetSense Study Codebook</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Survey &amp; Network Datasets</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../surveys.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Demographic &amp; Behavioral Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Social Network Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../proximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bluetooth Proximity Logs</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Searchable Catalogs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../catalog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Searchable Variable Catalog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../citation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Metadata and Mappings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/07275-Codebook.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT-variable-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BluetoothProximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/CodeBook(netsense_entry_recoded_12_5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Codebook for arcWeeklyTableCombined.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Files Overview 7_30_14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Files Overview 7_30_14.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Structures and Variables for NetSense.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data Structures and Variables for NetSense.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Dorm Distances.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/DormValueLabels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/EdgleListRenumberCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Edge List Renumbered Codebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Ego and Alter Coding Conventions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Ego and Alter Coding Conventions.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/IAmSomeoneIndices(extraversion).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">I Am Someone Indices (Extraversion)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Interesting_data.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Interesting_data.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/ND-academic-calendar-2011_2012.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ND Academic Calendar 2011-2012</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/PolQuizzesCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/QuizDataCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Semester Dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/personality-inventory-coding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Personality Inventory Coding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Network Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2011Net(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Summer2011Net(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Spring2012Net(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Spring2012Net(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2012Net(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Summer2012Net(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Fall2012Net(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Winter2013Net(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2013Net(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Demographic Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2011Demog(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Summer2011Demog(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Spring2012Demog(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spring2012Demog(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2012Demog(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Summer2012Demog(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Fall2012Demog(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fall2012Demog(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Winter2013Demog(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Winter2013Demog(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2013Demog(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Summer2013Demog(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Metadata and Mappings/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Metadata and Mappings/Dorm Distances.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This table outlines the physical geographic distances between student dormitories on campus.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 4%">
+<col style="width: 2%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">…1</th>
+<th style="text-align: left;">Alumni</th>
+<th style="text-align: left;">Badin</th>
+<th style="text-align: left;">BP</th>
+<th style="text-align: left;">Carroll</th>
+<th style="text-align: left;">Cavanaugh</th>
+<th style="text-align: left;">Dillon</th>
+<th style="text-align: left;">Duncan</th>
+<th style="text-align: left;">Farley</th>
+<th style="text-align: left;">Fisher</th>
+<th style="text-align: left;">Howard</th>
+<th style="text-align: left;">Keenan</th>
+<th style="text-align: left;">Keough</th>
+<th style="text-align: left;">Knott</th>
+<th style="text-align: left;">Lewis</th>
+<th style="text-align: left;">Lyons</th>
+<th style="text-align: left;">McGlinn</th>
+<th style="text-align: left;">Morrissey</th>
+<th style="text-align: left;">O’Neill</th>
+<th style="text-align: left;">Pangborn</th>
+<th style="text-align: left;">PE</th>
+<th style="text-align: left;">PW</th>
+<th style="text-align: left;">Ryan</th>
+<th style="text-align: left;">St.&nbsp;Ed’s</th>
+<th style="text-align: left;">Siegfried</th>
+<th style="text-align: left;">Sorin</th>
+<th style="text-align: left;">Stanford</th>
+<th style="text-align: left;">Walsh</th>
+<th style="text-align: left;">Welsh-Fam</th>
+<th style="text-align: left;">Zahm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Alumni</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">204 m</td>
+<td style="text-align: left;">444.7 m</td>
+<td style="text-align: left;">736.25 m</td>
+<td style="text-align: left;">390 m</td>
+<td style="text-align: left;">74.5 m</td>
+<td style="text-align: left;">382 m</td>
+<td style="text-align: left;">510 m</td>
+<td style="text-align: left;">252 m</td>
+<td style="text-align: left;">233 m</td>
+<td style="text-align: left;">508 m</td>
+<td style="text-align: left;">231 m</td>
+<td style="text-align: left;">665 m</td>
+<td style="text-align: left;">535 m</td>
+<td style="text-align: left;">336 m</td>
+<td style="text-align: left;">321 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">245 m</td>
+<td style="text-align: left;">309 m</td>
+<td style="text-align: left;">692.5 m</td>
+<td style="text-align: left;">621 m</td>
+<td style="text-align: left;">267 m</td>
+<td style="text-align: left;">427 m</td>
+<td style="text-align: left;">570 m</td>
+<td style="text-align: left;">244 m</td>
+<td style="text-align: left;">578 m</td>
+<td style="text-align: left;">154 m</td>
+<td style="text-align: left;">169 m</td>
+<td style="text-align: left;">458 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Badin</td>
+<td style="text-align: left;">204 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">531 m</td>
+<td style="text-align: left;">557 m</td>
+<td style="text-align: left;">404 m</td>
+<td style="text-align: left;">150 m</td>
+<td style="text-align: left;">362 m</td>
+<td style="text-align: left;">440 m</td>
+<td style="text-align: left;">154 m</td>
+<td style="text-align: left;">40 m</td>
+<td style="text-align: left;">495 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">714 m</td>
+<td style="text-align: left;">441 m</td>
+<td style="text-align: left;">160 m</td>
+<td style="text-align: left;">313 m</td>
+<td style="text-align: left;">101 m</td>
+<td style="text-align: left;">289 m</td>
+<td style="text-align: left;">200 m</td>
+<td style="text-align: left;">739 m</td>
+<td style="text-align: left;">627 m</td>
+<td style="text-align: left;">387 m</td>
+<td style="text-align: left;">387 m</td>
+<td style="text-align: left;">611 m</td>
+<td style="text-align: left;">162 m</td>
+<td style="text-align: left;">531 m</td>
+<td style="text-align: left;">99 m</td>
+<td style="text-align: left;">263 m</td>
+<td style="text-align: left;">441 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">BP</td>
+<td style="text-align: left;">444.7 m</td>
+<td style="text-align: left;">531 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">978 m</td>
+<td style="text-align: left;">94 m</td>
+<td style="text-align: left;">505 m</td>
+<td style="text-align: left;">815 m</td>
+<td style="text-align: left;">69 m</td>
+<td style="text-align: left;">636 m</td>
+<td style="text-align: left;">440 m</td>
+<td style="text-align: left;">167 m</td>
+<td style="text-align: left;">670 m</td>
+<td style="text-align: left;">228 m</td>
+<td style="text-align: left;">345 m</td>
+<td style="text-align: left;">637 m</td>
+<td style="text-align: left;">750 m</td>
+<td style="text-align: left;">569 m</td>
+<td style="text-align: left;">637 m</td>
+<td style="text-align: left;">605 m</td>
+<td style="text-align: left;">253 m</td>
+<td style="text-align: left;">140 m</td>
+<td style="text-align: left;">696 m</td>
+<td style="text-align: left;">202 m</td>
+<td style="text-align: left;">111 m</td>
+<td style="text-align: left;">347 m</td>
+<td style="text-align: left;">224 m</td>
+<td style="text-align: left;">394 m</td>
+<td style="text-align: left;">617 m</td>
+<td style="text-align: left;">119 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Carroll</td>
+<td style="text-align: left;">736.25 m</td>
+<td style="text-align: left;">557 m</td>
+<td style="text-align: left;">978 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">874 m</td>
+<td style="text-align: left;">670 m</td>
+<td style="text-align: left;">580 m</td>
+<td style="text-align: left;">977 m</td>
+<td style="text-align: left;">522 m</td>
+<td style="text-align: left;">519 m</td>
+<td style="text-align: left;">892 m</td>
+<td style="text-align: left;">707 m</td>
+<td style="text-align: left;">1,192 m</td>
+<td style="text-align: left;">726 m</td>
+<td style="text-align: left;">408 m</td>
+<td style="text-align: left;">630 m</td>
+<td style="text-align: left;">450 m</td>
+<td style="text-align: left;">659 m</td>
+<td style="text-align: left;">474 m</td>
+<td style="text-align: left;">1,198 m</td>
+<td style="text-align: left;">1,077 m</td>
+<td style="text-align: left;">829 m</td>
+<td style="text-align: left;">799 m</td>
+<td style="text-align: left;">1,072 m</td>
+<td style="text-align: left;">642 m</td>
+<td style="text-align: left;">898 m</td>
+<td style="text-align: left;">644 m</td>
+<td style="text-align: left;">752 m</td>
+<td style="text-align: left;">873 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cavanaugh</td>
+<td style="text-align: left;">390 m</td>
+<td style="text-align: left;">404 m</td>
+<td style="text-align: left;">94 m</td>
+<td style="text-align: left;">874 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">435 m</td>
+<td style="text-align: left;">737 m</td>
+<td style="text-align: left;">123 m</td>
+<td style="text-align: left;">555 m</td>
+<td style="text-align: left;">431 m</td>
+<td style="text-align: left;">133 m</td>
+<td style="text-align: left;">605 m</td>
+<td style="text-align: left;">328 m</td>
+<td style="text-align: left;">265 m</td>
+<td style="text-align: left;">527 m</td>
+<td style="text-align: left;">680 m</td>
+<td style="text-align: left;">479 m</td>
+<td style="text-align: left;">635 m</td>
+<td style="text-align: left;">615 m</td>
+<td style="text-align: left;">333 m</td>
+<td style="text-align: left;">220 m</td>
+<td style="text-align: left;">657 m</td>
+<td style="text-align: left;">107 m</td>
+<td style="text-align: left;">203 m</td>
+<td style="text-align: left;">247 m</td>
+<td style="text-align: left;">192 m</td>
+<td style="text-align: left;">300 m</td>
+<td style="text-align: left;">570 m</td>
+<td style="text-align: left;">64 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dillon</td>
+<td style="text-align: left;">74.5 m</td>
+<td style="text-align: left;">150 m</td>
+<td style="text-align: left;">505 m</td>
+<td style="text-align: left;">670 m</td>
+<td style="text-align: left;">435 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">318 m</td>
+<td style="text-align: left;">560 m</td>
+<td style="text-align: left;">184 m</td>
+<td style="text-align: left;">176 m</td>
+<td style="text-align: left;">550 m</td>
+<td style="text-align: left;">182 m</td>
+<td style="text-align: left;">707 m</td>
+<td style="text-align: left;">552 m</td>
+<td style="text-align: left;">279 m</td>
+<td style="text-align: left;">251 m</td>
+<td style="text-align: left;">243 m</td>
+<td style="text-align: left;">210 m</td>
+<td style="text-align: left;">232 m</td>
+<td style="text-align: left;">743 m</td>
+<td style="text-align: left;">661 m</td>
+<td style="text-align: left;">253 m</td>
+<td style="text-align: left;">454 m</td>
+<td style="text-align: left;">613 m</td>
+<td style="text-align: left;">247 m</td>
+<td style="text-align: left;">600 m</td>
+<td style="text-align: left;">168 m</td>
+<td style="text-align: left;">151 m</td>
+<td style="text-align: left;">491 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Duncan</td>
+<td style="text-align: left;">382 m</td>
+<td style="text-align: left;">362 m</td>
+<td style="text-align: left;">815 m</td>
+<td style="text-align: left;">580 m</td>
+<td style="text-align: left;">737 m</td>
+<td style="text-align: left;">318 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">866 m</td>
+<td style="text-align: left;">199 m</td>
+<td style="text-align: left;">342 m</td>
+<td style="text-align: left;">840 m</td>
+<td style="text-align: left;">212 m</td>
+<td style="text-align: left;">1,020 m</td>
+<td style="text-align: left;">782 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">75 m</td>
+<td style="text-align: left;">347 m</td>
+<td style="text-align: left;">131 m</td>
+<td style="text-align: left;">163 m</td>
+<td style="text-align: left;">1,058 m</td>
+<td style="text-align: left;">960 m</td>
+<td style="text-align: left;">295 m</td>
+<td style="text-align: left;">742 m</td>
+<td style="text-align: left;">928 m</td>
+<td style="text-align: left;">513 m</td>
+<td style="text-align: left;">893 m</td>
+<td style="text-align: left;">440 m</td>
+<td style="text-align: left;">255 m</td>
+<td style="text-align: left;">785 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Farley</td>
+<td style="text-align: left;">510 m</td>
+<td style="text-align: left;">440 m</td>
+<td style="text-align: left;">69 m</td>
+<td style="text-align: left;">977 m</td>
+<td style="text-align: left;">123 m</td>
+<td style="text-align: left;">560 m</td>
+<td style="text-align: left;">866 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">691 m</td>
+<td style="text-align: left;">557 m</td>
+<td style="text-align: left;">119 m</td>
+<td style="text-align: left;">723 m</td>
+<td style="text-align: left;">207 m</td>
+<td style="text-align: left;">304 m</td>
+<td style="text-align: left;">661 m</td>
+<td style="text-align: left;">800 m</td>
+<td style="text-align: left;">604 m</td>
+<td style="text-align: left;">755 m</td>
+<td style="text-align: left;">723 m</td>
+<td style="text-align: left;">217 m</td>
+<td style="text-align: left;">98 m</td>
+<td style="text-align: left;">767 m</td>
+<td style="text-align: left;">182 m</td>
+<td style="text-align: left;">95 m</td>
+<td style="text-align: left;">370 m</td>
+<td style="text-align: left;">153 m</td>
+<td style="text-align: left;">429 m</td>
+<td style="text-align: left;">684 m</td>
+<td style="text-align: left;">107 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fisher</td>
+<td style="text-align: left;">252 m</td>
+<td style="text-align: left;">154 m</td>
+<td style="text-align: left;">636 m</td>
+<td style="text-align: left;">522 m</td>
+<td style="text-align: left;">555 m</td>
+<td style="text-align: left;">184 m</td>
+<td style="text-align: left;">199 m</td>
+<td style="text-align: left;">691 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">130 m</td>
+<td style="text-align: left;">648 m</td>
+<td style="text-align: left;">191 m</td>
+<td style="text-align: left;">852 m</td>
+<td style="text-align: left;">586 m</td>
+<td style="text-align: left;">126 m</td>
+<td style="text-align: left;">144 m</td>
+<td style="text-align: left;">157 m</td>
+<td style="text-align: left;">148 m</td>
+<td style="text-align: left;">48 m</td>
+<td style="text-align: left;">883 m</td>
+<td style="text-align: left;">784 m</td>
+<td style="text-align: left;">314 m</td>
+<td style="text-align: left;">542 m</td>
+<td style="text-align: left;">748 m</td>
+<td style="text-align: left;">320 m</td>
+<td style="text-align: left;">691 m</td>
+<td style="text-align: left;">252 m</td>
+<td style="text-align: left;">219 m</td>
+<td style="text-align: left;">594 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Howard</td>
+<td style="text-align: left;">233 m</td>
+<td style="text-align: left;">40 m</td>
+<td style="text-align: left;">440 m</td>
+<td style="text-align: left;">519 m</td>
+<td style="text-align: left;">431 m</td>
+<td style="text-align: left;">176 m</td>
+<td style="text-align: left;">342 m</td>
+<td style="text-align: left;">557 m</td>
+<td style="text-align: left;">130 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">506 m</td>
+<td style="text-align: left;">304 m</td>
+<td style="text-align: left;">751 m</td>
+<td style="text-align: left;">436 m</td>
+<td style="text-align: left;">119 m</td>
+<td style="text-align: left;">296 m</td>
+<td style="text-align: left;">67 m</td>
+<td style="text-align: left;">269 m</td>
+<td style="text-align: left;">166 m</td>
+<td style="text-align: left;">768 m</td>
+<td style="text-align: left;">657 m</td>
+<td style="text-align: left;">405 m</td>
+<td style="text-align: left;">404 m</td>
+<td style="text-align: left;">630 m</td>
+<td style="text-align: left;">193 m</td>
+<td style="text-align: left;">548 m</td>
+<td style="text-align: left;">142 m</td>
+<td style="text-align: left;">291 m</td>
+<td style="text-align: left;">456 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Keenan</td>
+<td style="text-align: left;">508 m</td>
+<td style="text-align: left;">495 m</td>
+<td style="text-align: left;">167 m</td>
+<td style="text-align: left;">892 m</td>
+<td style="text-align: left;">133 m</td>
+<td style="text-align: left;">550 m</td>
+<td style="text-align: left;">840 m</td>
+<td style="text-align: left;">119 m</td>
+<td style="text-align: left;">648 m</td>
+<td style="text-align: left;">506 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">710 m</td>
+<td style="text-align: left;">307 m</td>
+<td style="text-align: left;">189 m</td>
+<td style="text-align: left;">598 m</td>
+<td style="text-align: left;">781 m</td>
+<td style="text-align: left;">538 m</td>
+<td style="text-align: left;">723 m</td>
+<td style="text-align: left;">684 m</td>
+<td style="text-align: left;">317 m</td>
+<td style="text-align: left;">195 m</td>
+<td style="text-align: left;">772 m</td>
+<td style="text-align: left;">102 m</td>
+<td style="text-align: left;">205 m</td>
+<td style="text-align: left;">328 m</td>
+<td style="text-align: left;">47 m</td>
+<td style="text-align: left;">390 m</td>
+<td style="text-align: left;">667 m</td>
+<td style="text-align: left;">70 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Keough</td>
+<td style="text-align: left;">231 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">670 m</td>
+<td style="text-align: left;">707 m</td>
+<td style="text-align: left;">605 m</td>
+<td style="text-align: left;">182 m</td>
+<td style="text-align: left;">212 m</td>
+<td style="text-align: left;">723 m</td>
+<td style="text-align: left;">191 m</td>
+<td style="text-align: left;">304 m</td>
+<td style="text-align: left;">710 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">870 m</td>
+<td style="text-align: left;">707 m</td>
+<td style="text-align: left;">343 m</td>
+<td style="text-align: left;">118 m</td>
+<td style="text-align: left;">331 m</td>
+<td style="text-align: left;">61 m</td>
+<td style="text-align: left;">266 m</td>
+<td style="text-align: left;">881 m</td>
+<td style="text-align: left;">809 m</td>
+<td style="text-align: left;">111 m</td>
+<td style="text-align: left;">611 m</td>
+<td style="text-align: left;">769 m</td>
+<td style="text-align: left;">404 m</td>
+<td style="text-align: left;">756 m</td>
+<td style="text-align: left;">315 m</td>
+<td style="text-align: left;">49 m</td>
+<td style="text-align: left;">648 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Knott</td>
+<td style="text-align: left;">665 m</td>
+<td style="text-align: left;">714 m</td>
+<td style="text-align: left;">228 m</td>
+<td style="text-align: left;">1,192 m</td>
+<td style="text-align: left;">328 m</td>
+<td style="text-align: left;">707 m</td>
+<td style="text-align: left;">1,020 m</td>
+<td style="text-align: left;">207 m</td>
+<td style="text-align: left;">852 m</td>
+<td style="text-align: left;">751 m</td>
+<td style="text-align: left;">307 m</td>
+<td style="text-align: left;">870 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">505 m</td>
+<td style="text-align: left;">857 m</td>
+<td style="text-align: left;">940 m</td>
+<td style="text-align: left;">790 m</td>
+<td style="text-align: left;">895 m</td>
+<td style="text-align: left;">908 m</td>
+<td style="text-align: left;">51 m</td>
+<td style="text-align: left;">96 m</td>
+<td style="text-align: left;">865 m</td>
+<td style="text-align: left;">383 m</td>
+<td style="text-align: left;">87 m</td>
+<td style="text-align: left;">573 m</td>
+<td style="text-align: left;">332 m</td>
+<td style="text-align: left;">606 m</td>
+<td style="text-align: left;">801 m</td>
+<td style="text-align: left;">314 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lewis</td>
+<td style="text-align: left;">535 m</td>
+<td style="text-align: left;">441 m</td>
+<td style="text-align: left;">345 m</td>
+<td style="text-align: left;">726 m</td>
+<td style="text-align: left;">265 m</td>
+<td style="text-align: left;">552 m</td>
+<td style="text-align: left;">782 m</td>
+<td style="text-align: left;">304 m</td>
+<td style="text-align: left;">586 m</td>
+<td style="text-align: left;">436 m</td>
+<td style="text-align: left;">189 m</td>
+<td style="text-align: left;">707 m</td>
+<td style="text-align: left;">505 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">495 m</td>
+<td style="text-align: left;">725 m</td>
+<td style="text-align: left;">443 m</td>
+<td style="text-align: left;">695 m</td>
+<td style="text-align: left;">608 m</td>
+<td style="text-align: left;">498 m</td>
+<td style="text-align: left;">391 m</td>
+<td style="text-align: left;">779 m</td>
+<td style="text-align: left;">160 m</td>
+<td style="text-align: left;">398 m</td>
+<td style="text-align: left;">294 m</td>
+<td style="text-align: left;">180 m</td>
+<td style="text-align: left;">377 m</td>
+<td style="text-align: left;">671 m</td>
+<td style="text-align: left;">219 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lyons</td>
+<td style="text-align: left;">336 m</td>
+<td style="text-align: left;">160 m</td>
+<td style="text-align: left;">637 m</td>
+<td style="text-align: left;">408 m</td>
+<td style="text-align: left;">527 m</td>
+<td style="text-align: left;">279 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">661 m</td>
+<td style="text-align: left;">126 m</td>
+<td style="text-align: left;">119 m</td>
+<td style="text-align: left;">598 m</td>
+<td style="text-align: left;">343 m</td>
+<td style="text-align: left;">857 m</td>
+<td style="text-align: left;">495 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">286 m</td>
+<td style="text-align: left;">53 m</td>
+<td style="text-align: left;">284 m</td>
+<td style="text-align: left;">114 m</td>
+<td style="text-align: left;">874 m</td>
+<td style="text-align: left;">769 m</td>
+<td style="text-align: left;">430 m</td>
+<td style="text-align: left;">495 m</td>
+<td style="text-align: left;">746 m</td>
+<td style="text-align: left;">294 m</td>
+<td style="text-align: left;">642 m</td>
+<td style="text-align: left;">259 m</td>
+<td style="text-align: left;">343 m</td>
+<td style="text-align: left;">564 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">McGlinn</td>
+<td style="text-align: left;">321 m</td>
+<td style="text-align: left;">313 m</td>
+<td style="text-align: left;">750 m</td>
+<td style="text-align: left;">630 m</td>
+<td style="text-align: left;">680 m</td>
+<td style="text-align: left;">251 m</td>
+<td style="text-align: left;">75 m</td>
+<td style="text-align: left;">800 m</td>
+<td style="text-align: left;">144 m</td>
+<td style="text-align: left;">296 m</td>
+<td style="text-align: left;">781 m</td>
+<td style="text-align: left;">118 m</td>
+<td style="text-align: left;">940 m</td>
+<td style="text-align: left;">725 m</td>
+<td style="text-align: left;">286 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">297 m</td>
+<td style="text-align: left;">60 m</td>
+<td style="text-align: left;">148 m</td>
+<td style="text-align: left;">978 m</td>
+<td style="text-align: left;">895 m</td>
+<td style="text-align: left;">211 m</td>
+<td style="text-align: left;">669 m</td>
+<td style="text-align: left;">856 m</td>
+<td style="text-align: left;">453 m</td>
+<td style="text-align: left;">824 m</td>
+<td style="text-align: left;">369 m</td>
+<td style="text-align: left;">181 m</td>
+<td style="text-align: left;">716 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Morrissey</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">101 m</td>
+<td style="text-align: left;">569 m</td>
+<td style="text-align: left;">450 m</td>
+<td style="text-align: left;">479 m</td>
+<td style="text-align: left;">243 m</td>
+<td style="text-align: left;">347 m</td>
+<td style="text-align: left;">604 m</td>
+<td style="text-align: left;">157 m</td>
+<td style="text-align: left;">67 m</td>
+<td style="text-align: left;">538 m</td>
+<td style="text-align: left;">331 m</td>
+<td style="text-align: left;">790 m</td>
+<td style="text-align: left;">443 m</td>
+<td style="text-align: left;">53 m</td>
+<td style="text-align: left;">297 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">145 m</td>
+<td style="text-align: left;">809 m</td>
+<td style="text-align: left;">702 m</td>
+<td style="text-align: left;">425 m</td>
+<td style="text-align: left;">433 m</td>
+<td style="text-align: left;">684 m</td>
+<td style="text-align: left;">233 m</td>
+<td style="text-align: left;">577 m</td>
+<td style="text-align: left;">205 m</td>
+<td style="text-align: left;">329 m</td>
+<td style="text-align: left;">501 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O’Neill</td>
+<td style="text-align: left;">245 m</td>
+<td style="text-align: left;">289 m</td>
+<td style="text-align: left;">637 m</td>
+<td style="text-align: left;">659 m</td>
+<td style="text-align: left;">635 m</td>
+<td style="text-align: left;">210 m</td>
+<td style="text-align: left;">131 m</td>
+<td style="text-align: left;">755 m</td>
+<td style="text-align: left;">148 m</td>
+<td style="text-align: left;">269 m</td>
+<td style="text-align: left;">723 m</td>
+<td style="text-align: left;">61 m</td>
+<td style="text-align: left;">895 m</td>
+<td style="text-align: left;">695 m</td>
+<td style="text-align: left;">284 m</td>
+<td style="text-align: left;">60 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">166 m</td>
+<td style="text-align: left;">910 m</td>
+<td style="text-align: left;">826 m</td>
+<td style="text-align: left;">158 m</td>
+<td style="text-align: left;">617 m</td>
+<td style="text-align: left;">786 m</td>
+<td style="text-align: left;">412 m</td>
+<td style="text-align: left;">766 m</td>
+<td style="text-align: left;">317 m</td>
+<td style="text-align: left;">119 m</td>
+<td style="text-align: left;">668 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pangborn</td>
+<td style="text-align: left;">309 m</td>
+<td style="text-align: left;">200 m</td>
+<td style="text-align: left;">605 m</td>
+<td style="text-align: left;">474 m</td>
+<td style="text-align: left;">615 m</td>
+<td style="text-align: left;">232 m</td>
+<td style="text-align: left;">163 m</td>
+<td style="text-align: left;">723 m</td>
+<td style="text-align: left;">48 m</td>
+<td style="text-align: left;">166 m</td>
+<td style="text-align: left;">684 m</td>
+<td style="text-align: left;">266 m</td>
+<td style="text-align: left;">908 m</td>
+<td style="text-align: left;">608 m</td>
+<td style="text-align: left;">114 m</td>
+<td style="text-align: left;">148 m</td>
+<td style="text-align: left;">145 m</td>
+<td style="text-align: left;">166 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">925 m</td>
+<td style="text-align: left;">829 m</td>
+<td style="text-align: left;">335 m</td>
+<td style="text-align: left;">573 m</td>
+<td style="text-align: left;">804 m</td>
+<td style="text-align: left;">358 m</td>
+<td style="text-align: left;">715 m</td>
+<td style="text-align: left;">296 m</td>
+<td style="text-align: left;">265 m</td>
+<td style="text-align: left;">632 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PE</td>
+<td style="text-align: left;">692.5 m</td>
+<td style="text-align: left;">739 m</td>
+<td style="text-align: left;">253 m</td>
+<td style="text-align: left;">1,198 m</td>
+<td style="text-align: left;">333 m</td>
+<td style="text-align: left;">743 m</td>
+<td style="text-align: left;">1,058 m</td>
+<td style="text-align: left;">217 m</td>
+<td style="text-align: left;">883 m</td>
+<td style="text-align: left;">768 m</td>
+<td style="text-align: left;">317 m</td>
+<td style="text-align: left;">881 m</td>
+<td style="text-align: left;">51 m</td>
+<td style="text-align: left;">498 m</td>
+<td style="text-align: left;">874 m</td>
+<td style="text-align: left;">978 m</td>
+<td style="text-align: left;">809 m</td>
+<td style="text-align: left;">910 m</td>
+<td style="text-align: left;">925 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">97 m</td>
+<td style="text-align: left;">923 m</td>
+<td style="text-align: left;">395 m</td>
+<td style="text-align: left;">102 m</td>
+<td style="text-align: left;">579 m</td>
+<td style="text-align: left;">314 m</td>
+<td style="text-align: left;">636 m</td>
+<td style="text-align: left;">836 m</td>
+<td style="text-align: left;">312 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PW</td>
+<td style="text-align: left;">621 m</td>
+<td style="text-align: left;">627 m</td>
+<td style="text-align: left;">140 m</td>
+<td style="text-align: left;">1,077 m</td>
+<td style="text-align: left;">220 m</td>
+<td style="text-align: left;">661 m</td>
+<td style="text-align: left;">960 m</td>
+<td style="text-align: left;">98 m</td>
+<td style="text-align: left;">784 m</td>
+<td style="text-align: left;">657 m</td>
+<td style="text-align: left;">195 m</td>
+<td style="text-align: left;">809 m</td>
+<td style="text-align: left;">96 m</td>
+<td style="text-align: left;">391 m</td>
+<td style="text-align: left;">769 m</td>
+<td style="text-align: left;">895 m</td>
+<td style="text-align: left;">702 m</td>
+<td style="text-align: left;">826 m</td>
+<td style="text-align: left;">829 m</td>
+<td style="text-align: left;">97 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">835 m</td>
+<td style="text-align: left;">294 m</td>
+<td style="text-align: left;">43 m</td>
+<td style="text-align: left;">463 m</td>
+<td style="text-align: left;">216 m</td>
+<td style="text-align: left;">528 m</td>
+<td style="text-align: left;">757 m</td>
+<td style="text-align: left;">208 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ryan</td>
+<td style="text-align: left;">267 m</td>
+<td style="text-align: left;">387 m</td>
+<td style="text-align: left;">696 m</td>
+<td style="text-align: left;">829 m</td>
+<td style="text-align: left;">657 m</td>
+<td style="text-align: left;">253 m</td>
+<td style="text-align: left;">295 m</td>
+<td style="text-align: left;">767 m</td>
+<td style="text-align: left;">314 m</td>
+<td style="text-align: left;">405 m</td>
+<td style="text-align: left;">772 m</td>
+<td style="text-align: left;">111 m</td>
+<td style="text-align: left;">865 m</td>
+<td style="text-align: left;">779 m</td>
+<td style="text-align: left;">430 m</td>
+<td style="text-align: left;">211 m</td>
+<td style="text-align: left;">425 m</td>
+<td style="text-align: left;">158 m</td>
+<td style="text-align: left;">335 m</td>
+<td style="text-align: left;">923 m</td>
+<td style="text-align: left;">835 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">674 m</td>
+<td style="text-align: left;">800 m</td>
+<td style="text-align: left;">487 m</td>
+<td style="text-align: left;">822 m</td>
+<td style="text-align: left;">394 m</td>
+<td style="text-align: left;">52 m</td>
+<td style="text-align: left;">699 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">St.Ed’s</td>
+<td style="text-align: left;">427 m</td>
+<td style="text-align: left;">387 m</td>
+<td style="text-align: left;">202 m</td>
+<td style="text-align: left;">799 m</td>
+<td style="text-align: left;">107 m</td>
+<td style="text-align: left;">454 m</td>
+<td style="text-align: left;">742 m</td>
+<td style="text-align: left;">182 m</td>
+<td style="text-align: left;">542 m</td>
+<td style="text-align: left;">404 m</td>
+<td style="text-align: left;">102 m</td>
+<td style="text-align: left;">611 m</td>
+<td style="text-align: left;">383 m</td>
+<td style="text-align: left;">160 m</td>
+<td style="text-align: left;">495 m</td>
+<td style="text-align: left;">669 m</td>
+<td style="text-align: left;">433 m</td>
+<td style="text-align: left;">617 m</td>
+<td style="text-align: left;">573 m</td>
+<td style="text-align: left;">395 m</td>
+<td style="text-align: left;">294 m</td>
+<td style="text-align: left;">674 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">284 m</td>
+<td style="text-align: left;">212 m</td>
+<td style="text-align: left;">147 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">572 m</td>
+<td style="text-align: left;">82 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Siegfried</td>
+<td style="text-align: left;">570 m</td>
+<td style="text-align: left;">611 m</td>
+<td style="text-align: left;">111 m</td>
+<td style="text-align: left;">1,072 m</td>
+<td style="text-align: left;">203 m</td>
+<td style="text-align: left;">613 m</td>
+<td style="text-align: left;">928 m</td>
+<td style="text-align: left;">95 m</td>
+<td style="text-align: left;">748 m</td>
+<td style="text-align: left;">630 m</td>
+<td style="text-align: left;">205 m</td>
+<td style="text-align: left;">769 m</td>
+<td style="text-align: left;">87 m</td>
+<td style="text-align: left;">398 m</td>
+<td style="text-align: left;">746 m</td>
+<td style="text-align: left;">856 m</td>
+<td style="text-align: left;">684 m</td>
+<td style="text-align: left;">786 m</td>
+<td style="text-align: left;">804 m</td>
+<td style="text-align: left;">102 m</td>
+<td style="text-align: left;">43 m</td>
+<td style="text-align: left;">800 m</td>
+<td style="text-align: left;">284 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">460 m</td>
+<td style="text-align: left;">239 m</td>
+<td style="text-align: left;">498 m</td>
+<td style="text-align: left;">715 m</td>
+<td style="text-align: left;">194 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sorin</td>
+<td style="text-align: left;">244 m</td>
+<td style="text-align: left;">162 m</td>
+<td style="text-align: left;">347 m</td>
+<td style="text-align: left;">642 m</td>
+<td style="text-align: left;">247 m</td>
+<td style="text-align: left;">247 m</td>
+<td style="text-align: left;">513 m</td>
+<td style="text-align: left;">370 m</td>
+<td style="text-align: left;">320 m</td>
+<td style="text-align: left;">193 m</td>
+<td style="text-align: left;">328 m</td>
+<td style="text-align: left;">404 m</td>
+<td style="text-align: left;">573 m</td>
+<td style="text-align: left;">294 m</td>
+<td style="text-align: left;">294 m</td>
+<td style="text-align: left;">453 m</td>
+<td style="text-align: left;">233 m</td>
+<td style="text-align: left;">412 m</td>
+<td style="text-align: left;">358 m</td>
+<td style="text-align: left;">579 m</td>
+<td style="text-align: left;">463 m</td>
+<td style="text-align: left;">487 m</td>
+<td style="text-align: left;">212 m</td>
+<td style="text-align: left;">460 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">368 m</td>
+<td style="text-align: left;">83 m</td>
+<td style="text-align: left;">370 m</td>
+<td style="text-align: left;">265 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Stanford</td>
+<td style="text-align: left;">578 m</td>
+<td style="text-align: left;">531 m</td>
+<td style="text-align: left;">224 m</td>
+<td style="text-align: left;">898 m</td>
+<td style="text-align: left;">192 m</td>
+<td style="text-align: left;">600 m</td>
+<td style="text-align: left;">893 m</td>
+<td style="text-align: left;">153 m</td>
+<td style="text-align: left;">691 m</td>
+<td style="text-align: left;">548 m</td>
+<td style="text-align: left;">47 m</td>
+<td style="text-align: left;">756 m</td>
+<td style="text-align: left;">332 m</td>
+<td style="text-align: left;">180 m</td>
+<td style="text-align: left;">642 m</td>
+<td style="text-align: left;">824 m</td>
+<td style="text-align: left;">577 m</td>
+<td style="text-align: left;">766 m</td>
+<td style="text-align: left;">715 m</td>
+<td style="text-align: left;">314 m</td>
+<td style="text-align: left;">216 m</td>
+<td style="text-align: left;">822 m</td>
+<td style="text-align: left;">147 m</td>
+<td style="text-align: left;">239 m</td>
+<td style="text-align: left;">368 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">454 m</td>
+<td style="text-align: left;">717 m</td>
+<td style="text-align: left;">119 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Walsh</td>
+<td style="text-align: left;">154 m</td>
+<td style="text-align: left;">99 m</td>
+<td style="text-align: left;">394 m</td>
+<td style="text-align: left;">644 m</td>
+<td style="text-align: left;">300 m</td>
+<td style="text-align: left;">168 m</td>
+<td style="text-align: left;">440 m</td>
+<td style="text-align: left;">429 m</td>
+<td style="text-align: left;">252 m</td>
+<td style="text-align: left;">142 m</td>
+<td style="text-align: left;">390 m</td>
+<td style="text-align: left;">315 m</td>
+<td style="text-align: left;">606 m</td>
+<td style="text-align: left;">377 m</td>
+<td style="text-align: left;">259 m</td>
+<td style="text-align: left;">369 m</td>
+<td style="text-align: left;">205 m</td>
+<td style="text-align: left;">317 m</td>
+<td style="text-align: left;">296 m</td>
+<td style="text-align: left;">636 m</td>
+<td style="text-align: left;">528 m</td>
+<td style="text-align: left;">394 m</td>
+<td style="text-align: left;">293 m</td>
+<td style="text-align: left;">498 m</td>
+<td style="text-align: left;">83 m</td>
+<td style="text-align: left;">454 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">285 m</td>
+<td style="text-align: left;">357 m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Welsh-Fam</td>
+<td style="text-align: left;">169 m</td>
+<td style="text-align: left;">263 m</td>
+<td style="text-align: left;">617 m</td>
+<td style="text-align: left;">752 m</td>
+<td style="text-align: left;">570 m</td>
+<td style="text-align: left;">151 m</td>
+<td style="text-align: left;">255 m</td>
+<td style="text-align: left;">684 m</td>
+<td style="text-align: left;">219 m</td>
+<td style="text-align: left;">291 m</td>
+<td style="text-align: left;">667 m</td>
+<td style="text-align: left;">49 m</td>
+<td style="text-align: left;">801 m</td>
+<td style="text-align: left;">671 m</td>
+<td style="text-align: left;">343 m</td>
+<td style="text-align: left;">181 m</td>
+<td style="text-align: left;">329 m</td>
+<td style="text-align: left;">119 m</td>
+<td style="text-align: left;">265 m</td>
+<td style="text-align: left;">836 m</td>
+<td style="text-align: left;">757 m</td>
+<td style="text-align: left;">52 m</td>
+<td style="text-align: left;">572 m</td>
+<td style="text-align: left;">715 m</td>
+<td style="text-align: left;">370 m</td>
+<td style="text-align: left;">717 m</td>
+<td style="text-align: left;">285 m</td>
+<td style="text-align: left;">0 m</td>
+<td style="text-align: left;">616 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Zahm</td>
+<td style="text-align: left;">458 m</td>
+<td style="text-align: left;">441 m</td>
+<td style="text-align: left;">119 m</td>
+<td style="text-align: left;">873 m</td>
+<td style="text-align: left;">64 m</td>
+<td style="text-align: left;">491 m</td>
+<td style="text-align: left;">785 m</td>
+<td style="text-align: left;">107 m</td>
+<td style="text-align: left;">594 m</td>
+<td style="text-align: left;">456 m</td>
+<td style="text-align: left;">70 m</td>
+<td style="text-align: left;">648 m</td>
+<td style="text-align: left;">314 m</td>
+<td style="text-align: left;">219 m</td>
+<td style="text-align: left;">564 m</td>
+<td style="text-align: left;">716 m</td>
+<td style="text-align: left;">501 m</td>
+<td style="text-align: left;">668 m</td>
+<td style="text-align: left;">632 m</td>
+<td style="text-align: left;">312 m</td>
+<td style="text-align: left;">208 m</td>
+<td style="text-align: left;">699 m</td>
+<td style="text-align: left;">82 m</td>
+<td style="text-align: left;">194 m</td>
+<td style="text-align: left;">265 m</td>
+<td style="text-align: left;">119 m</td>
+<td style="text-align: left;">357 m</td>
+<td style="text-align: left;">616 m</td>
+<td style="text-align: left;">0 m</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="pagination-link" aria-label="Data Summary (1-18-16).html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Metadata and Mappings/DormValueLabels.html" class="pagination-link" aria-label="Dorm Value Labels">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9&nbsp; BluetoothProximity – NetSense Study Codebook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Metadata and Mappings/CodeBook(netsense_entry_recoded_12_5).html" rel="next">
+<link href="../Metadata and Mappings/BT_egoid_mapping.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-fee066a00baa590e8925199ba1c8ceb4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Metadata and Mappings/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Metadata and Mappings/BluetoothProximity.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">NetSense Study Codebook</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Survey &amp; Network Datasets</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../surveys.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Demographic &amp; Behavioral Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Social Network Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../proximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bluetooth Proximity Logs</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Searchable Catalogs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../catalog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Searchable Variable Catalog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../citation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Metadata and Mappings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/07275-Codebook.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT-variable-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BluetoothProximity.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/CodeBook(netsense_entry_recoded_12_5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Codebook for arcWeeklyTableCombined.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Files Overview 7_30_14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Files Overview 7_30_14.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Structures and Variables for NetSense.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data Structures and Variables for NetSense.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Dorm Distances.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/DormValueLabels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/EdgleListRenumberCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Edge List Renumbered Codebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Ego and Alter Coding Conventions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Ego and Alter Coding Conventions.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/IAmSomeoneIndices(extraversion).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">I Am Someone Indices (Extraversion)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Interesting_data.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Interesting_data.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/ND-academic-calendar-2011_2012.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ND Academic Calendar 2011-2012</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/PolQuizzesCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/QuizDataCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Semester Dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/personality-inventory-coding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Personality Inventory Coding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Network Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2011Net(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Summer2011Net(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Spring2012Net(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Spring2012Net(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2012Net(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Summer2012Net(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Fall2012Net(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Winter2013Net(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2013Net(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Demographic Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2011Demog(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Summer2011Demog(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Spring2012Demog(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spring2012Demog(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2012Demog(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Summer2012Demog(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Fall2012Demog(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fall2012Demog(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Winter2013Demog(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Winter2013Demog(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2013Demog(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Summer2013Demog(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Metadata and Mappings/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Metadata and Mappings/BluetoothProximity.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>1 Face-to-Face Proximity Estimation Using Bluetooth On Smartphones Shu Liu, Yingxin Jiang, and Aaron Striegel, Member, IEEE ! Abstract—The availability of “always-on” communications has tremen- dous implications for how people interact socially. In particular, sociolo- gists are interested in the question if such pervasive access increases or decreases face-to-face interactions. Unlike triangulation which seeks to precisely deﬁne position, the question of face-to-face interaction reduces to one of proximity, i.e.&nbsp;are the individuals within a certain distance? Moreover, the problem of proximity estimation is complicated by the fact that the measurement must be quite precise (1-1.5m) and can cover a wide variety of environments. Existing approaches such as GPS and WiFi triangulation are insufﬁcient to meet the requirements of accuracy and ﬂexibility. In contrast, Bluetooth, which is commonly available on most smartphones, provides a compelling alternative for proximity es- timation. In this paper, we demonstrate through experimental studies the efﬁcacy of Bluetooth for this exact purpose. We propose a proximity estimation model to determine the distance based on the RSSI values of Bluetooth and light sensor data in different environments. We present several real world scenarios and explore Bluetooth proximity estimation on Android with respect to accuracy and power consumption. Index Terms—Bluetooth, RSSI, proximity estimation model, smart- phone, face-to-face proximity 1 INTRODUCTION In recent years, the presence of portable devices rang- ing from the traditional laptop to fully ﬂedged smart- phones has introduced low-cost, always-on network con- nectivity to signiﬁcant swaths of society. Network ap- plications designed for communication and connectivity provide the facility for people to reach anywhere at any time in the mobile network fabric. Digital communica- tion [2], such as texting and social networking, connect individuals and communities with ever expanding infor- mation ﬂows, all the while becoming increasingly more interwoven. There are compelling research questions whether such digital social interactions are modifying the nature and frequency of human social interactions. A key metric for sociologists is whether these networks facilitate face-to-face interactions or whether these net- works impede face-to-face interactions. • S. Liu, Y. Jiang and A. Striegel are with the Department of Computer Science and Engineering, University of Notre Dame, Notre Dame, IN, 46556. E-mail: sliu6@nd.edu, yjiang3@nd.edu, striegel@nd.edu • This paper is an extension of the paper that appeared in the ICCCN WiMAN workshop 2011 [1]. Studies have shown that collecting occurrences of communications based on self-reporting, where subjects are asked about their social interaction proximity, is unreliable since the accuracy depends upon the recency and salience of the interactions [3]. With the increasing availability of data in logs generated by smartphones, there are tremendous opportunities for collecting data automatically [4]–[6]. The critical technical challenge is how to measure face-to-face interactions, i.e.&nbsp;are two or more individuals within a certain distance that could afford such interactions? Interactions are not limited to any particular area and can take place at a wide variety of locations, ranging from sitting and chatting in a Starbucks coffee shop to walking and chatting across a college campus. As will be explored later in the paper, for most face-to-face interactions, the approximate distance between individ- uals in casual conversation is within 0.5 to 2.5 meters (Section IV presents empirical evidence supporting this claim.). The natural solution would seem to be either WiFi triangulation [7], cell phone triangulation [8], GPS, or a combination of all three. However, none of these solutions are ideal or sufﬁcient. Although WiFi triangu- lation can present a reasonable degree of accuracy, its accuracy in all but the most dense WiFi deployments is insufﬁcient, ranging on the order of 3 to 30 meters [7]. Similarly, cell phone triangulation suffers from an even worse accuracy [8]. Moreover, while WiFi is reasonably pervasive, WiFi tends to generally be sparser in green spaces, i.e.&nbsp;outdoor spaces. Notably, GPS suffers from both an accuracy shortcoming (5-50m) as well as a lack of viability indoors [9]. However, it is important to note that face-to-face interaction does not demand an absolute position as offered by the previously mentioned schemes but rather requires a determination of proximity. With that impor- tant shift of the problem deﬁnition, Bluetooth emerges as a plausible alternative, offering both accuracy (1- 1.2m) [10] and ubiquity (most modern smartphones come with Bluetooth) [11]. Although some prior work has attempted to use the detection of Bluetooth to indi- cate nearness [3], it is not enough for the face-to-face proximity estimation. The question addressed by this paper is to what extent Bluetooth can be an accurate estimator of such proximity.</p>
+<p>2 To summarize, our work makes the following contri- butions: • We demonstrate the viability of using Bluetooth for the purposes of face-to-face proximity estimation and propose a proximity estimation model with appropriate smoothing and consideration of a wide variety of typical environments. • We study the relationship between the value of Bluetooth RSSI and distance based on empirical measurements and compare the results with the the- oretical results using the radio propagation model. • We explore the energy efﬁciency and accuracy of Bluetooth compared with WiFi and GPS via real-life measurements. • We deploy an application “PhoneMonitor” which collects data such as Bluetooth RSSI values on 196 Android-bases phones. Based on the data collec- tion platform, we are able to use the proximity estimation model across several real-world cases to provide high accurate determination of face-to-face interaction distance. The remainder of the paper is organized as follows. In Section II, we start with an introduction of related approaches to relative distance determination indoors and outdoors. Afterwards, in Section III the data col- lecting system built on smartphones is documented. In Section IV the results of empirical tests are evaluated and compared. Based on these practical results, a proxim- ity estimation model with smoothing and environment differentiation is proposed. In Section V the data in different real-world cases are analyzed by using the model. Finally, we suggest ways to extend this work to future communication research in Section VI. 2 RELATED WORK Over the years, there has been a signiﬁcant body of work addressing how to determine position through wireless signals [9]. For the purposes of this paper, we are interested in techniques that are based on commonly available technologies in smartphones, i.e.&nbsp;WiFi, GPS and Bluetooth. Particularly, we are interested in techniques that can be applied at the smartphone itself without signiﬁcant changes to the infrastructure. For most position techniques which aim to deliver on absolute position, distance/angle estimation techniques are used to calculate the distances and then the loca- tions are plotted based on the known reference loca- tions with the help of triangulation or trilateration [7]. Different methods can be used to estimate such infor- mation which include time of arrival/time difference of arrival (ToA/TDoA) [12], angle of arrival (AoA) [13] and RSSI [14]. In TDoA, the difference in arrived signal time and transmitted signal time gives estimated distance. TDoA is efﬁciently used by GPS and has the potential for very high accuracy. The method of angle of arrival (AoA) uses an array of antennas to measure the angle of the signal received and is combined with TDoA to reduce error rate. In contrast to TDoA and AoA techniques which tend to require a much costlier implementation and infras- tructure, RSSI-based techniques rely on the theory that the received signal strength is inversely proportional to the square of the distance. RSSI-based method is one of the most commonly implemented techniques, due to its practicality, low cost and availability. Numerous work has been explored in the literature leveraging RSSI of WiFi [7], [15], [16] and Bluetooth [10], [17], [18]. Theoretically, a known radio propagation model can be used to convert the signal strength into distance. However, in real world environments, the indicator is highly inﬂuenced by noise, obstacles and the type of antenna, which make it difﬁcult to calibrate. Recently there has been work combining the WiFi triangulation or Bluetooth with GPS techniques together to reach higher location accuracy. In [19] an indoor local- ization method with a median localization error of 2-7m is introduced. It assumes the indoor scenarios are places like shopping mall where GPS data can get occasionally. Without explicit WiFi access point pre-deployment cali- bration, a genetic algorithm called EZ Localization run- ning on the server calculates the location based on the WiFi RSSI information and occasionally obtained GPS data on client smartphones. However, such accuracy still cannot satisfy the requirement of face-to-face proximity estimation. Based on sensing and proximity detection techniques, a portable software architecture for indoor- outdoor location sensing is proposed in [20]. The results can tell whether the cell phone is indoor or outdoor but the deployment cost is still high to maintain the robust Bluetooth RSSI sensing indoors. Table I summarizes the differences of techniques, their prominent features and the performance [14], [21]. TABLE 1: Different location techniques comparison Bluetooth WiFi GPS HW costs Medium High High Coverage High High(Indoor) High (Outdoor) Power Usage Medium High High Accuracy 1-4m 2-30m 5-50m Security High High Not applicable Antti et al.&nbsp;presented the design and implementation of a Bluetooth Local Positioning Application (BLPA) [22]. BLPA converts the received signal power level to dis- tance estimate according to a simple propagation model, then BLPA computes 3-D position estimate on the basis of distance estimates. The accuracy of BLPA is reported to be 3.76 m. However all the results are based on the propagation model which is only suitable for speciﬁc controlled environments. From a speciﬁc work perspectives, the works of Nathan et al. [3], [4] are highly relevant to the paper. In those studies, the authors use the ability to detect Bluetooth signals as indicators for people nearby within the Bluetooth range (around 10m). However, such in- dication does not meet the requirement of face-to-face</p>
+<p>3 proximity detection. In class, a student may discuss with others sitting beside him/her, but face-to-face talk is dif- ﬁcult with the students on the other side of the classroom even they are still in the Bluetooth range. In contrast, we focus on a ﬁner grain of proximity estimation to provide accuracy on the order of 1 to 1.5 meters in which people may have face-to-face interaction. 3 SOFTWARE DESIGN AND IMPLEMENTATION The goal of our work is to estimate the proximity among two or more users with Bluetooth RSSI values logged on smartphones. In this section, we present the software architecture of data collection system, describe the data we get and compare the battery consumption by using different location techniques on smartphones. 3.1 Data Collection System As illustrated in Figure 1, an application named PhoneMonitor collects Bluetooth data including the de- tailed values of RSSI, MAC address, and Bluetooth identiﬁer (BTID). The data is recorded in SD card once the phone detects other Bluetooth devices around. In addition to Bluetooth, data points from a variety of other subsystems (light sensor, battery level and etc.) are gathered in order to compare and improve the proximity estimation. Separate threads are employed to compen- sate for the variety of speeds at which the respective sub- systems offer relevant data. We also record the location data reported by both GPS and network providers (either WiFi or cell network). In order to determine whether the phone is sheltered (e.g.&nbsp;inside a backpack or in hand) and the surroundings (e.g.&nbsp;inside or outside buildings) during the daytime, we keep track of the light sensor data. The battery usage percentage is recorded for the energy consumption comparison. Linux Kernel Library, Virtual Machine PhoneMonitor Application MonitorService GUI Activity Bluetooth Time BTID RSSI MAC Address Location by GPS Time Latitude Longitude Light Time Strength Battery Time Percentage Charging SQLite Database Server Phone Send data periodically and securely Location by network providers Time Latitude Longitude Fig. 1: Software architecture The application starts automatically when the phone power is turned on and runs passively in the background on Samsung Nexus S 4G using Android OS version 2.3 (Gingerbread). The Android platform was selected for its customization capabilities through normal API or rooted/customized interfaces with respect to hardware- level interactions. We keep the data records in a local SQLite database on the phone and upload them to MySQL database on the servers periodically with AES security for backup and analysis. With current Android APIs, each kind of data is invoked through the corre- sponding function calls. The default sensing granularity in terms of updating time interval for Bluetooth is 30 seconds. Intuitively, larger time intervals can help save energy, hence we also enable the changing of such sensing interval in order to explore its impact on the energy consumption. Unfortunately, in order to protect users from people trying to hack into their phones, phones by default do not allow Bluetooth to always be discoverable in Android 2.3. Thus we must root the phone and ﬂash CyanogenMod in order to enable Bluetooth to be dis- coverable all of the time while in the experiments. The root process does not overwrite the shipped ROM on the device. During the development another consideration about Bluetooth is the difference between Bluetooth discovery and pairing. Since in our tests there is no need to create Bluetooth connections among phones, we simply call the method of startDiscovery() to return the found devices with RSSI values instead of sending pairing request to other phones. There are more than one million Bluetooth records collected per week. Figure 2 shows the distribution of the Bluetooth RSSI values collected from 196 phones in one week (more details will be discussed in Section IV and Section V). The data collected includes both indoor and outdoor environments. As it shows, the most prevalent value is around -76dBm which indicates much more than 5m indoor and nearly 5m outdoor as will be shown later. Therefore, an unﬁltered detection method such as [3], [4] is not enough to estimate the face-to-face proximity and we use a more accurate method in Section IV to solve this problem. Moreover, we introduce various smoothing effects and take advantage of empirical observations to function across a wide variety of typical environments. 3.2 Power Comparison Energy is one of the most important considerations for applications on smartphones. Compared to a PC, the energy of mobile phones is quite limited. Therefore it is essential to utilize an energy saving method in the system. Before we reveal the relationship between Bluetooth RSSI values and the distance, we compare the energy consumption of Bluetooth, WiFi and GPS in order to ensure that Bluetooth is suitable for proximity estimation on smartphones. In order to test the energy consumption of Bluetooth, WiFi and GPS, evaluations were separately run on three</p>
+<p>4 -90 -80 -70 -60 -50 -40 0.00 0.01 0.02 0.03 0.04 0.05 0.0 0.2 0.4 0.6 0.8 1.0 Porbability Density Function Bluetooth RSSI Value (dBm) Cumulative Density Function Fig. 2: Bluetooth RSSI values distribution in one week identical phones with full charged battery and the up- dating time interval is 30 seconds. The battery level was recorded periodically (every half an hour) in order to obtain the results. The results are shown in Figure 3 with Bluetooth clearly having the best capability for energy saving. The phone running Bluetooth almost has twice the battery life than the one with WiFi logging. More- over, when the time granularity of Bluetooth update becomes larger, the battery can even last longer. 0 5 10 15 20 25 30 35 40 45 50 0 10 20 30 40 50 60 70 80 90 100 Bluetooth (update interval = 10s) Bluetooth (update interval = 30s) W iFi GPS Percetage(%) Time(h) Fig. 3: Energy consumption of Bluetooth, WiFi and GPS 4 PROXIMITY ESTIMATION MODEL In this section, we explore the relationship between Bluetooth RSSI and distance in real world scenarios. Importantly, even with inevitable noise interference, the relationship still follows the same trend as the theoretical model predicts. We use two different methods to do face- to-face proximity estimation. The ﬁrst method is using RSSI value threshold to determine whether two phones are in proximity or not. Based on the method, the second method introduces the light sensor data to determine whether the phone is indoors or outdoors, inside the backpack or in hand. By differentiating environments and smoothing data, a face-to-face proximity estimation model is outlined to improve the estimation accuracy in general scenarios. At the end of this section the prox- imity accuracy of Bluetooth, WiFi and GPS are analyzed and compared. 4.1 Bluetooth RSSI vs.&nbsp;Distance Since the unit of RSSI returned by the Android phone interface is dBm, there is no need to convert RSSI to received signal power level like in BLPA [22]. In theory, distance can be measured based on the radio propaga- tion model and power level. The model can be described as follows: RSSI = PT X + GT X + GRX + 20 log ( c 4πf ) −10n log (d) = PT X + G −40.2 −10n log (d) (1) where PT X is the transmitted power; GT X and GRX are the antenna gains; G is the total antenna gain: G = GT X + GRX; c is the speed of light (3.0 ∗108m/s); f is the central frequency (2.44 GHz); n is the attenuation factor (2 in free space); and d is the distance between transmitter and receiver (in m). d is therefore: d = 10[(PT X−40.2−RSSI+G)/10n] (2) However, such a model can only be utilized as a theo- retical reference. Due to reﬂection, obstacles, noise and antenna orientation, the relationship between RSSI and distance becomes more complicated. Our challenge was to assess how much impact these environmental factors have on Bluetooth RSSI values. Therefore, we carried out several experiments to understand how the Bluetooth indicators fade with distance under these environmental inﬂuences. Indoor experiments were conducted in a noisy hall- way (around seven other Bluetooth devices detected) in the campus engineering building. Outdoor experiments were conducted in the open area outside the building. In the measurement there were no obstacles between the two phones and the antennas of the phones were aligned towards each other. In such a way, we tried to build up a relatively simple and “ideal” environment where the possible impact factors are reﬂection and noise only. We repeated the measurements over the period of an hour with the distance being increased by 0.5 meters between each round. Figure 4 shows the initial ﬂuctu- ations of indoor RSSI results with different distances. Although the data varies signiﬁcantly even within the same distance, there is a noticeable gap exists between different distances. Such results further shed light on the viability of using Bluetooth RSSI to indicate the face-to- face proximity. In Figure 5, we present indoor, outdoor, and theoretical results for Bluetooth across a variety of distances (0-5 meters). The theoretical values were predicted by the</p>
+<p>5 0 500 1000 1500 2000 2500 3000 3500 -70 -65 -60 -55 -50 -45 -40 3m 2m 5m 4m 1.5m RSSI (dBm) Time (s) 1m Fig. 4: Initial indoor RSSI values with different distances propagation model with PT X = 2.9 dBm, n = 2 and G = −4.82 dBi [22]. We calculated the average RSSI from nearly 120 raw values for each distance. The indoor results were relatively close to the theoretical values. However, the results outside the building were much farther away from the theoretical reference and imply that these two kinds of environmental settings should be identiﬁed in the following measurements. -80 -75 -70 -65 -60 -55 -50 -45 -40 -35 -30 -25 -20 -15 -10 0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 Distance(m) RSSI(dBm) Theoretical Reference Indoor Outdoor Fig. 5: Bluetooth RSSI vs.&nbsp;distance - theoretical, indoor, outdoor Furthermore, we performed the similar experiments on two phones focusing on the indoor case but with different antenna orientation (e.g.&nbsp;in the same direction) and obstacles (e.g.&nbsp;put in a backpack or partitioned by cubicle) in order to discover the inﬂuence of these possible factors. Figure 6 illustrates the results with these impacts. The observations include the following: ﬁrst, the change in orientation turns out to have little impact on the ﬁnal results. As many smart phones cannot predict phone orientation, antenna design is typically optimized to account for this fact. Second, although we -80 -78 -76 -74 -72 -70 -68 -66 -64 -62 -60 -58 -56 -54 -52 -50 -48 -46 -44 -42 -40 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 RSSI(dBm) Indoor Indoor with same antenna direction Indoor across clapboard Indoor (inside a backpack) Distance(m) Fig. 6: Bluetooth RSSI vs.&nbsp;Distance indoor case placed two phones on each side of a cubicle board, such an arrangement did not affect RSSI signiﬁcantly. Third, the most important environmental issue came from the backpack. It may be because the signal of Bluetooth is disturbed or shielded in such a closed environment. As many individuals would be likely to carry their phone in a purse or backpack (particularly on a college campus), the backpack setting bears further investigation. We also recorded the data to check whether the RSSI values on phones are symmetric. Figure 7 shows the RSSI values on one phone are almost the same as the results on the other phone. Using the same method, we measured the RSSI values outdoors with the consideration of the inﬂuence of a backpack. Figure 8 shows the results from those exper- iments. Similarly, the RSSI values become lower when the phones are in the backpack so it is a non-ignorable elements in the following estimations, further reinforcing that detection of such an arrangement may be critical for proper distance estimation resolution. Based on these indoor and outdoor results, there are two main environmental factors may effect the RSSI values: inside/outside building and inside/outside a backpack. Besides those factors, it is also necessary to take multiple-phones scenario into consideration since phones with Bluetooth around may have interference on Bluetooth RSSI values. 4.2 Proximity Estimation Model As mentioned in the beginning, the objective of the paper is to provide an accurate proximity estimation for face-to-face communication. This raises a question: what is the face-to-face communication distance? In this subsection, we ﬁrst deﬁne the face-to-face distance and then use the indoor results as a threshold to do the estimation in real world scenarios. Since the error rate of using a simple threshold is relatively high, we explore the possible reasons and propose a proximity estimation</p>
+<p>6 -80 -78 -76 -74 -72 -70 -68 -66 -64 -62 -60 -58 -56 -54 -52 -50 -48 -46 -44 -42 -40 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 inside results of A inside (backpack) results of A inside results of B inside (backpack) results of B RSSI(dBm) Distance(m) Fig. 7: Symmetric RSSI values -80 -78 -76 -74 -72 -70 -68 -66 -64 -62 -60 -58 -56 -54 -52 -50 -48 -46 -44 -42 -40 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 RSSI(dBm) Outdoor Outdoor (inside a backpack) Distance(m) Fig. 8: Bluetooth RSSI vs.&nbsp;Distance outdoor case model with the introduction of light sensor values. Distance of face-to-face communication: When we have dinner with our friends sitting at the same table, the con- version among us is called face-to-face communication; or when we talk with someone side by side, the distance between us is also called face-to-face communication. In other words, face-to-face communication happens when people are close enough to have conversations in a convenient manner. People typically have such commu- nication when they are sitting or walking together. Thus, we calculate the distance for this kind of communication by measuring distances across the campus (such as diagonal of desk in dinning hall, distance between desks in classrooms and etc.) and the average value is equal to 1.52m. The detailed samples are listed in Table II. To conduct an evaluation of the accuracy of our Bluetooth method, we constructed a scenario that draws upon several likely occurrences in normal campus inter- actions. The scenario blends each of the earlier test cases TABLE 2: Distance of face-to-face communication around campus Place Distance(cm) Diagonal of small square desk in La Fortune 116 Diagonal of large square desk in La Fortune 160 Diameter of round desk in La Fortune 120 Diagonal of desk in dinning hall 250 Distance between desks in Cushing ofﬁce 125 Distance between desks in classroom 155 Diagonal of desk in discussion cubic 220 Distance between people walking side by side 70 and provides a ground truth to assess the accuracy in a real-world setting. The measurement was conducted as follows: two people with two phones walked side by side from Cushing Hall to Grace Hall and then returned back (Figure 9). The whole process took 40 minutes Fig. 9: Walk path for real-world scenario and individuals were always within the distance for face-to-face communication. The Bluetooth update time interval was changed to 10 seconds temporarily in order to provide enough samples. During the ﬁrst ten minutes (phone in hand) and last ten minutes (phone inside a backpack) individuals were inside Cushing Hall. When individuals were outside (the duration was 20 minutes), in the ﬁrst ten minutes individuals held the phones in their hands and then put the phones in their backpack for the later ten minutes. Single Threshold: After data collection, the corresponding RSSI value (-52dBm) of direct communication distance (152cm) based on the indoor measurements (Figure 6) was used as a threshold to estimate whether the indi- viduals were in proximity. Accordingly, values less then -52dBm were considered as not in face-to-face proximity and labeled as a wrong estimation. Table III shows the results and error rate of this na¨ıve method. It was found that both of the outdoor and backpack parts have</p>
+<p>7 TABLE 3: Error rate against ground truth Total samples 246 Total error rate 72.8% Indoor error rate (0 - 10 mins) 14.3% Outdoor error rate (10 - 20 mins) 91.3% Outdoor (inside a backpack) error rate (20 - 30 mins) 100.0% Indoor (inside a backpack) error rate (30 - 40 mins) 85.0% TABLE 4: Improved error rate with modiﬁed threshold Total samples 246 Total error rate 48.4% Indoor error rate (0 - 10 mins) 4.9% Outdoor error rate (10 - 20 mins) 53.2% Outdoor (inside a backpack) error rate (20 - 30 mins) 85.5% Indoor (inside a backpack) error rate (30 - 40 mins) 49.2% extremely high error rates. After switching the threshold value to -58dBm which is the outdoor RSSI values with 152cm distance, the error rate was improved but still high as shown in Table IV. In our opinion, the reasons for high error rates include: i) One ﬁxed threshold is not enough as the indicator of correct or wrong estimation; ii) Only indoor or outdoor relationship was used to analyze the data without differentiation; iii) The inﬂuence of backpack and other possible envi- ronmental interference were not taken into considera- tion; iv) Each RSSI value was not smoothed to allow for environmental ﬂuctuations. Multiple Thresholds: According to the reasons for high error rate analyzed above, we introduce a multiple threshold-based method as follows: i) Light Sensor Data As shown in Figure 6 and Figure 8, the Bluetooth RSSI values are much smaller than the indoor ones when the phone is in the backpack or outdoors. One of our observations is that it is possible to treat the light sensor data as an indicator of the environment. Figure 10 reveals the light sensor data distribution in different settings: during the daytime when the phone is inside the building the light sensor returns values between 225 to 1280; while this value comes up to larger than 1280 when phone is under daylight. When the phone is in the backpack, the light values are typically around 10. Therefore, when the light sensor value is in a range that indicates the phone is in a speciﬁc corresponding environment. In Figure 11, we reviewed the distribution of the Bluetooth RSSI values collected in the walk experiment and the corresponding light sensor data got at the same time. As shown, there is RSSI data ﬂuctuation even in the same setting due to the interference and noise. However, most Bluetooth RSSI values are larger than -55dBm when light sensor data is from 225 to 1280 (indicates indoor setting) while the RSSI values are smaller than -55dBm when light sensor data is in other zones (either in the backpack or outdoors). Thus, light sensor data is 10 0 10 1 10 2 10 3 10 4 10 5 0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1 Light Sensor Data Probability</p>
+<p>Indoor Indoor (inside a backpack) Outdoor Outdoor (inside a backpack) Fig. 10: Cdf of light sensor data in different environments 1 10 100 1000 10000 -75 -70 -65 -60 -55 -50 RSSI (dBm) Light Sensor Data Fig. 11: Data in Real-world Scenario introduced to differentiate the circumstances to improve the accuracy of distance estimation bases on the rules in Table V. Variations due to time of day (day vs.&nbsp;evening) may be accounted for using the smartphone time. In- evitably, accuracy will decrease during evening hours but we fell this is an adequate tradeoff for improved environmental detection. Unfortunately, the Nexus S 4G phone does not contain a pressure sensor which could be used to further improve results. TABLE 5: Environment Estimation with Light Sensor Data Light Sensor Data Environment Estimation (0, 100] Inside backpack (100, 1280] Indoor and out of backpack &gt;1280 Outdoor and out of backpack ii) Data Smoothing Since there is time delay during the data collection, we do smoothing on the data collection to avoid envi- ronmental ﬂuctuation effects and each value RSSIi at</p>
+<p>8 time i is modiﬁed using the following function: RSSIi = a ∗RSSIi−1 + b ∗RSSIi + c ∗RSSIi+1 (3) For the values of the parameters (a, b and c), several combinations such as (0.4, 0.6, 0), (0.3, 0.4, 0.3) and (0.2, 0.6, 0.2) are used in the following experiments. Then we choose the best one which produces the highest accuracy. iii) Proximity Estimation Model Based on the analysis of noise and interference, we use a multiple threshold model instead of a single threshold to do the proximity estimation. In Figure 5, the corre- sponding indoor RSSI values of 2.5m (the maximum distance for face-to-face communication) is around - 55dBm. It is obvious that when the received RSSI value is larger than -55dBm the two phones are in face-to- face proximity. Similarly, when the outdoor RSSI values is larger than -60dBm the two phones holder are close enougth to have direct interaction. We call such data zone the “Positive Zone” denoting where two individuals are certainly within face-to-face interaction distance. For the indoor data smaller than -55dBm, the model is constructed based on the following observation: in Figure 6 the smallest value for 5m distance in the test was -65dBm and it had a relatively low probability of occurence (values larger than -65dBm is less than 20%) in Figure 2. Taking noise and interference into consideration, the value between -65dBm and -55dBm may also indicate a face-to-face proximity with high probability. Figure 2 includes both indoor and outdoor data and the most frequent data is -76dBm and the lowest values detected is -90dBm. When the indoor data is in (-76dBm, -65dBm), it is still possible to make a face- to-face communication but the probability is relatively low. The indoor data smaller than -76dBm implies that it is too far to have a direct communication and it is called the “Negative Zone”. Similarly, we set up several bounds for outdoor data: the smallest value for 5m is -75dBm. Therefore the zone(-75dBm, -60dBm) has a relatively high probability while the zone(-90dBm, -75dBm) is the low probability zone. When the outdoor data is smaller than -90dbm, we strongly believe it is impossible to indicate a face-to-face proximity or even be detected. Furthermore, we revisit the data regarding the inside backpack environment. Based on light sensor data, it is difﬁcult to distinguish indoor or outdoor when the phone is inside the backpack. We noticed that when distance are 2.5m and 5m, the corresponding indoor Bluetooth RSSI values inside a backpack are -59dBm and -70dBm and the corresponding outdoor values are - 64dBm and -79dBm. We deﬁned the zone which is larger than -59dBm as “Positive Zone” for backpack data. Simi- larly, the zone which is smaller than -79dBm as “Negative Zone”. For the data between the two above bounds, we also deﬁne “High Probability (HP) Zone” (-70dBm, -59dBm) and “Low Probability (LP) Zone” (-79dBm, - 70dBm). Therefore, for each type of environment, we have four zones as summarized in Table VI. Table VII lists the corresponding multiple thresholds. Figure 12 illustrates the multiple thresholds of different zones in a more direct way. For high and low probability zones, we name the minimum values in low probability zone as Bmin, the maximum value in high probability zone as Bmax and the range as Brange. Therefore Brange = Bmax - Bmin. To sum up, a proximity estimation model with multiple thresholds is proposed to improve the accuracy. For Bluetooth RSSI value xi and the corresponding light sensor value yi at time i, we calculate the probability of face-to-face proximity pi as described in algorithm 1. TABLE 6: Deﬁnition of Zones in Different Environments Zones Indoor Outdoor Inside Backpack Positive &gt;=BI F T F &gt;=BO F T F &gt;=BI P F T F HP [BI 5m, BI F T F ) [BO 5m, BO F T F ) [BI P 5m, BI P F T F ) LP [Bfrequent, BI 5m) [Bmin, BO 5m) [BO P 5m,BI P 5m) Negative &lt;Bfrequent &lt;Bmin &lt;BO P 5m TABLE 7: Boundary Summary Boundary Detail Values(dBm) BI F T F Indoor fact-to-face (2.5m) -55 BO F T F Outdoor fact-to-face (2.5m) -60 BI P F T F Indoor inside backpack fact-to-face (2.5m) -59 BO P F T F Outdoor inside back- pack fact-to-face (2.5m) -64 BI 5m Indoor 5m -65 BO 5m Outdoor 5m -75 BI P 5m Indoor inside backpack 5m -70 BO P 5m Outdoor inside backpack 5m -79 Bfrequent Most frequent value in the results -76 Bmin Minimum in the results -90 -80 -78-76-74-72-70-68-66-64-62-60-58-56-54-52-50-48-46-44-42-40 Indoor Outdoor Inside backpack -82 -84 -86 -88 -90 Positive Zone High Probabilty Zone Low Probability Zone Negative Zone RSSI(dBm) Fig. 12: Multiple Thresholds in Different Zones We deﬁne Required Accuracy (RA) as the lowest re- quirement for the probability to indicate two phones are in face-to-face proximity. With the improved estimation model, we analyze the data in the real-world scenario again and the error rate is improved greatly as shown in Table VIII. Once pi is higher than 45% ( RA = 45%), the two phones are considered to be in the face-to-face proximity. The bigger the RA value is, the more accurate face-to-face proximity we can obtain. We choose 45% as RA based on the following calculation: in each type of environment, the probability of the lowest possible value l in high probability zone equals to (l-Bmin) divided by Brange. The smallest one in three types of environments</p>
+<p>9 Algorithm 1 Estimate probability pi of face-to-face prox- imity with Bluetooth RSSI value xi and light sensor value yi xi ←a ∗xi−1 + b ∗xi + c ∗xi+1 determine the scenario depending on yi if xi is in positive zone then pi ←1 else if xi is in probability zone [Bmin, Bmax) then pi ←(xi −Bmin)/Brange else pi ←0 end if equals to 45%. We choose (0.3, 0.4, 0.3) for the parameters of a, b and c because this combination has the highest accuracy in the calculation. TABLE 8: Error rate against ground truth with proximity estimation model Total samples 246 Total error rate 4.6% Inside error rate (0 - 10 mins) 0.0% Outside error rate (10 - 20 mins) 4.3% Outside (inside a backpack) error rate (20 - 30 mins) 10.3% Inside (inside a backpack) error rate (30 - 40 mins) 5.0% 4.3 Comparisons WiFi triangulation/trilateration is a widely used method to do location indoors while GPS is perhaps the most popular way to do location outdoors. As summa- rized in Section II, both of them have their own advan- tages and disadvantages. Here we use WiFi and GPS to do the face-to-face proximity estimation in order to com- pare the accuracy of them with the Bluetooth method we proposed. Together with the power consumption comparison in Section III, the method of Bluetooth is proved to be an effective and efﬁcient way in both aspects of accuracy and power usage. We collected both network-provider location and GPS location data on the phone for the comparison. With the API provided by class LocationManager in Android SDK, we can get both kinds of location data by choosing dif- ferent location providers. The GPS provider determines location using satellites while the network provider determines location based on availability of cell tower and WiFi access points(APs). In the network provider method, the triangulation is used to get the location of the phone with the knowledge of cell towers’ or APs’ locations. When each phone’s location is known, the relative distance as well as the accuracy is easy to calculate. We conducted the experiment on a game day in the campus. Two students (A and B) went to Notre Dame Stadium to watch the game together. In Figure 13 the reported location data are marked. From 3pm to 7pm, the location data recorded by network provider are (41.699517, -86.232877) and (41.699203, -86.235269). During the same time period, the GPS provider collected the location as (41.699504, -86.234624) and (41.699004, -86.235723). The corresponding distance between the reported data were 11.25 meters (443 inches) and 7.92 meters (312 inches) respectively. Based on the results reported by the phones, the accuracy of WiFi-based localization turns out to be around 10-15 meters and the one using GPS is around 10 meters. Fig. 13: Location data provided by WiFi and GPS Compared to the above WiFi triangulation and GPS methods, the Bluetooth-based method was more suit- able for the face-to-face proximity estimation. As we mentioned before, there is no need to get the absolute location data to calculate the distance. Instead, we only need relative distance to do the estimation. From 3pm to 7pm on that day, we collected the Bluetooth RSSI on both phones and use the estimation model to do the analyze. When RA is 45%, we got the error rate around 6% with 554 sample data. Table IX summarizes the comparison results of accuracy and power consumption percentage by invoking each method with the similar frequency. These results are consistent with the data in Table I and Bluetooth can deﬁnitely fulﬁll the requirements of proximity estimation in our system. TABLE 9: Accuracy and power consumption comparisons Accuracy Power consumption Samples Our method 1.5 - 2.5 meters 15.7% 554 WiFi 10-15 meters 25.7% 251 GPS 10 meters 58.6% 98 5 CASE STUDY While our experimental data shows the viability of Bluetooth as a proximity estimation tool, we examine the larger corpus of data from our smartphone study. We gathered high-ﬁdelity data set by deploying the “PhoneMonitor” app on the Nexus S 4G android phones of 196 users. The participates were randomly chosen</p>
+<p>10 from the 2011 freshman in the University of Notre Dame and were given the phones with unlimited voice, text and data plans. We encouraged the users to take advantage of all the features and services of the phone. The data set, including Bluetooth RSSI, WiFi RSSI, light sensor values as well as locations, was gathered between Sep and Oct 2011. With the data collected on these phones, we use the face-to-face proximity estimation model to get people who are in the direct communication distance with other participants. In the previous section, we showed that the proximity estimation model with multiple thresholds can increase the accuracy of proxim- ity estimation effectively. In the following subsections, more cases and samples will be introduced to explore the Bluetooth-based method for proximity estimation in daily life. 5.1 Proximity in large group With the data reported by 196 phones over two months, we analyzed the proximity among a large group. We ﬁrst use Table X to show the proximity variation in one week (Oct 3rd - Oct 9th). There are three columns in the table: Proximity Detected column is the total number of devices which at least detected one of the other devices with face-to-face proximity probability larger than 45% (RA = 45%); Maybe Detected column stands for the number of devices which detected other devices but most of them were in the low probability zone as shown in Table VI; None column is number of devices which do not report any data or the detected Bluetooth RSSI values were always in the negative zone. The number of samples may be varied from day to day. Notably, the weekend included a home football game. Compared to the weekdays, more “Proximity Detected” cases are reported on Saturday since many students watched the game together and sit in the same student zone. On Sunday, we observed signiﬁcant ”None” cases which may indicate students stayed in their room or went home instead of interacting. TABLE 10: Proximity variation in a week Num of Devices Proximity Detected Maybe Detected None Mon 190 90 97 3 Tue 193 108 84 1 Wed 192 105 86 1 Thu 192 107 85 0 Fri 191 110 78 3 Sat 194 133 57 4 Sun 190 67 72 51 We look into the data on Tuesday in a more detailed way. Before we reveal the proximity variation on that day, we ﬁrst plot the distribution of reported light sensor data and Bluetooth RSSI values in order to compare them with the former results we received in two-phones scenario. Figure 14 shows the trend of light sensor values in 24 hours. During the early morning and late night, most values were smaller than 1000 which means the participants are inside the buildings. From 8am to 8pm we noticed many values larger than 10000. At the same time, several values at the bottom (values vary from 10 to 100) indicate the phone is in the backpack. During the daytime, the value reﬂects the true scenario where the phone is. However, since the light sensor values are not reliable to indicate indoor or outdoor during nighttime, we use the thresholds of indoor environment to do the estimation on the data collected from 5pm to 12am, the thresholds of backpack environment are used between 12am to 8am. Using the same method as above, we summarize the proximity variation on that day in Table XI. The number of ”Maybe Detected” cases during the class time (8am-5pm) is less than other time slots. Specially, the devices met much more other devices in the afternoon which covers the lunch time as well. Fig. 14: Light sensor data distribution on Tuesday TABLE 11: Proximity variation on Tuesday Proximity Detected Maybe Detected None 12am-8am 34 158 1 8am-12pm 97 95 1 12pm-5pm 107 86 0 5pm-8pm 86 106 1 8pm-12am 91 101 1 Figure 15 reﬂects the distribution of Bluetooth RSSI values on that day. The most frequently value is around -75dBm which is similar as concluded in Figure 2. As revealed in Section IV, when RSSI value is smaller than -75dBm, it has a relatively low probability that the two phones are in face-to-face proximity. Critically, a method such as the one in [3], [4] would misdetect such interactions. Based on both Bluetooth RSSI values and light sensor values, our model can improve the accuracy of face-to-face proximity indication. 5.2 Proximity in small group 5.2.1 Football Game Day On Oct 8th 2011, the university had a football game with Air Force from 3:30pm to 7:30pm. There were 126 students among the 196 that watched the game in the</p>
+<p>11 -90 -80 -70 -60 -50 -40 -30 0.00 0.01 0.02 0.03 0.04 0.05 0.0 0.2 0.4 0.6 0.8 1.0 probability density function Bluetooth RSSI (dBm) cumulative distribution function Fig. 15: Bluetooth RSSI values distribution on Tuesday stadium and we gathered 56710 Bluetooth records in the database. In Figure 16, we select one participant S018 and show the detected phones around that student through Bluetooth during the 4 hour period. For every ﬁve minutes, if any other phone is detected we add its corresponding ID in that time slot. There are total 48 time slots and with several students always together with the student in the game. Similarly, we explore one of those nearby students S077 to validate symmetric detection in Figure 17. These two ﬁgures further show that it is practical to use Bluetooth to detect people around. 0 5 10 15 20 25 30 35 40 45 0 20 40 60 80 100 120 140 160 180 200 Student ID Time (3:30pm - 7:30pm) S018 Fig. 16: S018 data on game day Figure 16 shows the detected students around without any restriction of Bluetooth RSSI values. In order to get list of the students in face-to-face proximity, we need to utilize the proximity estimation model to reﬁne the results. Combined with light sensor data and method of data smoothing, the probability of proximity is calcu- lated for the ﬁltration. With RA of 45%, Figure 18 shows 0 5 10 15 20 25 30 35 40 45 0 20 40 60 80 100 120 140 160 180 200 S077 Student ID Time (3:30pm - 7:30pm) Fig. 17: S077 data on game day the ﬁltered results which is more accurate to indicate the people who is in the face-to-face conversation range with the participant in the game. Compared with Figure 16, it is much more clear to ﬁnd other devices kept close with the participant during the game. We analyzed the symmetry between S018 and S077 in a more accurate way with proximity estimation model. In section IV we discussed the symmetry of Bluetooth RSSI values between two phones and the values are almost the same when the noisy and interference is relatively low. Does such symmetry still exist when more than two phones are nearby? We look into the data reported on the game day again to check whether the symmetry between S018 and S077 still exists or not. Figure 19 includes the data from both S018 and S077 with RA equals to 45% and (018,077) means that S018 detected S077 was in the face-to-face range in the speciﬁc time slot. Due to the interference from other phones with Bluetooth, the values are not exactly symmetric in the four hours. There is nearly 40% of the time when such proximity detection is not symmetric. 5.2.2 Weekday In this part, we analyzed the data recorded during week- days, such as class time and lunch hours, and compared it with the data on game days. During the football game, most of the freshmen sit in the same student section and it is highly possible to detect more than 10 people around him/her at one time slot. However, when students are in class or having lunch, the data becomes reasonably sparse. Compared to more than ﬁfty thousand records in the game, we recorded 6408 records on Oct 11th 2011 (Tuesday) from 9am to 1pm. Figure 20 illustrates the data reported by the same phone S018 during this period. Obviously, the chance to meet other students (related to this project) in class or during the lunch time is relatively low. In S018’s case, he/she only met with two other</p>
+<p>12 0 5 10 15 20 25 30 35 40 45 0 20 40 60 80 100 120 140 160 180 200 S018 (RA = 45%) Time (3:30pm - 7:30pm) Student ID Fig. 18: S018 data on game day with proximity estimation model 0 5 10 15 20 25 30 35 40 45 50 Detected in face-to-face proximity (018,077) (077,018) Time(3:30pm - 7:30pm) Fig. 19: Symmetry analysis of data on game day students within a direct-communication distance in class and four during the lunch time. 5.2.3 Fall Break During the fall break (from Oct 17th to Oct 23rd), most students went home and we got relatively less data. Take the data of Oct 19th for example, we got 4373 records in the whole day and only 26 devices detected other devices in the project in face-to-face proximity. We use the proximity estimation model and the same RA to analyze the results we got on Oct 19th between 10am and 10:05am. Figure 21 shows the proximity status among students in this speciﬁc time slot. There are in total 11 samples collected during the 5-minutes period and (035, 148) means device S035 detected S148 was in the face- to-face proximity. Since there is less interference, the 0 5 10 15 20 25 30 35 40 45 0 20 40 60 80 100 120 140 160 180 200 S018 (RA = 45%) Student ID Time (9am - 1pm) Fig. 20: S018 data on weekday with proximity estimation model 0 20 40 60 80 100 120 140 160 180 200 0 20 40 60 80 100 120 140 160 180 200 Student ID Student ID Oct 19th 10am-10:05am (RA = 45%) (035,148) Fig. 21: Fallbreak data with proximity estimation model symmetry is maintained as observed in Section IV. In Figure 21, more than 70% values are symmetric and it further indicates that Bluetooth is a reliable and effective method to detect face-to-face proximity in daily life. 6 CONCLUSION AND FUTURE WORK In summary, our presented work validates the usage of Bluetooth as a tool for face-to-face proximity de- tection. We carefully explored the relationship between Bluetooth RSSI values and distances for indoors and out- doors settings. We also analyzed the impacts of different environment settings. Based on the experiment results, we summarized two methods to estimate proximity: single threshold and multiple thresholds. In the latter ap- proach we showed how the light sensor and smoothing can be employed to yield reasonable approximations for</p>
+<p>13 proximity. Then we proposed the proximity estimation model by combining Bluetooth RSSI value, light sensor data as well as data smoothing together. By developing and deploying the application “PhoneMonitor” on 196 phones, we recorded data reported from devices in different occasions. We applied the proximity estimation model on the realistic data and analyzed the proximity among the participates as well as the symmetry of proximity. Compared with the method of collecting all devices around, the accuracy of utilizing proximity esti- mation model to estimate whether two devices are in a direct communication distance is improved dramatically. We also compared the battery usage and accuracy of our method with other different location methods such as WiFi triangulation and GPS. The results demonstrates that Bluetooth offers an effective mechanism that is accurate and power-efﬁcient for measuring face-to-face proximity. For our future work, we intend to improve our thresh- old algorithms with data mining. The thresholds used in the proximity estimation model are based on the experiment results on Nexus S 4G phones. For different phones, such threshold may be different. Therefore, a more general method is necessary to determine the rela- tionship between Bluetooth RSSI values and the face-to- face proximity. With more data reported in the next fol- lowing two years, a more efﬁcient data mining algorithm is needed to analyze the data. During the nighttime, only the data reported by light sensor is not reliable. One possible method to solve this problem is to take atmospheric pressure into consideration to determine whether the phone is indoor or outdoor. ACKNOWLEDGEMENT This work was funded in part by the National Science Foundation through grant IIS-0968529. We would also like to thank our collaborators, Dr.&nbsp;Christian Poellabauer, Dr.&nbsp;David Hachen, and Dr.&nbsp;Omar Lizardo. Great thanks to Sprint who provides us more than 200 phones and free data plan for the experiments. REFERENCES [1] S. Liu and A. Striegel, “Accurate extraction of face-to-face prox- imity using smartphones and Bluetooth,” in Computer Communi- cations and Networks (ICCCN), 2011 Proceedings of 20th International Conference on. IEEE, 2011, pp.&nbsp;1–5. [2] A. Mitra, Digital Communications: From E-mail to the Cyber Commu- nity. New York, USA: Chelsea House Publications, 2010. [3] A. P. Nathan Eagle and D. Lazer, “Inferring social network structure using mobile phone data,” Proc. of the National Academy of Sciences (PNAS), vol.&nbsp;106, no. 36, pp.&nbsp;15 274–15 278, September 2009. [4] N. Eagle and A. Pentland, “Social serendipity: Mobilizing social software,” IEEE Pervasive Computing, vol.&nbsp;4, no. 2, pp.&nbsp;28–34, 2005. [5] M. N. Juuso Karikoski, “Measuring social relations with multi- ple datasets,” International Journal of Social Computing and Cyber- Physical Systems, vol.&nbsp;1, no. 1, pp.&nbsp;98–113, November 2011. [6] H. Falaki, R. Mahajan, S. Kandula, D. Lymberopoulos, R. Govin- dan, and D. Estrin, “Diversity in smartphone usage,” in Proceed- ings of the 8th international conference on Mobile systems, applications, and services. ACM, 2010, pp.&nbsp;179–194. [7] F. Izquierdo, M. Ciurana, F. Barcelo, J. Paradells, and E. Zola, “Performance evaluation of a TOA-based trilateration method to locate terminals in WLAN,” in Wireless Pervasive Computing, 2006 1st International Symposium on, jan. 2006, pp.&nbsp;1–6. [8] V. Otsason, A. Varshavsky, A. LaMarca, and E. De Lara, “Accurate GSM indoor localization,” UbiComp 2005: Ubiquitous Computing, pp.&nbsp;903–921, 2005. [9] V. Zeimpekis, G. M. Giaglis, and G. Lekakos, “A taxonomy of indoor and outdoor positioning techniques for mobile location services,” SIGecom Exch., vol.&nbsp;3, pp.&nbsp;19–27, December 2002. [10] S. Zhou and J. Pollard, “Position measurement using Bluetooth,” Consumer Electronics, IEEE Transactions on, vol.&nbsp;52, no. 2, pp.&nbsp;555– 558, May 2006. [11] A. O. M. Raento and N. Eagle, “Smartphones: An emerging tool for social scientists,” Sociological Methods Research, vol.&nbsp;37, no. 3, pp.&nbsp;426–454, 2009. [12] L. Cong and W. Zhuang, “Non-line-of-sight error mitigation in TDOA mobile location,” in GLOBECOM 2001: Global Telecommu- nications Conference, vol.&nbsp;1. IEEE, 2001, pp.&nbsp;680–684. [13] S. Venkatraman and J. Caffery Jr, “Hybrid toa/aoa techniques for mobile location in non-line-of-sight environments,” in WCNC 2004: Wireless Communications and Networking Conference, vol.&nbsp;1. IEEE, 2004, pp.&nbsp;274–278. [14] H. Liu, H. Darabi, P. Banerjee, and J. Liu, “Survey of wireless indoor positioning techniques and systems,” Systems, Man, and Cybernetics, Part C: Applications and Reviews, IEEE Transactions on, vol.&nbsp;37, no. 6, pp.&nbsp;1067 –1080, November 2007. [15] M. Youssef, A. Agrawala, and A. Udaya Shankar, “WLAN loca- tion determination via clustering and probability distributions,” in PerCom 2003: Pervasive Computing and Communications, March 2003, pp.&nbsp;143–150. [16] A. Ladd, K. Bekris, A. Rudys, D. Wallach, and L. Kavraki, “On the feasibility of using wireless ethernet for indoor localization,” Robotics and Automation, IEEE Transactions on, vol.&nbsp;20, no. 3, pp. 555–559, June 2004. [17] L. Pei, R. Chen, J. Liu, H. Kuusniemi, T. Tenhunen, and Y. Chen, “Using inquiry-based Bluetooth rssi probability distributions for indoor positioning,” Journal of Global Positioning Systems, vol.&nbsp;9, no. 2, pp.&nbsp;122–130, 2010. [18] F. Subhan, H. Hasbullah, A. Rozyyev, and S. Bakhsh, “Indoor positioning in Bluetooth networks using ﬁngerprinting and lat- eration approach,” in Information Science and Applications (ICISA), 2011 International Conference on. IEEE, 2011, pp.&nbsp;1–9. [19] K. Chintalapudi, A. Padmanabha Iyer, and V. Padmanabhan, “In- door localization without the pain,” in Proceedings of the sixteenth annual international conference on Mobile computing and networking. ACM, 2010, pp.&nbsp;173–184. [20] C. di Flora, M. Ficco, S. Russo, and V. Vecchio, “Indoor and outdoor location based services for portable wireless devices,” in Distributed Computing Systems Workshops, 2005. 25th IEEE Inter- national Conference on, June 2005, pp.&nbsp;244–250. [21] J. Figueiras and S. Frattasi, “Mobile positioning and tracking,” Wiley Online Library, Tech. Rep., 2010. [22] A. Kotanen, M. Hannikainen, H. Leppakoski, and T. Hamalainen, “Experiments on local positioning with Bluetooth,” in ITCC 2003: Information Technology: Coding and Computing, april 2003, pp.&nbsp;297– 303.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="pagination-link" aria-label="Bluetooth to EgoID Mapping">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Metadata and Mappings/CodeBook(netsense_entry_recoded_12_5).html" class="pagination-link" aria-label="CodeBook(netsense_entry_recoded_12_5)">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

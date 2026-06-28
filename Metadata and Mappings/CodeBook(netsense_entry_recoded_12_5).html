@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>10&nbsp; CodeBook(netsense_entry_recoded_12_5) – NetSense Study Codebook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Metadata and Mappings/Codebook for arcWeeklyTableCombined.html" rel="next">
+<link href="../Metadata and Mappings/BluetoothProximity.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-fee066a00baa590e8925199ba1c8ceb4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Metadata and Mappings/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Metadata and Mappings/CodeBook(netsense_entry_recoded_12_5).html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">NetSense Study Codebook</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Survey &amp; Network Datasets</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../surveys.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Demographic &amp; Behavioral Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Social Network Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../proximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bluetooth Proximity Logs</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Searchable Catalogs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../catalog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Searchable Variable Catalog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../citation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Metadata and Mappings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/07275-Codebook.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT-variable-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BluetoothProximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/CodeBook(netsense_entry_recoded_12_5).html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Codebook for arcWeeklyTableCombined.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Files Overview 7_30_14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Files Overview 7_30_14.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Structures and Variables for NetSense.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data Structures and Variables for NetSense.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Dorm Distances.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/DormValueLabels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/EdgleListRenumberCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Edge List Renumbered Codebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Ego and Alter Coding Conventions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Ego and Alter Coding Conventions.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/IAmSomeoneIndices(extraversion).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">I Am Someone Indices (Extraversion)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Interesting_data.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Interesting_data.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/ND-academic-calendar-2011_2012.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ND Academic Calendar 2011-2012</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/PolQuizzesCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/QuizDataCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Semester Dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/personality-inventory-coding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Personality Inventory Coding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Network Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2011Net(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Summer2011Net(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Spring2012Net(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Spring2012Net(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2012Net(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Summer2012Net(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Fall2012Net(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Winter2013Net(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2013Net(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Demographic Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2011Demog(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Summer2011Demog(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Spring2012Demog(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spring2012Demog(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2012Demog(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Summer2012Demog(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Fall2012Demog(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fall2012Demog(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Winter2013Demog(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Winter2013Demog(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Network Surveys/Summer2013Demog(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Summer2013Demog(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Metadata and Mappings/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Metadata and Mappings/CodeBook(netsense_entry_recoded_12_5).html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Wednesday, February 29, 2012 11:24 AM Page 1 User: David Hachen<br>
+name: <unnamed> log: /Users/dhachen/data/CodeBook.smcl log type: smcl opened on: 29 Feb 2012, 11:21:28 1 . codebook completed<br>
+type: string (str15) unique values: 191 missing ““: 4/202 examples:”8/15/2011 17:19” “8/15/2011 23:19” “8/16/2011 22:57” “8/19/2011 1:09” warning: variable has embedded blanks lastpageseen<br>
+type: numeric (byte) range: [2,80] units: 1 unique values: 5 missing .: 0/202 tabulation: Freq. Value 1 2 1 4 1 24 1 53 198 80 startlanguage<br>
+type: string (str2) unique values: 1 missing ““: 0/202 tabulation: Freq. Value 202”en” namenetid1</unnamed></p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 2 User: David Hachen<br>
+type: string (str11) unique values: 154 missing ““: 0/202 examples:”Cecilia” “Jana” “Marissa” “Quinn” warning: variable has embedded blanks namenetid2<br>
+type: string (str15) unique values: 197 missing ““: 0/202 examples:”Dudley” “Kennelly” “Negash” “Spear” warning: variable has embedded blanks namenetid3<br>
+type: string (str15) unique values: 202 missing ““: 0/202 examples:”abacye” “cshort1” “khough1” “nbranch” dropped<br>
+type: numeric (byte) range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Value 195 0 7 1 netid</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 3 User: David Hachen<br>
+type: string (str8) unique values: 201 missing ““: 0/202 examples:”cchval” “iamegash” “mburbank” “pkuczyns” phonenumber<br>
+type: string (str10) unique values: 196 missing ““: 0/202 examples:”5743671740” “5743671902” “5745403657” “5745407544” studyid Id (Mapped type: string (str4) unique values: 195 missing ““: 0/202 examples:”127” “163” “23” “6” age<br>
+type: numeric (byte) range: [17,19] units: 1 unique values: 3 missing .: 0/202 tabulation: Freq. Value 3 17 138 18 61 19 hometown</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 4 User: David Hachen<br>
+type: numeric (float) range: [1,6] units: 1 unique values: 4 missing .: 9/202 tabulation: Freq. Value 1 1 13 4 65 5 114 6 9 . ethnicity<br>
+type: numeric (long) label: ethnicity1 range: [1,8] units: 1 unique values: 8 missing .: 0/202 tabulation: Freq. Numeric Label 13 1 African American/Black 2 2 American Indian/Alaska Native 25 3 Asian American/Asian 12 4 Mexican American/Chicano 5 5 Other 7 6 Other Latino 1 7 Puerto Rican 137 8 White/Caucasian gender<br>
+type: numeric (long) label: gender1 range: [1,2] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 96 1 Female 106 2 Male reshall<br>
+type: numeric (long) label: reshall</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 5 User: David Hachen<br>
+range: [1,29] units: 1 unique values: 29 missing .: 0/202 examples: 6 Dillion 11 Keenan 19 Pangborn 23 Siegfried smrtphone Type of smar type: numeric (long) label: smrtphone range: [1,6] units: 1 unique values: 6 missing .: 0/202 tabulation: Freq. Numeric Label 25 1 Android 9 2 RIM Blackberry 1 3 Windows Mobile 20 4 iPhone 137 5 no smartphone 10 6 other cellprovider Cell phone pro type: numeric (long) label: cellprovider range: [1,8] units: 1 unique values: 8 missing .: 0/202 tabulation: Freq. Numeric Label 56 1 AT&amp;T Mobility 3 2 Cricket 25 3 Other 22 4 Sprint Nextel 15 5 T-Mobile 2 6 TracFone Wireless 2 7 U.S. Cellular 77 8 Verizon Wireless hstype Type of high s type: numeric (long) label: hstype range: [1,5] units: 1</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 6 User: David Hachen<br>
+unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 19 1 Private independent college-prep school 55 2 Private religious/parochial school 1 3 Public charter school 10 4 Public magnet school 115 5 Public school 2 .<br>
+hstypeother Typ type: numeric (byte) range: [.,.] units: . unique values: 0 missing .: 202/202 tabulation: Freq. Value 202 . hsgender Gender m type: numeric (long) label: hsgender range: [1,3] units: 1 unique values: 3 missing .: 1/202 tabulation: Freq. Numeric Label 178 1 A mixture of boys and girls 11 2 Same sex - female 12 3 Same sex - male 1 .<br>
+hsgrade What was your type: numeric (long) label: grade range: [1,4] units: 1 unique values: 4 missing .: 1/202 tabulation: Freq. Numeric Label 1 1 B 9 2 B+ 42 3 A-</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 7 User: David Hachen<br>
+149 4 A or A+ 1 .<br>
+apcourses1 How many AP courses type: numeric (long) label: ap range: [0,6] units: 1 unique values: 7 missing .: 8/202 tabulation: Freq. Numeric Label 11 0 Not offered at my high school 2 1 None 17 2 1-2 24 3 3-4 112 4 5-9 27 5 10-14 1 6 15 or more 8 .<br>
+apcourses2 How many AP exam type: numeric (long) label: ap range: [0,5] units: 1 unique values: 6 missing .: 9/202 tabulation: Freq. Numeric Label 8 0 Not offered at my high school 6 1 None 17 2 1-2 30 3 3-4 107 4 5-9 25 5 10-14 9 .<br>
+highestdegree What is the highest academic degree you type: numeric (long) label: highestdegree1 range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 17 1 Bachelor’s Degree</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 8 User: David Hachen<br>
+17 2 Master’s Degree 83 3 J.D. (Law) 31 4 M.D., D.O., D.D.S., or D.V.M.) 52 5 Ph.D.&nbsp;or Ed. D 2 .<br>
+major Prob type: numeric (long) label: major range: [1,40] units: 1 unique values: 40 missing .: 2/202 examples: 13 Business: Accounting 18 Business: Marketing 24 Engineering: Mechanical Engineering 30 Physical Science: Physics hswork During senior year, ho type: numeric (long) label: work range: [0,5] units: 1 unique values: 6 missing .: 2/202 tabulation: Freq. Numeric Label 97 0 None 41 1 0-4 38 2 5-10 14 3 11-15 7 4 16-20 3 5 21 or more 2 .<br>
+clubsclu01<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 139 0 No 63 1 Yes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 9 User: David Hachen<br>
+clubsclu02<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 192 0 No 10 1 Yes clubsclu03<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 196 0 No 6 1 Yes clubsclu04<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 175 0 No 27 1 Yes clubsclu05 Clubs type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 170 0 No</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 10 User: David Hachen<br>
+32 1 Yes clubsclu06 Clubs: Futur type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 201 0 No 1 1 Yes clubsclu07<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 193 0 No 9 1 Yes clubsclu08<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 150 0 No 52 1 Yes clubsclu09<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 11 User: David Hachen<br>
+tabulation: Freq. Numeric Label 161 0 No 41 1 Yes clubsclu10<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 184 0 No 18 1 Yes clubsclu11 Clubs: Co type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 117 0 No 85 1 Yes clubsclu12<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 154 0 No 48 1 Yes clubsclu13 Clubs: Che type: numeric (long) label: clubs range: [0,1] units: 1</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 12 User: David Hachen<br>
+unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 198 0 No 4 1 Yes clubsclu14 Cl type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 178 0 No 24 1 Yes clubsclu15<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 182 0 No 20 1 Yes clubsclu16 Clubs: Other type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 140 0 No 62 1 Yes clubsclu17 Clubs: type: numeric (long) label: clubs</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 13 User: David Hachen<br>
+range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 182 0 No 20 1 Yes clubsclu18<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 172 0 No 30 1 Yes clubsclu19<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 198 0 No 4 1 Yes clubsclu20<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 184 0 No 18 1 Yes clubsclu21</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 14 User: David Hachen<br>
+type: numeric (long) label: clubs range: [0,0] units: 1 unique values: 1 missing .: 0/202 tabulation: Freq. Numeric Label 202 0 No clubsclu22<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 192 0 No 10 1 Yes clubsclu23<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 169 0 No 33 1 Yes clubsclu24<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 183 0 No 19 1 Yes clubsclu25</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 15 User: David Hachen<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 177 0 No 25 1 Yes clubsclu26<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 157 0 No 45 1 Yes clubsclu27<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 185 0 No 17 1 Yes clubsclu28<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 198 0 No 4 1 Yes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 16 User: David Hachen<br>
+clubsclu29 Clu type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 150 0 No 52 1 Yes clubsclu30<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 173 0 No 29 1 Yes clubsclu31<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 54 0 No 148 1 Yes clubsclu32 Cl type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 131 0 No 71 1 Yes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 17 User: David Hachen<br>
+clubsclu33<br>
+type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 182 0 No 20 1 Yes clubsclu34 Clubs: type: numeric (long) label: clubs range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 190 0 No 12 1 Yes clubsother Clubs: type: string (str69) unique values: 50 missing ““: 151/202 examples:”” “” “” “Chess Team” warning: variable has embedded and trailing blanks relativesndrend1<br>
+type: numeric (long) label: relatives range: [0,1] units: 1 unique values: 2 missing .: 0/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 18 User: David Hachen<br>
+tabulation: Freq. Numeric Label 165 0 No 37 1 Yes relativesndrend2 Gran type: numeric (long) label: relatives range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 188 0 No 14 1 Yes relativesndrend3 Brother or type: numeric (long) label: relatives range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 175 0 No 27 1 Yes relativesndrend4 Uncle type: numeric (long) label: relatives range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 170 0 No 32 1 Yes relativesndrend5<br>
+type: numeric (long) label: relatives range: [0,1] units: 1</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 19 User: David Hachen<br>
+unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 183 0 No 19 1 Yes relativesndother<br>
+type: string (str31) unique values: 6 missing ““: 192/202 tabulation: Freq. Value 192”” 1 “Brother in Law” 1 “Great grandfather, great uncles” 2 “None” 1 “great cousins” 1 “great uncle” 4 “none” warning: variable has embedded blanks fstchoice<br>
+type: numeric (long) label: choice range: [0,1] units: 1 unique values: 2 missing .: 2/202 tabulation: Freq. Numeric Label 72 0 No 128 1 Yes 2 .<br>
+wellbeingindex1 In last two weeks: Felt cheerful type: numeric (long) label: wellbeing range: [2,6] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 2 2 Some of the time 9 3 Less than half of the time 35 4 More than half of the time</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 20 User: David Hachen<br>
+120 5 Most of the time 34 6 All of the time 2 .<br>
+wellbeingindex2 In last two weeks: Fe type: numeric (long) label: wellbeing range: [2,6] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 4 2 Some of the time 26 3 Less than half of the time 66 4 More than half of the time 78 5 Most of the time 26 6 All of the time 2 .<br>
+wellbeingindex3 In last two weeks: Felt type: numeric (long) label: wellbeing range: [1,6] units: 1 unique values: 6 missing .: 2/202 tabulation: Freq. Numeric Label 2 1 At no time 7 2 Some of the time 33 3 Less than half of the time 60 4 More than half of the time 70 5 Most of the time 28 6 All of the time 2 .<br>
+wellbeingindex4 In last two weeks: Woke up feeli type: numeric (long) label: wellbeing range: [1,6] units: 1 unique values: 6 missing .: 2/202 tabulation: Freq. Numeric Label 5 1 At no time 17 2 Some of the time</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 21 User: David Hachen<br>
+48 3 Less than half of the time 53 4 More than half of the time 57 5 Most of the time 20 6 All of the time 2 .<br>
+wellbeingindex5 In last two weeks: Daily life filled with thin type: numeric (long) label: wellbeing range: [2,6] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 6 2 Some of the time 22 3 Less than half of the time 42 4 More than half of the time 75 5 Most of the time 55 6 All of the time 2 .<br>
+iamsomeonewho1 I am someo type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 2 1 Strongly disagree 32 2 Disagree 51 3 Neither agree nor disagree 77 4 Agree 37 5 Strongly agree 3 .<br>
+iamsomeonewho2 I am someone who tends to fin type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 9 1 Strongly disagree</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 22 User: David Hachen<br>
+80 2 Disagree 62 3 Neither agree nor disagree 43 4 Agree 6 5 Strongly agree 2 .<br>
+iamsomeonewho3 I am someone who type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 8 3 Neither agree nor disagree 109 4 Agree 82 5 Strongly agree 2 .<br>
+iamsomeonewho4 I am someone who type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 4/202 tabulation: Freq. Numeric Label 60 1 Strongly disagree 104 2 Disagree 24 3 Neither agree nor disagree 9 4 Agree 1 5 Strongly agree 4 .<br>
+iamsomeonewho5 I am someone who is original, come type: numeric (long) label: iamsomeone range: [2,5] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 7 2 Disagree 47 3 Neither agree nor disagree</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 23 User: David Hachen<br>
+105 4 Agree 41 5 Strongly agree 2 .<br>
+iamsomeonewho6 I am some type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 11 1 Strongly disagree 40 2 Disagree 52 3 Neither agree nor disagree 75 4 Agree 22 5 Strongly agree 2 .<br>
+iamsomeonewho7 I am someone who is helpful and un type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 5 2 Disagree 27 3 Neither agree nor disagree 114 4 Agree 53 5 Strongly agree 2 .<br>
+iamsomeonewho8 I am someone who can b type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 4/202 tabulation: Freq. Numeric Label 16 1 Strongly disagree 68 2 Disagree 48 3 Neither agree nor disagree</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 24 User: David Hachen<br>
+58 4 Agree 8 5 Strongly agree 4 .<br>
+iamsomeonewho9 I am someone who is relaxed, type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 20 2 Disagree 47 3 Neither agree nor disagree 101 4 Agree 31 5 Strongly agree 2 .<br>
+iamsomeonewho10 I am someone who is curious about ma type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 2 2 Disagree 6 3 Neither agree nor disagree 94 4 Agree 97 5 Strongly agree 2 .<br>
+iamsomeonewho11 I am someone wh type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 2 1 Strongly disagree 13 2 Disagree 45 3 Neither agree nor disagree</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 25 User: David Hachen<br>
+95 4 Agree 45 5 Strongly agree 2 .<br>
+iamsomeonewho12 I am someone who starts q type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 76 1 Strongly disagree 70 2 Disagree 41 3 Neither agree nor disagree 11 4 Agree 1 5 Strongly agree 3 .<br>
+iamsomeonewho13 I am someone who i type: numeric (long) label: iamsomeone range: [3,5] units: 1 unique values: 3 missing .: 2/202 tabulation: Freq. Numeric Label 6 3 Neither agree nor disagree 85 4 Agree 109 5 Strongly agree 2 .<br>
+iamsomeonewho14 I am someo type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 7 1 Strongly disagree 36 2 Disagree 61 3 Neither agree nor disagree 81 4 Agree 14 5 Strongly agree</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 26 User: David Hachen<br>
+3 .<br>
+iamsomeonewho15 I am someone who is ingeni type: numeric (long) label: iamsomeone range: [2,5] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 8 2 Disagree 40 3 Neither agree nor disagree 104 4 Agree 47 5 Strongly agree 3 .<br>
+iamsomeonewho16 I am someone who generates type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 2 1 Strongly disagree 21 2 Disagree 65 3 Neither agree nor disagree 75 4 Agree 37 5 Strongly agree 2 .<br>
+iamsomeonewho17 I am someone who has type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 16 2 Disagree 28 3 Neither agree nor disagree 103 4 Agree 52 5 Strongly agree 2 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 27 User: David Hachen<br>
+iamsomeonewho18 I am someone who tends type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 27 1 Strongly disagree 65 2 Disagree 47 3 Neither agree nor disagree 50 4 Agree 10 5 Strongly agree 3 .<br>
+iamsomeonewho19 I am someo type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 14 1 Strongly disagree 63 2 Disagree 48 3 Neither agree nor disagree 54 4 Agree 20 5 Strongly agree 3 .<br>
+iamsomeonewho20 I am someone whohas an type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 11 2 Disagree 49 3 Neither agree nor disagree 90 4 Agree 49 5 Strongly agree 2 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 28 User: David Hachen<br>
+iamsomeonewho21 I am someone wh type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 4/202 tabulation: Freq. Numeric Label 20 1 Strongly disagree 42 2 Disagree 49 3 Neither agree nor disagree 71 4 Agree 16 5 Strongly agree 4 .<br>
+iamsomeonewho22 I am someone who is type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 12 2 Disagree 20 3 Neither agree nor disagree 104 4 Agree 63 5 Strongly agree 2 .<br>
+iamsomeonewho23 I am someone w type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 28 1 Strongly disagree 68 2 Disagree 64 3 Neither agree nor disagree 33 4 Agree 6 5 Strongly agree 3 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 29 User: David Hachen<br>
+iamsomeonewho24 I am someone who is emotionally stabl type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 2 1 Strongly disagree 14 2 Disagree 42 3 Neither agree nor disagree 99 4 Agree 43 5 Strongly agree 2 .<br>
+iamsomeonewho25 I am someo type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 15 2 Disagree 73 3 Neither agree nor disagree 83 4 Agree 27 5 Strongly agree 3 .<br>
+iamsomeonewho26 I am someone who has an as type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 6 1 Strongly disagree 34 2 Disagree 47 3 Neither agree nor disagree 72 4 Agree 41 5 Strongly agree 2 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 30 User: David Hachen<br>
+iamsomeonewho27 I am someone who ca type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 22 1 Strongly disagree 98 2 Disagree 39 3 Neither agree nor disagree 39 4 Agree 2 5 Strongly agree 2 .<br>
+iamsomeonewho28 I am someone who perseveres until t type: numeric (long) label: iamsomeone range: [2,5] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 3 2 Disagree 26 3 Neither agree nor disagree 109 4 Agree 62 5 Strongly agree 2 .<br>
+iamsomeonewho29 I am someo type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 12 1 Strongly disagree 58 2 Disagree 52 3 Neither agree nor disagree 67 4 Agree 11 5 Strongly agree 2 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 31 User: David Hachen<br>
+iamsomeonewho30 I am someone who values artistic, ae type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 7 1 Strongly disagree 24 2 Disagree 37 3 Neither agree nor disagree 83 4 Agree 49 5 Strongly agree 2 .<br>
+iamsomeonewho31 I am someone who is somet type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 15 1 Strongly disagree 38 2 Disagree 37 3 Neither agree nor disagree 98 4 Agree 12 5 Strongly agree 2 .<br>
+iamsomeonewho32 I am someone who is considerate and kind type: numeric (long) label: iamsomeone range: [2,5] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 4 2 Disagree 21 3 Neither agree nor disagree 103 4 Agree 72 5 Strongly agree 2 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 32 User: David Hachen<br>
+iamsomeonewho33 I am someone who does type: numeric (long) label: iamsomeone range: [2,5] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 3 2 Disagree 17 3 Neither agree nor disagree 122 4 Agree 58 5 Strongly agree 2 .<br>
+iamsomeonewho34 I am someone who remains calm type: numeric (long) label: iamsomeone range: [2,5] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 17 2 Disagree 42 3 Neither agree nor disagree 98 4 Agree 43 5 Strongly agree 2 .<br>
+iamsomeonewho35 I am someone who Prefers w type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 9 1 Strongly disagree 42 2 Disagree 76 3 Neither agree nor disagree 50 4 Agree 23 5 Strongly agree 2 .<br>
+iamsomeonewho36 I am someone who is</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 33 User: David Hachen<br>
+type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 2 1 Strongly disagree 20 2 Disagree 55 3 Neither agree nor disagree 83 4 Agree 40 5 Strongly agree 2 .<br>
+iamsomeonewho37 I am someone who is somet type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 25 1 Strongly disagree 92 2 Disagree 44 3 Neither agree nor disagree 37 4 Agree 1 5 Strongly agree 3 .<br>
+iamsomeonewho38 I am someone who makes plans and follow type: numeric (long) label: iamsomeone range: [2,5] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 8 2 Disagree 39 3 Neither agree nor disagree 120 4 Agree 33 5 Strongly agree 2 .<br>
+iamsomeonewho39 I am someone who</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 34 User: David Hachen<br>
+type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 10 1 Strongly disagree 58 2 Disagree 52 3 Neither agree nor disagree 70 4 Agree 10 5 Strongly agree 2 .<br>
+iamsomeonewho40 I am someone who likes to refle type: numeric (long) label: iamsomeone range: [2,5] units: 1 unique values: 4 missing .: 5/202 tabulation: Freq. Numeric Label 10 2 Disagree 37 3 Neither agree nor disagree 94 4 Agree 56 5 Strongly agree 5 .<br>
+iamsomeonewho41 I am someone who has few type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 28 1 Strongly disagree 51 2 Disagree 53 3 Neither agree nor disagree 54 4 Agree 14 5 Strongly agree 2 .<br>
+iamsomeonewho42 I am someone who likes to co type: numeric (long)</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 35 User: David Hachen<br>
+label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Strongly disagree 9 2 Disagree 29 3 Neither agree nor disagree 123 4 Agree 38 5 Strongly agree 2 .<br>
+iamsomeonewho43 I am someone who i type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 14 1 Strongly disagree 64 2 Disagree 58 3 Neither agree nor disagree 51 4 Agree 13 5 Strongly agree 2 .<br>
+iamsomeonewho44 I am someone who is sophisticated in art, m type: numeric (long) label: iamsomeone range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 13 1 Strongly disagree 48 2 Disagree 40 3 Neither agree nor disagree 62 4 Agree 37 5 Strongly agree 2 .<br>
+happy<br>
+type: numeric (long)</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 36 User: David Hachen<br>
+label: happy1 range: [0,4] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 3 0 Not sure 8 1 Not so happy 105 2 Pretty happy 32 3 Happy 52 4 Very happy 2 .<br>
+health<br>
+type: numeric (long) label: health range: [1,4] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 1 1 Poor 12 2 Fair 82 3 Good 105 4 Excellent 2 .<br>
+weight<br>
+type: numeric (float) range: [95,255] units: .01 unique values: 60 missing .: 2/202 mean: 151.966 std. dev: 29.2291 percentiles: 10% 25% 50% 75% 90% 115 130 150 170 190 height1<br>
+type: string (str4) unique values: 8 missing ““: 3/202 tabulation: Freq. Value</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 37 User: David Hachen<br>
+3 “” 1 “3” 1 “4” 151 “5” 1 “5’” 1 “5.3” 1 “5.31” 1 “5.8” 42 “6” height2 Height i type: string (str6) unique values: 30 missing ““: 2/202 examples:”10” “2” “5” “7” warning: variable has embedded blanks eyeglasses D type: numeric (long) label: glasses1 range: [0,1] units: 1 unique values: 2 missing .: 2/202 tabulation: Freq. Numeric Label 105 0 No 95 1 Yes 2 .<br>
+contactlens Do you w type: numeric (long) label: glasses1 range: [0,1] units: 1 unique values: 2 missing .: 2/202 tabulation: Freq. Numeric Label 122 0 No 78 1 Yes 2 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 38 User: David Hachen<br>
+disabilityphysical Do you have a p type: numeric (long) label: glasses1 range: [0,0] units: 1 unique values: 1 missing .: 3/202 tabulation: Freq. Numeric Label 199 0 No 3 .<br>
+disabilitylearning Do you have a l type: numeric (long) label: glasses1 range: [0,1] units: 1 unique values: 2 missing .: 3/202 tabulation: Freq. Numeric Label 197 0 No 2 1 Yes 3 .<br>
+activitypastyear1 Past year: Attended type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 20 1 Not at all 31 2 Less than 1-2 times a month 23 3 1-2 times a month 123 4 1-2 times a week 3 5 Everyday or almost everyday 2 .<br>
+activitypastyear2 Past year: Demon type: numeric (long) label: activity</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 39 User: David Hachen<br>
+range: [1,4] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 94 1 Not at all 73 2 Less than 1-2 times a month 20 3 1-2 times a month 13 4 1-2 times a week 2 .<br>
+activitypastyear3 Past year: type: numeric (long) label: activity range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 183 1 Not at all 12 2 Less than 1-2 times a month 3 3 1-2 times a month 1 4 1-2 times a week 3 .<br>
+activitypastyear4 Pa type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 116 1 Not at all 50 2 Less than 1-2 times a month 19 3 1-2 times a month 12 4 1-2 times a week 3 5 Everyday or almost everyday 2 .<br>
+activitypastyear5 Past year: D type: numeric (long) label: activity range: [1,5] units: 1</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 40 User: David Hachen<br>
+unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 102 1 Not at all 57 2 Less than 1-2 times a month 26 3 1-2 times a month 12 4 1-2 times a week 2 5 Everyday or almost everyday 3 .<br>
+activitypastyear6 P type: numeric (long) label: activity range: [2,5] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 11 2 Less than 1-2 times a month 26 3 1-2 times a month 58 4 1-2 times a week 104 5 Everyday or almost everyday 3 .<br>
+activitypastyear7 Past year: Felt overwhelmed type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 14 1 Not at all 33 2 Less than 1-2 times a month 77 3 1-2 times a month 57 4 1-2 times a week 18 5 Everyday or almost everyday 3 .<br>
+activitypastyear8 Past y type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 2/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 41 User: David Hachen<br>
+tabulation: Freq. Numeric Label 67 1 Not at all 76 2 Less than 1-2 times a month 39 3 1-2 times a month 15 4 1-2 times a week 3 5 Everyday or almost everyday 2 .<br>
+activitypastyear9 Past year: Perfo type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 4 1 Not at all 39 2 Less than 1-2 times a month 99 3 1-2 times a month 53 4 1-2 times a week 5 5 Everyday or almost everyday 2 .<br>
+activitypastyear10 Past year: Socialized with someone of another type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 2/202 tabulation: Freq. Numeric Label 2 1 Not at all 12 2 Less than 1-2 times a month 29 3 1-2 times a month 47 4 1-2 times a week 110 5 Everyday or almost everyday 2 .<br>
+activitypastyear11 Past year: type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 2/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 42 User: David Hachen<br>
+tabulation: Freq. Numeric Label 8 1 Not at all 33 2 Less than 1-2 times a month 73 3 1-2 times a month 61 4 1-2 times a week 25 5 Everyday or almost everyday 2 .<br>
+activitypastyear12 Past year: type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 13 1 Not at all 39 2 Less than 1-2 times a month 54 3 1-2 times a month 59 4 1-2 times a week 34 5 Everyday or almost everyday 3 .<br>
+activitypastyear13 Past year: Worked on type: numeric (long) label: activity range: [1,4] units: 1 unique values: 4 missing .: 2/202 tabulation: Freq. Numeric Label 183 1 Not at all 8 2 Less than 1-2 times a month 6 3 1-2 times a month 3 4 1-2 times a week 2 .<br>
+activitypastyear14 Past year: Publically communicated by op type: numeric (long) label: activity range: [1,5] units: 1 unique values: 5 missing .: 2/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 43 User: David Hachen<br>
+tabulation: Freq. Numeric Label 103 1 Not at all 46 2 Less than 1-2 times a month 24 3 1-2 times a month 17 4 1-2 times a week 10 5 Everyday or almost everyday 2 .<br>
+highschoolactivitya HS hours/wk type: numeric (long) label: hsact range: [2,8] units: 1 unique values: 7 missing .: 2/202 tabulation: Freq. Numeric Label 3 2 Less than an hour 16 3 1-2 Hours 32 4 3-5 Hours 50 5 6-10 Hours 50 6 11-15 24 7 16-20 25 8 Over 20 Hours 2 .<br>
+highschoolactivityb HS hours/wk: socia type: numeric (long) label: hsact range: [2,8] units: 1 unique values: 7 missing .: 3/202 tabulation: Freq. Numeric Label 1 2 Less than an hour 12 3 1-2 Hours 58 4 3-5 Hours 62 5 6-10 Hours 37 6 11-15 14 7 16-20 15 8 Over 20 Hours 3 .<br>
+highschoolactivityc HS hours/wk: type: numeric (long) label: hsact</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 44 User: David Hachen<br>
+range: [1,8] units: 1 unique values: 8 missing .: 3/202 tabulation: Freq. Numeric Label 2 1 None 14 2 Less than an hour 27 3 1-2 Hours 40 4 3-5 Hours 42 5 6-10 Hours 41 6 11-15 17 7 16-20 16 8 Over 20 Hours 3 .<br>
+highschoolactivityd HS type: numeric (long) label: hsact range: [1,6] units: 1 unique values: 6 missing .: 2/202 tabulation: Freq. Numeric Label 97 1 None 45 2 Less than an hour 28 3 1-2 Hours 16 4 3-5 Hours 10 5 6-10 Hours 4 6 11-15 2 .<br>
+highschoolactivitye HS hours/ type: numeric (long) label: hsact range: [1,8] units: 1 unique values: 8 missing .: 3/202 tabulation: Freq. Numeric Label 99 1 None 5 2 Less than an hour 24 3 1-2 Hours 26 4 3-5 Hours 22 5 6-10 Hours 13 6 11-15 7 7 16-20 3 8 Over 20 Hours 3 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 45 User: David Hachen<br>
+highschoolactivityf HS hours type: numeric (long) label: hsact range: [1,6] units: 1 unique values: 6 missing .: 4/202 tabulation: Freq. Numeric Label 12 1 None 40 2 Less than an hour 93 3 1-2 Hours 35 4 3-5 Hours 14 5 6-10 Hours 4 6 11-15 4 .<br>
+highschoolactivityg HS hours/wk: S type: numeric (long) label: hsact range: [1,8] units: 1 unique values: 8 missing .: 2/202 tabulation: Freq. Numeric Label 8 1 None 14 2 Less than an hour 73 3 1-2 Hours 57 4 3-5 Hours 28 5 6-10 Hours 14 6 11-15 3 7 16-20 3 8 Over 20 Hours 2 .<br>
+highschoolactivityh HS hours/wk: wa type: numeric (long) label: hsact range: [1,8] units: 1 unique values: 8 missing .: 2/202 tabulation: Freq. Numeric Label 20 1 None 23 2 Less than an hour</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 46 User: David Hachen<br>
+65 3 1-2 Hours 55 4 3-5 Hours 28 5 6-10 Hours 6 6 11-15 2 7 16-20 1 8 Over 20 Hours 2 .<br>
+highschoolactivityi HS hours/wk: type: numeric (long) label: hsact range: [1,8] units: 1 unique values: 8 missing .: 2/202 tabulation: Freq. Numeric Label 5 1 None 24 2 Less than an hour 49 3 1-2 Hours 53 4 3-5 Hours 41 5 6-10 Hours 12 6 11-15 8 7 16-20 8 8 Over 20 Hours 2 .<br>
+highschoolactivityj HS hours/wk: Househo type: numeric (long) label: hsact range: [1,8] units: 1 unique values: 8 missing .: 2/202 tabulation: Freq. Numeric Label 28 1 None 41 2 Less than an hour 75 3 1-2 Hours 40 4 3-5 Hours 10 5 6-10 Hours 2 6 11-15 2 7 16-20 2 8 Over 20 Hours 2 .<br>
+highschoolactivityk HS hours/wk: R</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 47 User: David Hachen<br>
+type: numeric (long) label: hsact range: [1,8] units: 1 unique values: 8 missing .: 2/202 tabulation: Freq. Numeric Label 32 1 None 50 2 Less than an hour 59 3 1-2 Hours 33 4 3-5 Hours 18 5 6-10 Hours 4 6 11-15 1 7 16-20 3 8 Over 20 Hours 2 .<br>
+highschoolactivityl HS hours/wk: Playing single player v type: numeric (long) label: hsact range: [1,8] units: 1 unique values: 7 missing .: 2/202 tabulation: Freq. Numeric Label 102 1 None 42 2 Less than an hour 26 3 1-2 Hours 22 4 3-5 Hours 1 5 6-10 Hours 5 6 11-15 2 8 Over 20 Hours 2 .<br>
+highschoolactivitym HS hours/wk: Playing multiplayer v type: numeric (long) label: hsact range: [1,7] units: 1 unique values: 7 missing .: 2/202 tabulation: Freq. Numeric Label 112 1 None 41 2 Less than an hour 23 3 1-2 Hours 17 4 3-5 Hours 3 5 6-10 Hours 2 6 11-15</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 48 User: David Hachen<br>
+2 7 16-20 2 .<br>
+highschoolactivityn HS hours/wk: Onli type: numeric (long) label: hsact range: [1,8] units: 1 unique values: 8 missing .: 2/202 tabulation: Freq. Numeric Label 4 1 None 10 2 Less than an hour 58 3 1-2 Hours 63 4 3-5 Hours 45 5 6-10 Hours 11 6 11-15 4 7 16-20 5 8 Over 20 Hours 2 .<br>
+importance1 Importance: Becoming accomplished type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 107 1 Not important 49 2 Somewhat important 29 3 Very Important 14 4 Essential 3 .<br>
+importance2 Importance: Becoming an aut type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 8 1 Not important 59 2 Somewhat important</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 49 User: David Hachen<br>
+83 3 Very Important 49 4 Essential 3 .<br>
+importance3 Importance: Obtaining recognition from colleague type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 8 1 Not important 66 2 Somewhat important 75 3 Very Important 50 4 Essential 3 .<br>
+importance4 Importance: Influencing the type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 67 1 Not important 81 2 Somewhat important 30 3 Very Important 21 4 Essential 3 .<br>
+importance5 Importance: Influe type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 23 1 Not important 64 2 Somewhat important 74 3 Very Important 38 4 Essential 3 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 50 User: David Hachen<br>
+importance6 Importanc type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 8 1 Not important 22 2 Somewhat important 55 3 Very Important 114 4 Essential 3 .<br>
+importance7 Importance: Being very type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 9 1 Not important 53 2 Somewhat important 71 3 Very Important 66 4 Essential 3 .<br>
+importance8 Importance: Helping promote understan type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 4/202 tabulation: Freq. Numeric Label 21 1 Not important 66 2 Somewhat important 68 3 Very Important 43 4 Essential 4 .<br>
+importance9 Importance: Making a theoretical cont</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 51 User: David Hachen<br>
+type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 76 1 Not important 65 2 Somewhat important 33 3 Very Important 25 4 Essential 3 .<br>
+importance10 Importance: Wri type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 112 1 Not important 46 2 Somewhat important 31 3 Very Important 10 4 Essential 3 .<br>
+importance11 Importance: Crea type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 141 1 Not important 33 2 Somewhat important 13 3 Very Important 12 4 Essential 3 .<br>
+importance12 Importance: Becoming involved in programs to c type: numeric (long)</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 52 User: David Hachen<br>
+label: importance range: [1,4] units: 1 unique values: 4 missing .: 4/202 tabulation: Freq. Numeric Label 50 1 Not important 81 2 Somewhat important 48 3 Very Important 19 4 Essential 4 .<br>
+importance13 Importance: Keeping up to date wit type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 5/202 tabulation: Freq. Numeric Label 21 1 Not important 69 2 Somewhat important 69 3 Very Important 38 4 Essential 5 .<br>
+importance14 Importance: Becoming type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 5/202 tabulation: Freq. Numeric Label 24 1 Not important 68 2 Somewhat important 69 3 Very Important 36 4 Essential 5 .<br>
+importance15 Importance: Improving my understanding of ot type: numeric (long) label: importance range: [1,4] units: 1</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 53 User: David Hachen<br>
+unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 7 1 Not important 58 2 Somewhat important 75 3 Very Important 59 4 Essential 3 .<br>
+importance16 Importance: Adopting green practices to type: numeric (long) label: importance range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 35 1 Not important 62 2 Somewhat important 63 3 Very Important 39 4 Essential 3 .<br>
+guesschance1 Chance you will: type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 7 1 No Chance 68 2 Very little chance 90 3 Some Chance 34 4 Very good chance 3 .<br>
+guesschance2 Chance you will: C type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 54 User: David Hachen<br>
+10 1 No Chance 46 2 Very little chance 95 3 Some Chance 48 4 Very good chance 3 .<br>
+guesschance3 Chance you will: Participate in type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 19 1 No Chance 66 2 Very little chance 89 3 Some Chance 25 4 Very good chance 3 .<br>
+guesschance4 Chance you will: Get a job to help p type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 7 1 No Chance 17 2 Very little chance 41 3 Some Chance 134 4 Very good chance 3 .<br>
+guesschance5 Chance you will: Play club, intramural, or type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 4/202 tabulation: Freq. Numeric Label 9 1 No Chance 23 2 Very little chance 46 3 Some Chance</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 55 User: David Hachen<br>
+120 4 Very good chance 4 .<br>
+guesschance6 Chance you will: Play interc type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 4/202 tabulation: Freq. Numeric Label 106 1 No Chance 61 2 Very little chance 17 3 Some Chance 14 4 Very good chance 4 .<br>
+guesschance7 Chance you will: Participate in student protest type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 5/202 tabulation: Freq. Numeric Label 26 1 No Chance 89 2 Very little chance 70 3 Some Chance 12 4 Very good chance 5 .<br>
+guesschance8 Chance you will: Transfer to another colleg type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 4/202 tabulation: Freq. Numeric Label 101 1 No Chance 83 2 Very little chance 13 3 Some Chance 1 4 Very good chance 4 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 56 User: David Hachen<br>
+guesschance9 Chance you will: Participat type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 4/202 tabulation: Freq. Numeric Label 1 1 No Chance 10 2 Very little chance 55 3 Some Chance 132 4 Very good chance 4 .<br>
+guesschance10 Chance you will: Seek type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 24 1 No Chance 114 2 Very little chance 48 3 Some Chance 13 4 Very good chance 3 .<br>
+guesschance11 Chance you will: Socialize with someone of another type: numeric (long) label: guess range: [2,4] units: 1 unique values: 3 missing .: 3/202 tabulation: Freq. Numeric Label 4 2 Very little chance 21 3 Some Chance 174 4 Very good chance 3 .<br>
+guesschance12 Chance you will: Participate in st</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 57 User: David Hachen<br>
+type: numeric (long) label: guess range: [2,4] units: 1 unique values: 3 missing .: 3/202 tabulation: Freq. Numeric Label 5 2 Very little chance 39 3 Some Chance 155 4 Very good chance 3 .<br>
+guesschance13 Chance you will: Participate in s type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 1 1 No Chance 18 2 Very little chance 66 3 Some Chance 114 4 Very good chance 3 .<br>
+guesschance14 Chance you will: Work on a professo type: numeric (long) label: guess range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 1 1 No Chance 25 2 Very little chance 98 3 Some Chance 75 4 Very good chance 3 .<br>
+political<br>
+type: numeric (long) label: polit range: [0,7] units: 1</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 58 User: David Hachen<br>
+unique values: 8 missing .: 3/202 tabulation: Freq. Numeric Label 11 0 Not sure 2 1 Extremely liberal 21 2 Liberal 29 3 Slightly liberal 37 4 Moderate 47 5 Slightly conservative 46 6 Conservative 6 7 Extremely conservative 3 .<br>
+deathpen Do you favor or oppose the death penalty for persons con type: numeric (long) label: deathpen range: [1,3] units: 1 unique values: 3 missing .: 3/202 tabulation: Freq. Numeric Label 41 1 Favor 56 2 Not sure 102 3 Oppose 3 .<br>
+marijuana Do you think the use of marijuana should be m type: numeric (long) label: marijuanal range: [1,3] units: 1 unique values: 3 missing .: 3/202 tabulation: Freq. Numeric Label 63 1 Legal 35 2 Not Sure 101 3 Not Legal 3 .<br>
+abortion Which agrees with type: numeric (long) label: abort range: [1,5] units: 1 unique values: 5 missing .: 3/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 59 User: David Hachen<br>
+tabulation: Freq. Numeric Label 71 1 By law, abortion should never be permitted 52 2 Law should permit only in rape, incest, or woman’s life in danger 31 3 Law should permited in other cases, but only after need is established 35 4 By law, should always be able to obtain abortion 10 5 Not sure 3 .<br>
+homosexual Thoughts about consensual sexual relations between 2 adul type: numeric (long) label: homopre range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 63 1 Always wrong 13 2 Almost always wrong 20 3 Sometimes wrong 80 4 Not wrong at all 23 5 Not sure 3 .<br>
+gaymarriage Do you agree homosexual couples ha type: numeric (long) label: gaymar range: [0,5] units: 1 unique values: 6 missing .: 3/202 tabulation: Freq. Numeric Label 12 0 Not Sure 35 1 Strongly diisagree 26 2 Disagree 26 3 Neither agree nor disagree 40 4 Agree 60 5 Strongly agree 3 .<br>
+premaritalsex Thoughts a</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 60 User: David Hachen<br>
+type: numeric (long) label: homopre range: [1,5] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 44 1 Always wrong 30 2 Almost always wrong 66 3 Sometimes wrong 48 4 Not wrong at all 11 5 Not sure 3 .<br>
+euthanasia Should eut type: numeric (long) label: euthanasia range: [1,3] units: 1 unique values: 3 missing .: 3/202 tabulation: Freq. Numeric Label 62 1 No 39 2 Not sure 98 3 Yes 3 .<br>
+fswelfare Do you think federal speding o type: numeric (long) label: spending range: [0,3] units: 1 unique values: 4 missing .: 4/202 tabulation: Freq. Numeric Label 40 0 Not sure 82 1 Decrease 50 2 Be kept the same 26 3 Increase 4 .<br>
+fssocsec Do you think federal spending on social type: numeric (long)</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 61 User: David Hachen<br>
+label: spending range: [0,3] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 47 0 Not sure 55 1 Decrease 69 2 Be kept the same 28 3 Increase 3 .<br>
+healthins Health Insurance: Govt Insurance=1 type: numeric (long) label: healthins, but 5 nonmissing values are not labeled range: [1,7] units: 1 unique values: 7 missing .: 22/202 tabulation: Freq. Numeric Label 13 1 Govt. Insurance Plan 11 2<br>
+29 3<br>
+22 4<br>
+38 5<br>
+39 6<br>
+28 7 Private Insurance Plan 22 .<br>
+jobguar Job Guarantee: Govt. See to Job/Living=1 E type: numeric (long) label: jobguar, but 5 nonmissing values are not labeled range: [1,7] units: 1 unique values: 7 missing .: 14/202 tabulation: Freq. Numeric Label 4 1 Govt. See to Job/Living 9 2<br>
+23 3<br>
+21 4<br>
+60 5<br>
+39 6<br>
+32 7 Each Person on Own 14 .<br>
+govnservices Govt Services/Spendin</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 62 User: David Hachen<br>
+type: numeric (long) label: govnservices, but 5 nonmissing values are not labeled range: [1,7] units: 1 unique values: 7 missing .: 23/202 tabulation: Freq. Numeric Label 18 1 Cut Services/Spending 23 2<br>
+38 3<br>
+48 4<br>
+31 5<br>
+11 6<br>
+10 7 More Services/Spending 23 .<br>
+toomucheqrights We have gone too far in pushing equal rig type: numeric (long) label: likert range: [0,5] units: 1 unique values: 6 missing .: 3/202 tabulation: Freq. Numeric Label 12 0 Not Sure 37 1 Strongly diisagree 57 2 Disagree 41 3 Neither agree nor disagree 39 4 Agree 13 5 Strongly agree 3 .<br>
+eqchances One of the big problems in country is not al type: numeric (long) label: likert range: [0,5] units: 1 unique values: 6 missing .: 3/202 tabulation: Freq. Numeric Label 12 0 Not Sure 28 1 Strongly diisagree 64 2 Disagree 36 3 Neither agree nor disagree 47 4 Agree 12 5 Strongly agree</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 63 User: David Hachen<br>
+3 .<br>
+moreeqchances Not really a big problem if some ppl have more chance type: numeric (long) label: likert range: [0,5] units: 1 unique values: 6 missing .: 3/202 tabulation: Freq. Numeric Label 16 0 Not Sure 21 1 Strongly diisagree 66 2 Disagree 50 3 Neither agree nor disagree 42 4 Agree 4 5 Strongly agree 3 .<br>
+lesseq Country would be better off if we worried less abou type: numeric (long) label: likert range: [0,5] units: 1 unique values: 6 missing .: 4/202 tabulation: Freq. Numeric Label 13 0 Not Sure 18 1 Strongly diisagree 52 2 Disagree 41 3 Neither agree nor disagree 59 4 Agree 15 5 Strongly agree 4 .<br>
+racediscrim Do you favor favor preferential hiring and type: numeric (long) label: racediscrim1 range: [0,4] units: 1 unique values: 5 missing .: 3/202 tabulation: Freq. Numeric Label 20 0 Not sure 71 1 Strongly oppose 80 2 Oppose</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 64 User: David Hachen<br>
+23 3 Favor 5 4 Strongly favor 3 .<br>
+musicpref1<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 174 0 No 28 1 Yes musicpref2 L type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 187 0 No 15 1 Yes musicpref3 List type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 169 0 No 33 1 Yes musicpref4 Listen to: Broadway mus type: numeric (long) label: noyes range: [0,1] units: 1</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 65 User: David Hachen<br>
+unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 140 0 No 62 1 Yes musicpref5 Listen to: type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 164 0 No 38 1 Yes musicpref6 Listen to: Cla type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 86 0 No 116 1 Yes musicpref7 Listen to: Classic type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 148 0 No 54 1 Yes musicpref8<br>
+type: numeric (long) label: noyes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 66 User: David Hachen<br>
+range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 114 0 No 88 1 Yes musicpref9 Lis type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 102 0 No 100 1 Yes musicpref10 Listen to: type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 180 0 No 22 1 Yes musicpref11 Li type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 164 0 No 38 1 Yes musicpref12 Listen to: Hy</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 67 User: David Hachen<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 172 0 No 30 1 Yes musicpref13<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 161 0 No 41 1 Yes musicpref14 Listen to: Lati type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 170 0 No 32 1 Yes musicpref15 Listen to: Moo type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 140 0 No 62 1 Yes musicpref16 Liste</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 68 User: David Hachen<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 157 0 No 45 1 Yes musicpref17<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 188 0 No 14 1 Yes musicpref18 Listen to: O type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 188 0 No 14 1 Yes musicpref19 Listen to: Para type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 188 0 No 14 1 Yes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 69 User: David Hachen<br>
+musicpref20 Listen type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 72 0 No 130 1 Yes musicpref21<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 170 0 No 32 1 Yes musicpref22 Listen to: type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 81 0 No 121 1 Yes musicprefother Listen to: Ot type: string (str22) unique values: 22 missing ““: 160/202 examples:”” “” “” “Alternative”</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 70 User: David Hachen<br>
+warning: variable has embedded blanks culturalevents1 Cultural Event type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 15/202 tabulation: Freq. Numeric Label 148 0 No 39 1 Yes 15 .<br>
+culturalevents2 Cultural Events: type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 18/202 tabulation: Freq. Numeric Label 162 0 No 22 1 Yes 18 .<br>
+culturalevents3 Cultural Events: Classica type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 12/202 tabulation: Freq. Numeric Label 122 0 No 68 1 Yes 12 .<br>
+culturalevents4 Cul type: numeric (long) label: noyes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 71 User: David Hachen<br>
+range: [0,1] units: 1 unique values: 2 missing .: 18/202 tabulation: Freq. Numeric Label 170 0 No 14 1 Yes 18 .<br>
+culturalevents5 Cultural Events: type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 9/202 tabulation: Freq. Numeric Label 60 0 No 133 1 Yes 9 .<br>
+culturalevents6 Cultural Events: Non type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 14/202 tabulation: Freq. Numeric Label 85 0 No 103 1 Yes 14 .<br>
+culturalevents7 Cultural E type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 15/202 tabulation: Freq. Numeric Label 148 0 No 39 1 Yes 15 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 72 User: David Hachen<br>
+culturalevents8 Cultural Events: type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 11/202 tabulation: Freq. Numeric Label 77 0 No 114 1 Yes 11 .<br>
+culturalevents9 Cultural type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 12/202 tabulation: Freq. Numeric Label 80 0 No 110 1 Yes 12 .<br>
+culturalevents10 Cultural Eve type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 15/202 tabulation: Freq. Numeric Label 84 0 No 103 1 Yes 15 .<br>
+culturalevents11 Cultural Events: O type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 14/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 73 User: David Hachen<br>
+tabulation: Freq. Numeric Label 97 0 No 91 1 Yes 14 .<br>
+culturalevents12 Cultural Events: Craft type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 14/202 tabulation: Freq. Numeric Label 118 0 No 70 1 Yes 14 .<br>
+booksread Book type: numeric (int) range: [0,150] units: 1 unique values: 32 missing .: 4/202 mean: 12.1414 std. dev: 17.6158 percentiles: 10% 25% 50% 75% 90% 2 3 6.5 15 25 typebookread1 Type of b type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 94 0 No 108 1 Yes typebookread2 Type of b</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 74 User: David Hachen<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 117 0 No 85 1 Yes typebookread3 Type of type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 136 0 No 66 1 Yes typebookread4 Type of book read: Scie type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 85 0 No 117 1 Yes typebookread5 Type of book type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 89 0 No 113 1 Yes typebookread6 Type of book read: Health/Fitne</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 75 User: David Hachen<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 166 0 No 36 1 Yes typebookread7 Type of book read: type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 111 0 No 91 1 Yes typebookread8 Type of book read: type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 126 0 No 76 1 Yes typebookread9 Type of book read type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 140 0 No 62 1 Yes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 76 User: David Hachen<br>
+typebookreadother Type of book read: O type: string (str22) unique values: 10 missing ““: 192/202 examples:”” “” “” “” warning: variable has embedded blanks music How many songs are in you type: numeric (long) label: musicc range: [0,6] units: 1 unique values: 7 missing .: 3/202 tabulation: Freq. Numeric Label 5 0 None 7 1 1-99 24 2 100-499 50 3 500-999 87 4 1000-4999 21 5 5000-9999 5 6 10000 or more 3 .<br>
+landmarks1 Landmarks or place visite type: string (str55) unique values: 118 missing ““: 9/202 examples:”Eiffel Tower” “LAX Airport” “Sears Tower” “Washington D.C.” warning: variable has embedded blanks landmarks2 Landmarks or place visite</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 77 User: David Hachen<br>
+type: string (str34) unique values: 141 missing ““: 11/202 examples:”Disney Land” “L.A. Tar Pits” “Pentagon” “Times Square” warning: variable has embedded blanks landmarks3 Landmarks or place visite type: string (str29) unique values: 140 missing ““: 15/202 examples:”Chicago, IL” “LA” “Palace Museum” “The Grand Canyon” warning: variable has embedded blanks landmarks4 Landmarks or place visite type: string (str35) unique values: 143 missing ““: 20/202 examples:”Central Park” “Great Wall” “Nashville” “The Gateway Arch” warning: variable has embedded blanks landmarks5 Landmarks or place visite type: string (str37) unique values: 152 missing ““: 22/202 examples:”Chicago” “Ground Zero” “Mt. St.&nbsp;Helens” “The Acropolis”</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 78 User: David Hachen<br>
+warning: variable has embedded blanks outus Have you type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 4/202 tabulation: Freq. Numeric Label 38 0 No 160 1 Yes 4 .<br>
+whereoutus1 W type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 145 0 No 57 1 Yes whereoutus2 W type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 120 0 No 82 1 Yes whereoutus3 Wher type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 79 User: David Hachen<br>
+tabulation: Freq. Numeric Label 152 0 No 50 1 Yes whereoutus4 Where out type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 183 0 No 19 1 Yes whereoutus5 Where ou type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 193 0 No 9 1 Yes whereoutus6 W type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 119 0 No 83 1 Yes whereoutus7 Where type: numeric (long) label: noyes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 80 User: David Hachen<br>
+range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 198 0 No 4 1 Yes whereoutus8 W type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 193 0 No 9 1 Yes whereoutus9<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 176 0 No 26 1 Yes whereoutus10 Where out us: Far east type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 177 0 No 25 1 Yes whereoutus11 Where out us: Au type: numeric (long)</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 81 User: David Hachen<br>
+label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 195 0 No 7 1 Yes whereoutusother Where out us: Ot type: string (str4) unique values: 1 missing ““: 201/202 tabulation: Freq. Value 201”” 1 “Fiji” numberpets<br>
+type: numeric (byte) range: [0,28] units: 1 unique values: 18 missing .: 3/202 mean: 3.57789 std. dev: 3.89025 percentiles: 10% 25% 50% 75% 90% 0 1 3 5 8 interestitems1<br>
+type: numeric (long) label: interest range: [0,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 1 0 Not Sure 5 2 Not that much 45 3 Somewhat 148 4 Very Much 3 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 82 User: David Hachen<br>
+interestitems2<br>
+type: numeric (long) label: interest range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 1 1 Not at all 6 2 Not that much 51 3 Somewhat 141 4 Very Much 3 .<br>
+interestitems3<br>
+type: numeric (long) label: interest range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 2 1 Not at all 20 2 Not that much 71 3 Somewhat 106 4 Very Much 3 .<br>
+interestitems4 Enjoy doin type: numeric (long) label: interest range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 30 1 Not at all 38 2 Not that much 49 3 Somewhat 82 4 Very Much 3 .<br>
+interestitems5 Enjoy d</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 83 User: David Hachen<br>
+type: numeric (long) label: interest range: [1,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 7 1 Not at all 21 2 Not that much 73 3 Somewhat 98 4 Very Much 3 .<br>
+interestitems6 Enjoy doing: type: numeric (long) label: interest range: [0,4] units: 1 unique values: 4 missing .: 3/202 tabulation: Freq. Numeric Label 1 0 Not Sure 16 2 Not that much 75 3 Somewhat 107 4 Very Much 3 .<br>
+cellular Do y type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 5/202 tabulation: Freq. Numeric Label 3 0 No 194 1 Yes 5 .<br>
+maker Maker of type: string (str13) unique values: 13 missing ““: 8/202 examples:”HTC”</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 84 User: David Hachen<br>
+“LG” “Nokia” “Samsung” warning: variable has embedded blanks makerother<br>
+type: string (str19) unique values: 4 missing ““: 198/202 tabulation: Freq. Value 198”” 1 “Huawei” 1 “Kyocera” 1 “Mytouch” 1 “SKY(Korean Company)” warning: variable has embedded blanks model<br>
+type: string (str31) unique values: 121 missing ““: 8/202 examples:”Don’t Know” “EnV 2” “Motorola Droid” “TracFone, don’t know” warning: variable has embedded blanks period How long have you been us type: string (str47) unique values: 5 missing ““: 8/202 tabulation: Freq. Value 8”” 35 “Less than three months” 62 “More than a year but less than two years” 37 “More than six months but less than a year” 20 “More than three months but less than</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 85 User: David Hachen<br>
+six months” 40 “More than two years” warning: variable has embedded blanks carrier<br>
+type: string (str24) unique values: 5 missing ““: 8/202 tabulation: Freq. Value 8”” 53 “AT&amp;T (formerly Cingular)” 21 “Other” 33 “Sprint-Nextel” 16 “T-mobile” 71 “Verizon Wireless” warning: variable has embedded blanks carrierother<br>
+type: string (str16) unique values: 12 missing ““: 182/202 examples:”” “” “” “” warning: variable has embedded blanks usagedegree Degree type: numeric (byte) range: [1,10] units: 1 unique values: 10 missing .: 8/202 mean: 6.86598 std. dev: 2.16246 percentiles: 10% 25% 50% 75% 90% 3 6 7 8 10</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 86 User: David Hachen<br>
+planpurchasing1 Own or plan on purchasin type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 165 0 No 37 1 Yes planpurchasing2 Own or plan on purchasi type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 26 0 No 176 1 Yes planpurchasing3 Own or plan type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 178 0 No 24 1 Yes planpurchasing4 Own or plan on purch type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 199 0 No 3 1 Yes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 87 User: David Hachen<br>
+planpurchasing5 Own or plan on purch type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 175 0 No 27 1 Yes planpurchasing6 Own or plan on pur type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 57 0 No 145 1 Yes planpurchasing7 Own or plan on purc type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 108 0 No 94 1 Yes planpurchasing8 Own or pla type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 88 User: David Hachen<br>
+88 0 No 114 1 Yes computeruse Deg type: numeric (byte) range: [3,10] units: 1 unique values: 7 missing .: 4/202 tabulation: Freq. Value 1 3 9 5 14 6 42 7 71 8 32 9 29 10 4 . program Know any type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 4/202 tabulation: Freq. Numeric Label 176 0 No 22 1 Yes 4 .<br>
+programwhich1 Which Progra type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 188 0 No 14 1 Yes programwhich2 Which Pro</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 89 User: David Hachen<br>
+type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 200 0 No 2 1 Yes programwhich3 Which Progr type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 198 0 No 4 1 Yes programwhich4 Which Progr type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 201 0 No 1 1 Yes programwhich5 Which Programing lan type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 199 0 No 3 1 Yes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 90 User: David Hachen<br>
+programwhich6 Which Progra type: numeric (long) label: noyes range: [0,0] units: 1 unique values: 1 missing .: 0/202 tabulation: Freq. Numeric Label 202 0 No programwhich7 Which Programi type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 201 0 No 1 1 Yes programwhich8 Which Prog type: numeric (long) label: noyes range: [0,0] units: 1 unique values: 1 missing .: 0/202 tabulation: Freq. Numeric Label 202 0 No programwhich9 Which Progra type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 201 0 No 1 1 Yes</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 91 User: David Hachen<br>
+programwhich10 Which Programing l type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 198 0 No 4 1 Yes programwhich11 Which Progra type: numeric (long) label: noyes range: [0,0] units: 1 unique values: 1 missing .: 0/202 tabulation: Freq. Numeric Label 202 0 No programwhichother Which Programing language: Ot type: string (str11) unique values: 3 missing ““: 198/202 tabulation: Freq. Value 198”” 1 “Blitz Basic” 2 “HTML” 1 “Lab-View” warning: variable has embedded blanks usesocnetwork1 Social Ne type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 5 0 No</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 92 User: David Hachen<br>
+197 1 Yes usesocnetwork2 Social N type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 148 0 No 54 1 Yes usesocnetwork3 Social N type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 160 0 No 42 1 Yes usesocnetwork4 Social N type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 199 0 No 3 1 Yes usesocnetwork5 Social N type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 93 User: David Hachen<br>
+tabulation: Freq. Numeric Label 195 0 No 7 1 Yes usesocnetwork6 Social Ne type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 197 0 No 5 1 Yes usesocnetwork7 Social Net type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 200 0 No 2 1 Yes usesocnetwork8 Social type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 0/202 tabulation: Freq. Numeric Label 183 0 No 19 1 Yes usesocnetwork9 Social Network Use: Ot type: string (str12) unique values: 6 missing ““: 195/202</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 94 User: David Hachen<br>
+tabulation: Freq. Value 195 “” 1 “Foursquare” 1 “Pinterest” 2 “Skype” 1 “Stumble Upon” 1 “Stumbleupon” 1 “renren” warning: variable has embedded blanks fbprivacy Do you restrict who can see type: numeric (long) label: facebook range: [1,4] units: 1 unique values: 4 missing .: 5/202 tabulation: Freq. Numeric Label 3 1 No one can see my posts unless I say otherwise 18 2 Only some of my friends can see my posts 165 3 All my friends can see my posts 11 4 My posts on Facebook are public 5 .<br>
+activityfun01 Cell Us type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 8/202 tabulation: Freq. Numeric Label 1 1 Cell lacks ability 11 2 Don’t use function 20 4 A few times a month 52 5 A few times a week 40 6 About once a day 63 7 A few times a day 7 8 Throughout most of the day 8 .<br>
+activityfun02 Cell</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 95 User: David Hachen<br>
+type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 9/202 tabulation: Freq. Numeric Label 2 1 Cell lacks ability 2 2 Don’t use function 3 4 A few times a month 8 5 A few times a week 5 6 About once a day 54 7 A few times a day 119 8 Throughout most of the day 9 .<br>
+activityfun03 Cell Use: Readin type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 8/202 tabulation: Freq. Numeric Label 87 1 Cell lacks ability 33 2 Don’t use function 7 4 A few times a month 7 5 A few times a week 12 6 About once a day 26 7 A few times a day 22 8 Throughout most of the day 8 .<br>
+activityfun04 Cell Use: Posting on Faceboo type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 9/202 tabulation: Freq. Numeric Label 75 1 Cell lacks ability 32 2 Don’t use function 18 4 A few times a month 17 5 A few times a week 11 6 About once a day 24 7 A few times a day 16 8 Throughout most of the day</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 96 User: David Hachen<br>
+9 .<br>
+activityfun05 Cell Use: Reading or sendin type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 8/202 tabulation: Freq. Numeric Label 79 1 Cell lacks ability 79 2 Don’t use function 4 4 A few times a month 8 5 A few times a week 3 6 About once a day 12 7 A few times a day 9 8 Throughout most of the day 8 .<br>
+activityfun06 Cell Use: Shoo type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 8/202 tabulation: Freq. Numeric Label 4 1 Cell lacks ability 43 2 Don’t use function 67 4 A few times a month 51 5 A few times a week 14 6 About once a day 10 7 A few times a day 5 8 Throughout most of the day 8 .<br>
+activityfun07 Cell type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 9/202 tabulation: Freq. Numeric Label 42 1 Cell lacks ability</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 97 User: David Hachen<br>
+94 2 Don’t use function 37 4 A few times a month 16 5 A few times a week 1 6 About once a day 1 7 A few times a day 2 8 Throughout most of the day 9 .<br>
+activityfun08 Cell Use: type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 8/202 tabulation: Freq. Numeric Label 58 1 Cell lacks ability 88 2 Don’t use function 7 4 A few times a month 11 5 A few times a week 9 6 About once a day 10 7 A few times a day 11 8 Throughout most of the day 8 .<br>
+activityfun09 Cell Use type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 8/202 tabulation: Freq. Numeric Label 102 1 Cell lacks ability 37 2 Don’t use function 9 4 A few times a month 23 5 A few times a week 11 6 About once a day 7 7 A few times a day 5 8 Throughout most of the day 8 .<br>
+activityfun10 Cell type: numeric (long) label: act</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 98 User: David Hachen<br>
+range: [1,8] units: 1 unique values: 7 missing .: 9/202 tabulation: Freq. Numeric Label 48 1 Cell lacks ability 92 2 Don’t use function 16 4 A few times a month 16 5 A few times a week 8 6 About once a day 8 7 A few times a day 5 8 Throughout most of the day 9 .<br>
+activityfun11 Cell Use: Consulting a map or type: numeric (long) label: act range: [1,8] units: 1 unique values: 7 missing .: 8/202 tabulation: Freq. Numeric Label 92 1 Cell lacks ability 42 2 Don’t use function 28 4 A few times a month 16 5 A few times a week 9 6 About once a day 5 7 A few times a day 2 8 Throughout most of the day 8 .<br>
+talk Minutes/ type: numeric (float) range: [0,1000] units: .1 unique values: 26 missing .: 8/202 mean: 29.9536 std. dev: 80.2355 percentiles: 10% 25% 50% 75% 90% 3 5 10 30 60 sendsms<br>
+type: numeric (int)</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 99 User: David Hachen<br>
+range: [0,5000] units: 1 unique values: 31 missing .: 9/202 mean: 95.7306 std. dev: 369.203 percentiles: 10% 25% 50% 75% 90% 4 15 30 100 200 receivesms Texts r type: numeric (int) range: [0,5000] units: 1 unique values: 37 missing .: 8/202 mean: 101.186 std. dev: 369.621 percentiles: 10% 25% 50% 75% 90% 5 15 40 100 200 contacts Number o type: numeric (int) range: [15,1000] units: 1 unique values: 93 missing .: 8/202 mean: 131.84 std. dev: 128.849 percentiles: 10% 25% 50% 75% 90% 30 50 96.5 172 250 engnative Is English yo type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 4/202 tabulation: Freq. Numeric Label 26 0 No 172 1 Yes 4 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 100 User: David Hachen<br>
+citizen What is your type: numeric (long) label: citizenl range: [1,3] units: 1 unique values: 3 missing .: 4/202 tabulation: Freq. Numeric Label 183 1 US Citizen 4 2 Permanent Resident (green card) 11 3 Neither 4 .<br>
+pmarriage<br>
+type: numeric (long) label: parentsmarriage range: [2,4] units: 1 unique values: 3 missing .: 5/202 tabulation: Freq. Numeric Label 2 2 One of them deceased 26 3 Alive, but divorced or living apart 169 4 Alive and living together 5 .<br>
+pincome Estimate of parents’ type: numeric (long) label: parentsincome range: [-1,14] units: 1 unique values: 15 missing .: 5/202 examples: 6 30000-39999 10 75000-99999 11 100000-149999 12 150000-199999 momed Mom’s highest type: numeric (long)</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 101 User: David Hachen<br>
+label: ed range: [-1,8] units: 1 unique values: 8 missing .: 4/202 tabulation: Freq. Numeric Label 1 -1 Not sure 5 2 Some high school 15 3 High school Graduate 5 4 Postsecondary school other than college 21 5 Some college 94 6 College Degree 6 7 Some graduate school 51 8 Graduate degree 4 .<br>
+daded Dad’s highest type: numeric (long) label: ed range: [-1,8] units: 1 unique values: 9 missing .: 4/202 tabulation: Freq. Numeric Label 3 -1 Not sure 3 1 Junior High/middle school or less 3 2 Some high school 15 3 High school Graduate 4 4 Postsecondary school other than college 21 5 Some college 56 6 College Degree 4 7 Some graduate school 89 8 Graduate degree 4 .<br>
+occupations1<br>
+type: string (str46) unique values: 30 missing ““: 4/202 examples:”Business executive (management, administrator)” “Homemaker ( full-time)” “Laborer (unskilled)” “Pharmacist”</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 102 User: David Hachen<br>
+warning: variable has embedded blanks occupations2<br>
+type: string (str46) unique values: 32 missing ““: 4/202 examples:”Business executive (management, administrator)” “College teacher” “Laborer (unskilled)” “Other” warning: variable has embedded blanks occupations3 Responde type: string (str46) unique values: 27 missing ““: 6/202 examples:”Clinical psychologist” “Engineer” “Other” “Scientific researcher” warning: variable has embedded blanks momrelig Mom’s R type: numeric (long) label: religious range: [1,23] units: 1 unique values: 16 missing .: 4/202 examples: 14 Roman Catholic 14 Roman Catholic 14 Roman Catholic 14 Roman Catholic dadrelig Dad’s R type: numeric (long) label: religious</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 103 User: David Hachen<br>
+range: [1,23] units: 1 unique values: 19 missing .: 4/202 examples: 14 Roman Catholic 14 Roman Catholic 14 Roman Catholic 17 Other Christian selfrelig Respondent’s R type: numeric (long) label: religious range: [1,23] units: 1 unique values: 14 missing .: 5/202 examples: 14 Roman Catholic 14 Roman Catholic 14 Roman Catholic 17 Other Christian military What is yo type: numeric (long) label: rotc range: [0,1] units: 1 unique values: 2 missing .: 4/202 tabulation: Freq. Numeric Label 194 0 None 4 1 ROTC, Cadet, or misdhipman at a service academy 4 .<br>
+familymilitary Fam type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 4/202 tabulation: Freq. Numeric Label 88 0 No 110 1 Yes 4 .</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 104 User: David Hachen<br>
+closemilitary Non-Family know anyone fairl type: numeric (long) label: noyes range: [0,1] units: 1 unique values: 2 missing .: 5/202 tabulation: Freq. Numeric Label 88 0 No 109 1 Yes 5 .<br>
+firstname<br>
+type: string (str14) unique values: 145 missing ““: 2/202 examples:”Carlee” “Huili” “Marco” “Paul” warning: variable has embedded blanks lastname<br>
+type: string (str15) unique values: 194 missing ““: 2/202 examples:”Denis” “Jenkins” “Moss” “Shoemake” warning: variable has embedded blanks emailaddress<br>
+type: string (str27) unique values: 199 missing ““: 2/202 examples:”cronin.46@nd.edu”</p>
+<p>Wednesday, February 29, 2012 11:24 AM Page 105 User: David Hachen<br>
+“jeffries.6@nd.edu” “moss.24@nd.edu” “shoemake.1@nd.edu” 2 . log close name: <unnamed> log: /Users/dhachen/data/CodeBook.smcl log type: smcl closed on: 29 Feb 2012, 11:23:21</unnamed></p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Metadata and Mappings/BluetoothProximity.html" class="pagination-link" aria-label="BluetoothProximity">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Metadata and Mappings/Codebook for arcWeeklyTableCombined.html" class="pagination-link" aria-label="Codebook for arcWeeklyTableCombined">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
