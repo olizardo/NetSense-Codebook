@@ -42,23 +42,56 @@
   {
     "objectID": "surveys.html",
     "href": "surveys.html",
-    "title": "1  Demographic & Behavioral Surveys",
+    "title": "1  Demographic, Behavioral, & Quiz Surveys",
     "section": "",
-    "text": "1.1 Dataset Quick Profile\nThis section describes the individual-level demographic and behavioral survey dataset. You can download the complete, de-identified longitudinal panels below:\nDownload CSV Dataset (.csv)  Download R Dataset (.rds)  Download Stata Dataset (.dta)  Download SPSS Dataset (.sav)\nInteractive Survey Instruments\nExplore the fully digitized survey instruments for each wave below:\nThis dataset combines survey responses from 203 Notre Dame students across 6 consecutive waves, capturing demographic backgrounds, personality inventories (e.g., Big Five), academic metrics (GPAs), musical and artistic preferences, lifestyle behaviors, and campus engagement.\nBelow is a quick programmatic summary of the clean demographic survey data loaded directly from the processed CSV.\nCode\nlibrary(readr)\nlibrary(dplyr)\n\n# Load clean demographics dataset\ndem_df &lt;- read_csv(\"Surveys/demographics_longitudinal_clean.csv\", show_col_types = FALSE)\n\n# Profile metrics\nprofile &lt;- tibble(\n  Metric = c(\"Total Students (Egos)\", \"Total Survey Attributes\", \"Sensitive Columns Safely Dropped\"),\n  Value = c(nrow(dem_df), ncol(dem_df), 38)\n)\n\nknitr::kable(profile, caption = \"Processed Demographic Survey Profile\")\n\n\n\n\nTable 1.1: Processed Demographic Survey Profile\n\n\n\n\n\n\nMetric\nValue\n\n\n\n\nTotal Students (Egos)\n203\n\n\nTotal Survey Attributes\n1556\n\n\nSensitive Columns Safely Dropped\n38",
+    "text": "1.1 Main Demographic Surveys\nThis section describes the individual-level demographic and behavioral survey datasets, as well as the specialized quiz responses. You can download the complete, de-identified longitudinal panels below.\nDownload CSV Dataset (.csv)  Download R Dataset (.rds)  Download Stata Dataset (.dta)  Download SPSS Dataset (.sav)\nInteractive Survey Instruments\nExplore the fully digitized survey instruments for each wave below:\nThis dataset combines survey responses from 203 Notre Dame students across 6 consecutive waves, capturing demographic backgrounds, personality inventories (e.g., Big Five), academic metrics (GPAs), musical and artistic preferences, lifestyle behaviors, and campus engagement.",
     "crumbs": [
       "Survey & Network Datasets",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Demographic & Behavioral Surveys</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Demographic, Behavioral, & Quiz Surveys</span>"
+    ]
+  },
+  {
+    "objectID": "surveys.html#main-demographic-surveys",
+    "href": "surveys.html#main-demographic-surveys",
+    "title": "1  Demographic, Behavioral, & Quiz Surveys",
+    "section": "",
+    "text": "Wave 1: Summer 2011 Demographic Survey\nWave 2: Spring 2012 Demographic Survey\nWave 3: Summer 2012 Demographic Survey\nWave 4: Fall 2012 Demographic Survey\nWave 5: Winter 2013 Demographic Survey\nWave 6: Summer 2013 Demographic Survey\n\n\n\n\n\n\n\n\nImportantSecurity & Privacy Scrubbing\n\n\n\nThe raw demographic dataset originally contained sensitive participant identifiers. A secure, programmatic R script (Code/scrub_demographics.R) has been run to drop 38 personal identifying columns containing: - Participant first names and last names (firstname_*, lastname_*, v1532, v1180, etc.) - University NetIDs and emails (netid, netid_*, emailaddress_*) - Raw cellular telephone numbers (phonenumber)",
+    "crumbs": [
+      "Survey & Network Datasets",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Demographic, Behavioral, & Quiz Surveys</span>"
+    ]
+  },
+  {
+    "objectID": "surveys.html#dataset-quick-profile",
+    "href": "surveys.html#dataset-quick-profile",
+    "title": "1  Demographic, Behavioral, & Quiz Surveys",
+    "section": "1.2 Dataset Quick Profile",
+    "text": "1.2 Dataset Quick Profile\nBelow is a quick programmatic summary of the clean demographic survey data loaded directly from the processed CSV.\n\n\nCode\nlibrary(readr)\nlibrary(dplyr)\n\n# Load clean demographics dataset\ndem_df &lt;- read_csv(\"Surveys/demographics_longitudinal_clean.csv\", show_col_types = FALSE)\n\n# Profile metrics\nprofile &lt;- tibble(\n  Metric = c(\"Total Students (Egos)\", \"Total Survey Attributes\", \"Sensitive Columns Safely Dropped\"),\n  Value = c(nrow(dem_df), ncol(dem_df), 38)\n)\n\nknitr::kable(profile, caption = \"Processed Demographic Survey Profile\")\n\n\n\n\nTable 1.1: Processed Demographic Survey Profile\n\n\n\n\n\n\nMetric\nValue\n\n\n\n\nTotal Students (Egos)\n203\n\n\nTotal Survey Attributes\n1556\n\n\nSensitive Columns Safely Dropped\n38",
+    "crumbs": [
+      "Survey & Network Datasets",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Demographic, Behavioral, & Quiz Surveys</span>"
     ]
   },
   {
     "objectID": "surveys.html#major-variable-groupings",
     "href": "surveys.html#major-variable-groupings",
-    "title": "1  Demographic & Behavioral Surveys",
-    "section": "1.2 Major Variable Groupings",
-    "text": "1.2 Major Variable Groupings\nWith 1,556 attributes, variables are suffixed with a wave number (e.g. _1 for Wave 1, _6 for Wave 6) to track changes over time. Some of the core groupings include:\n\nDemographics: Participant gender (gender_1), ethnicity, family background, and dorm locations.\nAcademic Performance: Semester-by-semester GPAs (e.g., firstsemgpa_2, gpa_6).\nPersonality Scales: Big Five traits (Extraversion, Neuroticism, Openness, Agreeableness, Conscientiousness).\nLifestyles and Habits: Alcohol use, smoking, sleep habits, and smartphone usage metrics (e.g., phoneuse*_1).\nCultural Tastes: Music genres, movies, books, and artistic preferences (e.g., bigband_1, classicrock_1, jazz_1, rap_1).",
+    "title": "1  Demographic, Behavioral, & Quiz Surveys",
+    "section": "1.3 Major Variable Groupings",
+    "text": "1.3 Major Variable Groupings\nWith 1,556 attributes, variables are suffixed with a wave number (e.g. _1 for Wave 1, _6 for Wave 6) to track changes over time. Some of the core groupings include:\n\nDemographics: Participant gender (gender_1), ethnicity, family background, and dorm locations.\nAcademic Performance: Semester-by-semester GPAs (e.g., firstsemgpa_2, gpa_6).\nPersonality Scales: Big Five traits (Extraversion, Neuroticism, Openness, Agreeableness, Conscientiousness).\nLifestyles and Habits: Alcohol use, smoking, sleep habits, and smartphone usage metrics (e.g., phoneuse*_1).\nCultural Tastes: Music genres, movies, books, and artistic preferences (e.g., bigband_1, classicrock_1, jazz_1, rap_1).",
     "crumbs": [
       "Survey & Network Datasets",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Demographic & Behavioral Surveys</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Demographic, Behavioral, & Quiz Surveys</span>"
+    ]
+  },
+  {
+    "objectID": "surveys.html#quiz-responses-master",
+    "href": "surveys.html#quiz-responses-master",
+    "title": "1  Demographic, Behavioral, & Quiz Surveys",
+    "section": "1.4 Quiz Responses (Master)",
+    "text": "1.4 Quiz Responses (Master)\nIn addition to the main demographic surveys, the study administered a series of quizzes to participants. These quizzes capture high-frequency assessments of student health, emotional well-being, political discussions, and feedback on their smartphone performance.\n Download Quiz CSV (.csv)  Download Quiz Stata (.dta)\n\n\n\n\n\n\nNotePII Scrubbing\n\n\n\nThe raw quiz datasets originally tracked participants using raw 10-digit phone numbers. These have been securely mapped to the standard egoid identifier and the raw phone numbers have been completely dropped to maintain anonymity.\n\n\nThe consolidated quiz dataset contains responses from 197 students across 146 specialized survey items, all of which are documented in the Searchable Variable Catalog.",
+    "crumbs": [
+      "Survey & Network Datasets",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Demographic, Behavioral, & Quiz Surveys</span>"
     ]
   },
   {
