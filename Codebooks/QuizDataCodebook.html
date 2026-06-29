@@ -1,0 +1,2629 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>23&nbsp; QuizDataCodebook – NetSense Study Codebook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Metadata and Mappings/Semester Dates.html" rel="next">
+<link href="../Codebooks/PolQuizzesCodebook.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-fee066a00baa590e8925199ba1c8ceb4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Codebooks/QuizDataCodebook.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">NetSense Study Codebook</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Survey &amp; Network Datasets</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../surveys.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Demographic, Behavioral, &amp; Quiz Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Social Network Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../proximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bluetooth Proximity Logs</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Searchable Catalogs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../catalog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Searchable Variable Catalog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../citation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Metadata and Mappings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/07275-Codebook.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT-variable-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BluetoothProximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/CodeBook(netsense_entry_recoded_12_5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Codebook for arcWeeklyTableCombined.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Files Overview 7_30_14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Files Overview 7_30_14.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Structures and Variables for NetSense.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data Structures and Variables for NetSense.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Dorm Distances.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/DormValueLabels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/EdgleListRenumberCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Edge List Renumbered Codebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Ego and Alter Coding Conventions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Ego and Alter Coding Conventions.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/IAmSomeoneIndices(extraversion).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">I Am Someone Indices (Extraversion)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Interesting_data.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Interesting_data.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/ND-academic-calendar-2011_2012.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ND Academic Calendar 2011-2012</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/PolQuizzesCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/QuizDataCodebook.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Semester Dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/personality-inventory-coding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Personality Inventory Coding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Network Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2011Net(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Summer2011Net(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Spring2012Net(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Spring2012Net(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2012Net(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Summer2012Net(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Fall2012Net(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Winter2013Net(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2013Net(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Demographic Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2011Demog(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Summer2011Demog(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Spring2012Demog(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spring2012Demog(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2012Demog(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Summer2012Demog(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Fall2012Demog(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fall2012Demog(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Winter2013Demog(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Winter2013Demog(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2013Demog(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Summer2013Demog(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#variable-phonenumber" id="toc-variable-phonenumber" class="nav-link active" data-scroll-target="#variable-phonenumber"><span class="header-section-number">23.0.1</span> Variable: <code>phonenumber</code></a></li>
+  <li><a href="#variable-phoneworkq1" id="toc-variable-phoneworkq1" class="nav-link" data-scroll-target="#variable-phoneworkq1"><span class="header-section-number">23.0.2</span> Variable: <code>phoneworkQ1</code></a></li>
+  <li><a href="#variable-fbgameq2" id="toc-variable-fbgameq2" class="nav-link" data-scroll-target="#variable-fbgameq2"><span class="header-section-number">23.0.3</span> Variable: <code>fbgameQ2</code></a></li>
+  <li><a href="#variable-fbgame4gq2" id="toc-variable-fbgame4gq2" class="nav-link" data-scroll-target="#variable-fbgame4gq2"><span class="header-section-number">23.0.4</span> Variable: <code>fbgame4gQ2</code></a></li>
+  <li><a href="#variable-_mergeq2" id="toc-variable-_mergeq2" class="nav-link" data-scroll-target="#variable-_mergeq2"><span class="header-section-number">23.0.5</span> Variable: <code>_mergeQ2</code></a></li>
+  <li><a href="#variable-prevphoneq3" id="toc-variable-prevphoneq3" class="nav-link" data-scroll-target="#variable-prevphoneq3"><span class="header-section-number">23.0.6</span> Variable: <code>prevphoneQ3</code></a></li>
+  <li><a href="#variable-_mergeq3" id="toc-variable-_mergeq3" class="nav-link" data-scroll-target="#variable-_mergeq3"><span class="header-section-number">23.0.7</span> Variable: <code>_mergeQ3</code></a></li>
+  <li><a href="#variable-fallbreakq4" id="toc-variable-fallbreakq4" class="nav-link" data-scroll-target="#variable-fallbreakq4"><span class="header-section-number">23.0.8</span> Variable: <code>fallbreakQ4</code></a></li>
+  <li><a href="#variable-uscgameq4" id="toc-variable-uscgameq4" class="nav-link" data-scroll-target="#variable-uscgameq4"><span class="header-section-number">23.0.9</span> Variable: <code>uscgameQ4</code></a></li>
+  <li><a href="#variable-_mergeq4" id="toc-variable-_mergeq4" class="nav-link" data-scroll-target="#variable-_mergeq4"><span class="header-section-number">23.0.10</span> Variable: <code>_mergeQ4</code></a></li>
+  <li><a href="#variable-healthq6" id="toc-variable-healthq6" class="nav-link" data-scroll-target="#variable-healthq6"><span class="header-section-number">23.0.11</span> Variable: <code>healthQ6</code></a></li>
+  <li><a href="#variable-_mergeq7" id="toc-variable-_mergeq7" class="nav-link" data-scroll-target="#variable-_mergeq7"><span class="header-section-number">23.0.12</span> Variable: <code>_mergeQ7</code></a></li>
+  <li><a href="#variable-videogameq8" id="toc-variable-videogameq8" class="nav-link" data-scroll-target="#variable-videogameq8"><span class="header-section-number">23.0.13</span> Variable: <code>videogameQ8</code></a></li>
+  <li><a href="#variable-_mergeq8" id="toc-variable-_mergeq8" class="nav-link" data-scroll-target="#variable-_mergeq8"><span class="header-section-number">23.0.14</span> Variable: <code>_mergeQ8</code></a></li>
+  <li><a href="#variable-overwhelmedq9" id="toc-variable-overwhelmedq9" class="nav-link" data-scroll-target="#variable-overwhelmedq9"><span class="header-section-number">23.0.15</span> Variable: <code>overwhelmedQ9</code></a></li>
+  <li><a href="#variable-calmq9" id="toc-variable-calmq9" class="nav-link" data-scroll-target="#variable-calmq9"><span class="header-section-number">23.0.16</span> Variable: <code>calmQ9</code></a></li>
+  <li><a href="#variable-overallq9" id="toc-variable-overallq9" class="nav-link" data-scroll-target="#variable-overallq9"><span class="header-section-number">23.0.17</span> Variable: <code>overallQ9</code></a></li>
+  <li><a href="#variable-_mergeq9" id="toc-variable-_mergeq9" class="nav-link" data-scroll-target="#variable-_mergeq9"><span class="header-section-number">23.0.18</span> Variable: <code>_mergeQ9</code></a></li>
+  <li><a href="#variable-healthq10" id="toc-variable-healthq10" class="nav-link" data-scroll-target="#variable-healthq10"><span class="header-section-number">23.0.19</span> Variable: <code>healthQ10</code></a></li>
+  <li><a href="#variable-_mergeq10" id="toc-variable-_mergeq10" class="nav-link" data-scroll-target="#variable-_mergeq10"><span class="header-section-number">23.0.20</span> Variable: <code>_mergeQ10</code></a></li>
+  <li><a href="#variable-_mergeq11" id="toc-variable-_mergeq11" class="nav-link" data-scroll-target="#variable-_mergeq11"><span class="header-section-number">23.0.21</span> Variable: <code>_mergeQ11</code></a></li>
+  <li><a href="#variable-days" id="toc-variable-days" class="nav-link" data-scroll-target="#variable-days"><span class="header-section-number">23.0.22</span> Variable: <code>Days</code></a></li>
+  <li><a href="#variable-videogameq12" id="toc-variable-videogameq12" class="nav-link" data-scroll-target="#variable-videogameq12"><span class="header-section-number">23.0.23</span> Variable: <code>videogameQ12</code></a></li>
+  <li><a href="#variable-_mergeq12" id="toc-variable-_mergeq12" class="nav-link" data-scroll-target="#variable-_mergeq12"><span class="header-section-number">23.0.24</span> Variable: <code>_mergeQ12</code></a></li>
+  <li><a href="#variable-calmq13" id="toc-variable-calmq13" class="nav-link" data-scroll-target="#variable-calmq13"><span class="header-section-number">23.0.25</span> Variable: <code>calmQ13</code></a></li>
+  <li><a href="#variable-freshq13" id="toc-variable-freshq13" class="nav-link" data-scroll-target="#variable-freshq13"><span class="header-section-number">23.0.26</span> Variable: <code>freshQ13</code></a></li>
+  <li><a href="#variable-overallq13" id="toc-variable-overallq13" class="nav-link" data-scroll-target="#variable-overallq13"><span class="header-section-number">23.0.27</span> Variable: <code>overallQ13</code></a></li>
+  <li><a href="#variable-_mergeq13" id="toc-variable-_mergeq13" class="nav-link" data-scroll-target="#variable-_mergeq13"><span class="header-section-number">23.0.28</span> Variable: <code>_mergeQ13</code></a></li>
+  <li><a href="#variable-healthq14" id="toc-variable-healthq14" class="nav-link" data-scroll-target="#variable-healthq14"><span class="header-section-number">23.0.29</span> Variable: <code>healthQ14</code></a></li>
+  <li><a href="#variable-_mergeq14" id="toc-variable-_mergeq14" class="nav-link" data-scroll-target="#variable-_mergeq14"><span class="header-section-number">23.0.30</span> Variable: <code>_mergeQ14</code></a></li>
+  <li><a href="#variable-_mergeq15" id="toc-variable-_mergeq15" class="nav-link" data-scroll-target="#variable-_mergeq15"><span class="header-section-number">23.0.31</span> Variable: <code>_mergeQ15</code></a></li>
+  <li><a href="#variable-days-1" id="toc-variable-days-1" class="nav-link" data-scroll-target="#variable-days-1"><span class="header-section-number">23.0.32</span> Variable: <code>Days</code></a></li>
+  <li><a href="#variable-videogameq16" id="toc-variable-videogameq16" class="nav-link" data-scroll-target="#variable-videogameq16"><span class="header-section-number">23.0.33</span> Variable: <code>videogameQ16</code></a></li>
+  <li><a href="#variable-_mergeq16" id="toc-variable-_mergeq16" class="nav-link" data-scroll-target="#variable-_mergeq16"><span class="header-section-number">23.0.34</span> Variable: <code>_mergeQ16</code></a></li>
+  <li><a href="#variable-calmq17" id="toc-variable-calmq17" class="nav-link" data-scroll-target="#variable-calmq17"><span class="header-section-number">23.0.35</span> Variable: <code>calmQ17</code></a></li>
+  <li><a href="#variable-freshq17" id="toc-variable-freshq17" class="nav-link" data-scroll-target="#variable-freshq17"><span class="header-section-number">23.0.36</span> Variable: <code>freshQ17</code></a></li>
+  <li><a href="#variable-overallq17" id="toc-variable-overallq17" class="nav-link" data-scroll-target="#variable-overallq17"><span class="header-section-number">23.0.37</span> Variable: <code>overallQ17</code></a></li>
+  <li><a href="#variable-_mergeq17" id="toc-variable-_mergeq17" class="nav-link" data-scroll-target="#variable-_mergeq17"><span class="header-section-number">23.0.38</span> Variable: <code>_mergeQ17</code></a></li>
+  <li><a href="#variable-healthq18" id="toc-variable-healthq18" class="nav-link" data-scroll-target="#variable-healthq18"><span class="header-section-number">23.0.39</span> Variable: <code>healthQ18</code></a></li>
+  <li><a href="#variable-during" id="toc-variable-during" class="nav-link" data-scroll-target="#variable-during"><span class="header-section-number">23.0.40</span> Variable: <code>During</code></a></li>
+  <li><a href="#variable-_mergeq19" id="toc-variable-_mergeq19" class="nav-link" data-scroll-target="#variable-_mergeq19"><span class="header-section-number">23.0.41</span> Variable: <code>_mergeQ19</code></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Codebooks/QuizDataCodebook.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Stata Codebook Output
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following is derived from the original Stata codebook logs.</p>
+</div>
+</div>
+<section id="variable-phonenumber" class="level3" data-number="23.0.1">
+<h3 data-number="23.0.1" class="anchored" data-anchor-id="variable-phonenumber"><span class="header-section-number">23.0.1</span> Variable: <code>phonenumber</code></h3>
+<pre class="text"><code>phonenumber                                                         (unlabeled)
+                  type:  numeric (double)
+                 range:  [5.744e+09,5.745e+09]        units:  100
+         unique values:  196                      missing .:  0/196
+                  mean:   5.7e+09
+              std. dev:    867321
+           percentiles:        10%       25%       50%       75%       90%
+                           5.7e+09   5.7e+09   5.7e+09   5.7e+09   5.7e+09</code></pre>
+</section>
+<section id="variable-phoneworkq1" class="level3" data-number="23.0.2">
+<h3 data-number="23.0.2" class="anchored" data-anchor-id="variable-phoneworkq1"><span class="header-section-number">23.0.2</span> Variable: <code>phoneworkQ1</code></h3>
+<pre class="text"><code>phoneworkQ1                                  How is your smartphone working- Q1
+                  type:  numeric (long)
+                 label:  phone
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  51/196
+            tabulation:  Freq.   Numeric  Label
+                            63         1  Great
+                            75         2  Ok
+                             6         3  Poorly
+                             1         4  Dont know
+                            51         .  </code></pre>
+</section>
+<section id="variable-fbgameq2" class="level3" data-number="23.0.3">
+<h3 data-number="23.0.3" class="anchored" data-anchor-id="variable-fbgameq2"><span class="header-section-number">23.0.3</span> Variable: <code>fbgameQ2</code></h3>
+<pre class="text"><code>fbgameQ2                                  Did you go to the game? Quiz 2 9/5/11
+                  type:  numeric (long)
+                 label:  yesno
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  41/196
+            tabulation:  Freq.   Numeric  Label
+                            15         0  No
+                           140         1  Yes
+                            41         .
+</code></pre>
+</section>
+<section id="variable-fbgame4gq2" class="level3" data-number="23.0.4">
+<h3 data-number="23.0.4" class="anchored" data-anchor-id="variable-fbgame4gq2"><span class="header-section-number">23.0.4</span> Variable: <code>fbgame4gQ2</code></h3>
+<pre class="text"><code>fbgame4gQ2              Did you use the Nexus 4G during the game? Quiz 2 9/5/11
+                  type:  numeric (long)
+                 label:  yesno
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  41/196
+            tabulation:  Freq.   Numeric  Label
+                            28         0  No
+                           127         1  Yes
+                            41         .  </code></pre>
+</section>
+<section id="variable-_mergeq2" class="level3" data-number="23.0.5">
+<h3 data-number="23.0.5" class="anchored" data-anchor-id="variable-_mergeq2"><span class="header-section-number">23.0.5</span> Variable: <code>_mergeQ2</code></h3>
+<pre class="text"><code>_mergeQ2                                                            (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  27/196
+            tabulation:  Freq.   Numeric  Label
+                            14         1  master only (1)
+                            24         2  using only (2)
+                           131         3  matched (3)
+                            27         .  </code></pre>
+</section>
+<section id="variable-prevphoneq3" class="level3" data-number="23.0.6">
+<h3 data-number="23.0.6" class="anchored" data-anchor-id="variable-prevphoneq3"><span class="header-section-number">23.0.6</span> Variable: <code>prevphoneQ3</code></h3>
+<pre class="text"><code>prevphoneQ3       How often do you use your previous cell phone? Quiz 3 9/27/11
+                  type:  numeric (long)
+                 label:  phone, but 1 nonmissing value is not labeled
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  21/196
+            tabulation:  Freq.   Numeric  Label
+                           110         1  Great
+                            39         2  Ok
+                            10         3  Poorly
+                             5         4  Dont know
+                            11         5  
+                            21         .  
+facebookQ3            Are you using Facebook on your smartphone? Quiz 3 9/27/11
+
+                  type:  numeric (long)
+                 label:  yesno
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  21/196
+            tabulation:  Freq.   Numeric  Label
+                           166         0  No
+                             9         1  Yes
+                            21         .  </code></pre>
+</section>
+<section id="variable-_mergeq3" class="level3" data-number="23.0.7">
+<h3 data-number="23.0.7" class="anchored" data-anchor-id="variable-_mergeq3"><span class="header-section-number">23.0.7</span> Variable: <code>_mergeQ3</code></h3>
+<pre class="text"><code>_mergeQ3                                                            (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  7/196
+            tabulation:  Freq.   Numeric  Label
+                            14         1  master only (1)
+                            20         2  using only (2)
+                           155         3  matched (3)
+                             7         .  </code></pre>
+</section>
+<section id="variable-fallbreakq4" class="level3" data-number="23.0.8">
+<h3 data-number="23.0.8" class="anchored" data-anchor-id="variable-fallbreakq4"><span class="header-section-number">23.0.8</span> Variable: <code>fallbreakQ4</code></h3>
+<pre class="text"><code>fallbreakQ4      What are you going to do during the fall break? Quiz 4 9/27/11
+                  type:  numeric (long)
+                 label:  fallbreak
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  6/196
+            tabulation:  Freq.   Numeric  Label
+                            29         1  Stay on campus
+                           136         2  Go home
+                            19         3  Go on vacation
+                             6         4  Participate in a service project
+                             6         .  </code></pre>
+</section>
+<section id="variable-uscgameq4" class="level3" data-number="23.0.9">
+<h3 data-number="23.0.9" class="anchored" data-anchor-id="variable-uscgameq4"><span class="header-section-number">23.0.9</span> Variable: <code>uscgameQ4</code></h3>
+<pre class="text"><code>uscgameQ4                 Are you coming back for the USC game? Quiz 4 10/24/11
+                  type:  numeric (long)
+                 label:  yesno
+                 range:  [0,1]                        units:  1
+         unique values:  2                        missing .:  6/196
+
+            tabulation:  Freq.   Numeric  Label
+                            14         0  No
+                           176         1  Yes
+                             6         .  </code></pre>
+</section>
+<section id="variable-_mergeq4" class="level3" data-number="23.0.10">
+<h3 data-number="23.0.10" class="anchored" data-anchor-id="variable-_mergeq4"><span class="header-section-number">23.0.10</span> Variable: <code>_mergeQ4</code></h3>
+<pre class="text"><code>_mergeQ4                                                            (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  1/196
+            tabulation:  Freq.   Numeric  Label
+                             5         1  master only (1)
+                             6         2  using only (2)
+                           184         3  matched (3)
+                             1         .  
+overwhelmedQ5                          During the last week, how many days did
+                                       you feel overwhelmed by all you had to d
+                  type:  numeric (long)
+                 label:  q5
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  8/196
+            tabulation:  Freq.   Numeric  Label
+                            28         1  0 days
+                            79         2  1-2 days
+                            52         3  3-4 days
+                            19         4  5-6 days
+                            10         5  7 days
+                             8         .  
+cheerfulQ5
+During the last week, how often did you feel cheerful and in good spirits? Quiz
+&gt;  
+                  type:  numeric (long)
+                 label:  q5
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  8/196
+            tabulation:  Freq.   Numeric  Label
+                             4         1  0 days
+
+                            28         2  1-2 days
+                            60         3  3-4 days
+                            65         4  5-6 days
+                            31         5  7 days
+                             8         .  
+calmQ5
+  During the last week, how often did you feel calm and relaxed? Quiz 5 11/2/11
+                  type:  numeric (long)
+                 label:  q5
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  8/196
+            tabulation:  Freq.   Numeric  Label
+                            16         1  0 days
+                            68         2  1-2 days
+                            63         3  3-4 days
+                            30         4  5-6 days
+                            11         5  7 days
+                             8         .  
+activeQ5
+During the last week, how often did you feel active and vigorous? Quiz 5 11/2/1
+&gt; 1
+                  type:  numeric (long)
+                 label:  q5
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  8/196
+            tabulation:  Freq.   Numeric  Label
+                            10         1  0 days
+                            70         2  1-2 days
+                            59         3  3-4 days
+                            36         4  5-6 days
+                            13         5  7 days
+                             8         .  
+freshQ5
+During the last week, how often did you wake up feeling fresh and rested? Quiz 
+&gt; 5
+                  type:  numeric (long)
+                 label:  q5
+
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  8/196
+            tabulation:  Freq.   Numeric  Label
+                            46         1  0 days
+                            83         2  1-2 days
+                            40         3  3-4 days
+                            15         4  5-6 days
+                             4         5  7 days
+                             8         .  
+interestedQ5                           During the last week, how often was your
+                                       daily life filled with things that inte
+                  type:  numeric (long)
+                 label:  q5
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  8/196
+            tabulation:  Freq.   Numeric  Label
+                             5         1  0 days
+                            35         2  1-2 days
+                            73         3  3-4 days
+                            42         4  5-6 days
+                            33         5  7 days
+                             8         .  
+happyQ5
+    Taken all together, how would you say things are these days? Quiz 5 11/2/11
+                  type:  numeric (long)
+                 label:  happy
+                 range:  [1,6]                        units:  1
+         unique values:  6                        missing .:  8/196
+            tabulation:  Freq.   Numeric  Label
+                            28         1  Very happy
+                            74         2  Pretty happy
+                            57         3  Happy
+                            24         4  Not so happy
+                             2         5  Not happy at all
+                             3         6  Not sure
+                             8         .  
+_mergeQ5                                                            (unlabeled)
+
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                             8         1  master only (1)
+                             1         2  using only (2)
+                           187         3  matched (3)</code></pre>
+</section>
+<section id="variable-healthq6" class="level3" data-number="23.0.11">
+<h3 data-number="23.0.11" class="anchored" data-anchor-id="variable-healthq6"><span class="header-section-number">23.0.11</span> Variable: <code>healthQ6</code></h3>
+<pre class="text"><code>healthQ6             How would you describe your current health? Quiz 6 11_3_11
+                  type:  numeric (long)
+                 label:  health
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  7/196
+            tabulation:  Freq.   Numeric  Label
+                            52         1  Excellent
+                           104         2  Good
+                            24         3  Fair
+                             9         4  Poor
+                             7         .  
+exerciseQ6
+ During the last week how often did you exercise or play sports? Quiz 6 11_3_11
+                  type:  numeric (long)
+                 label:  exercise
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  7/196
+            tabulation:  Freq.   Numeric  Label
+                            17         1  0 days
+                            68         2  1-2 days
+                            58         3  3-4 days
+                            37         4  5-6 days
+                             9         5  7 days
+                             7         .  
+sleepQ6
+During the last week, on average, how much sleep did you get each night? Quiz 6
+&gt;  
+                  type:  numeric (long)
+
+                 label:  sleep
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  7/196
+            tabulation:  Freq.   Numeric  Label
+                             6         1  4 or less
+                            26         2  5
+                            66         3  6
+                            71         4  7
+                            20         5  8
+                             7         .  
+sleepqualQ6
+During the last week, do you feel the amount of sleep you got was... Quiz 6 11_
+&gt; 3
+                  type:  numeric (long)
+                 label:  sleepqual
+                 range:  [2,5]                        units:  1
+         unique values:  4                        missing .:  7/196
+            tabulation:  Freq.   Numeric  Label
+                             3         2  too much
+                            53         3  just right
+                           115         4  too little
+                            18         5  way too little
+                             7         .  
+weightQ6
+How much has your weight changed since the beginning of the semester? Quiz 6 11
+&gt; _
+                  type:  numeric (long)
+                 label:  weight
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  7/196
+            tabulation:  Freq.   Numeric  Label
+                             5         1  +11 or more pounds
+                            57         2  +5 to 10 pounds
+                           114         3  -5 to 5 pounds
+                            11         4  -5 to 10 pounds
+                             2         5  -11 or more pounds
+                             7         .  
+_mergeQ6                                                            (unlabeled)
+
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                             7         1  master only (1)
+                           189         3  matched (3)
+polviewsQ7
+On a scale from liberal to conservative, describe your poltical views? Quiz 7 1
+&gt; 1
+                  type:  numeric (long)
+                 label:  polviews
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  9/196
+            tabulation:  Freq.   Numeric  Label
+                            13         1  Liberal
+                            35         2  Slightly Liberal
+                            54         3  Moderate
+                            50         4  Slightly Conservative
+                            35         5  Conservative
+                             9         .  
+gaymarryQ7
+     Do you agree homosexual couples have the right to marry? Quiz 7 11_13_2011
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  9/196
+            tabulation:  Freq.   Numeric  Label
+                            56         1  Strongly Agree
+                            67         2  Agree
+                            41         3  Disagree
+                            23         4  Strongly Disagree
+                             9         .  
+govservQ7
+       Should the government cut services to reduce spending? Quiz 7 11_13_2011
+
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  9/196
+            tabulation:  Freq.   Numeric  Label
+                            26         1  Strongly Agree
+                            92         2  Agree
+                            60         3  Disagree
+                             9         4  Strongly Disagree
+                             9         .  
+eqlchanceQ7
+One of the big problems we don't give everyone an equal chance? Quiz 7 11_13_20
+&gt; 1
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  9/196
+            tabulation:  Freq.   Numeric  Label
+                            18         1  Strongly Agree
+                            59         2  Agree
+                            91         3  Disagree
+                            19         4  Strongly Disagree
+                             9         .  
+dispolQ7
+Days in the last week did you discuss POLITICS outside of class? Quiz 7 11_13_2
+&gt; 0
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  9/196
+            tabulation:  Freq.   Numeric  Label
+                            44         1  0 Days
+                           103         2  1 - 2 Days
+                            29         3  3 - 4 Days
+                             6         4  5 - 6 Days
+                             5         5  7 Days
+                             9         .
+
+distvQ7
+   Days in the last week did you discuss TV outside of class? Quiz 7 11_13_2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  9/196
+            tabulation:  Freq.   Numeric  Label
+                            34         1  0 Days
+                            90         2  1 - 2 Days
+                            42         3  3 - 4 Days
+                            14         4  5 - 6 Days
+                             7         5  7 Days
+                             9         .  
+dissportQ7
+Days in the last week did you discuss SPORTS outside of class? Quiz 7 11_13_201
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  9/196
+            tabulation:  Freq.   Numeric  Label
+                            17         1  0 Days
+                            56         2  1 - 2 Days
+                            44         3  3 - 4 Days
+                            34         4  5 - 6 Days
+                            36         5  7 Days
+                             9         .  
+disartQ7
+Days in the last week did you discuss THEATRE/ART outside of class? Quiz 7 11_1
+&gt; 3
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  9/196
+            tabulation:  Freq.   Numeric  Label
+                            72         1  0 Days
+                            79         2  1 - 2 Days
+                            27         3  3 - 4 Days
+
+                             7         4  5 - 6 Days
+                             2         5  7 Days
+                             9         .  </code></pre>
+</section>
+<section id="variable-_mergeq7" class="level3" data-number="23.0.12">
+<h3 data-number="23.0.12" class="anchored" data-anchor-id="variable-_mergeq7"><span class="header-section-number">23.0.12</span> Variable: <code>_mergeQ7</code></h3>
+<pre class="text"><code>_mergeQ7                                                            (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                             9         1  master only (1)
+                           187         3  matched (3)
+tvmovieQ8
+      Days in the last week did you watch a TV SHOW or MOVIE? Quiz 8 11_16_2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                            32         1  0 Days
+                            96         2  1 - 2 Days
+                            36         3  3 - 4 Days
+                             7         4  5 - 6 Days
+                            11         5  7 Days
+                            14         .  
+attsportQ8
+          Days in the last week did you attend a Live Sports? Quiz 8 11_16_2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                            72         1  0 Days
+                           101         2  1 - 2 Days
+                             9         3  3 - 4 Days
+                            14         .
+
+wtchsportQ8
+        Days in the last week did you watch a Sports Program? Quiz 8 11_16_2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                            62         1  0 Days
+                            77         2  1 - 2 Days
+                            26         3  3 - 4 Days
+                            13         4  5 - 6 Days
+                             4         5  7 Days
+                            14         .  
+liveartQ8
+Days in the last week did you watch live artistic performance? Quiz 8 11_16_201
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                           131         1  0 Days
+                            45         2  1 - 2 Days
+                             6         3  3 - 4 Days
+                            14         .  
+alcoholQ8
+ Days in the last week did you consume an alcoholic beverage? Quiz 8 11_16_2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                           110         1  0 Days
+                            64         2  1 - 2 Days
+                             7         3  3 - 4 Days
+                             1         4  5 - 6 Days
+                            14         .
+</code></pre>
+</section>
+<section id="variable-videogameq8" class="level3" data-number="23.0.13">
+<h3 data-number="23.0.13" class="anchored" data-anchor-id="variable-videogameq8"><span class="header-section-number">23.0.13</span> Variable: <code>videogameQ8</code></h3>
+<pre class="text"><code>videogameQ8    Days in the last week did you play video game? Quiz 8 11_16_2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                           100         1  0 Days
+                            44         2  1 - 2 Days
+                            23         3  3 - 4 Days
+                            12         4  5 - 6 Days
+                             3         5  7 Days
+                            14         .  </code></pre>
+</section>
+<section id="variable-_mergeq8" class="level3" data-number="23.0.14">
+<h3 data-number="23.0.14" class="anchored" data-anchor-id="variable-_mergeq8"><span class="header-section-number">23.0.14</span> Variable: <code>_mergeQ8</code></h3>
+<pre class="text"><code>_mergeQ8                                                            (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            14         1  master only (1)
+                           182         3  matched (3)</code></pre>
+</section>
+<section id="variable-overwhelmedq9" class="level3" data-number="23.0.15">
+<h3 data-number="23.0.15" class="anchored" data-anchor-id="variable-overwhelmedq9"><span class="header-section-number">23.0.15</span> Variable: <code>overwhelmedQ9</code></h3>
+<pre class="text"><code>overwhelmedQ9   Days in the last week did you feel overwhelmed? Quiz 9 11_20_11
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  6/196
+            tabulation:  Freq.   Numeric  Label
+                            22         1  0 Days
+                            78         2  1 - 2 Days
+                            58         3  3 - 4 Days
+                            23         4  5 - 6 Days
+                             9         5  7 Days
+                             6         .  
+cheerfulQ9  Days in the last week did you attend feel cheerful? Quiz 9 11_20_11
+
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  6/196
+            tabulation:  Freq.   Numeric  Label
+                             3         1  0 Days
+                            29         2  1 - 2 Days
+                            67         3  3 - 4 Days
+                            64         4  5 - 6 Days
+                            27         5  7 Days
+                             6         .  </code></pre>
+</section>
+<section id="variable-calmq9" class="level3" data-number="23.0.16">
+<h3 data-number="23.0.16" class="anchored" data-anchor-id="variable-calmq9"><span class="header-section-number">23.0.16</span> Variable: <code>calmQ9</code></h3>
+<pre class="text"><code>calmQ9     Days in the last week did you feel calm and relaxed? Quiz 9 11_20_11
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  6/196
+            tabulation:  Freq.   Numeric  Label
+                            15         1  0 Days
+                            83         2  1 - 2 Days
+                            54         3  3 - 4 Days
+                            31         4  5 - 6 Days
+                             7         5  7 Days
+                             6         .  
+activeQ9
+        Days in the last week did you feel active and vigorous? Quiz 9 11_20_11
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  6/196
+            tabulation:  Freq.   Numeric  Label
+                            13         1  0 Days
+                            64         2  1 - 2 Days
+                            70         3  3 - 4 Days
+                            30         4  5 - 6 Days
+                            13         5  7 Days
+                             6         .  
+freshQ9               Days in the last week did you feel fresh? Quiz 9 11_20_11
+
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  6/196
+            tabulation:  Freq.   Numeric  Label
+                            33         1  0 Days
+                            92         2  1 - 2 Days
+                            47         3  3 - 4 Days
+                            17         4  5 - 6 Days
+                             1         5  7 Days
+                             6         .  
+interestQ9
+     Days in the last week life filled with interesting things? Quiz 9 11_20_11
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  6/196
+            tabulation:  Freq.   Numeric  Label
+                             7         1  0 Days
+                            35         2  1 - 2 Days
+                            67         3  3 - 4 Days
+                            51         4  5 - 6 Days
+                            30         5  7 Days
+                             6         .  </code></pre>
+</section>
+<section id="variable-overallq9" class="level3" data-number="23.0.17">
+<h3 data-number="23.0.17" class="anchored" data-anchor-id="variable-overallq9"><span class="header-section-number">23.0.17</span> Variable: <code>overallQ9</code></h3>
+<pre class="text"><code>overallQ9       Days in the last week did you feel overwhelmed? Quiz 9 11_20_11
+                  type:  numeric (long)
+                 label:  overall
+                 range:  [1,6]                        units:  1
+         unique values:  6                        missing .:  6/196
+            tabulation:  Freq.   Numeric  Label
+                            34         1  Very Happy
+                            78         2  Pretty Happy
+                            55         3  Happy
+                            19         4  Not so happy
+                             2         5  Not happy at all
+                             2         6  Not sure
+                             6         .
+</code></pre>
+</section>
+<section id="variable-_mergeq9" class="level3" data-number="23.0.18">
+<h3 data-number="23.0.18" class="anchored" data-anchor-id="variable-_mergeq9"><span class="header-section-number">23.0.18</span> Variable: <code>_mergeQ9</code></h3>
+<pre class="text"><code>_mergeQ9                                                            (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                             6         1  master only (1)
+                           190         3  matched (3)</code></pre>
+</section>
+<section id="variable-healthq10" class="level3" data-number="23.0.19">
+<h3 data-number="23.0.19" class="anchored" data-anchor-id="variable-healthq10"><span class="header-section-number">23.0.19</span> Variable: <code>healthQ10</code></h3>
+<pre class="text"><code>healthQ10        How would you describe your current health? Quiz 10 11/23/2011
+                  type:  numeric (long)
+                 label:  health
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  16/196
+            tabulation:  Freq.   Numeric  Label
+                            46         1  Excellent
+                           105         2  Good
+                            24         3  Fair
+                             5         4  Poor
+                            16         .  
+exerciseQ10
+During the last week how often did you exercise or play sports? Quiz 10 11/23/2
+&gt; 0
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  16/196
+            tabulation:  Freq.   Numeric  Label
+                            24         1  0 Days
+                            67         2  1 - 2 Days
+                            58         3  3 - 4 Days
+                            25         4  5 - 6 Days
+                             6         5  7 Days
+                            16         .  
+sleepQ10
+During the last week, how much sleep did you get each night? Quiz 10 11/23/2011
+
+                  type:  numeric (long)
+                 label:  sleep
+                 range:  [1,6]                        units:  1
+         unique values:  6                        missing .:  16/196
+            tabulation:  Freq.   Numeric  Label
+                             4         1  4 or less
+                            22         2  5
+                            61         3  6
+                            61         4  7
+                            27         5  8
+                             5         6  9 or more
+                            16         .  
+sleepqualQ10                           During the last week, do you feel the
+                                       amount of sleep you got was... Quiz 10
+                                       11/
+                  type:  numeric (long)
+                 label:  sleepqual
+                 range:  [2,5]                        units:  1
+         unique values:  4                        missing .:  16/196
+            tabulation:  Freq.   Numeric  Label
+                             6         2  too much
+                            63         3  just right
+                           103         4  too little
+                             8         5  way too little
+                            16         .  
+weightQ10
+How much has your weight changed since the beginning of the semester? Quiz 10 1
+&gt; 1
+                  type:  numeric (long)
+                 label:  weight
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  16/196
+            tabulation:  Freq.   Numeric  Label
+                             5         1  +11 or more pounds
+                            60         2  +5 to 10 pounds
+                           102         3  -5 to 5 pounds
+                            10         4  -5 to 10 pounds
+                             3         5  -11 or more pounds
+
+                            16         .  
+angryQ10
+During the last week, how many days did you feel angry at someone? Quiz 10 11/2
+&gt; 3
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  16/196
+            tabulation:  Freq.   Numeric  Label
+                            48         1  0 Days
+                           109         2  1 - 2 Days
+                            18         3  3 - 4 Days
+                             2         4  5 - 6 Days
+                             3         5  7 Days
+                            16         .  
+embarrassedQ10                         During the last week, how many days did
+                                       you feel embarrassed about something? Qu
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  16/196
+            tabulation:  Freq.   Numeric  Label
+                            59         1  0 Days
+                            97         2  1 - 2 Days
+                            21         3  3 - 4 Days
+                             2         4  5 - 6 Days
+                             1         5  7 Days
+                            16         .  </code></pre>
+</section>
+<section id="variable-_mergeq10" class="level3" data-number="23.0.20">
+<h3 data-number="23.0.20" class="anchored" data-anchor-id="variable-_mergeq10"><span class="header-section-number">23.0.20</span> Variable: <code>_mergeQ10</code></h3>
+<pre class="text"><code>_mergeQ10                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            16         1  master only (1)
+                           180         3  matched (3)
+
+polviewsQ11
+On a scale from liberal to conservative, describe your poltical views? Quiz 11 
+&gt; 1
+                  type:  numeric (long)
+                 label:  polviews
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  18/196
+            tabulation:  Freq.   Numeric  Label
+                            15         1  Liberal
+                            32         2  Slightly Liberal
+                            60         3  Moderate
+                            42         4  Slightly Conservative
+                            29         5  Conservative
+                            18         .  
+gaymarryQ11
+    Do you agree homosexual couples have the right to marry? Quiz 11 11/27/2011
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  18/196
+            tabulation:  Freq.   Numeric  Label
+                            53         1  Strongly Agree
+                            69         2  Agree
+                            36         3  Disagree
+                            20         4  Strongly Disagree
+                            18         .  
+govservQ11
+      Should the government cut services to reduce spending? Quiz 11 11/27/2011
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  18/196
+            tabulation:  Freq.   Numeric  Label
+                            27         1  Strongly Agree
+                            87         2  Agree
+                            59         3  Disagree
+
+                             5         4  Strongly Disagree
+                            18         .  
+eqlchanceQ11                           One of the big problems we don't give
+                                       everyone an equal chance? Quiz 11
+                                       11/27/20
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  18/196
+            tabulation:  Freq.   Numeric  Label
+                            19         1  Strongly Agree
+                            54         2  Agree
+                            83         3  Disagree
+                            22         4  Strongly Disagree
+                            18         .  
+dispolQ11
+Days in the last week did you discuss POLITICS outside of class? Quiz 11 11/27/
+&gt; 2
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  18/196
+            tabulation:  Freq.   Numeric  Label
+                            50         1  0 Days
+                            88         2  1 - 2 Days
+                            33         3  3 - 4 Days
+                             5         4  5 - 6 Days
+                             2         5  7 Days
+                            18         .  
+distvQ11
+  Days in the last week did you discuss TV outside of class? Quiz 11 11/27/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  18/196
+            tabulation:  Freq.   Numeric  Label
+
+                            30         1  0 Days
+                            81         2  1 - 2 Days
+                            51         3  3 - 4 Days
+                            13         4  5 - 6 Days
+                             3         5  7 Days
+                            18         .  
+dissportQ11
+Days in the last week did you discuss SPORTS outside of class? Quiz 11 11/27/20
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  18/196
+            tabulation:  Freq.   Numeric  Label
+                            25         1  0 Days
+                            70         2  1 - 2 Days
+                            37         3  3 - 4 Days
+                            21         4  5 - 6 Days
+                            25         5  7 Days
+                            18         .  
+disartQ11
+Days in the last week did you discuss THEATRE/ART outside of class? Quiz 11 11/
+&gt; 2
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  18/196
+            tabulation:  Freq.   Numeric  Label
+                            84         1  0 Days
+                            69         2  1 - 2 Days
+                            16         3  3 - 4 Days
+                             5         4  5 - 6 Days
+                             4         5  7 Days
+                            18         .  </code></pre>
+</section>
+<section id="variable-_mergeq11" class="level3" data-number="23.0.21">
+<h3 data-number="23.0.21" class="anchored" data-anchor-id="variable-_mergeq11"><span class="header-section-number">23.0.21</span> Variable: <code>_mergeQ11</code></h3>
+<pre class="text"><code>_mergeQ11                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            18         1  master only (1)
+                           178         3  matched (3)
+tvmovieQ12
+     Days in the last week did you watch a TV SHOW or MOVIE? Quiz 12 11/30/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  22/196
+            tabulation:  Freq.   Numeric  Label
+                            10         1  0 Days
+                            93         2  1 - 2 Days
+                            43         3  3 - 4 Days
+                            17         4  5 - 6 Days
+                            11         5  7 Days
+                            22         .  
+attsportQ12
+         Days in the last week did you attend a Live Sports? Quiz 12 11/30/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  22/196
+            tabulation:  Freq.   Numeric  Label
+                           109         1  0 Days
+                            61         2  1 - 2 Days
+                             4         3  3 - 4 Days
+                            22         .  
+wtchsportQ12
+       Days in the last week did you watch a Sports Program? Quiz 12 11/30/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  22/196
+
+            tabulation:  Freq.   Numeric  Label
+                            51         1  0 Days
+                            78         2  1 - 2 Days
+                            27         3  3 - 4 Days
+                            13         4  5 - 6 Days
+                             5         5  7 Days
+                            22         .  
+liveartQ12
+Days in the last week did you watch live artistic performance? Quiz 12 11/30/20
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  22/196
+            tabulation:  Freq.   Numeric  Label
+                           132         1  0 Days
+                            38         2  1 - 2 Days
+                             3         3  3 - 4 Days
+                             1         4  5 - 6 Days
+                            22         .  
+alcoholQ12</code></pre>
+</section>
+<section id="variable-days" class="level3" data-number="23.0.22">
+<h3 data-number="23.0.22" class="anchored" data-anchor-id="variable-days"><span class="header-section-number">23.0.22</span> Variable: <code>Days</code></h3>
+<pre class="text"><code>Days in the last week did you consume an alcoholic beverage? Quiz 12 11/30/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  22/196
+            tabulation:  Freq.   Numeric  Label
+                           119         1  0 Days
+                            41         2  1 - 2 Days
+                            10         3  3 - 4 Days
+                             3         4  5 - 6 Days
+                             1         5  7 Days
+                            22         .  </code></pre>
+</section>
+<section id="variable-videogameq12" class="level3" data-number="23.0.23">
+<h3 data-number="23.0.23" class="anchored" data-anchor-id="variable-videogameq12"><span class="header-section-number">23.0.23</span> Variable: <code>videogameQ12</code></h3>
+<pre class="text"><code>videogameQ12  Days in the last week did you play video game? Quiz 12 11/30/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+
+         unique values:  5                        missing .:  22/196
+            tabulation:  Freq.   Numeric  Label
+                            88         1  0 Days
+                            45         2  1 - 2 Days
+                            25         3  3 - 4 Days
+                            14         4  5 - 6 Days
+                             2         5  7 Days
+                            22         .  </code></pre>
+</section>
+<section id="variable-_mergeq12" class="level3" data-number="23.0.24">
+<h3 data-number="23.0.24" class="anchored" data-anchor-id="variable-_mergeq12"><span class="header-section-number">23.0.24</span> Variable: <code>_mergeQ12</code></h3>
+<pre class="text"><code>_mergeQ12                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            22         1  master only (1)
+                           174         3  matched (3)
+overwhelmedQ13
+              Days in the last week did you feel overwhelmed? Quiz 13 12/4/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  84/196
+            tabulation:  Freq.   Numeric  Label
+                            10         1  0 Days
+                            36         2  1 - 2 Days
+                            32         3  3 - 4 Days
+                            23         4  5 - 6 Days
+                            11         5  7 Days
+                            84         .  
+cheerfulQ13
+          Days in the last week did you attend feel cheerful? Quiz 13 12/4/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  84/196
+
+            tabulation:  Freq.   Numeric  Label
+                             2         1  0 Days
+                            21         2  1 - 2 Days
+                            39         3  3 - 4 Days
+                            30         4  5 - 6 Days
+                            20         5  7 Days
+                            84         .  </code></pre>
+</section>
+<section id="variable-calmq13" class="level3" data-number="23.0.25">
+<h3 data-number="23.0.25" class="anchored" data-anchor-id="variable-calmq13"><span class="header-section-number">23.0.25</span> Variable: <code>calmQ13</code></h3>
+<pre class="text"><code>calmQ13  Days in the last week did you feel calm and relaxed? Quiz 13 12/4/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  84/196
+            tabulation:  Freq.   Numeric  Label
+                            10         1  0 Days
+                            45         2  1 - 2 Days
+                            28         3  3 - 4 Days
+                            22         4  5 - 6 Days
+                             7         5  7 Days
+                            84         .  
+activeQ13
+      Days in the last week did you feel active and vigorous? Quiz 13 12/4/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  84/196
+            tabulation:  Freq.   Numeric  Label
+                            11         1  0 Days
+                            41         2  1 - 2 Days
+                            39         3  3 - 4 Days
+                            14         4  5 - 6 Days
+                             7         5  7 Days
+                            84         .  </code></pre>
+</section>
+<section id="variable-freshq13" class="level3" data-number="23.0.26">
+<h3 data-number="23.0.26" class="anchored" data-anchor-id="variable-freshq13"><span class="header-section-number">23.0.26</span> Variable: <code>freshQ13</code></h3>
+<pre class="text"><code>freshQ13            Days in the last week did you feel fresh? Quiz 13 12/4/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  84/196
+
+            tabulation:  Freq.   Numeric  Label
+                             8         1  0 Days
+                            56         2  1 - 2 Days
+                            35         3  3 - 4 Days
+                             9         4  5 - 6 Days
+                             4         5  7 Days
+                            84         .  
+interestQ13
+   Days in the last week life filled with interesting things? Quiz 13 12/4/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  84/196
+            tabulation:  Freq.   Numeric  Label
+                             5         1  0 Days
+                            23         2  1 - 2 Days
+                            43         3  3 - 4 Days
+                            19         4  5 - 6 Days
+                            22         5  7 Days
+                            84         .  </code></pre>
+</section>
+<section id="variable-overallq13" class="level3" data-number="23.0.27">
+<h3 data-number="23.0.27" class="anchored" data-anchor-id="variable-overallq13"><span class="header-section-number">23.0.27</span> Variable: <code>overallQ13</code></h3>
+<pre class="text"><code>overallQ13    Days in the last week did you feel overwhelmed? Quiz 13 12/4/2011
+                  type:  numeric (long)
+                 label:  overall
+                 range:  [1,6]                        units:  1
+         unique values:  6                        missing .:  84/196
+            tabulation:  Freq.   Numeric  Label
+                            16         1  Very Happy
+                            48         2  Pretty Happy
+                            29         3  Happy
+                            14         4  Not so happy
+                             4         5  Not happy at all
+                             1         6  Not sure
+                            84         .  </code></pre>
+</section>
+<section id="variable-_mergeq13" class="level3" data-number="23.0.28">
+<h3 data-number="23.0.28" class="anchored" data-anchor-id="variable-_mergeq13"><span class="header-section-number">23.0.28</span> Variable: <code>_mergeQ13</code></h3>
+<pre class="text"><code>_mergeQ13                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            84         1  master only (1)
+                           112         3  matched (3)</code></pre>
+</section>
+<section id="variable-healthq14" class="level3" data-number="23.0.29">
+<h3 data-number="23.0.29" class="anchored" data-anchor-id="variable-healthq14"><span class="header-section-number">23.0.29</span> Variable: <code>healthQ14</code></h3>
+<pre class="text"><code>healthQ14         How would you describe your current health? Quiz 14 12/7/2011
+                  type:  numeric (long)
+                 label:  health
+                 range:  [2,2]                        units:  1
+         unique values:  1                        missing .:  194/196
+            tabulation:  Freq.   Numeric  Label
+                             2         2  Good
+                           194         .  
+exerciseQ14
+During the last week how often did you exercise or play sports? Quiz 14 12/7/20
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,1]                        units:  1
+         unique values:  1                        missing .:  194/196
+            tabulation:  Freq.   Numeric  Label
+                             2         1  0 Days
+                           194         .  
+sleepQ14
+ During the last week, how much sleep did you get each night? Quiz 14 12/7/2011
+                  type:  numeric (long)
+                 label:  sleep
+                 range:  [3,4]                        units:  1
+         unique values:  2                        missing .:  194/196
+            tabulation:  Freq.   Numeric  Label
+                             1         3  6
+                             1         4  7
+                           194         .
+
+sleepqualQ14                           During the last week, do you feel the
+                                       amount of sleep you got was... Quiz 14
+                                       12/
+                  type:  numeric (long)
+                 label:  sleepqual
+                 range:  [3,4]                        units:  1
+         unique values:  2                        missing .:  194/196
+            tabulation:  Freq.   Numeric  Label
+                             1         3  just right
+                             1         4  too little
+                           194         .  
+weightQ14
+How much has your weight changed since the beginning of the semester? Quiz 14 1
+&gt; 2
+                  type:  numeric (long)
+                 label:  weight
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  194/196
+            tabulation:  Freq.   Numeric  Label
+                             1         1  +11 or more pounds
+                             1         3  -5 to 5 pounds
+                           194         .  
+angryQ14
+During the last week, how many days did you feel angry at someone? Quiz 14 12/7
+&gt; /
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,2]                        units:  1
+         unique values:  2                        missing .:  194/196
+            tabulation:  Freq.   Numeric  Label
+                             1         1  0 Days
+                             1         2  1 - 2 Days
+                           194         .  
+embarrassedQ14                         During the last week, how many days did
+                                       you feel embarrassed about something? Qu
+
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,2]                        units:  1
+         unique values:  2                        missing .:  194/196
+            tabulation:  Freq.   Numeric  Label
+                             1         1  0 Days
+                             1         2  1 - 2 Days
+                           194         .  </code></pre>
+</section>
+<section id="variable-_mergeq14" class="level3" data-number="23.0.30">
+<h3 data-number="23.0.30" class="anchored" data-anchor-id="variable-_mergeq14"><span class="header-section-number">23.0.30</span> Variable: <code>_mergeQ14</code></h3>
+<pre class="text"><code>_mergeQ14                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                           194         1  master only (1)
+                             2         3  matched (3)
+polviewsQ15
+On a scale from liberal to conservative, describe your poltical views? Quiz 15 
+&gt; 1
+                  type:  numeric (long)
+                 label:  polviews
+                 range:  [2,5]                        units:  1
+         unique values:  4                        missing .:  168/196
+            tabulation:  Freq.   Numeric  Label
+                             9         2  Slightly Liberal
+                             8         3  Moderate
+                             6         4  Slightly Conservative
+                             5         5  Conservative
+                           168         .  
+gaymarryQ15
+    Do you agree homosexual couples have the right to marry? Quiz 15 12/11/2011
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+
+         unique values:  4                        missing .:  168/196
+            tabulation:  Freq.   Numeric  Label
+                            10         1  Strongly Agree
+                            10         2  Agree
+                             6         3  Disagree
+                             2         4  Strongly Disagree
+                           168         .  
+govservQ15
+      Should the government cut services to reduce spending? Quiz 15 12/11/2011
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  168/196
+            tabulation:  Freq.   Numeric  Label
+                             5         1  Strongly Agree
+                            16         2  Agree
+                             6         3  Disagree
+                             1         4  Strongly Disagree
+                           168         .  
+eqlchanceQ15                           One of the big problems we don't give
+                                       everyone an equal chance? Quiz 15
+                                       12/11/20
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  168/196
+            tabulation:  Freq.   Numeric  Label
+                             2         1  Strongly Agree
+                             9         2  Agree
+                            14         3  Disagree
+                             3         4  Strongly Disagree
+                           168         .  
+dispolQ15
+Days in the last week did you discuss POLITICS outside of class? Quiz 15 12/11/
+&gt; 2
+                  type:  numeric (long)
+                 label:  days
+
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  168/196
+            tabulation:  Freq.   Numeric  Label
+                             6         1  0 Days
+                            14         2  1 - 2 Days
+                             7         3  3 - 4 Days
+                             1         4  5 - 6 Days
+                           168         .  
+distvQ15
+  Days in the last week did you discuss TV outside of class? Quiz 15 12/11/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  168/196
+            tabulation:  Freq.   Numeric  Label
+                             6         1  0 Days
+                            12         2  1 - 2 Days
+                             9         3  3 - 4 Days
+                             1         4  5 - 6 Days
+                           168         .  
+dissportQ15
+Days in the last week did you discuss SPORTS outside of class? Quiz 15 12/11/20
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  168/196
+            tabulation:  Freq.   Numeric  Label
+                             8         1  0 Days
+                             9         2  1 - 2 Days
+                             5         3  3 - 4 Days
+                             4         4  5 - 6 Days
+                             2         5  7 Days
+                           168         .  
+disartQ15
+Days in the last week did you discuss THEATRE/ART outside of class? Quiz 15 12/
+&gt; 1
+
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  168/196
+            tabulation:  Freq.   Numeric  Label
+                            13         1  0 Days
+                            12         2  1 - 2 Days
+                             3         3  3 - 4 Days
+                           168         .  </code></pre>
+</section>
+<section id="variable-_mergeq15" class="level3" data-number="23.0.31">
+<h3 data-number="23.0.31" class="anchored" data-anchor-id="variable-_mergeq15"><span class="header-section-number">23.0.31</span> Variable: <code>_mergeQ15</code></h3>
+<pre class="text"><code>_mergeQ15                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                           168         1  master only (1)
+                            28         3  matched (3)
+tvmovieQ16
+     Days in the last week did you watch a TV SHOW or MOVIE? Quiz 16 12/14/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                            38         1  0 Days
+                            82         2  1 - 2 Days
+                            33         3  3 - 4 Days
+                            18         4  5 - 6 Days
+                            11         5  7 Days
+                            14         .  
+attsportQ16
+         Days in the last week did you attend a Live Sports? Quiz 16 12/14/2011
+                  type:  numeric (long)
+                 label:  days
+
+                 range:  [1,5]                        units:  1
+         unique values:  3                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                           149         1  0 Days
+                            32         2  1 - 2 Days
+                             1         5  7 Days
+                            14         .  
+wtchsportQ16
+       Days in the last week did you watch a Sports Program? Quiz 16 12/14/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                            95         1  0 Days
+                            51         2  1 - 2 Days
+                            20         3  3 - 4 Days
+                            13         4  5 - 6 Days
+                             3         5  7 Days
+                            14         .  
+liveartQ16
+Days in the last week did you watch live artistic performance? Quiz 16 12/14/20
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                           141         1  0 Days
+                            39         2  1 - 2 Days
+                             2         3  3 - 4 Days
+                            14         .  
+alcoholQ16</code></pre>
+</section>
+<section id="variable-days-1" class="level3" data-number="23.0.32">
+<h3 data-number="23.0.32" class="anchored" data-anchor-id="variable-days-1"><span class="header-section-number">23.0.32</span> Variable: <code>Days</code></h3>
+<pre class="text"><code>Days in the last week did you consume an alcoholic beverage? Quiz 16 12/14/2011
+                  type:  numeric (long)
+                 label:  days
+
+                 range:  [1,3]                        units:  1
+         unique values:  3                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                           144         1  0 Days
+                            34         2  1 - 2 Days
+                             4         3  3 - 4 Days
+                            14         .  </code></pre>
+</section>
+<section id="variable-videogameq16" class="level3" data-number="23.0.33">
+<h3 data-number="23.0.33" class="anchored" data-anchor-id="variable-videogameq16"><span class="header-section-number">23.0.33</span> Variable: <code>videogameQ16</code></h3>
+<pre class="text"><code>videogameQ16  Days in the last week did you play video game? Quiz 16 12/14/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  14/196
+            tabulation:  Freq.   Numeric  Label
+                            87         1  0 Days
+                            47         2  1 - 2 Days
+                            31         3  3 - 4 Days
+                            13         4  5 - 6 Days
+                             4         5  7 Days
+                            14         .  </code></pre>
+</section>
+<section id="variable-_mergeq16" class="level3" data-number="23.0.34">
+<h3 data-number="23.0.34" class="anchored" data-anchor-id="variable-_mergeq16"><span class="header-section-number">23.0.34</span> Variable: <code>_mergeQ16</code></h3>
+<pre class="text"><code>_mergeQ16                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            14         1  master only (1)
+                           182         3  matched (3)
+overwhelmedQ17
+             Days in the last week did you feel overwhelmed? Quiz 17 12/18/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  27/196
+            tabulation:  Freq.   Numeric  Label
+                            30         1  0 Days
+
+                            52         2  1 - 2 Days
+                            49         3  3 - 4 Days
+                            33         4  5 - 6 Days
+                             5         5  7 Days
+                            27         .  
+cheerfulQ17
+         Days in the last week did you attend feel cheerful? Quiz 17 12/18/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  27/196
+            tabulation:  Freq.   Numeric  Label
+                            10         1  0 Days
+                            31         2  1 - 2 Days
+                            66         3  3 - 4 Days
+                            38         4  5 - 6 Days
+                            24         5  7 Days
+                            27         .  </code></pre>
+</section>
+<section id="variable-calmq17" class="level3" data-number="23.0.35">
+<h3 data-number="23.0.35" class="anchored" data-anchor-id="variable-calmq17"><span class="header-section-number">23.0.35</span> Variable: <code>calmQ17</code></h3>
+<pre class="text"><code>calmQ17 Days in the last week did you feel calm and relaxed? Quiz 17 12/18/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  27/196
+            tabulation:  Freq.   Numeric  Label
+                            16         1  0 Days
+                            62         2  1 - 2 Days
+                            58         3  3 - 4 Days
+                            22         4  5 - 6 Days
+                            11         5  7 Days
+                            27         .  
+activeQ17
+     Days in the last week did you feel active and vigorous? Quiz 17 12/18/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  27/196
+
+            tabulation:  Freq.   Numeric  Label
+                            28         1  0 Days
+                            69         2  1 - 2 Days
+                            49         3  3 - 4 Days
+                            13         4  5 - 6 Days
+                            10         5  7 Days
+                            27         .  </code></pre>
+</section>
+<section id="variable-freshq17" class="level3" data-number="23.0.36">
+<h3 data-number="23.0.36" class="anchored" data-anchor-id="variable-freshq17"><span class="header-section-number">23.0.36</span> Variable: <code>freshQ17</code></h3>
+<pre class="text"><code>freshQ17           Days in the last week did you feel fresh? Quiz 17 12/18/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  27/196
+            tabulation:  Freq.   Numeric  Label
+                            21         1  0 Days
+                            67         2  1 - 2 Days
+                            55         3  3 - 4 Days
+                            22         4  5 - 6 Days
+                             4         5  7 Days
+                            27         .  
+interestQ17
+  Days in the last week life filled with interesting things? Quiz 17 12/18/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  27/196
+            tabulation:  Freq.   Numeric  Label
+                             9         1  0 Days
+                            46         2  1 - 2 Days
+                            59         3  3 - 4 Days
+                            31         4  5 - 6 Days
+                            24         5  7 Days
+                            27         .  </code></pre>
+</section>
+<section id="variable-overallq17" class="level3" data-number="23.0.37">
+<h3 data-number="23.0.37" class="anchored" data-anchor-id="variable-overallq17"><span class="header-section-number">23.0.37</span> Variable: <code>overallQ17</code></h3>
+<pre class="text"><code>overallQ17   Days in the last week did you feel overwhelmed? Quiz 17 12/18/2011
+                  type:  numeric (long)
+                 label:  overall
+                 range:  [1,6]                        units:  1
+         unique values:  6                        missing .:  27/196
+
+            tabulation:  Freq.   Numeric  Label
+                            42         1  Very Happy
+                            67         2  Pretty Happy
+                            39         3  Happy
+                            17         4  Not so happy
+                             2         5  Not happy at all
+                             2         6  Not sure
+                            27         .  </code></pre>
+</section>
+<section id="variable-_mergeq17" class="level3" data-number="23.0.38">
+<h3 data-number="23.0.38" class="anchored" data-anchor-id="variable-_mergeq17"><span class="header-section-number">23.0.38</span> Variable: <code>_mergeQ17</code></h3>
+<pre class="text"><code>_mergeQ17                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            27         1  master only (1)
+                           169         3  matched (3)</code></pre>
+</section>
+<section id="variable-healthq18" class="level3" data-number="23.0.39">
+<h3 data-number="23.0.39" class="anchored" data-anchor-id="variable-healthq18"><span class="header-section-number">23.0.39</span> Variable: <code>healthQ18</code></h3>
+<pre class="text"><code>healthQ18        How would you describe your current health? Quiz 18 12/21/2011
+                  type:  numeric (long)
+                 label:  health
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  30/196
+            tabulation:  Freq.   Numeric  Label
+                            62         1  Excellent
+                            85         2  Good
+                            16         3  Fair
+                             3         4  Poor
+                            30         .  
+exerciseQ18
+During the last week how often did you exercise or play sports? Quiz 18 12/21/2
+&gt; 0
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  30/196
+            tabulation:  Freq.   Numeric  Label
+
+                            34         1  0 Days
+                            61         2  1 - 2 Days
+                            44         3  3 - 4 Days
+                            23         4  5 - 6 Days
+                             4         5  7 Days
+                            30         .  
+sleepQ18</code></pre>
+</section>
+<section id="variable-during" class="level3" data-number="23.0.40">
+<h3 data-number="23.0.40" class="anchored" data-anchor-id="variable-during"><span class="header-section-number">23.0.40</span> Variable: <code>During</code></h3>
+<pre class="text"><code>During the last week, how much sleep did you get each night? Quiz 18 12/21/2011
+                  type:  numeric (long)
+                 label:  sleep
+                 range:  [1,6]                        units:  1
+         unique values:  6                        missing .:  30/196
+            tabulation:  Freq.   Numeric  Label
+                             4         1  4 or less
+                             4         2  5
+                            11         3  6
+                            31         4  7
+                            64         5  8
+                            52         6  9 or more
+                            30         .  
+sleepqualQ18                           During the last week, do you feel the
+                                       amount of sleep you got was... Quiz 18
+                                       12/
+                  type:  numeric (long)
+                 label:  sleepqual
+                 range:  [2,5]                        units:  1
+         unique values:  4                        missing .:  30/196
+            tabulation:  Freq.   Numeric  Label
+                             8         2  too much
+                            30         3  just right
+                           101         4  too little
+                            27         5  way too little
+                            30         .  
+weightQ18
+How much has your weight changed since the beginning of the semester? Quiz 18 1
+&gt; 2
+                  type:  numeric (long)
+                 label:  weight
+
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  30/196
+            tabulation:  Freq.   Numeric  Label
+                             8         1  +11 or more pounds
+                            45         2  +5 to 10 pounds
+                            99         3  -5 to 5 pounds
+                            11         4  -5 to 10 pounds
+                             3         5  -11 or more pounds
+                            30         .  
+angryQ18
+During the last week, how many days did you feel angry at someone? Quiz 18 12/2
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  30/196
+            tabulation:  Freq.   Numeric  Label
+                            49         1  0 Days
+                            99         2  1 - 2 Days
+                            14         3  3 - 4 Days
+                             2         4  5 - 6 Days
+                             2         5  7 Days
+                            30         .  
+embarrassedQ18                         During the last week, how many days did
+                                       you feel embarrassed about something? Qu
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  30/196
+            tabulation:  Freq.   Numeric  Label
+                            78         1  0 Days
+                            74         2  1 - 2 Days
+                            11         3  3 - 4 Days
+                             2         4  5 - 6 Days
+                             1         5  7 Days
+                            30         .  
+_mergeQ18                                                           (unlabeled)
+
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            30         1  master only (1)
+                           166         3  matched (3)
+polviewsQ19
+On a scale from liberal to conservative, describe your poltical views? QUIZ 19 
+&gt; 1
+                  type:  numeric (long)
+                 label:  polviews
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  53/196
+            tabulation:  Freq.   Numeric  Label
+                            10         1  Liberal
+                            26         2  Slightly Liberal
+                            44         3  Moderate
+                            39         4  Slightly Conservative
+                            24         5  Conservative
+                            53         .  
+gaymarryQ19
+    Do you agree homosexual couples have the right to marry? QUIZ 19 12/25/2011
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  53/196
+            tabulation:  Freq.   Numeric  Label
+                            45         1  Strongly Agree
+                            49         2  Agree
+                            33         3  Disagree
+                            16         4  Strongly Disagree
+                            53         .  
+govservQ19
+      Should the government cut services to reduce spending? QUIZ 19 12/25/2011
+
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  53/196
+            tabulation:  Freq.   Numeric  Label
+                            26         1  Strongly Agree
+                            59         2  Agree
+                            54         3  Disagree
+                             4         4  Strongly Disagree
+                            53         .  
+eqlchanceQ19                           One of the big problems we don't give
+                                       everyone an equal chance? QUIZ 19
+                                       12/25/20
+                  type:  numeric (long)
+                 label:  likert4
+                 range:  [1,4]                        units:  1
+         unique values:  4                        missing .:  53/196
+            tabulation:  Freq.   Numeric  Label
+                            17         1  Strongly Agree
+                            42         2  Agree
+                            60         3  Disagree
+                            24         4  Strongly Disagree
+                            53         .  
+dispolQ19
+Days in the last week did you discuss POLITICS outside of class? QUIZ 19 12/25/
+&gt; 2
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  53/196
+            tabulation:  Freq.   Numeric  Label
+                            31         1  0 Days
+                            74         2  1 - 2 Days
+                            30         3  3 - 4 Days
+                             6         4  5 - 6 Days
+                             2         5  7 Days
+                            53         .  
+distvQ19
+
+  Days in the last week did you discuss TV outside of class? QUIZ 19 12/25/2011
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  53/196
+            tabulation:  Freq.   Numeric  Label
+                            18         1  0 Days
+                            61         2  1 - 2 Days
+                            40         3  3 - 4 Days
+                            19         4  5 - 6 Days
+                             5         5  7 Days
+                            53         .  
+dissportQ19
+Days in the last week did you discuss SPORTS outside of class? QUIZ 19 12/25/20
+&gt; 1
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  53/196
+            tabulation:  Freq.   Numeric  Label
+                            20         1  0 Days
+                            55         2  1 - 2 Days
+                            29         3  3 - 4 Days
+                            24         4  5 - 6 Days
+                            15         5  7 Days
+                            53         .  
+disartQ19
+Days in the last week did you discuss THEATRE/ART outside of class? QUIZ 19 12/
+&gt; 2
+                  type:  numeric (long)
+                 label:  days
+                 range:  [1,5]                        units:  1
+         unique values:  5                        missing .:  53/196
+            tabulation:  Freq.   Numeric  Label
+                            66         1  0 Days
+                            59         2  1 - 2 Days
+                            12         3  3 - 4 Days
+                             4         4  5 - 6 Days
+
+                             2         5  7 Days
+                            53         .  </code></pre>
+</section>
+<section id="variable-_mergeq19" class="level3" data-number="23.0.41">
+<h3 data-number="23.0.41" class="anchored" data-anchor-id="variable-_mergeq19"><span class="header-section-number">23.0.41</span> Variable: <code>_mergeQ19</code></h3>
+<pre class="text"><code>_mergeQ19                                                           (unlabeled)
+                  type:  numeric (byte)
+                 label:  _merge
+                 range:  [1,3]                        units:  1
+         unique values:  2                        missing .:  0/196
+            tabulation:  Freq.   Numeric  Label
+                            53         1  master only (1)
+                           143         3  matched (3)
+2 . log close
+      name:  &lt;unnamed&gt;
+       log:  /Volumes/dhachen/Private/netsense/HachenWork/Finalists(DH2).smcl
+  log type:  smcl
+ closed on:  28 Mar 2012, 09:43:01
+</code></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../Codebooks/PolQuizzesCodebook.html" class="pagination-link" aria-label="PolQuizzesCodebook">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Metadata and Mappings/Semester Dates.html" class="pagination-link" aria-label="Semester Dates">
+        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

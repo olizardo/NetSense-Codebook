@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>codebook.txt – NetSense Study Codebook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Metadata and Mappings/BT-variable-description.html" rel="next">
+<link href="../citation.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-fee066a00baa590e8925199ba1c8ceb4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">NetSense Study Codebook</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Survey &amp; Network Datasets</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../surveys.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Demographic, Behavioral, &amp; Quiz Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Social Network Surveys</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../proximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bluetooth Proximity Logs</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Searchable Catalogs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../catalog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Searchable Variable Catalog</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../citation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Metadata and Mappings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/07275-Codebook.txt.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT-variable-description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/BluetoothProximity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/CodeBook(netsense_entry_recoded_12_5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Codebook for arcWeeklyTableCombined.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Files Overview 7_30_14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Files Overview 7_30_14.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Structures and Variables for NetSense.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data Structures and Variables for NetSense.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Dorm Distances.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/DormValueLabels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/EdgleListRenumberCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Edge List Renumbered Codebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Ego and Alter Coding Conventions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Ego and Alter Coding Conventions.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/IAmSomeoneIndices(extraversion).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">I Am Someone Indices (Extraversion)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Interesting_data.txt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Interesting_data.txt.html</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/ND-academic-calendar-2011_2012.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ND Academic Calendar 2011-2012</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/PolQuizzesCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/QuizDataCodebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/Semester Dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Metadata and Mappings/personality-inventory-coding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Personality Inventory Coding</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Network Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2011Net(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Summer2011Net(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Spring2012Net(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Spring2012Net(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2012Net(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Summer2012Net(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Fall2012Net(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Winter2013Net(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2013Net(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Demographic Survey Instruments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2011Demog(W1).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Summer2011Demog(W1)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Spring2012Demog(W2).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spring2012Demog(W2)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2012Demog(W3).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Summer2012Demog(W3)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Fall2012Demog(W4).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fall2012Demog(W4)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Winter2013Demog(W5).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Winter2013Demog(W5)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Codebooks/Summer2013Demog(W6).html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Summer2013Demog(W6)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></a></li></ol></nav></header>
+
+
+
+
+<p>1</p>
+<p>EUROPEAN COMMUNITIES STUDY, 1971</p>
+<p>(ICPSR 7275)</p>
+<p>Principal Investigators</p>
+<p>Ronald Inglehart</p>
+<p>Jacques-Rene Rabier</p>
+<p>First ICPSR Edition</p>
+<p>April 1976</p>
+<p>Inter-university Consortium for</p>
+<p>Political and Social Research</p>
+<p>P.O. Box 1248</p>
+<p>Ann Arbor, Michigan 48106</p>
+<p>[Hard copy documentation transformed into machine-readable</p>
+<p>text utilizing Optical Character Recognition (OCR) Scanning,</p>
+<p>Septemer 1991]</p>
+<p>1</p>
+<p>1</p>
+<p>BIBLIOGRAPHIC CITATION</p>
+<p>Publications based on ICPSR data collections should</p>
+<p>acknowledge those sources by means of bibliographic citations.</p>
+<p>To ensure that such source attributions are captured for</p>
+<p>social science bibliographic utilities, citations must appear</p>
+<p>in footnotes or in the reference section of publications. The</p>
+<p>bibliographic citation for this data collection is:</p>
+<p>Inglehart, Ronald, and Jacques-Rene Rabier.</p>
+<p>EUROPEAN COMMUNITIES STUDY, 1971 [Computer file].</p>
+<p>Conducted by Institut Francais D'Opinion Publique</p>
+<p>(IFOP), Paris, et al.&nbsp;ICPSR ed.&nbsp;Ann Arbor, MI:</p>
+<p>Inter-university Consortium for Political and</p>
+<p>Social Research [producer and distributor], 1976.</p>
+<p>REQUEST FOR INFORMATION ON USE OF ICPSR RESOURCES</p>
+<p>To provide funding agencies with essential information about</p>
+<p>use of archival resources and to facilitate the exchange of</p>
+<p>information about ICPSR participants' research activities,</p>
+<p>users of ICPSR data are requested to send to ICPSR</p>
+<p>bibliographic citations for each completed manuscript or</p>
+<p>thesis abstract. Please indicate in a cover letter which data</p>
+<p>were used.</p>
+<p>DATA DISCLAIMER</p>
+<p>The original collector of the data, ICPSR, and the relevant</p>
+<p>funding agency bear no responsibility for uses of this</p>
+<p>collection or for interpretations or inferences based upon</p>
+<p>such uses.</p>
+<p>1</p>
+<p>1</p>
+<p>ICPSR 7275 Page 1</p>
+<p>OSIRIS DICTIONARY LISTING</p>
+<p>BELGIUM</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>1 INTERVIEW NUMBER 1 4 1</p>
+<p>2 0=G,1=B,2=F,3=I,4=L,5=N 5 1 1</p>
+<p>3 SPLIT BALLOT:l=EVEN,20DD 6 1 1</p>
+<p>4 1ST BELONG:EUROPE=50TH6 7 1 1</p>
+<p>5 2ND BELONG:EUROPE=50TH6 8 1 1</p>
+<p>6 BORN IN THIS PROV:0=NO 9 1 1</p>
+<p>7 CAME HERE:5=20 YRS+ 10 1 1</p>
+<p>8 RAPID DEVEL=4 11 1 1</p>
+<p>9 REGIONAL DEVEL:3=NEUTRAL 12 1 1</p>
+<p>10 WOULDNT MOVE IN NATN 13 1 1</p>
+<p>11 WOULDNT MOVE IN EURN 14 1 1</p>
+<p>12 ABANDON EEC:INDIFF=3 15 1 1</p>
+<p>13 EEC VERY BAD INFL=5 16 1 1</p>
+<p>14 EEC MAIN INFL:TNSPT=5 17 1 1</p>
+<p>15 EXPECT VERY BAD INFL=5 18 1 1</p>
+<p>16 EXPECT MAIN INFL:TNSPT=5 19 1 1</p>
+<p>17 (SPLIT)REG/EUR BETTER=1 20 1 1</p>
+<p>18 (SPLIT)EVEN=EUR/REG.BETR 21 1 1</p>
+<p>19 WHAT PROBVARIABLE X 22 1 1</p>
+<p>20 FARMERS WORST OFF=5 23 1 1</p>
+<p>21 AGRIC=ORDINARY=2 24 1 1</p>
+<p>22 (1) FARM DIFF.DUE DIST=4 25 1 1</p>
+<p>23 (2)FARM DIFF.DUE DIST=4 26 1 1</p>
+<p>24 STRONG.AGST.FARM DEMS=4 27 1 1</p>
+<p>25 STRONGLY AG.VIOL.DEMS=4 28 1 1</p>
+<p>26 ADVISE SEEK NON-FARM=2 29 1 1</p>
+<p>27 ADVISE COMPLETELY OUT=3 30 1 1</p>
+<p>28 VERY DIFFIC.FIND OTHER=4 31 1 1</p>
+<p>29 EEC GOOD SOME FARM=3 32 1 1</p>
+<p>30 (BELG)FARMERS SPEC.BAD=2 33 1 1</p>
+<p>31 EEC GOOD SOME INDUS=3 34 1 1</p>
+<p>32 (BELG) INDUS.SPEC.BAD= 2 35 1 1</p>
+<p>33 EEC STIM.INDUS:DISAGR=5 36 1 1</p>
+<p>34 EEC AID INDUS.EXPORT 37 1 1</p>
+<p>35 EEC GD.CONSUMEPS:DISAGR= 38 1 1</p>
+<p>36 EEC AIDS FORN COMPETITN 39 1 1</p>
+<p>37 EEC AIDS FARM EXPORTS 40 1 1</p>
+<p>38 NEW MEMBRS:BAD,AGRIC=2 41 1 1</p>
+<p>39 NEW MEMBRS BAD INDUS=2 42 1 1</p>
+<p>40 NEW MEMBRS BAD PROV.=2 43 1 1</p>
+<p>41 HEARD OF MANSHOLT PLAN=1 44 1 1</p>
+<p>42 MANSHOLT=BAD=2 45 1 1</p>
+<p>43 ACQ/P-B VALUES:1ST 46 1 1</p>
+<p>44 ACQ/P-B VALUES:2ND 47 1 1</p>
+<p>45 JOB-POLLUTN-WOMEN:lST 48 1 1</p>
+<p>46 JOB-POLLUTN-WOMEN 2ND 49 1 1</p>
+<p>1</p>
+<p>Page 2 ICPSR 7275</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>47 ARMY-EC.AID-EUR:lST 50 1 1</p>
+<p>48 ARMY-EC.AID-EUR:2ND 51 1 1</p>
+<p>49 WAR CERTAIN=1 52 1 1 0</p>
+<p>50 EC.CRISIS CERTAIN=1 53 1 1 0</p>
+<p>51 AG.U.S.EUR.=4 54 1 1</p>
+<p>52 PERS.SACRIFIC.EUR:NOT=4 55 1 1</p>
+<p>53 INSUFFIC.INFO.EEC=2 56 1 1</p>
+<p>54 INSUFFIC.INFO.BELG.AGRIC 57 1 1</p>
+<p>55 INSUFFIC.INFO.REG.DEVEL 58 1 1</p>
+<p>56 (BELG.)TV INSUFFIC.:EEC 59 1 1</p>
+<p>57 (BELG.)TV INSUFFIC.:AGRIC 60 1 1</p>
+<p>58 (BELG) TV INSUFFIC:REG. 61 1 1</p>
+<p>59 EUR.COUNTRIES TOO DIFF. 62 1 1</p>
+<p>60 U.S.EUR.ONLY IN 20 YRS. 63 1 1</p>
+<p>61 EUR.PEOPLES GAIN CONSC. 64 1 1</p>
+<p>62 EUR.PUBLICS AHEAD GOV'TS 65 1 1</p>
+<p>63 PERSUAD.FRIENDS:NEVER=4 66 1 1</p>
+<p>64 LIKE NEW THINGS:NEVER=4 67 1 1</p>
+<p>65 POLITICAL PARTY(&amp;-=1,7) 68 1 1</p>
+<p>66 RELIG.DENOM.l=CATHOLIC 69 1 1</p>
+<p>67 RELIG.ATTENDANCE:5=NEVER 70 1 1</p>
+<p>68 RELIG.PROGRESSIVE=2 71 1 1</p>
+<p>69 MALE=1 72 1 1</p>
+<p>70 AGE:65+=X=l 73 1 1</p>
+<p>71 OCCUPA,HD. OF FAM:8=INAC 74 1 1</p>
+<p>72 OCCUPA,RESPONDENT 75 1 1</p>
+<p>73 UNION=1-3;SELF-EMPLOY=5 76 1 1</p>
+<p>74 UNION SYMP:(3=4 77 1 1</p>
+<p>75 FA.OCCUPA (CHILD) 78 1 1</p>
+<p>76 FATHER UNIV.EDUC=5 79 1 1</p>
+<p>77 RESP.UNIV.EDUC=5 80 1 1</p>
+<p>78 FAM.INCOME:HI=5(VARIES) 81 1 1</p>
+<p>79 SIZE OF TOWN:LG=6 82 1 1</p>
+<p>80 REGIONS(VARIES) 83 1 1</p>
+<p>81 TEEN-AGE=l,OTHERS=9 84 1 1</p>
+<p>82 BELG.ONLY:REGIONAL I.D. 85 1 1</p>
+<p>1</p>
+<p>ICPSR 7275 Page 3</p>
+<p>GERMANY</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>1 INTERVIEW NUMBER 1 4 1</p>
+<p>2 0=G,l=B,2=F,3=I,4=L,5=N 5 1 1</p>
+<p>3 SPLIT BALLOT:l=EVEN,20DD 6 1 1</p>
+<p>4 1ST BELONG:EUROPE=50TH6 7 1 1</p>
+<p>5 2ND BELONG:EUROPE=50TH6 8 1 1</p>
+<p>6 BORN IN THIS PROV:O=NO 9 1 1</p>
+<p>7 CAME HERE:5=20 YRS+ 10 1 1</p>
+<p>8 RAPID DEVEL=4 11 1 1</p>
+<p>9 REGIONAL DEVEL:3=NEUTRAL 12 1 1</p>
+<p>10 WOULDNT MOVE IN NATN 13 1 1</p>
+<p>11 WOULDNT MOVE IN EURN 14 1 1</p>
+<p>12 ABANDON EEC:INDIFF=3 15 1 1</p>
+<p>13 EEC VERY BAD INFL=5 16 1 1</p>
+<p>14 EEC MAIN INFL:TNSPT=5 17 1 1</p>
+<p>15 EXPECT VERY BAD INFL=5 18 1 1</p>
+<p>16 EXPECT MAIN INFL:TNSPT=5 19 1 1</p>
+<p>17 (SPLIT)REG/EUR BETTEP=1 20 1 1</p>
+<p>18 (SPLIT)EVEN=EUR/REG.BETR 21 1 1</p>
+<p>19 WHAT PROB. BETTER DONE? 22 1 1</p>
+<p>20 FARMERS WORST OFF=5 23 1 1</p>
+<p>21 AGRIC=ORDINARY=2 24 1 1</p>
+<p>22 (1)FARM DIFF.DUE DIST=4 25 1 1</p>
+<p>23 (2)FARM DIFF.DUE DIST=4 26 1 1</p>
+<p>24 STRONG.AGST.FARM DEMS=4 27 1 1</p>
+<p>25 STRONGLY AG.VIOL.DEMS=4 28 1 1</p>
+<p>26 ADVISE SEEK NON-FARM=2 29 1 1</p>
+<p>27 ADVISE COMPLETELY OUT=3 30 1 1</p>
+<p>28 VERY DIFFIC.FIND OTHER=4 31 1 1</p>
+<p>29 EEC GOOD SOME FARM=3 32 1 1</p>
+<p>30 (BELG)FARMERS SPEC.BAD=2 33 1 1</p>
+<p>31 EEC GOOD SOME INDUS=3 34 1 1</p>
+<p>32 (BELG)INDUS.SPEC.BAD=2 35 1 1</p>
+<p>33 EEC STIM.INDUS:DISAGR=5 36 1 1</p>
+<p>34 EEC AID INDUS.EXPORT 37 1 1</p>
+<p>35 EEC GD.CONSUMERS:DISAGR= 38 1 1</p>
+<p>36 EEC AIDS FORN COMPETITN 39 1 1</p>
+<p>37 EEC AIDS FARM EXPORTS 40 1 1</p>
+<p>38 NEW MEMBRS:BAD,AGRIC=2 41 1 1</p>
+<p>39 NEW MEMBRS BAD INDUS=2 42 1 1</p>
+<p>40 NEW MEMBRS BAD PROV.=2 43 1 1</p>
+<p>41 HEARD OF MANSHOLT PLAN=1 44 1 1</p>
+<p>42 MANSHOLT=BAD=2 45 1 1</p>
+<p>43 ACQ/P-B VALUES:1ST 46 1 1</p>
+<p>44 ACQ/P-B VALUES:2ND 47 1 1</p>
+<p>45 JOB-POLLUTN-WOMEN:lST 48 1 1</p>
+<p>46 JOB-POLLUTN-WOMEN 2ND 49 1 1</p>
+<p>47 ARMY-EC.AID-EUR:lST 50 1 1</p>
+<p>48 ARMY-EC.AID-EUR:2ND 51 1 1</p>
+<p>1</p>
+<p>Page 4 ICPSR 7275</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>49 WAR CERTAIN=1 52 1 1 0</p>
+<p>50 EC.CRISIS CERTAIN=1 53 1 1 0</p>
+<p>51 AG.U.S.EUR.=4 54 1 1</p>
+<p>52 PERS.SACRIFIC.EUR:NOT=4 55 1 1</p>
+<p>53 INSUFFIC.INFO.EEC=2 56 1 1</p>
+<p>54 INSUFFIC.INFO.BELG.AGRIC 57 1 1</p>
+<p>55 INSUFFIC.INF0.REG.DEVEL 58 1 1</p>
+<p>56 (BELG.)TV INSUFFIC.:EEC 59 1 1</p>
+<p>57 (BELG.)TV INSUFFIC.:AGRI 60 1 1</p>
+<p>58 (BELG)TV INSUFFIC:REG. 61 1 1</p>
+<p>59 EUR.COUNTRIES TOO DIFF. 62 1 1</p>
+<p>60 U.S.EUR.ONLY IN 20 YRS. 63 1 1</p>
+<p>61 EUR.PEOPLES GAIN CONSC. 64 1 1</p>
+<p>62 EUR.PUBLICS AHEAD GOV'TS 65 1 1</p>
+<p>63 PERSUAD.FRIENDS:NEVER=4 66 1 1</p>
+<p>64 LIKE NEW THINGS:NEVER=4 67 1 1</p>
+<p>65 POLITICAL PARTY(VARIES) 68 1 1</p>
+<p>66 RELIG.DENOM.l=CATHOLIC 69 1 1</p>
+<p>67 RELIG.ATTENDANCE:5=NEVER 70 1 1</p>
+<p>68 RELIG.PROGRESSIVE=2 71 1 1</p>
+<p>69 MALE=1 72 1 1</p>
+<p>70 AGE:65+=X=1 73 1 1</p>
+<p>71 OCCUPA,HD. OF FAM:8=INAC 74 1 1</p>
+<p>72 OCCUPA,RESPONDENT 75 1 1</p>
+<p>73 UNION=1-3;SELF-EMPLOY=5 76 1 1</p>
+<p>74 UNION SYMP:(3=4 77 1 1</p>
+<p>75 FA.OCCUPA(CHILD) 78 1 1</p>
+<p>76 FATHER UNIV.EDUC=5 79 1 1</p>
+<p>77 RESP.UNIV.EDUC=5 80 1 1</p>
+<p>78 FAM.INCOME: HI= 5 (VARIES) 81 1 1</p>
+<p>79 SIZE OF TOWN:LG=6 82 2 1</p>
+<p>80 REGIONS(VARIES) 84 1 1</p>
+<p>81 TEEN-AGE=l,OTHERS=9 85 1 1</p>
+<p>1</p>
+<p>ICPSR 7275 Page 5</p>
+<p>ITALY</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>1 INTERVIEW NUMBER 1 4 1</p>
+<p>2 0=G,l=B,2=F,3=I,4=L,5=N 5 1 1</p>
+<p>3 SPLIT BALLOT:l=EVEN,20DD 6 1 1</p>
+<p>4 1ST BELONG:EUROPE=50TH6 7 1 1</p>
+<p>5 2ND BELONG:EUROPE=50TH6 8 1 1</p>
+<p>6 BORN IN THIS PPOV:O=NO 9 1 1</p>
+<p>7 CAME HERE:5=20 YRS+ 10 1 1</p>
+<p>8 RAPID DEVEL=4 11 1 1</p>
+<p>9 REGIONAL DEVEL:3=NEUTRAL 12 1 1</p>
+<p>10 WOULDNT MOVE IN NATN 13 1 1</p>
+<p>11 WOULDNT MOVE IN EURN 14 1 1</p>
+<p>12 ABANDON EEC:INDIFF=3 15 1 1</p>
+<p>13 EEC VERY BAD INFL=5 16 1 1</p>
+<p>14 EEC MAIN INFL:TNSPT=5 17 1 1</p>
+<p>15 EXPECT VERY BAD INFL=5 18 1 1</p>
+<p>16 EXPECT MAIN INFL:TNSPT=5 19 1 1</p>
+<p>17 (SPLIT)REG/EUP BETTER=1 20 1 1</p>
+<p>18 (SPLIT)EVEN=EUR/REG.BETR 21 1 1</p>
+<p>19 HD.OF FAM:-=O,+=l 22 1 1</p>
+<p>20 FARMERS WORST OFF=5 23 1 1</p>
+<p>21 AGRIC=ORDINARY=2 24 1 1</p>
+<p>22 (1)FARM DIFF.DUE DIST=4 25 1 1</p>
+<p>23 (2)FARM DIFF.DUE DIST=4 26 1 1</p>
+<p>24 STRONG.AGST.FARM DEMS=4 27 1 1</p>
+<p>25 STRONGLY AG.VIOL.DEMS=4 28 1 1</p>
+<p>26 ADVISE SEEK NON-FARM=2 29 1 1</p>
+<p>27 ADVISE COMPLETELY OUT=3 30 1 1</p>
+<p>28 VERY DIFFIC.FIND OTHER=4 31 1 1</p>
+<p>29 EEC GOOD SOME FARM=3 32 1 1</p>
+<p>30 (BELG)FARMERS SPEC.BAD=2 33 1 1</p>
+<p>31 EEC GOOD SOME INDUS=3 34 1 1</p>
+<p>32 (BELG)INDUS.SPEC.BAD=2 35 1 1</p>
+<p>33 EEC STIM.INDUS:DISAGR=5 36 1 1</p>
+<p>34 EEC AID INDUS.EXPORT 37 1 1</p>
+<p>35 EEC GD.CONSUMERS:DISAGR= 38 1 1</p>
+<p>36 EEC AIDS FORN COMPETITN 39 1 1</p>
+<p>37 EEC AIDS FARM EXPORTS 40 1 1</p>
+<p>38 NEW MEMBRS:BAD,AGRIC=2 41 1 1</p>
+<p>39 NEW MEMBRS BAD INDUS=2 42 1 1</p>
+<p>40 NEW MEMBRS BAD PROV.=2 43 1 1</p>
+<p>41 HEARD OF MANSHOLT PLAN=1 44 1 1</p>
+<p>42 MANSHOLT=BAD=2 45 1 1</p>
+<p>43 ACQ/P-B VALUES:1ST 46 1 1</p>
+<p>44 ACQ/P-B VALUES:2ND 47 1 1</p>
+<p>45 JOB-POLLUTN-WOMEN:lST 48 1 1</p>
+<p>46 JOB-POLLUTN-WOMEN 2ND 49 1 1</p>
+<p>47 ARMY-EC.AID-EUR: 1ST 50 1 1</p>
+<p>1</p>
+<p>Page 6 ICPSR 7275</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>48 ARMY-EC.AID-EUR:2ND 51 1 1</p>
+<p>49 WAR CERTAIN=1 52 1 1 0</p>
+<p>50 EC.CRISIS CERTAIN=1 53 1 1 0</p>
+<p>51 AG.U.S.EUR.=4 54 1 1</p>
+<p>52 PERS.SACRIFIC.EUR:NOT=4 55 1 1</p>
+<p>53 INSUFFIC.INFO.EEC=2 56 1 1</p>
+<p>54 INSUFFIC.INFO.BELG.AGRIC 57 1 1</p>
+<p>55 INSUFFIC.INFO.REG.DEVEL 58 1 1</p>
+<p>56 (BELG.)TV INSUFFIC.:EEC 59 1 1</p>
+<p>57 (BELG.)TV INSUFFIC.:AGRI 60 1 1</p>
+<p>58 (BELG)TV INSUFFIC:REG. 61 1 1</p>
+<p>59 EUR.COUNTRIES TOO DIFF. 62 1 1</p>
+<p>60 U.S.EUR.ONLY IN 20 YRS. 63 1 1</p>
+<p>61 EUR.PEOPLES GAIN CONSC. 64 1 1</p>
+<p>62 EUR.PUBLICS AHEAD GOV'TS 65 1 1</p>
+<p>63 PERSUAD.FRIENDS:NEVER=4 66 1 1</p>
+<p>64 LIKE NEW THINGS:NEVER=4 67 1 1</p>
+<p>65 PARTY:O=NA,l=PCI,9=MSI 68 1 1 0</p>
+<p>66 RELIG.DENOM.l=CATHOLIC 69 1 1</p>
+<p>67 RELIG.ATTENDANCE:5=NEVER 70 1 1</p>
+<p>68 RELIG.PROGRESSIVE=2 71 1 1</p>
+<p>69 MALE=1 72 1 1</p>
+<p>70 AGE:65+=X=l 73 1 1</p>
+<p>71 OCCUPA,HD-FAM:-=2,+=3 74 1 1</p>
+<p>72 OCCUPA,RESP:-=2,+=3 75 1 1</p>
+<p>73 UNION=1-3;SELF-EMPLOY=6 76 1 1</p>
+<p>74 UNION SYMP:NO=O 77 1 1</p>
+<p>75 FA. OCCUPA (CHILD) 78 1 1</p>
+<p>76 FATHER UNIV.EDUC=5 79 1 1</p>
+<p>77 RESP. UNIV. EDUC=5 80 1 1</p>
+<p>78 FAM.INCOME:HI=5(VARIES) 81 1 1</p>
+<p>79 RESP:-=O,+=l 82 1 1</p>
+<p>80 REGIONS:ISLANDS=O 83 1 1</p>
+<p>81 TEEN-AGE=1,OTHERS=9 84 1 1</p>
+<p>1</p>
+<p>ICPSR 7275 Page 7</p>
+<p>FRANCE</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>1 INTERVIEW NUMBER 1 4 1</p>
+<p>2 0=G,l=B,2=F,3=1,4=L,5=N 5 1 1</p>
+<p>3 SPLIT BALLOT:l=EVEN,20DD 6 1 1</p>
+<p>4 1ST BELONG:EUROPE=50TH6 7 1 1</p>
+<p>5 2ND BELONG:EUROPE=50TH6 8 1 1</p>
+<p>6 BORN IN THIS PROV:O=NO 9 1 1</p>
+<p>7 CAME HERE:5=20 YRS+ 10 1 1</p>
+<p>8 RAPID DEVEL=4 11 1 1</p>
+<p>9 REGIONAL DEVEL:3=NEUTRAL 12 1 1</p>
+<p>10 WOULDNT MOVE IN NATN 13 1 1</p>
+<p>11 WOULDNT MOVE IN EURN 14 1 1</p>
+<p>12 ABANDON EEC:INDIFF=3 15 1 1</p>
+<p>13 EEC VERY BAD INFL=5 16 1 1</p>
+<p>14 EEC MAIN INFL:TNSPT=5 17 1 1</p>
+<p>15 EXPECT VERY BAD INFL=5 18 1 1</p>
+<p>16 EXPECT MAIN INFL:TNSPT=5 19 1 1</p>
+<p>17 (SPLIT) REG/EUR BETTER=1 20 1 1</p>
+<p>18 (SPLIT)EVEN=EUR/REG.BETR 21 1 1</p>
+<p>19 WHAT PROBVARIABLE X 22 1 1</p>
+<p>20 FARMERS WORST OFF=5 23 1 1</p>
+<p>21 AGRIC=ORDINARY=2 24 1 1</p>
+<p>22 (1)FARM DIFF.DUE DIST=4 25 1 1</p>
+<p>23 (2)FARM DIFF.DUE DIST=4 26 1 1</p>
+<p>24 STRONG.AGST.FARM DEMS=4 27 1 1</p>
+<p>25 STRONGLY AG.VIOL.DEMS=4 28 1 1</p>
+<p>26 ADVISE SEEK NON-FARM=2 29 1 1</p>
+<p>27 ADVISE COMPLETELY OUT=3 30 1 1</p>
+<p>28 VERY DIFFIC.FIND OTHER=4 31 1 1</p>
+<p>29 EEC GOOD SOME FARM=3 32 1 1</p>
+<p>30 (BELG)FARMERS SPEC.BAD=2 33 1 1</p>
+<p>31 EEC GOOD SOME INDUS=3 34 1 1</p>
+<p>32 (BELG)INDUS.SPEC.BAD=2 35 1 1</p>
+<p>33 EEC STIM.INDUS:DISAGR=5 36 1 1</p>
+<p>34 EEC AID INDUS.EXPORT 37 1 1</p>
+<p>35 EEC GD.CONSUMERS:DISAGR= 38 1 1</p>
+<p>36 EEC AIDS FORN COMPETITN 39 1 1</p>
+<p>37 EEC AIDS FARM EXPORTS 40 1 1</p>
+<p>38 NEW MEMBRS:BAD,AGRIC=2 41 1 1</p>
+<p>39 NEW MEMBRS BAD INDUS=2 42 1 1</p>
+<p>40 NEW MEMBRS BAD PROV.=2 43 1 1</p>
+<p>41 HEARD OF MANSHOLT PLAN=1 44 1 1</p>
+<p>42 MANSHOLT=BAD=2 45 1 1</p>
+<p>43 ACQ/P-B VALUES:1ST 46 1 1</p>
+<p>44 ACQ/P-B VALUES:2ND 47 1 1</p>
+<p>45 JOB-POLLUTN-WOMEN:IST 48 1 1</p>
+<p>46 JOB-POLLUTN-WOMEN 2ND 49 1 1</p>
+<p>47 ARMY-EC.AID-EUR:lST 50 1 1</p>
+<p>1</p>
+<p>Page 8 ICPSR 7275</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>48 ARMY-EC.AID-EUR:2ND 51 1 1</p>
+<p>49 WAR CERTAIN=1 52 1 1 0</p>
+<p>50 EC.CRISIS CERTAIN=1 53 1 1 0</p>
+<p>51 AG.U.S.EUR.=4 54 1 1</p>
+<p>52 PERS.SACRIFIC.EUR:NOT=4 55 1 1</p>
+<p>53 INSUFFIC.INFO.EEC=2 56 1 1</p>
+<p>54 INSUFFIC.INFO.BELG.AGRIC 57 1 1</p>
+<p>55 INSUFFIC.INFO.REG.DEVEL 58 1 1</p>
+<p>56 (BELG.) TV INSUFFIC.:EEC 59 1 1</p>
+<p>57 (BELG.)TV INSUFFIC.:AGRI 60 1 1</p>
+<p>58 (BELG)TV INSUFFIC:REG. 61 1 1</p>
+<p>59 EUR.COUNTRIES TOO DIFF. 62 1 1</p>
+<p>60 U.S.EUR.ONLY IN 20 YRS. 63 1 1</p>
+<p>61 EUR.PEOPLES GAIN CONSC. 64 1 1</p>
+<p>62 EUR.PUBLICS AHEAD GOV'TS 65 1 1</p>
+<p>63 PERSUAD.FRIENDS:NEVER=4 66 1 1</p>
+<p>64 LIKE NEW THINGS:NEVER=4 67 1 1</p>
+<p>65 POLITICAL PARTY 68 1 1</p>
+<p>66 RELIG.DENOM.1=CATHOLIC 69 1 1</p>
+<p>67 RELIG.ATTENDANCE:5=NEVER 70 1 1</p>
+<p>68 RELIG.PROGRESSIVE=2 71 1 1</p>
+<p>69 MALE=1 72 1 1</p>
+<p>70 AGE:65+=X=l 73 1 1</p>
+<p>71 OCCUPA,HD. OF FAM 74 1 1</p>
+<p>72 OCCUPA,RESPONDENT 75 1 1</p>
+<p>73 UNION=1-3;SELF-EMPLOY=5 76 1 1</p>
+<p>74 UNION SYMP:(3=4 77 1 1</p>
+<p>75 FA.OCCUPA(CHILD) 78 1 1</p>
+<p>76 FATHER UNIV.EDUC=5 79 1 1</p>
+<p>77 RESP.UNIV.EDUC=5 80 1 1</p>
+<p>78 FAM.INCOME:HI=5(VARIES) 81 1 1</p>
+<p>79 SIZE OF TOWN:LG=6 82 1 1</p>
+<p>80 REGIONS(VARIES) 83 1 1</p>
+<p>81 TEEN-AGE=l,OTHERS=9 84 1 1</p>
+<p>82 FRANCE:1=FARM SUPPLEMENT 85 1 1</p>
+<p>83 DEPARTEMENT 86 2 1</p>
+<p>84 OCCUPA,HD. OF FAM(2COL) 88 2 1</p>
+<p>85 OCCUPA,RESPONDENT(2COL) 90 2 1</p>
+<p>1</p>
+<p>ICPSR 7275 Page 9</p>
+<p>NETHERLANDS</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>1 INTERVIEW NUMBER 1 4 1</p>
+<p>2 0=G,l=B,2=F,3=I,4=L,5=N 5 1 1</p>
+<p>3 SPLIT BALLOT:l=EVEN,20DD 6 1 1</p>
+<p>4 1ST BELONG:EUROPE=50TH6 7 1 1</p>
+<p>5 2ND BELONG:EUROPE=50TH6 8 1 1</p>
+<p>6 BORN IN THIS PROV:0=ND 9 1 1</p>
+<p>7 CAME HERE:5=20 YRS+ 10 1 1</p>
+<p>8 RAPID DEVEL=4 11 1 1</p>
+<p>9 REGIONAL DEVEL:3=NEUTRAL 12 1 1</p>
+<p>10 WOULDNT MOVE IN NATN 13 1 1</p>
+<p>11 WOULDNT MOVE IN EURN 14 1 1</p>
+<p>12 ABANDON EEC:INDIFF=3 15 1 1</p>
+<p>13 EEC VERY BAD INFL=5 16 1 1</p>
+<p>14 EEC MAIN INFL:TNSPT=5 17 1 1</p>
+<p>15 EXPECT VERY BAD INFL=5 18 1 1</p>
+<p>16 EXPECT MAIN INFL:TNSPT=5 19 1 1</p>
+<p>17 (SPLIT)REG/EUR BETTER=1 20 1 1</p>
+<p>18 (SPLIT) EVEN=EUR/REG. BETR 21 1 1</p>
+<p>19 WHAT PROB.BETTER DONE? 22 1 1</p>
+<p>20 FARMERS WORST OFF=5 23 1 1</p>
+<p>21 AGRIC=ORDINARY=2 24 1 1</p>
+<p>22 (1)FARM DIFF.DUE DIST=4 25 1 1</p>
+<p>23 (2)FARM DIFF.DUE DIST=4 26 1 1</p>
+<p>24 STRONG.AGST.FARM DEMS=4 27 1 1</p>
+<p>25 STRONGLY AG.VIOL.DEMS=4 28 1 1</p>
+<p>26 ADVISE SEEK NON-FARM=2 29 1 1</p>
+<p>27 ADVISE COMPLETELY OUT=3 30 1 1</p>
+<p>28 VERY DIFFIC.FIND OTHER=4 31 1 1</p>
+<p>29 EEC GOOD SOME FARM=3 32 1 1</p>
+<p>30 (BELG)FARMERS SPEC.BAD=2 33 1 1</p>
+<p>31 EEC GOOD SOME INDUS=3 34 1 1</p>
+<p>32 (BELG)INDUS.SPEC.BAD=2 35 1 1</p>
+<p>33 EEC STIM.INDUS:DISAGR=5 36 1 1</p>
+<p>34 EEC AID INDUS.EXPORT 37 1 1</p>
+<p>35 EEC GD.CONSUMERS:DISAGR= 38 1 1</p>
+<p>36 EEC AIDS FORN COMPETITN 39 1 1</p>
+<p>37 EEC AIDS FARM EXPORTS 40 1 1</p>
+<p>38 NEW MEMBRS:BAD,AGRIC=2 41 1 1</p>
+<p>39 NEW MEMBRS BAD INDUS=2 42 1 1</p>
+<p>40 NEW MEMBRS BAD PROV.=2 43 1 1</p>
+<p>41 HEARD OF MANSHOLT PLAN=1 44 1 1</p>
+<p>42 MANSHOLT=BAD=2 45 1 1</p>
+<p>43 ACQ/P-B VALUES:1ST 46 1 1</p>
+<p>44 ACQ/P-B VALUES:2ND 47 1 1</p>
+<p>45 JOB-POLLUTN-WOMEN:lST 48 1 1</p>
+<p>46 JOB-POLLUTN-WOMEN 2ND 49 1 1</p>
+<p>47 ARMY-EC.AID-EUP:lST 50 1 1</p>
+<p>1</p>
+<p>Page 10 ICPSR 7275</p>
+<p>VAR NAME START WIDTH/ # MD1 MD2</p>
+<p># TLOC RESP RESP</p>
+<p>48 ARMY-EC.AID-EUR:2ND 51 1 1</p>
+<p>49 WAR CERTAIN=1 52 1 1 0</p>
+<p>50 EC.CRISIS CERTAIN=1 53 1 1 0</p>
+<p>51 AG.U.S.EUR.=4 54 1 1</p>
+<p>52 PERS.SACRIFIC.EUR:NOT=4 55 1 1</p>
+<p>53 INSUFFIC.INFO.EEC=2 96 1 1</p>
+<p>54 INSUFFIC.INFO.BELG.AGRIC 57 1 1</p>
+<p>55 INSUFFIC.INF0.REG.DEVEL 58 1 1</p>
+<p>56 (BELG.)TV INSUFFIC.:EEC 59 1 1</p>
+<p>57 (BELG.)TV INSUFFIC.:AGRI 60 1 1</p>
+<p>58 (BELG)TV INSUFFIC:REG. 61 1 1</p>
+<p>59 EUR.COUNTRIES TOO DIFF. 62 1 1</p>
+<p>60 U.S.EUR.ONLY IN 20 YRS. 63 1 1</p>
+<p>61 EUR.PEOPLES GAIN CONSC. 64 1 1</p>
+<p>62 EUR.PUBLICS AHEAD GOV'TS 65 1 1</p>
+<p>63 PERSUAD.FRIENDS:NEVER=4 66 1 1</p>
+<p>64 LIKE NEW THINGS:NEVER=4 67 1 1</p>
+<p>65 POLITICAL PARTY(VARIES) 68 1 1</p>
+<p>66 RELIG.DENOM.l=CATHOLIC 69 1 1</p>
+<p>67 RELIG.ATTENDANCE:5=NEVER 70 1 1</p>
+<p>68 RELIG.PROGRESSIVE=2 71 1 1</p>
+<p>69 MALE=1 72 1 1</p>
+<p>70 AGE:65+=X=1 73 1 1</p>
+<p>71 OCCUPA,HD. OF FAM:8=INAC 74 1 1</p>
+<p>72 OCCUPA,RESPONDENT 75 1 1</p>
+<p>73 UNION=1-3;SELF-EMPLOY=5 76 1 1</p>
+<p>74 UNION SYMP:(3=4 77 1 1</p>
+<p>75 FA.OCCUPA(CHILD) 78 1 1</p>
+<p>76 FATHER UNIV.EDUC=5 79 1 1</p>
+<p>77 RESP.UNIV.EDUC=5 80 1 1</p>
+<p>78 FAM.INCOME:HI=5(VARIES) 81 1 1</p>
+<p>79 SIZE OF TOWN:LG=6 82 1 1</p>
+<p>80 REGIONS(VARIES) 83 1 1</p>
+<p>81 TEEN-AGE=1,OTHERS=9 84 1 1</p>
+<p>82 WEIGHTED CASE=3 85 1 1</p>
+<p>1</p>
+<p>ICPSR 7275 Page 11</p>
+<p>CODEBOOK</p>
+<p>NOTES TO USERS OF THE 1971 EUROPEAN COMMUNITIES STUDY</p>
+<p>A single codebook was created to match the data for all five countries</p>
+<p>surveyed. The codebook was translated from the French and Belgian</p>
+<p>questionnaires. Users who read the other languages may wish to request the</p>
+<p>original language questionnaires in order to ascertain whether the question</p>
+<p>wording is exactly comparable.</p>
+<p>The data were received in OSIRIS format. The variable names appear in the</p>
+<p>heading for each variable. In cases where the names differ, the non-conforming</p>
+<p>names are noted next to the codes for that country. Please note that the files</p>
+<p>are not all of the same length. In particular, several variables appear for</p>
+<p>France that do not appear for the other countries. These variables occur at the</p>
+<p>end of the French data file.</p>
+<p>A card image version of the data was generated and deck and column numbers</p>
+<p>are noted in the codebook.</p>
+<p>The original documentation matched a pre-OSIRIS version of the data. In the</p>
+<p>process of filebuilding codes for some variables were collapsed. The original</p>
+<p>codes were not always updated. If the recoding of a variable was documented for</p>
+<p>one country, the assumption was made that the same process occurred for the</p>
+<p>other countries. This cannot be confirmed until we communicate with the</p>
+<p>original investigator. There are also some variables for which we received no</p>
+<p>documentation. Communication with the original investigator is necessary before</p>
+<p>this can be recovered.</p>
+<p>1</p>
+<p>Page 12 ICPSR 7275</p>
+<p>1971 European Communities Study- France, Germany, Italy,</p>
+<p>Netherlands, Belgium</p>
+<p>VARIABLE 1 INTERVIEW NUMBER DECK 1 COL 1-4</p>
+<p>Constant '1' DECK 1 COL 5</p>
+<p>VARIABLE 2 0=G,1=B,2=F,3=I,4=L,5=N DECK 1 COL 6</p>
+<p>Country</p>
+<p>0. Germany</p>
+<p>1. Belgium</p>
+<p>2. France</p>
+<p>3 .Italy</p>
+<p>4. Luxembourg</p>
+<p>5. Netherlands</p>
+<p>VARIABLE 3 SPLIT BALLOT:1=EVEN,2ODD DECK 1 COL 7</p>
+<p>Split Ballot (refers to split form of questionnaire; even refers to order</p>
+<p>where question concerning regional authorities asked first and odd refers to</p>
+<p>order where question concerning European authorities asked first) Codes for</p>
+<p>France and Belgium unclear: even codes refer to regional question being asked</p>
+<p>first and odd codes refer to coding where European question asked</p>
+<p>first. Probably codes 0,2,4,6,8 should be coded 1 and 1,3, 5,7,9 coded 2.</p>
+<p>FRANCE AND BELGIUM NETHERLANDS, ITALY,GERMANY</p>
+<p>0. even 1. even numbered questionnaires, question</p>
+<p>1. odd concerning regional authorities asked</p>
+<p>2. even first (Q 12)</p>
+<p>3. odd 2. odd numbered questionnaires, question</p>
+<p>4. even concerning European authorities asked</p>
+<p>5. odd first (Q 12)</p>
+<p>6. even</p>
+<p>7. odd</p>
+<p>8. even</p>
+<p>9. odd</p>
+<p>VARIABLE 4 1ST BELONG:EUROPE=50TH6 DECK 1 COL 8</p>
+<p>Q1a Among the following geographic units,to which one do you feel you first</p>
+<p>belong?</p>
+<p>1. city, locality, "canton" where you live</p>
+<p>2. department (France), province (Belgium)</p>
+<p>3. region</p>
+<p>4. country</p>
+<p>5. Europe</p>
+<p>6. other</p>
+<p>0. N.A.</p>
+<p>9. wild code (Belgium)</p>
+<p>7. wild code (Germany)</p>
+<p>1</p>
+<p>ICPSR 7275 Page 13</p>
+<p>VARIABLE 5 2ND BELONG: EUROPE=50TH6 DECK 1 COL 9</p>
+<p>Q1b Secondly?</p>
+<p>1. city, locality, "canton" where you live</p>
+<p>2. department (France), province (Belgium)</p>
+<p>3. region</p>
+<p>4. country</p>
+<p>5. Europe</p>
+<p>6. other</p>
+<p>0. N.A.</p>
+<p>7. wild code (Germany)</p>
+<p>8. wild code (Germany)</p>
+<p>VARIABLE 6 BORN IN THIS PROV:0=NO DECK 1 COL 10</p>
+<p>Q2 Were you born in the province where you now live?</p>
+<p>1. yes</p>
+<p>0. no</p>
+<p>9. wild code (Belgium)</p>
+<p>2. wild code (Italy)</p>
+<p>VARIABLE 7 CAME HERE:5=20 YRS+ DECK 1 COL 11</p>
+<p>Q3 How old were you when you moved here (the last time)?</p>
+<p>1. 5 years or less</p>
+<p>2. 6 to 10 years</p>
+<p>3. 11 to 15 years</p>
+<p>4. 16 to 20 years</p>
+<p>5. more than 20 years</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Belgium, Netherlands, Italy, Germany)</p>
+<p>VARIABLE 8 RAPID DEVEL=4 DECK 1 COL 12</p>
+<p>Q4 Do you have the impression of living here in a region: (show card)</p>
+<p>1. which is declining</p>
+<p>2. which is stable</p>
+<p>3. which is developing</p>
+<p>4. which is rapidly developing</p>
+<p>0. N.A.</p>
+<p>VARIABLE 9 REGIONAL DEVEL:3=NEUTRAL DECK 1 COL 13</p>
+<p>Q5 In sum, what do you think of those things that have changed in your region</p>
+<p>in the last ten years. Do you find things have gone:</p>
+<p>1. well</p>
+<p>2. badly</p>
+<p>3. neither</p>
+<p>1</p>
+<p>Page 14 ICPSR 7275</p>
+<p>0. N.A.</p>
+<p>9. wild code (Belgium, Netherlands)</p>
+<p>VARIABLE 10 WOULDNT MOVE IN NATN DECK 1 COL 14</p>
+<p>Q6a Would you be willing or not to live in another region of (France) if you</p>
+<p>were assured of finding better living conditions?</p>
+<p>1. very willing</p>
+<p>2. somewhat willing</p>
+<p>3. certainly not willing</p>
+<p>0. N.A.</p>
+<p>0. wild code (Netherlands)</p>
+<p>VARIABLE 11 WOULDN'T MOVE IN EURN DECK 1 COL 15</p>
+<p>Q6b Would you be willing or not to go live in another country in Europe if</p>
+<p>you were assured of finding better living conditions?</p>
+<p>1. very willing</p>
+<p>2. somewhat willing</p>
+<p>3. certainly not willing</p>
+<p>0. N.A.</p>
+<p>9. wild code (Belgium)</p>
+<p>5. wild code (France)</p>
+<p>VARIABLE 12 ABANDON-EEC:-INDIFF=3 DECK 1 COL 16</p>
+<p>Q7 If someone told you tomorrow that the Common Market had been dropped, would</p>
+<p>you feel:</p>
+<p>1. large regrets</p>
+<p>2. some regrets</p>
+<p>3. would make no difference</p>
+<p>0. N.A.</p>
+<p>9. wild code (Netherlands)</p>
+<p>VARIABLE 13 EEC VERY BAD L=5 DECK 1 COL 17</p>
+<p>Q.8 Have you had the impression until now that the Common Market has had in</p>
+<p>your province?</p>
+<p>1. a very good influence</p>
+<p>2. a rather good influence</p>
+<p>3. no influence at all</p>
+<p>4. rather bad influence</p>
+<p>5. a very bad influence</p>
+<p>0. N.A.</p>
+<p>6. wild code (Italy)</p>
+<p>9. wild code (Italy)</p>
+<p>VARIABLE 14 EEC MAIN INFL: TNSPT=5 DECK 1 COL 18</p>
+<p>1</p>
+<p>ICPSR 7275 Page 15</p>
+<p>Q9 Can you tell me in which sector principally you notice this influence?</p>
+<p>1. Industry</p>
+<p>2. Agriculture</p>
+<p>3. Tourism</p>
+<p>4. Commerce</p>
+<p>5. Transport and communication</p>
+<p>0. N.A.</p>
+<p>9. Undocumented code (Belgium, Italy, Netherlands, Germany)</p>
+<p>VARIABLE 15 EXPECT VERY BAD INFL=5 DECK 1 COL 19</p>
+<p>Q10 In the coming ten to fifteen years do you think that the European Common</p>
+<p>Market will have on your province:</p>
+<p>1. a very good influence</p>
+<p>2. a rather good influence</p>
+<p>3. no influence at all</p>
+<p>4. a rather bad influence</p>
+<p>5. a very bad influence</p>
+<p>6. wild code (Italy)</p>
+<p>9. wild code (Italy)</p>
+<p>VARIABLE 16 EXPECT MAIN INFL:INSPT=5 DECK 1 COL 20</p>
+<p>Q11 In which sector principally do you expect the Common Market to have an</p>
+<p>influence?</p>
+<p>1. Industry</p>
+<p>2. Agriculture</p>
+<p>3. Tourism</p>
+<p>4. Commerce</p>
+<p>5. Transport and Communications</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Belgium, Netherlands, Italy)</p>
+<p>VARIABLE 17 (SPLIT) REG/EUR BETTER=1 DECK 1 COL 21</p>
+<p>Q12/Ql3 Among the problems which you judge important are there some which</p>
+<p>presently depend on the government and which would be better treated in your</p>
+<p>opinion by the European authorities?</p>
+<p>1. yes</p>
+<p>2. no</p>
+<p>0. N.A.</p>
+<p>* documentation for variables 17 and 18 is unclear and this interpretation</p>
+<p>may be incorrect</p>
+<p>VARIABLE 18 (SPLIT) EVEN=EUR/REG.BETR DECK 1 COL 22</p>
+<p>Q12/Q13 Among the problems which you judge Important are there some which</p>
+<p>presently depend on the government and which would be better treated in your</p>
+<p>opinion by the regional authorities?</p>
+<p>1</p>
+<p>Page 16 ICPSR 7275</p>
+<p>1. yes</p>
+<p>2. no</p>
+<p>0. N.A.</p>
+<p>VARIABLE 19 WHAT PROBVARIABLE X DECK 1 COL 23</p>
+<p>Q14 Which problems, for example?</p>
+<p>FRANCE, BELGIUM</p>
+<p>0.</p>
+<p>1.</p>
+<p>2.</p>
+<p>3.</p>
+<p>9. wild code (Belgium)</p>
+<p>NETHERLANDS WHAT PROB.BETTER DONE?</p>
+<p>0. transport, trade, import-export traffic</p>
+<p>1. monetary questions,price rulings, inflation (not agricultural prices)</p>
+<p>2. industrial problems</p>
+<p>3. military matters</p>
+<p>4. employment, labor working conditions</p>
+<p>5. over population</p>
+<p>6. development aid</p>
+<p>7. tax matters</p>
+<p>8. other answers</p>
+<p>9. D.K., can't mention an example</p>
+<p>Y. environmental protection, pollution</p>
+<p>X. agricultural policy, prices</p>
+<p>Note: codes for X and Y (+ and -) collapsed with other codes but not documented.</p>
+<p>GERMANY WHAT PROB. BETTER DONE? DECK 1 COL 23</p>
+<p>if given card la (V3, locality to Europe order):</p>
+<p>1. foreign policy, European unity, East-West Problems</p>
+<p>2. defense policy, security of Germany, armament, building up army</p>
+<p>3. economy, trade, lower tariffs, free borders</p>
+<p>4. financial policy, price policy, standardization of pricing</p>
+<p>5. agricultural policy</p>
+<p>6 traffic</p>
+<p>7. cultural policy, education and schooling problems</p>
+<p>8. criminality, crime prevention, criminal law</p>
+<p>9. social problems</p>
+<p>0. N.A.</p>
+<p>Y. other</p>
+<p>X. pollution</p>
+<p>if given card 1b (V3, Europe to locality order):</p>
+<p>1. housing, building and town rennovation</p>
+<p>1</p>
+<p>ICPSR 7275 Page 17</p>
+<p>2. regaining border lands</p>
+<p>3. economy, trade, industrialization</p>
+<p>4. financial policy, taxes</p>
+<p>5. agricultural policy</p>
+<p>6. traffic, road construction</p>
+<p>7. cultural policy, education &amp; schooling problems</p>
+<p>8. police matters</p>
+<p>9. social problems</p>
+<p>0. N.A.</p>
+<p>Y. other</p>
+<p>Note: codes for X and Y (+ and -) collapsed with other codes but not documented.</p>
+<p>VARIABLE 19 CONT. HD. OF FAM: - =0, + = 1</p>
+<p>ITALY</p>
+<p>Occupation of head of family - see also V71</p>
+<p>0. farm labor, housewife</p>
+<p>1. entrepreneur, student, retired</p>
+<p>2. professional</p>
+<p>3. manager</p>
+<p>4. upper employee</p>
+<p>5. lower level employee</p>
+<p>6. esercenti, artisan</p>
+<p>7. independent farmer</p>
+<p>8. skilled labor</p>
+<p>9. unskilled labor</p>
+<p>VARIABLE 20 FARMERS WORST OFF=5 DECK 1 COL 24</p>
+<p>Q15 In most European countries farmers presently complain of certain</p>
+<p>difficulties. In your opinion, do the (French) farmers have more or less</p>
+<p>difficulties than other (French) people?</p>
+<p>1. much more</p>
+<p>2. a little more</p>
+<p>3. neither more nor less</p>
+<p>4. a little less</p>
+<p>5. much less</p>
+<p>6. N.A. (wild code ? Italy)</p>
+<p>0. undocumented code (Belgium, France, Netherlands, Italy, Germany) probably</p>
+<p>replaces 6</p>
+<p>VARIABLE 21 AGRIC=ORDINARY=2 DECK 1 COL 25</p>
+<p>Q16 With regard to agriculture, one hears a certain number of contradictory</p>
+<p>opinions. Which of the following two phrases corresponds the best to your own</p>
+<p>personal opinion?</p>
+<p>1. Farming is a sector of activity that it is necessary to protect</p>
+<p>even if it is not as profitable as the others</p>
+<p>2. Farming is an economic activity like any other.</p>
+<p>1</p>
+<p>Page 18 ICPSR 7275</p>
+<p>0. N.A.</p>
+<p>VARIABLE 22 (1)FARM DIFF.DUE DIST=4 DECK 1 COL 26</p>
+<p>Q17a The difficulties of which farmers complain are due above all in your</p>
+<p>opinion to what factor?</p>
+<p>1. to insufficient prices paid to producers of agricultural products</p>
+<p>2. to very high prices for industrial products used by farmers</p>
+<p>3. to too many enterprises too small to be profitable</p>
+<p>4. to the bad organization for selling agricultural products</p>
+<p>5. other response and each</p>
+<p>0. N.A.</p>
+<p>9. wild code (Italy, Germany)</p>
+<p>6. wild code (Germany)</p>
+<p>7. wild code (Germany)</p>
+<p>8. wild code (Germany)</p>
+<p>VARIABLE 23 (2)FARM DIFF.DUE DIST=4 DECK 1 COL 27</p>
+<p>Q17b And next?</p>
+<p>1. to insufficient prices paid to producers of agricultural products</p>
+<p>2. to very high prices for industrial products used by farmers</p>
+<p>3. to too many enterprises too small to be profitable</p>
+<p>4. to the bad organization for selling agricultural products</p>
+<p>5. other response and each</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Italy)</p>
+<p>9. wild code (Germany)</p>
+<p>6. wild code (Germany)</p>
+<p>7. wild code (Germany)</p>
+<p>8. wild code (Germany)</p>
+<p>VARIABLE 24 STRONG.AGST.FARM DEMS=4 DECK 1 COL 28</p>
+<p>Q18 For some timethere have been important farmers' demonstrations in many</p>
+<p>countries. Generally are you personally for or against these demonstrations?</p>
+<p>1. definitely for</p>
+<p>2. somewhat for</p>
+<p>3. somewhat against</p>
+<p>4. definitely against</p>
+<p>0. N.A.</p>
+<p>9. wild code (France, Italy)</p>
+<p>VARIABLE 25 STRONGLY AG.VIOL.DEMS=4 DECK 1 COL 29</p>
+<p>Q19 And when these demonstrations become violent, to what extent are you on</p>
+<p>their (farmers') side?</p>
+<p>1. definitely on their side</p>
+<p>2. somewhat on their side</p>
+<p>3. somewhat against them</p>
+<p>1</p>
+<p>ICPSR 7275 Page 19</p>
+<p>4. definitely against them</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Belgium, Netherlands, Italy)</p>
+<p>VARIABLE 26 ADVISE SEEK NON-FARM=2 DECK 1 COL 30</p>
+<p>Q20 Generally, what do you think that in (France) today you would advise a</p>
+<p>farmer's son aged 15 to 20?</p>
+<p>1. to remain in agriculture</p>
+<p>2. to seek another occupation</p>
+<p>0. N.A.</p>
+<p>3. wild code (Italy)</p>
+<p>VARIABLE 27 ADVISE COMPLETELY OUT=3 DECK 1 COL 31</p>
+<p>Q21 Specifically, suppose the son of a farmer in your region who is very</p>
+<p>capable and hard working didn't find satisfactory conditions in the occupa-</p>
+<p>tion of his father, what would you advise him to do among the following</p>
+<p>possibilities?</p>
+<p>1. seek another farming activity</p>
+<p>2. prepare himself for a profession tied to agriculture (for example working</p>
+<p>in a cooperative, an instructional institution, or one of agricultural</p>
+<p>credit)</p>
+<p>3. prepare for an occupation that has nothing to do with farming</p>
+<p>0. N.A.</p>
+<p>4. wild code (France)</p>
+<p>VARIABLE 28 VERY DIFFIC.FIND OTHER=4 DECK 1 COL 32</p>
+<p>Q22 If today in France, the son of a farmer aged 15 to 20 wanted to find</p>
+<p>employment in another occupation, would you estimate that it would be:</p>
+<p>1. very easy</p>
+<p>2. somewhat easy</p>
+<p>3. somewhat difficult</p>
+<p>4. very difficult</p>
+<p>0. N.A.</p>
+<p>VARIABLE 29 EEC GOOD SOME FARM=3 DECK 1 COL 33</p>
+<p>Q23 Presently, do you think that the Common Market is all together:</p>
+<p>1. good for farming, in the six countries</p>
+<p>2. bad for farming in the six countries</p>
+<p>3 .good for farming in certain countries and bad for farming in the other</p>
+<p>0. N.A.</p>
+<p>9. wild code (Italy)</p>
+<p>4. wild code (Italy)</p>
+<p>VARIABLE 30 (BELG) FARMERS SPEC.BAD=2 DECK 1 COL 34</p>
+<p>Q24 Are (French) farmers at an advantage or always at a disadvantage?</p>
+<p>1</p>
+<p>Page 20 ICPSR 7275</p>
+<p>1. at an advantage</p>
+<p>2. at a disadvantage</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Belgium, Netherlands, Italy, Germany)</p>
+<p>VARIABLE 31 EEC GOOD SOME INDUS=3 DECK 1 COL 35</p>
+<p>Q25 Presently, do you think the Common Market is all together:</p>
+<p>1. good for industry in the six countries</p>
+<p>2. bad for industry in the six countries</p>
+<p>3. good for industry in some countries and bad for industry in the others</p>
+<p>0. N.A.</p>
+<p>9. wild code (Italy)</p>
+<p>VARIABLE 32 (BELG) INDUS.SPEC.BAD=2 DECK 1 COL 36</p>
+<p>Q26 Are the (French) industries at an advantage or at a disadvantage?</p>
+<p>1. at an advantage</p>
+<p>2. at a disadvantage</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Belgium, Netherlands, Italy, Germany)</p>
+<p>VARIABLE 33-VARIABLE 37</p>
+<p>Q27. Can you tell me your opinion on the effects of the Common Market? Are you</p>
+<p>always in agreement, sometimes in agreement, without any opinion, sometimes in</p>
+<p>disagreement, or always in disagreement with the following opinions?</p>
+<p>VARIABLE 33 EEC STIM.INDUS:DISAGR=5 DECK 1 COL 37</p>
+<p>Q27 The Common Market stimulates modernization of (French) industry.</p>
+<p>1. always in agreement</p>
+<p>2. sometimes in agreement</p>
+<p>3. no opinion</p>
+<p>4. sometimes in disagreement</p>
+<p>5. always in disagreement</p>
+<p>0. undocumented code (Belgium, France, Italy, Germany) N.A.?</p>
+<p>9. wild code (Belgium, Italy)</p>
+<p>VARIABLE 34 EEC AID INDUS.EXPORT DECK 1 COL 38</p>
+<p>Q27 It facilitates the sale abroad of our industrial products and thus helps</p>
+<p>our national production.</p>
+<p>1. always in agreement</p>
+<p>2. sometimes in agreement</p>
+<p>3. no opinion</p>
+<p>4. sometimes in disagreement</p>
+<p>5. always in disagreement</p>
+<p>0. undocumented code (Belgium, France, Italy, Germany) N.A.?</p>
+<p>1</p>
+<p>ICPSR 7275 Page 21</p>
+<p>VARIABLE 35 EEC GD. CONSUMERS:DISAGR= DECK 1 COL 39</p>
+<p>Q27 It permits better supply of consumer products</p>
+<p>1. always in agreement</p>
+<p>2. sometimes in agreement</p>
+<p>3. no opinion</p>
+<p>4. sometimes in disagreement</p>
+<p>5. always in disagreement</p>
+<p>0. undocumented code (Belgium, France, Italy, Germany) N.A.?</p>
+<p>VARIABLE 36 EEC AIDS FORN COMPETITION DECK 1 COL 40</p>
+<p>Q27 It opens the door to foreign products which compete with our products.</p>
+<p>1. always in agreement</p>
+<p>2. sometimes in agreement</p>
+<p>3. no opinion</p>
+<p>4. sometimes in disagreement</p>
+<p>5. always in disagreement</p>
+<p>0. undocumented code (Belgium, France, Italy, Germany) N.A.?</p>
+<p>VARIABLE 37 EEC AIDS FARM EXPORTS DECK 1 COL 41</p>
+<p>Q27 It facilitates the sale of our agricultural products in other countries</p>
+<p>1. always in agreement</p>
+<p>2. sometimes in agreement</p>
+<p>3. no opinion</p>
+<p>4. sometimes in disagreement</p>
+<p>5. always in disagreement</p>
+<p>0. undocumented code (France, Belgium, Italy, Germany) N.A.?</p>
+<p>9. wild code (Belgium)</p>
+<p>VARIABLE 38 - VARIABLE 40</p>
+<p>Q40 Very probably, four other European countries will enter the Common Market</p>
+<p>in 1973: Great Britain, Ireland, Denmark, and Norway. in your opinion, is this</p>
+<p>extension of the Common Market which would when comprise ten European Countries</p>
+<p>a good thing or a bad thing:</p>
+<p>VARIABLE 38 NEW MEMBRS :BAD AGRIC=2 DECK 1 COL 42</p>
+<p>For (French) agriculture?</p>
+<p>1. a good thing</p>
+<p>2. a bad thing</p>
+<p>0. undocumented code (N.A.?) all countries</p>
+<p>VARIABLE 39 NEW MEMBRS:BAD INDUS=2 DECK 1 COL 43</p>
+<p>For (French) industry?</p>
+<p>1</p>
+<p>Page 22 ICPSR 7275</p>
+<p>1. a good thing</p>
+<p>2. a bad thing</p>
+<p>0. undocumented code (N.A.?) all countries</p>
+<p>VARIABLE 40 NEW MEMBRS BAD PROV.=2 DECK 1 COL 44</p>
+<p>For your region, considered by itself?</p>
+<p>1. a good thing</p>
+<p>2. a bad thing</p>
+<p>0. undocumented code (N.A.?) all countries</p>
+<p>VARIABLE 41 HEARD OF MANSHOLT PLAN=1 DECK 1 COL 45</p>
+<p>Q29 Have you heard of the Mansholt plan?</p>
+<p>1. yes</p>
+<p>2. no</p>
+<p>0. wild code (France, Italy)</p>
+<p>9. wild code (Italy)</p>
+<p>VARIABLE 42 MANSHOLT = BAD=2 DECK 1 COL 46</p>
+<p>Q31 From what you know, do you think that the Mansholt plan is a good thing or</p>
+<p>a bad thing?</p>
+<p>1. a good thing</p>
+<p>2. a bad thing</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Belgium, Netherlands, Germany)</p>
+<p>6. wild code (Italy)</p>
+<p>VARIABLE 43 ACQ/PB VALUES:1ST DECK 1 COL 47</p>
+<p>Q32a In the political domain one cannot obtain all that one wants. If you had</p>
+<p>to choose among the following things which would appear to you the most</p>
+<p>desirable?</p>
+<p>1. maintain order in the country</p>
+<p>2. improve the participation of citizens in governmental decisions</p>
+<p>3. combat rising prices</p>
+<p>4. guarantee freedom of expression, where everyone can say</p>
+<p>freely what he thinks</p>
+<p>0. N.A.</p>
+<p>VARIABLE 44 ACQ/P-B VALUES;2ND DECK 1 COL 48</p>
+<p>Q32b and the next most desirable?</p>
+<p>1. maintain order in the country</p>
+<p>2. facilitate the participation of citizens in decisions of the government</p>
+<p>3. combat rising prices</p>
+<p>4. guarantee freedom of expression, where everyone can say</p>
+<p>freely what he thinks</p>
+<p>1</p>
+<p>ICPSR 7275 Page 23</p>
+<p>0. N.A.</p>
+<p>VARIABLE 45 JOB-POLLUTN-WOMEN:1ST DECK 1 COL 49</p>
+<p>Q33a And if you had to choose among the following things what would appear to</p>
+<p>you the most desirable?</p>
+<p>1. increase the security of employment</p>
+<p>2. stop pollution</p>
+<p>3. limit the number of foreigners working in (France)</p>
+<p>4. give women the same rights as men</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Italy)</p>
+<p>VARIABLE 46 JOB-POLLUTN-WOMEN:2ND DECK 1 COL 50</p>
+<p>Q33b and the next most desirable</p>
+<p>1. increase the security of employment</p>
+<p>2. stop Pollution</p>
+<p>3. limit the number of foreigners working in (France)</p>
+<p>4. give women the same rights as men</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Italy)</p>
+<p>VARIABLE 47 ARMY-EC.AID-EUR.1ST DECK 1 COL 51</p>
+<p>Q34a If you had to choose among the following objectives, what would appear to</p>
+<p>you to be the most desirable?</p>
+<p>1. that (France) has a strong army</p>
+<p>2. give economic aid to countries in the process of developing</p>
+<p>3. that (France) play an important role in world affairs</p>
+<p>4. move toward the formation of a United States of Europe</p>
+<p>0. N.A.</p>
+<p>5. undocumented code (Italy)</p>
+<p>VARIABLE 48 ARMY-EC.AID-EUR:2ND DECK 1 COL 52</p>
+<p>Q34b and the next most desirable?</p>
+<p>1. that (France) has a strong army</p>
+<p>2. give economic aid to countries in the process of developing</p>
+<p>3. that (France) play an important role in world affairs</p>
+<p>4. move toward the formation of a United States of Europe</p>
+<p>0. N.A.</p>
+<p>5. undocumented code (Italy)</p>
+<p>VARIABLE 49 WAR CERTAIN=1 DECK 1 COL 53</p>
+<p>Q35 Here is a sort of thermometer (show card). Would you show me where on this</p>
+<p>thermometer you place the danger of a new world war in the next ten years</p>
+<p>1. 100 war is certain</p>
+<p>1</p>
+<p>Page 24 ICPSR 7275</p>
+<p>2. 90</p>
+<p>3. 80</p>
+<p>4. 70</p>
+<p>5. 60</p>
+<p>6. 50</p>
+<p>7. 40</p>
+<p>8. 30</p>
+<p>9. 20</p>
+<p>9. 10</p>
+<p>9. 0 no danger of war</p>
+<p>0. N.A.</p>
+<p>VARIABLE 50 EC.CRISIS CERTAIN=1 DECK 1 COL 54</p>
+<p>Q36 Here is another thermometer (show card). Would you show where on this</p>
+<p>thermometer you place the danger of a economic crisis in the next ten years?</p>
+<p>1. 100 crisis is certain</p>
+<p>2. 90</p>
+<p>3. 80</p>
+<p>4. 70</p>
+<p>5. 60</p>
+<p>6. 50</p>
+<p>7. 40</p>
+<p>8. 30</p>
+<p>9. 20</p>
+<p>9. 10</p>
+<p>9. 0 no danger of crisis</p>
+<p>0. N.A.</p>
+<p>VARIABLE 51 AG.U.S.EUR.=4 DECK 1 COL 55</p>
+<p>Q37 Are you for or against the evolution of the Common Market toward the</p>
+<p>political formation of a United States of Europe?</p>
+<p>1. definitely for</p>
+<p>2. somewhat for</p>
+<p>3 somewhat against</p>
+<p>4. definitely against</p>
+<p>0. N.A.</p>
+<p>6. wild code (Italy)</p>
+<p>VARIABLE 52 PERS. SACRIF. EUR:-NOT=4 DECK 1 COL 56</p>
+<p>Q38 Would you be willing to make certain personal sacrifices for example, on</p>
+<p>the financial level so that the political unification of Europe takes place?</p>
+<p>1. definitely willing</p>
+<p>2. somewhat willing</p>
+<p>3. little willing</p>
+<p>4. not at all willing</p>
+<p>0. N.A.</p>
+<p>9. wild code (Belgium)</p>
+<p>1</p>
+<p>ICPSR 7275 Page 25</p>
+<p>5. undocumented code (Netherlands)</p>
+<p>9. undocumented code (Netherlands - no code 0.)</p>
+<p>VARIABLE 53 INSUFFIC. INFO. EEC=2 DECK 1 COL 57</p>
+<p>Q39 All together,do you consider that you are sufficiently or not sufficiently</p>
+<p>informed about:</p>
+<p>The problems concerning the Common Market?</p>
+<p>1. sufficiently</p>
+<p>2. not sufficiently</p>
+<p>0. N.A.</p>
+<p>4. wild code (Italy)</p>
+<p>VARIABLE 54 INSUFFIC. INFO. BELG. AGRIC DECK 1 COL 58</p>
+<p>The problems concerning (French) agriculture?</p>
+<p>1. sufficiently</p>
+<p>2. not sufficiently</p>
+<p>0. N.A.</p>
+<p>VARIABLE 55 INSUFFIC. INFO. REG. DEVEL DECK 1 COL 59</p>
+<p>The problems concerning economic development of your region?</p>
+<p>1. sufficiently</p>
+<p>2. not sufficiently</p>
+<p>0. N.A.</p>
+<p>3. wild code (Italy)</p>
+<p>VARIABLE 56 (BELG.) TV INSUFFIC. : EEC DECK 1 COL 60</p>
+<p>Q40 Specifically, do you consider that (French) television does a lot, just</p>
+<p>what's necessary, or not enough to inform the public about:</p>
+<p>The problems conerning the Common Market?</p>
+<p>1. a lot</p>
+<p>2. just what's necessary</p>
+<p>3. not enough</p>
+<p>0. N.A.</p>
+<p>VARIABLE 57 (BELG.)TV INSUFFIC.:AGRI DECK 1 COL 61</p>
+<p>The problems concerning (French) agriculture?</p>
+<p>1. a lot</p>
+<p>2. just what's necessary</p>
+<p>3. not enough</p>
+<p>0. N.A.</p>
+<p>VARIABLE 58 (BELG.)TV INSUFFIC:REG DECK 1 COL 62</p>
+<p>1</p>
+<p>Page 26 ICPSR 7275</p>
+<p>The problems concerning the economic development of your region?</p>
+<p>1. alot</p>
+<p>2. just what's necessary</p>
+<p>3. not enough</p>
+<p>0. N.A.</p>
+<p>VARIABLE 59 EUR.COUNTRIES TOO DIFF. DECK 1 COL 63</p>
+<p>Q41 Some say that the people of Europe are not ready to form a great political</p>
+<p>unity, with a European government and a European parliament. Personally, are</p>
+<p>you in agreement or not in agreement with each of the following opinions?</p>
+<p>The countries of Europe are too different in size and power to succeed at</p>
+<p>forming a great political unity</p>
+<p>1. agree</p>
+<p>2. disagree</p>
+<p>0. N.A.</p>
+<p>3. wild code (Italy)</p>
+<p>VARIABLE 60 U.S.EUR.ONLY IN 20 YRS DECK 1 COL 64</p>
+<p>The United States of Europe will exist perhaps one day but that will take at</p>
+<p>least 20 more years.</p>
+<p>1. agree</p>
+<p>2. disagree</p>
+<p>0. N.A.</p>
+<p>VARIABLE 61 EUR.PEOPLES GAIN CONSC. DECK 1 COL 65</p>
+<p>The people of Europe are becoming more and more conscious of their common</p>
+<p>interests in all areas.</p>
+<p>1. agree</p>
+<p>2. disagree</p>
+<p>0. N.A.</p>
+<p>VARIABLE 62 EUR. PUBLICS AHEAD GOV'TS DECK 1 COL 66</p>
+<p>In the Common Market countries the people are more ready to advance toward</p>
+<p>unification than are the governments.</p>
+<p>1. agree</p>
+<p>2 .disagree</p>
+<p>0. N.A.</p>
+<p>3. wild code (Italy)</p>
+<p>4. wild code (Italy)</p>
+<p>VARIABLE 63 PERSUAD. FRIENDS: NEVER=4 DECK 1 COL 67</p>
+<p>Q42 Concerning your friends, your coworkers, your acquaintances have you ever</p>
+<p>1</p>
+<p>ICPSR 7275 Page 27</p>
+<p>succeeded in convincing them to adopt an opinion which you hold strongly?</p>
+<p>1. often</p>
+<p>2. from time to time</p>
+<p>3. rarely</p>
+<p>4. never</p>
+<p>0. N.A.</p>
+<p>5. wild code (France)</p>
+<p>VARIABLE 64 LIKE NEW THINGS: NEVER= 4 DECK 1 COL 68</p>
+<p>Q43 Certain persons are attracted to new things and new ideas. Others are</p>
+<p>suspicious of that which is new. Which is in general your attitude toward that</p>
+<p>which is new?</p>
+<p>1. very attracted</p>
+<p>2. somewhat attracted</p>
+<p>3. depends</p>
+<p>4. somewhat suspicious</p>
+<p>5. very suspicious</p>
+<p>0. N.A.</p>
+<p>6. wild code (Italy)</p>
+<p>VARIABLE 65 POLITICAL PARTY DECK 1 COL 69</p>
+<p>Q44 If now were the time for legislative elections to choose deputies would you</p>
+<p>tell me the letter corresponding to the candidate for which it would be most</p>
+<p>likely that you would vote (This was the question probably used to obtain</p>
+<p>political party)</p>
+<p>FRANCE</p>
+<p>1. Centrists of the majority tendency (J. Duhamel)</p>
+<p>2. Communist party</p>
+<p>3. Radical party</p>
+<p>4 .U. D. R.</p>
+<p>5. Socialist party</p>
+<p>6. Independent Republicans</p>
+<p>7. P.S.U.</p>
+<p>8. Centrists of the opposition (J. Lecanuet)</p>
+<p>9. others</p>
+<p>0. N.A.</p>
+<p>VARIABLE 65 POLITICAL PARTY DECK 1 COL 69</p>
+<p>BELGIUM POLITICAL PARTY (&amp;=1,7)</p>
+<p>1. not yet voted</p>
+<p>2. BSP/PBS socialist</p>
+<p>3. CVP Christian People</p>
+<p>4. PSC Christian Socialist</p>
+<p>5. VU Volksunie</p>
+<p>1</p>
+<p>Page 28 ICPSR 7275</p>
+<p>6. FDF/RW Wallon nationalist</p>
+<p>7. N.A.</p>
+<p>8. Blanco</p>
+<p>9. Don't remember, KP/PC 'Communist, other</p>
+<p>0. PVV/PLP Liberal</p>
+<p>ITALY PARTY:0=NA,1=PCI,9=MSI</p>
+<p>1. Communists (PCI)</p>
+<p>2. Proletarian Socialists (PSIUP)</p>
+<p>3. Socialists (PSI)</p>
+<p>4. Saragt Socialists (PSDI)</p>
+<p>5. Republicans (PRI)</p>
+<p>6. Christian Democrats (DC)</p>
+<p>7. Liberals (PLI)</p>
+<p>8. Monarchists (PDIUM)</p>
+<p>9. MSI</p>
+<p>0. N.A.</p>
+<p>NETHERLANDS POLITICAL PARTY (VARIES) DECK 1 COL 70</p>
+<p>1. Catholic People's party (KVP)</p>
+<p>2. Socialist Party (PVDA)</p>
+<p>3. Liberals (VVD)</p>
+<p>4. Anti Revolutionary Party (AR - Fundamentalist Calvinist)</p>
+<p>5. Christian Historical:(CHU - Liberal Calvinist)</p>
+<p>6. Democrats, '66 and Radicals (d'66 of PPR New Left Coalition)</p>
+<p>7. Democratic Socialists, '70 (DS'70)</p>
+<p>8. Pacifist Socialist Party (PSP)</p>
+<p>9. Others</p>
+<p>0. Don't know</p>
+<p>GERMANY POLITICAL PARTY (VARIES)</p>
+<p>1. CDU/CSU</p>
+<p>2. FDP</p>
+<p>3. DKP</p>
+<p>4. NPD</p>
+<p>5. SPP</p>
+<p>6. DU</p>
+<p>7. others</p>
+<p>0. N.A.</p>
+<p>VARIABLE 66 RELIG.DENOM.1=CATHOLIC DECK 1 COL 70</p>
+<p>Q45 Do you belong to a religion and if so which one?</p>
+<p>1. yes, Catholic</p>
+<p>2. yes, Protestant</p>
+<p>3. yes, Jewish</p>
+<p>4. yes, Moslem</p>
+<p>5. yes, other</p>
+<p>6. no</p>
+<p>0. N.A.</p>
+<p>1</p>
+<p>ICPSR 7275 Page 29</p>
+<p>9. wild code (Italy)</p>
+<p>VARIABLE 67 RELIG.ATTENDANCE:5=NEVER DECK 1 COL 71</p>
+<p>Q46 How often do you attend religious services?</p>
+<p>1. several times a week</p>
+<p>2. nearly each week</p>
+<p>3. one or two times a month</p>
+<p>4. several times a year</p>
+<p>5. never or nearly never</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Belgium, Netherlands, Germany)</p>
+<p>VARIABLE 68 RELIG.PROGRESSIVE=2 DECK 1 COL 72</p>
+<p>Q47 In religious matters do you consider yourself conservative or progressive?</p>
+<p>1. Conservative</p>
+<p>2. Progressive</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (Belgium, Netherlands, Germany)</p>
+<p>VARIABLE 69 MALE=1 DECK 1 COL 73</p>
+<p>Sex of Respondent</p>
+<p>1. male</p>
+<p>2. female</p>
+<p>VARIABLE 70 AGE: 65+=X=1 DECK 1 COL 74</p>
+<p>Age of respondent</p>
+<p>BELGIUM</p>
+<p>1. 65+</p>
+<p>2. 15-24</p>
+<p>3. 25-29</p>
+<p>4. 30-34</p>
+<p>5. 35-39</p>
+<p>6. 40-44</p>
+<p>7. 45-49</p>
+<p>8. 50-54</p>
+<p>9. 55-59</p>
+<p>0. 60-64</p>
+<p>VARIABLE 71 OCCUPATION HD. OF FAM DECK 1 COL 75</p>
+<p>Occupation of family head</p>
+<p>FRANCE</p>
+<p>1. farmer</p>
+<p>1</p>
+<p>Page 30 ICPSR 7275</p>
+<p>2. self employed in industry or trades</p>
+<p>3. professional (high status)</p>
+<p>4. supervisory</p>
+<p>5. clerical, sales</p>
+<p>6. blue collar workers</p>
+<p>7. others</p>
+<p>8. inactive, not in labor force</p>
+<p>9. housewife</p>
+<p>BELGIUM OCCUPA, HD. OF FAM: 8=INAC</p>
+<p>1. farmer</p>
+<p>2. self employed in industry or trades</p>
+<p>3. professional (high status)</p>
+<p>4. supervisory</p>
+<p>5. clerical, sales</p>
+<p>6. blue collar workers</p>
+<p>7. others</p>
+<p>8. inactive, not in labor force</p>
+<p>9. housewife</p>
+<p>ITALY OCCUPA, HD. OF FAM: -=2, +=3</p>
+<p>1. entrepreneur</p>
+<p>2. professional, housewife</p>
+<p>3. manager, student, retired</p>
+<p>4. upper employee</p>
+<p>5. lower level employee</p>
+<p>6. esercenti, artigiani</p>
+<p>7. independent farmer</p>
+<p>8. skilled labor</p>
+<p>9. unskilled labor</p>
+<p>0. farm labor</p>
+<p>GERMANY OCCUPA, HD. OF FAM: 8=INAC</p>
+<p>1. farmer</p>
+<p>2. self employed in industry or trades</p>
+<p>3. professional (high status)</p>
+<p>4. middle level professionals</p>
+<p>5. lower level professionals</p>
+<p>6. blue collar workers</p>
+<p>7. other groups</p>
+<p>8. inactive, not in labor force</p>
+<p>NETHERLANDS OCCUP,HD. OF FAM: 8=INAC</p>
+<p>1. farmer, florist</p>
+<p>2. head of firm or company</p>
+<p>3. free profession &amp; higher employees</p>
+<p>4. medium level employees</p>
+<p>5. lower employees</p>
+<p>6. workers</p>
+<p>1</p>
+<p>ICPSR 7275 Page 31</p>
+<p>9. no profession or retired</p>
+<p>VARIABLE 72 OCCUPA, RESPONDENT DECK 1 COL 76</p>
+<p>Occupation of Respondent</p>
+<p>FRANCE</p>
+<p>1. farmer</p>
+<p>2. self employed in industry or trades</p>
+<p>3. professional (high status)</p>
+<p>4. supervisory</p>
+<p>5. clerical, sales</p>
+<p>6. blue collar workers</p>
+<p>7. others</p>
+<p>8. inactive, not in labor force</p>
+<p>9. housewife</p>
+<p>BELGIUM</p>
+<p>1. farmer</p>
+<p>2. self employed in industry or trades</p>
+<p>3. professional (high status)</p>
+<p>4. supervisory</p>
+<p>5. clerical, sales</p>
+<p>6. blue collar workers</p>
+<p>7. others</p>
+<p>8. inactive, not in labor force</p>
+<p>9. housewife</p>
+<p>GERMANY</p>
+<p>1. farmer</p>
+<p>2. self employed in industry or trades</p>
+<p>3. professional (high.status)</p>
+<p>4. middle level professionals</p>
+<p>5. lower level employees</p>
+<p>6. blue collar workers</p>
+<p>7. other groups</p>
+<p>8. inactive, not in labor force</p>
+<p>NETHERLANDS</p>
+<p>1. farmer, florist</p>
+<p>2. head of firm or company</p>
+<p>3. free profession &amp; higher employees</p>
+<p>4. medium level employees</p>
+<p>5. lower employees</p>
+<p>6. workers</p>
+<p>9. no profession or retired</p>
+<p>ITALY OCCUPA, RESP: -=2, +=3</p>
+<p>1. entrepreneur</p>
+<p>1</p>
+<p>Page 32 ICPSR 7275</p>
+<p>2. professional, housewife</p>
+<p>3. manager, student, retired</p>
+<p>4. upper employee</p>
+<p>5. lower level employee</p>
+<p>6. esercenti, artigiani</p>
+<p>7. independent farmer</p>
+<p>8. skilled labor</p>
+<p>9. unskilled labor</p>
+<p>0. farm labor</p>
+<p>VARIABLE 73 UNION=1-3: SELF-EMPLOY=5 DECK 1 COL 77</p>
+<p>Q48 Have you paid this year dues to a labor union (professional, white collar,</p>
+<p>or blue collar) and if yes, which?</p>
+<p>FRANCE</p>
+<p>1. union, paid dues CGT</p>
+<p>2. union, paid dues CFDT</p>
+<p>3. union, paid dues FO</p>
+<p>4. union, paid dues CGC</p>
+<p>5. union, paid dues CFTC</p>
+<p>6. union, paid dues independent union</p>
+<p>7. union, paid dues other</p>
+<p>8. salaried, paid no dues</p>
+<p>9. inap., not salaried</p>
+<p>0. N.A.</p>
+<p>ITALY UNION=1-3:SELF-EMPLOY=6</p>
+<p>1. union, paid dues CGIL</p>
+<p>2. union, paid dues CISL</p>
+<p>3. union, paid dues CISNAL</p>
+<p>4. union, paid dues UIL</p>
+<p>5. union, paid dues other (ACL, .…)</p>
+<p>6. not salaried</p>
+<p>7. wild code</p>
+<p>9. salaried, paid no dues</p>
+<p>0. N.A.</p>
+<p>BELGIUM</p>
+<p>1. union, paid dues Christian labor union</p>
+<p>2. union, paid dues Socialist labor union</p>
+<p>3. union, paid dues Liberal labor union</p>
+<p>4. not salaried</p>
+<p>5. salaried, paid no dues</p>
+<p>9. wild code</p>
+<p>0. N.A.</p>
+<p>NETHERLANDS</p>
+<p>1. union, paid dues NVV</p>
+<p>1</p>
+<p>ICPSR 7275 Page 33</p>
+<p>2. union, paid dues NKV</p>
+<p>3. union, paid dues CNV</p>
+<p>4. union, paid dues other</p>
+<p>5. paid no dues</p>
+<p>6. not salaried</p>
+<p>0. N.A.</p>
+<p>GERMANY</p>
+<p>1. union, paid dues DGB</p>
+<p>2. union, paid dues DAG</p>
+<p>3. union paid dues other</p>
+<p>4. paid no dues</p>
+<p>5. not salaried</p>
+<p>0. N.A.</p>
+<p>VARIABLE 74 UNION SYMP:(3=4) DECK 1 COL 78</p>
+<p>Q49 Are you not a union member but sympathetic to a worker's labor union</p>
+<p>(professional, white collar, blue collar) and if yes which?</p>
+<p>FRANCE</p>
+<p>1. C.G.T. sympathizer</p>
+<p>2. C.F.D.T. sympathizer</p>
+<p>3. F.O. sympathizer</p>
+<p>4. C.G.C. sympathizer</p>
+<p>5. C.F.T.C. sympathizer</p>
+<p>6. independent labor union sympathizer</p>
+<p>7. others</p>
+<p>8. not sympathizer of any union</p>
+<p>9. inap., not salaried</p>
+<p>0. N.A.</p>
+<p>GERMANY</p>
+<p>1. Sympathizer DGB</p>
+<p>2. sympathizer DAG</p>
+<p>3 . sympathizer other</p>
+<p>4 . not sympathizer</p>
+<p>9. undocumented code</p>
+<p>0. N.A.</p>
+<p>BELGIUM</p>
+<p>1. sympathetic with Christian union</p>
+<p>2. sympathetic with Socialist union</p>
+<p>3. sympathetic with Liberal union</p>
+<p>4. not sympathizer</p>
+<p>9. inap, not salaried</p>
+<p>0. N.A.</p>
+<p>NETHERLANDS</p>
+<p>1</p>
+<p>Page 34 ICPSR 7275</p>
+<p>1. sympathizer with NVV</p>
+<p>2. sympathizer with NKV</p>
+<p>3 . sympathizer CNV</p>
+<p>4. never sympathizer</p>
+<p>9. N.A.</p>
+<p>ITALY UNION SYMP:NO=0</p>
+<p>1. sympathizer CGIL</p>
+<p>2. sympathizer CISL</p>
+<p>3. sympathizer CISNAL</p>
+<p>4. sympathizer UIL</p>
+<p>5. sympathizer other (ACL-...)</p>
+<p>9. union member?</p>
+<p>0. not sympathizer</p>
+<p>VARIABLE 75 FA. OCCUPA (CHILD) DECK 1 COL 79</p>
+<p>Q50 During your youth what was the occupation of your father or of the head of</p>
+<p>your family?</p>
+<p>BELGIUM, FRANCE</p>
+<p>1. farmer</p>
+<p>2. self employed in industry or trades</p>
+<p>3. professional (high status)</p>
+<p>4. supervisory</p>
+<p>5. clerical, sales</p>
+<p>6. blue collar workers</p>
+<p>7. others</p>
+<p>8. inactive, not in labor force</p>
+<p>9. housewife</p>
+<p>0. undocumented code (France)</p>
+<p>NETHERLANDS</p>
+<p>1. farmer, florist</p>
+<p>2. head of firm or company</p>
+<p>3. free profession &amp; higher employees</p>
+<p>4. medium level employees</p>
+<p>5. lower employees</p>
+<p>6. workers</p>
+<p>9. no profession or retired</p>
+<p>ITALY</p>
+<p>1. self employed</p>
+<p>2. paid monthly wage</p>
+<p>3. paid daily or weekly wage</p>
+<p>9. wild code</p>
+<p>0. wild code</p>
+<p>GERMANY</p>
+<p>1</p>
+<p>ICPSR 7275 Page 35</p>
+<p>9. N.A.</p>
+<p>VARIABLE 76 FATHER UNIV.EDUC=5 DECK 1 COL 80</p>
+<p>Q51 What was the level of education of your father?</p>
+<p>FRANCE AND BELGIUM</p>
+<p>1. primaire</p>
+<p>2. primaire superieur</p>
+<p>3. technique et commercial</p>
+<p>4. secondaire</p>
+<p>5. superieur</p>
+<p>6. undocumented code (France)</p>
+<p>0. N.A.</p>
+<p>9. undocumented code (France)</p>
+<p>NETHERLANDS AND GERMANY</p>
+<p>1. Grundschule (elementary)</p>
+<p>2. Mittelschule</p>
+<p>3. Fach-und Handelsschule (special schools)</p>
+<p>4. Hohere Schule (gymnasium)</p>
+<p>5. Hochschule (university)</p>
+<p>0. N.A.</p>
+<p>ITALY</p>
+<p>1. scuole elementari (alcune classi)</p>
+<p>2. scuole elementari (fino alla 5a)</p>
+<p>3. scuole techniche o commerciali</p>
+<p>4. scuole medie, ginnasio</p>
+<p>5. medie superiori, magistrali, licei</p>
+<p>6. universita</p>
+<p>9. mei andates a scuoia</p>
+<p>0. non so</p>
+<p>INTERVIEW NUMBER DECK 2 COL 1-4</p>
+<p>Constant '2' DECK 2 COL 5</p>
+<p>VARIABLE 77 RESP,UNIV.EDUC=5 DECK 2 COL 6</p>
+<p>The last institution you attended as a student, was this a:</p>
+<p>BELGIUM AND FRANCE</p>
+<p>1. primaire</p>
+<p>2. primaire superieur</p>
+<p>3. secondaire</p>
+<p>4. technique, commercial</p>
+<p>5. superieur (universite, Gde Ecole)</p>
+<p>1</p>
+<p>Page 36 ICPSR 7275</p>
+<p>0. never a student</p>
+<p>9. undocumented code (Belgium)</p>
+<p>ITALY</p>
+<p>1. scuole elementari (alcune classi)</p>
+<p>2. scuole elementari (fino alla 5a)</p>
+<p>3. scuole techniche o commerciali</p>
+<p>4. scuole medie, ginnasio</p>
+<p>5. medie superiori, magistrali, licei</p>
+<p>6. universita</p>
+<p>9. mei andate a scuoia</p>
+<p>0. non so</p>
+<p>GERMANY</p>
+<p>1. Grundschule (elementary)</p>
+<p>2. Mittelschule</p>
+<p>3. Fach-und Handelsschule (special schools)</p>
+<p>4. Hohere Schule (gymnasium)</p>
+<p>5. Hochschule (university)</p>
+<p>NETHERLANDS</p>
+<p>1. lager onderwijs</p>
+<p>2. witgebreid lager onderwijs</p>
+<p>3. technisch of handel sonderwijs</p>
+<p>4. middelbaar onderwijs</p>
+<p>5. hoger onderwijs</p>
+<p>0. N.A.</p>
+<p>VARIABLE 78 FAM. INCOME: HI=5 (VARIES) DECK 2 COL 7</p>
+<p>Q55 We wish to analyze the results of this study in terms of family income of</p>
+<p>persons we question. Here is a list of incomes (show card). We wish to know at</p>
+<p>which level you place yourself counting all the sources of income of your</p>
+<p>household such as salaries, family subsidies, pensions, interest.</p>
+<p>FRANCE</p>
+<p>1. less than 250 frs</p>
+<p>2. 250-499 frs</p>
+<p>3. 500-799 frs</p>
+<p>4. 800-1.249 frs</p>
+<p>5. 1.250-1.749 frs</p>
+<p>6. 1.750-2.499 frs</p>
+<p>7. 2.500-3.999 frs</p>
+<p>8. 4.000 frs and more</p>
+<p>0. undocumented code</p>
+<p>9. wild code</p>
+<p>GERMANY</p>
+<p>1. under 800 marks</p>
+<p>1</p>
+<p>ICPSR 7275 Page 37</p>
+<p>2. 800 to 1000 marks</p>
+<p>3. 1001 to 1250 marks</p>
+<p>4. 1251 to 1500 marks</p>
+<p>5. 1500 and more</p>
+<p>6. N.A.</p>
+<p>BELGIUM</p>
+<p>1. less than 800 F.</p>
+<p>2. 800-1249 F</p>
+<p>3. 1250-1749 F</p>
+<p>4. 1750-2499 F</p>
+<p>5. 2500 F and more</p>
+<p>0. refused</p>
+<p>9. wild code?</p>
+<p>NETHERLANDS</p>
+<p>1. less than Hfl 500 per month</p>
+<p>2. Hfl 500-Hfl 799</p>
+<p>3. Hfl 800-Hfl 1099</p>
+<p>4. Hfl 1100-Hfl 1599</p>
+<p>5. Hfl 1600 or more</p>
+<p>0. Don't know, N.A.</p>
+<p>ITALY</p>
+<p>1. 70-120 thousand lire</p>
+<p>2. 120-180 thousand lire</p>
+<p>3. 180-250 thousand lire</p>
+<p>4. 250-350 thousand lire</p>
+<p>5. more than 350 thousand lire</p>
+<p>9. wild code (?)</p>
+<p>VARIABLE 79 SIZE OF TOWN: LG=6 DECK 2 COL 8</p>
+<p>Size of Town</p>
+<p>FRANCE, BELGIUM</p>
+<p>1. rural commune</p>
+<p>cities or urban communities ("agglomerations") of</p>
+<p>2. less that 10,000</p>
+<p>3. 10,000 to 20,000</p>
+<p>4. 20,000 to 50,000</p>
+<p>5. 50,000 to 100,000</p>
+<p>6. more than 100,000</p>
+<p>7. Paris (residential complex) (France only)</p>
+<p>NETHERLANDS</p>
+<p>1. suburbs of Amsterdam, Rotterdam, the Hague</p>
+<p>2. 100,000 and more (excluding Amsterdam, Rotterdam, the Hague)</p>
+<p>3. 50,000-100,000</p>
+<p>1</p>
+<p>Page 38 ICPSR 7275</p>
+<p>4. 20,000-50,000</p>
+<p>5. 10,000-20,000</p>
+<p>6. less than 10,000, no agricultural character</p>
+<p>9. countryside community with agricultural character</p>
+<p>0. Amsterdam, Rotterdam, the Hague</p>
+<p>ITALY RESP: -=0,+=1</p>
+<p>1. less than 5000 inhabitants</p>
+<p>2. 5000 - 10.000</p>
+<p>3. 10.000 - 30.000</p>
+<p>4. 30.000 - 100.000</p>
+<p>5. 100.000 - 250.000</p>
+<p>6. more than 250.000</p>
+<p>7. undocumented code</p>
+<p>8. undocumented code</p>
+<p>9. altro comune</p>
+<p>0. capoluogu</p>
+<p>GERMANY DECK 2 COL 8-9</p>
+<p>first column:</p>
+<p>1. less than 2000 inhabitants</p>
+<p>2. 2000-5000</p>
+<p>3. 5000-10,000</p>
+<p>4. 10,000-20,000</p>
+<p>5. 20,000-50,000</p>
+<p>6. 50,000-100,000</p>
+<p>7. 100,000-200,000</p>
+<p>8. 200,000-500,000</p>
+<p>9. over 500,000</p>
+<p>second column:</p>
+<p>1. central cities of 500,000 and more</p>
+<p>2. central city of 100,000-499,999</p>
+<p>3. central city of less than 100,000</p>
+<p>4. urbanized area</p>
+<p>5. countryside towns of 20,000 and more</p>
+<p>6. countryside towns of 10,000-19,999</p>
+<p>7. communities of 2,000-9,999</p>
+<p>8. communities of less that 2000</p>
+<p>VARIABLE 80 REGIONS (VARIES) DECK 2 COL 9</p>
+<p>Region</p>
+<p>FRANCE</p>
+<p>1. Northwest Basee-Normandie</p>
+<p>Britaigne</p>
+<p>Loire</p>
+<p>Poitou-Charantes</p>
+<p>1</p>
+<p>ICPSR 7275 Page 39</p>
+<p>Limousin</p>
+<p>2. Southwest Aquitaine</p>
+<p>Auvergne</p>
+<p>Midi-Pyrenees</p>
+<p>Languedoc</p>
+<p>3. North Nord</p>
+<p>Pas de Calais</p>
+<p>4. Paris region</p>
+<p>5. Bassin Parisien Haute-Normandie</p>
+<p>Picardie</p>
+<p>Champagne</p>
+<p>Bourgogne</p>
+<p>Centre</p>
+<p>6. East Lorraine</p>
+<p>Alsace</p>
+<p>7. Southeast Franche-Comte</p>
+<p>Rhone-Alpes</p>
+<p>Provence-Cote d'Azur</p>
+<p>Corse</p>
+<p>GERMANY DECK 2 COL 10</p>
+<p>1. Schleswig-Holstein</p>
+<p>2. Hamburg</p>
+<p>3. Niedersachsen</p>
+<p>4. Bremen</p>
+<p>5. Nordhein-Westfalen</p>
+<p>6. Hessen</p>
+<p>7. Rheinland-Pfalz</p>
+<p>8. Baden-Wurttemberg</p>
+<p>9. Bayern</p>
+<p>0. Saarland, West Berlin</p>
+<p>BELGIUM</p>
+<p>1. Brabant Walloon (originally code X) or Bruxelles?</p>
+<p>2. Hainaut</p>
+<p>3. Limburg</p>
+<p>4. Namur</p>
+<p>5. Oost Vlaanderen</p>
+<p>6. West Vlaanderen</p>
+<p>7. Liege</p>
+<p>8. Luxembourg</p>
+<p>9. Vlaams-Brabant (ar. Leuven, Halle-Vilvorde, Randgemeenten)</p>
+<p>0. Antwerpen</p>
+<p>NETHERLANDS</p>
+<p>1. east (Overijessel, Gelderland)</p>
+<p>2. west (Noord-Holland, Zuid-Holland, Utrecht)</p>
+<p>3. south (Noord-Brabant, Limburg, Zeeland)</p>
+<p>0. north (Groningen, Friesland, Drenthe)</p>
+<p>ITALY REGIONS: ISLANDS=0</p>
+<p>1</p>
+<p>Page 40 ICPSR 7275</p>
+<p>1. Piemonte, Liguria, Valle d'Aosta</p>
+<p>2. Lombardia</p>
+<p>3. Tre Venezie</p>
+<p>4. Emilia - Romagna</p>
+<p>5. Toscana, Umbria, Marche</p>
+<p>6. Lazio</p>
+<p>7. Campania</p>
+<p>8. Abruzzi - Molise</p>
+<p>9. Puglia, Basilicata, Calabria</p>
+<p>0. Sicilia, Sardegna</p>
+<p>VARIABLE 81 TEEN-AGE=1, OTHERS=9 DECK 2 COL 10</p>
+<p>Germany DECK 2 COL 11</p>
+<p>How many children less than 15 years actually live in this house?</p>
+<p>1. has teenage children</p>
+<p>9. others</p>
+<p>VARIABLE 82 FRANCE: 1=FARM SUPPLEMENT DECK 2 COL 11</p>
+<p>1. farm supplement</p>
+<p>9. representative sample</p>
+<p>*These data are card weighted</p>
+<p>VARIABLE 82 WEIGHTED CASE=3 DECK 2 COL 11</p>
+<p>NETHERLANDS</p>
+<p>weight variable (?) codes are 0,1,3</p>
+<p>VARIABLE 82 BELG. ONLY: REGIONAL I.D. DECK 2 COL 11</p>
+<p>Q1bis If I were to ask you the name of the region where you live what would</p>
+<p>you answer.</p>
+<p>BELGIUM</p>
+<p>2. Belgium</p>
+<p>3. refers to a district or provincial capital</p>
+<p>4. refers to specific geographic areas within the region</p>
+<p>5. refers to a region on the basis of certain industrial or cultural</p>
+<p>characteristics</p>
+<p>6. refers to Flemish section of the country.</p>
+<p>7. refers to the French section of the country.</p>
+<p>8. others</p>
+<p>9. N.A.</p>
+<p>1</p>
+<p>ICPSR 7275 Page 41</p>
+<p>VARIABLE 83 DEPARTMENT DECK 2 COL 12-13</p>
+<p>FRANCE Department code</p>
+<p>01 Ain</p>
+<p>02 Aisne 47 Lot-et-Garonne 93 Seine-St.&nbsp;Denis</p>
+<p>03 Allier 48 Lozere 94 Val de Marne</p>
+<p>04 Alpes (Basses-) 49 Maine-et-Loire 95 Val d'Oise</p>
+<p>05 Alpes (Hautes-) 50 Manche</p>
+<p>06 Alpes-Maritimes 51 Marne</p>
+<p>07 Ardeche 52 Marne (Haute-)</p>
+<p>08 Ardennes 53 Mayenne</p>
+<p>09 Ariege 54 Meurthe-et-Moselle</p>
+<p>10 Aube 55 Meuse</p>
+<p>11 Aude 56 Morbihan</p>
+<p>12 Aveyron 57 Moselle</p>
+<p>13 Bouches-du-Rhone 58 Nievre</p>
+<p>14 Calvados 59 Nord</p>
+<p>15 Cantal 60 Oise</p>
+<p>16 Charente 61 Orne</p>
+<p>17 Charente-Inferieure 62 Pas-de-Calais</p>
+<p>18 Cher 63 Puy-de-Dome</p>
+<p>19 Correze 64 Pyrenees (Basses-)</p>
+<p>20 Corse 65 Pyrenees (Hautes-)</p>
+<p>21 Cote-D'Or 66 Pyrenees-Orientales</p>
+<p>22 Cotes-Du-Nord 67 Rhin (Bas-)</p>
+<p>23 Creuse 68 Rhin (Haute-)</p>
+<p>24 Dordogne 69 Rhone</p>
+<p>25 Doubs 70 Saone (Haute-)</p>
+<p>26 Drome 71 Saone-et-Loire</p>
+<p>27 Eure 72 Sarthe</p>
+<p>28 Eure et Loir 73 Savoie</p>
+<p>29 Finistere 74 Savoie (Haute-)</p>
+<p>30 Gard 75 Seine</p>
+<p>31 Garonne (Haute-) 76 Seine-Maritime</p>
+<p>32 Gers 77 Seine-et-Marne</p>
+<p>33 Gironde 78 Yvelines</p>
+<p>34 Herault 79 Sevres (Deux-)</p>
+<p>35 Ille-et-Vilaine 80 Somme</p>
+<p>36 Indre 81 Tarn</p>
+<p>37 Indre-et-Loire 82 Tarn-et-Garonne</p>
+<p>38 Isere 83 Var</p>
+<p>39 Jura 84 Vaucluse</p>
+<p>40 Landes 85 Vendee</p>
+<p>41 Loir-et-Cher 86 Vienne</p>
+<p>42 Loire 87 Vienne (Haute-)</p>
+<p>43 Loire (Haute) 88 Vosges</p>
+<p>44 Loire-Inferieure 89 Yonne</p>
+<p>45 Loiret 90 Territoire de Belfort</p>
+<p>46 Lot 91 Essonne</p>
+<p>92 Hauts de Seine</p>
+<p>1</p>
+<p>Page 42 ICPSR 7275</p>
+<p>VARIABLE 84 OCCUPA,HD.OF FAM(2 COL) DECK 2 COL 14-15</p>
+<p>French two column code for occupation of head</p>
+<p>VARIABLE 85 OCCUPA,RESPONDENT(2 COL) DECK 2 COL 16-17</p>
+<p>Occupation of respondent two column code (France)</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../citation.html" class="pagination-link" aria-label="Citation Guide">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Metadata and Mappings/BT-variable-description.html" class="pagination-link" aria-label="BT-variable-description.html">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
