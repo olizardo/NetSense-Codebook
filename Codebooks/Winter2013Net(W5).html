@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>30&nbsp; Winter2013Net(W5) – NetSense Study Codebook</title>
+<title>winter2013net(w5 – NetSense Study Codebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Codebooks/Summer2013Net(W6).html" rel="next">
-<link href="../Codebooks/Fall2012Net(W4).html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -44,13 +42,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fee066a00baa590e8925199ba1c8ceb4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c3d1e225d849e29a5da9db11878cc23d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -77,428 +75,221 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/Summer2011Net(W1).html">Network Survey Instruments</a></li><li class="breadcrumb-item"><a href="../Codebooks/Winter2013Net(W5).html"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">NetSense Study Codebook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-datasets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Datasets</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-datasets">    
+        <li>
+    <a class="dropdown-item" href="../surveys.html">
+ <span class="dropdown-text">Demographic Surveys</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../networks.html">
+ <span class="dropdown-text">Network Surveys</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../proximity.html">
+ <span class="dropdown-text">Bluetooth Proximity</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../catalog.html"> 
+<span class="menu-text">Interactive Catalog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../download.html"> 
+<span class="menu-text">Data Download</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-survey-instruments" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Survey Instruments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-survey-instruments">    
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2011Demog(W1).html">
+ <span class="dropdown-text">Summer2011Demog(W1)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Spring2012Demog(W2).html">
+ <span class="dropdown-text">Spring2012Demog(W2)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2012Demog(W3).html">
+ <span class="dropdown-text">Summer2012Demog(W3)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Fall2012Demog(W4).html">
+ <span class="dropdown-text">Fall2012Demog(W4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Winter2013Demog(W5).html">
+ <span class="dropdown-text">Winter2013Demog(W5)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2013Demog(W6).html">
+ <span class="dropdown-text">Summer2013Demog(W6)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2011Net(W1).html">
+ <span class="dropdown-text">Summer2011Net(W1)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Spring2012Net(W2).html">
+ <span class="dropdown-text">Spring2012Net(W2)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2012Net(W3).html">
+ <span class="dropdown-text">Summer2012Net(W3)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Fall2012Net(W4).html">
+ <span class="dropdown-text">Fall2012Net(W4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Winter2013Net(W5).html">
+ <span class="dropdown-text">Winter2013Net(W5)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2013Net(W6).html">
+ <span class="dropdown-text">Summer2013Net(W6)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../citation.html"> 
+<span class="menu-text">Citation</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/olizardo/NetSense"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">NetSense Study Codebook</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Survey &amp; Network Datasets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../surveys.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Demographic, Behavioral, &amp; Quiz Surveys</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Social Network Surveys</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../proximity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bluetooth Proximity Logs</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Searchable Catalogs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../catalog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Searchable Variable Catalog</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../citation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Metadata and Mappings</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/07275-Codebook.txt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BT-variable-description.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BluetoothProximity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/CodeBook(netsense_entry_recoded_12_5).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Codebook for arcWeeklyTableCombined.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Files Overview 7_30_14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Files Overview 7_30_14.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Structures and Variables for NetSense.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data Structures and Variables for NetSense.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Dorm Distances.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/DormValueLabels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/EdgleListRenumberCodebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Edge List Renumbered Codebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Ego and Alter Coding Conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Ego and Alter Coding Conventions.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/IAmSomeoneIndices(extraversion).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">I Am Someone Indices (Extraversion)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Interesting_data.txt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Interesting_data.txt.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/ND-academic-calendar-2011_2012.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ND Academic Calendar 2011-2012</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/PolQuizzesCodebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/QuizDataCodebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Semester Dates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/personality-inventory-coding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Personality Inventory Coding</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Network Survey Instruments</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2011Net(W1).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Summer2011Net(W1)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Spring2012Net(W2).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Spring2012Net(W2)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2012Net(W3).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Summer2012Net(W3)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Fall2012Net(W4).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Winter2013Net(W5).html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2013Net(W6).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Demographic Survey Instruments</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2011Demog(W1).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Summer2011Demog(W1)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Spring2012Demog(W2).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spring2012Demog(W2)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2012Demog(W3).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Summer2012Demog(W3)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Fall2012Demog(W4).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fall2012Demog(W4)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Winter2013Demog(W5).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Winter2013Demog(W5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2013Demog(W6).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Summer2013Demog(W6)</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#question-1-name.netid" id="toc-question-1-name.netid" class="nav-link active" data-scroll-target="#question-1-name.netid"><span class="header-section-number">30.0.1</span> Question 1: <code>name.netid</code></a></li>
-  <li><a href="#question-2-list.friends" id="toc-question-2-list.friends" class="nav-link" data-scroll-target="#question-2-list.friends"><span class="header-section-number">30.0.2</span> Question 2: <code>List.friends</code></a></li>
-  <li><a href="#question-3-number.alter" id="toc-question-3-number.alter" class="nav-link" data-scroll-target="#question-3-number.alter"><span class="header-section-number">30.0.3</span> Question 3: <code>Number.alter</code></a></li>
-  <li><a href="#question-4-closeness" id="toc-question-4-closeness" class="nav-link" data-scroll-target="#question-4-closeness"><span class="header-section-number">30.0.4</span> Question 4: <code>Closeness</code></a></li>
-  <li><a href="#question-5-duration" id="toc-question-5-duration" class="nav-link" data-scroll-target="#question-5-duration"><span class="header-section-number">30.0.5</span> Question 5: <code>Duration</code></a></li>
-  <li><a href="#question-6-emotion" id="toc-question-6-emotion" class="nav-link" data-scroll-target="#question-6-emotion"><span class="header-section-number">30.0.6</span> Question 6: <code>Emotion</code></a></li>
-  <li><a href="#question-7-subjective.similar" id="toc-question-7-subjective.similar" class="nav-link" data-scroll-target="#question-7-subjective.similar"><span class="header-section-number">30.0.7</span> Question 7: <code>subjective.similar</code></a></li>
-  <li><a href="#question-8-social.context" id="toc-question-8-social.context" class="nav-link" data-scroll-target="#question-8-social.context"><span class="header-section-number">30.0.8</span> Question 8: <code>Social.context</code></a></li>
-  <li><a href="#question-9-freq.fall.2012" id="toc-question-9-freq.fall.2012" class="nav-link" data-scroll-target="#question-9-freq.fall.2012"><span class="header-section-number">30.0.9</span> Question 9: <code>Freq.fall.2012</code></a></li>
-  <li><a href="#question-10-rel.type" id="toc-question-10-rel.type" class="nav-link" data-scroll-target="#question-10-rel.type"><span class="header-section-number">30.0.10</span> Question 10: <code>Rel.type</code></a></li>
-  <li><a href="#question-11-alter1.other" id="toc-question-11-alter1.other" class="nav-link" data-scroll-target="#question-11-alter1.other"><span class="header-section-number">30.0.11</span> Question 11: <code>alter1.other</code></a></li>
-  <li><a href="#question-12-alter2.other" id="toc-question-12-alter2.other" class="nav-link" data-scroll-target="#question-12-alter2.other"><span class="header-section-number">30.0.12</span> Question 12: <code>alter2.other</code></a></li>
-  <li><a href="#question-13-alter3.other" id="toc-question-13-alter3.other" class="nav-link" data-scroll-target="#question-13-alter3.other"><span class="header-section-number">30.0.13</span> Question 13: <code>alter3.other</code></a></li>
-  <li><a href="#question-14-alter4.other" id="toc-question-14-alter4.other" class="nav-link" data-scroll-target="#question-14-alter4.other"><span class="header-section-number">30.0.14</span> Question 14: <code>alter4.other</code></a></li>
-  <li><a href="#question-15-alter5.other" id="toc-question-15-alter5.other" class="nav-link" data-scroll-target="#question-15-alter5.other"><span class="header-section-number">30.0.15</span> Question 15: <code>alter5.other</code></a></li>
-  <li><a href="#question-16-alter6.other" id="toc-question-16-alter6.other" class="nav-link" data-scroll-target="#question-16-alter6.other"><span class="header-section-number">30.0.16</span> Question 16: <code>alter6.other</code></a></li>
-  <li><a href="#question-17-alter7.other" id="toc-question-17-alter7.other" class="nav-link" data-scroll-target="#question-17-alter7.other"><span class="header-section-number">30.0.17</span> Question 17: <code>alter7.other</code></a></li>
-  <li><a href="#question-18-alter8.other" id="toc-question-18-alter8.other" class="nav-link" data-scroll-target="#question-18-alter8.other"><span class="header-section-number">30.0.18</span> Question 18: <code>alter8.other</code></a></li>
-  <li><a href="#question-19-alter9.other" id="toc-question-19-alter9.other" class="nav-link" data-scroll-target="#question-19-alter9.other"><span class="header-section-number">30.0.19</span> Question 19: <code>alter9.other</code></a></li>
-  <li><a href="#question-20-alter10.other" id="toc-question-20-alter10.other" class="nav-link" data-scroll-target="#question-20-alter10.other"><span class="header-section-number">30.0.20</span> Question 20: <code>alter10.other</code></a></li>
-  <li><a href="#question-21-alter11.other" id="toc-question-21-alter11.other" class="nav-link" data-scroll-target="#question-21-alter11.other"><span class="header-section-number">30.0.21</span> Question 21: <code>alter11.other</code></a></li>
-  <li><a href="#question-22-alter12.other" id="toc-question-22-alter12.other" class="nav-link" data-scroll-target="#question-22-alter12.other"><span class="header-section-number">30.0.22</span> Question 22: <code>alter12.other</code></a></li>
-  <li><a href="#question-23-alter13.other" id="toc-question-23-alter13.other" class="nav-link" data-scroll-target="#question-23-alter13.other"><span class="header-section-number">30.0.23</span> Question 23: <code>alter13.other</code></a></li>
-  <li><a href="#question-24-alter14.other" id="toc-question-24-alter14.other" class="nav-link" data-scroll-target="#question-24-alter14.other"><span class="header-section-number">30.0.24</span> Question 24: <code>alter14.other</code></a></li>
-  <li><a href="#question-25-alter15.other" id="toc-question-25-alter15.other" class="nav-link" data-scroll-target="#question-25-alter15.other"><span class="header-section-number">30.0.25</span> Question 25: <code>alter15.other</code></a></li>
-  <li><a href="#question-26-alter16.other" id="toc-question-26-alter16.other" class="nav-link" data-scroll-target="#question-26-alter16.other"><span class="header-section-number">30.0.26</span> Question 26: <code>alter16.other</code></a></li>
-  <li><a href="#question-27-alter17.other" id="toc-question-27-alter17.other" class="nav-link" data-scroll-target="#question-27-alter17.other"><span class="header-section-number">30.0.27</span> Question 27: <code>alter17.other</code></a></li>
-  <li><a href="#question-28-alter18.other" id="toc-question-28-alter18.other" class="nav-link" data-scroll-target="#question-28-alter18.other"><span class="header-section-number">30.0.28</span> Question 28: <code>alter18.other</code></a></li>
-  <li><a href="#question-29-alter19.other" id="toc-question-29-alter19.other" class="nav-link" data-scroll-target="#question-29-alter19.other"><span class="header-section-number">30.0.29</span> Question 29: <code>alter19.other</code></a></li>
-  <li><a href="#question-30-alter20.other" id="toc-question-30-alter20.other" class="nav-link" data-scroll-target="#question-30-alter20.other"><span class="header-section-number">30.0.30</span> Question 30: <code>alter20.other</code></a></li>
-  <li><a href="#question-31-phone.num.email" id="toc-question-31-phone.num.email" class="nav-link" data-scroll-target="#question-31-phone.num.email"><span class="header-section-number">30.0.31</span> Question 31: <code>Phone.num.email</code></a></li>
-  <li><a href="#question-32-notre.dame" id="toc-question-32-notre.dame" class="nav-link" data-scroll-target="#question-32-notre.dame"><span class="header-section-number">30.0.32</span> Question 32: <code>Notre.Dame</code></a></li>
-  <li><a href="#question-33-gender" id="toc-question-33-gender" class="nav-link" data-scroll-target="#question-33-gender"><span class="header-section-number">30.0.33</span> Question 33: <code>Gender</code></a></li>
-  <li><a href="#question-34-whatdormcontacts" id="toc-question-34-whatdormcontacts" class="nav-link" data-scroll-target="#question-34-whatdormcontacts"><span class="header-section-number">30.0.34</span> Question 34: <code>whatdormcontacts</code></a></li>
-  <li><a href="#question-35-classtogether" id="toc-question-35-classtogether" class="nav-link" data-scroll-target="#question-35-classtogether"><span class="header-section-number">30.0.35</span> Question 35: <code>classtogether</code></a></li>
-  <li><a href="#question-36-5.activities" id="toc-question-36-5.activities" class="nav-link" data-scroll-target="#question-36-5.activities"><span class="header-section-number">30.0.36</span> Question 36: <code>5.activities</code></a></li>
-  <li><a href="#question-37-same.activities" id="toc-question-37-same.activities" class="nav-link" data-scroll-target="#question-37-same.activities"><span class="header-section-number">30.0.37</span> Question 37: <code>same.activities</code></a></li>
-  <li><a href="#question-38-alter.music" id="toc-question-38-alter.music" class="nav-link" data-scroll-target="#question-38-alter.music"><span class="header-section-number">30.0.38</span> Question 38: <code>Alter.music</code></a></li>
-  <li><a href="#question-39-alter.movies" id="toc-question-39-alter.movies" class="nav-link" data-scroll-target="#question-39-alter.movies"><span class="header-section-number">30.0.39</span> Question 39: <code>Alter.movies</code></a></li>
-  <li><a href="#question-40-alter.books" id="toc-question-40-alter.books" class="nav-link" data-scroll-target="#question-40-alter.books"><span class="header-section-number">30.0.40</span> Question 40: <code>Alter.books</code></a></li>
-  <li><a href="#question-41-alter.sports" id="toc-question-41-alter.sports" class="nav-link" data-scroll-target="#question-41-alter.sports"><span class="header-section-number">30.0.41</span> Question 41: <code>Alter.sports</code></a></li>
-  <li><a href="#question-42-alter.games" id="toc-question-42-alter.games" class="nav-link" data-scroll-target="#question-42-alter.games"><span class="header-section-number">30.0.42</span> Question 42: <code>Alter.games</code></a></li>
-  <li><a href="#question-43-alter.outdoor" id="toc-question-43-alter.outdoor" class="nav-link" data-scroll-target="#question-43-alter.outdoor"><span class="header-section-number">30.0.43</span> Question 43: <code>Alter.outdoor</code></a></li>
-  <li><a href="#question-44-alter1.rel" id="toc-question-44-alter1.rel" class="nav-link" data-scroll-target="#question-44-alter1.rel"><span class="header-section-number">30.0.44</span> Question 44: <code>alter1.rel</code></a></li>
-  <li><a href="#question-45-alter2.rel" id="toc-question-45-alter2.rel" class="nav-link" data-scroll-target="#question-45-alter2.rel"><span class="header-section-number">30.0.45</span> Question 45: <code>alter2.rel</code></a></li>
-  <li><a href="#question-46-alter3.rel" id="toc-question-46-alter3.rel" class="nav-link" data-scroll-target="#question-46-alter3.rel"><span class="header-section-number">30.0.46</span> Question 46: <code>alter3.rel</code></a></li>
-  <li><a href="#question-47-alter4.rel" id="toc-question-47-alter4.rel" class="nav-link" data-scroll-target="#question-47-alter4.rel"><span class="header-section-number">30.0.47</span> Question 47: <code>alter4.rel</code></a></li>
-  <li><a href="#question-48-alter5.rel" id="toc-question-48-alter5.rel" class="nav-link" data-scroll-target="#question-48-alter5.rel"><span class="header-section-number">30.0.48</span> Question 48: <code>alter5.rel</code></a></li>
-  <li><a href="#question-49-alter6.rel" id="toc-question-49-alter6.rel" class="nav-link" data-scroll-target="#question-49-alter6.rel"><span class="header-section-number">30.0.49</span> Question 49: <code>alter6.rel</code></a></li>
-  <li><a href="#question-50-alter7.rel" id="toc-question-50-alter7.rel" class="nav-link" data-scroll-target="#question-50-alter7.rel"><span class="header-section-number">30.0.50</span> Question 50: <code>alter7.rel</code></a></li>
-  <li><a href="#question-51-alter8.rel" id="toc-question-51-alter8.rel" class="nav-link" data-scroll-target="#question-51-alter8.rel"><span class="header-section-number">30.0.51</span> Question 51: <code>alter8.rel</code></a></li>
-  <li><a href="#question-52-alter9.rel" id="toc-question-52-alter9.rel" class="nav-link" data-scroll-target="#question-52-alter9.rel"><span class="header-section-number">30.0.52</span> Question 52: <code>alter9.rel</code></a></li>
-  <li><a href="#question-53-alter10.rel" id="toc-question-53-alter10.rel" class="nav-link" data-scroll-target="#question-53-alter10.rel"><span class="header-section-number">30.0.53</span> Question 53: <code>alter10.rel</code></a></li>
-  <li><a href="#question-54-alter11.rel" id="toc-question-54-alter11.rel" class="nav-link" data-scroll-target="#question-54-alter11.rel"><span class="header-section-number">30.0.54</span> Question 54: <code>alter11.rel</code></a></li>
-  <li><a href="#question-55-alter12.rel" id="toc-question-55-alter12.rel" class="nav-link" data-scroll-target="#question-55-alter12.rel"><span class="header-section-number">30.0.55</span> Question 55: <code>alter12.rel</code></a></li>
-  <li><a href="#question-56-alter13.rel" id="toc-question-56-alter13.rel" class="nav-link" data-scroll-target="#question-56-alter13.rel"><span class="header-section-number">30.0.56</span> Question 56: <code>alter13.rel</code></a></li>
-  <li><a href="#question-57-alter14.rel" id="toc-question-57-alter14.rel" class="nav-link" data-scroll-target="#question-57-alter14.rel"><span class="header-section-number">30.0.57</span> Question 57: <code>alter14.rel</code></a></li>
-  <li><a href="#question-58-alter15.rel" id="toc-question-58-alter15.rel" class="nav-link" data-scroll-target="#question-58-alter15.rel"><span class="header-section-number">30.0.58</span> Question 58: <code>alter15.rel</code></a></li>
-  <li><a href="#question-59-alter16.rel" id="toc-question-59-alter16.rel" class="nav-link" data-scroll-target="#question-59-alter16.rel"><span class="header-section-number">30.0.59</span> Question 59: <code>alter16.rel</code></a></li>
-  <li><a href="#question-60-alter17.rel" id="toc-question-60-alter17.rel" class="nav-link" data-scroll-target="#question-60-alter17.rel"><span class="header-section-number">30.0.60</span> Question 60: <code>alter17.rel</code></a></li>
-  <li><a href="#question-61-alter18.rel" id="toc-question-61-alter18.rel" class="nav-link" data-scroll-target="#question-61-alter18.rel"><span class="header-section-number">30.0.61</span> Question 61: <code>alter18.rel</code></a></li>
-  <li><a href="#question-62-alter19.rel" id="toc-question-62-alter19.rel" class="nav-link" data-scroll-target="#question-62-alter19.rel"><span class="header-section-number">30.0.62</span> Question 62: <code>alter19.rel</code></a></li>
-  <li><a href="#question-63-listromance" id="toc-question-63-listromance" class="nav-link" data-scroll-target="#question-63-listromance"><span class="header-section-number">30.0.63</span> Question 63: <code>listromance</code></a></li>
-  <li><a href="#question-64-romancecalls" id="toc-question-64-romancecalls" class="nav-link" data-scroll-target="#question-64-romancecalls"><span class="header-section-number">30.0.64</span> Question 64: <code>romancecalls</code></a></li>
-  <li><a href="#question-65-romantic" id="toc-question-65-romantic" class="nav-link" data-scroll-target="#question-65-romantic"><span class="header-section-number">30.0.65</span> Question 65: <code>romantic</code></a></li>
-  <li><a href="#question-66-description.char" id="toc-question-66-description.char" class="nav-link" data-scroll-target="#question-66-description.char"><span class="header-section-number">30.0.66</span> Question 66: <code>Description.char</code></a></li>
-  <li><a href="#question-67-description.type" id="toc-question-67-description.type" class="nav-link" data-scroll-target="#question-67-description.type"><span class="header-section-number">30.0.67</span> Question 67: <code>Description.type</code></a></li>
-  <li><a href="#question-68-relationshipstart" id="toc-question-68-relationshipstart" class="nav-link" data-scroll-target="#question-68-relationshipstart"><span class="header-section-number">30.0.68</span> Question 68: <code>relationshipstart</code></a></li>
-  <li><a href="#question-69-relationshipend" id="toc-question-69-relationshipend" class="nav-link" data-scroll-target="#question-69-relationshipend"><span class="header-section-number">30.0.69</span> Question 69: <code>relationshipend</code></a></li>
-  <li><a href="#question-70-thankyougoodbye" id="toc-question-70-thankyougoodbye" class="nav-link" data-scroll-target="#question-70-thankyougoodbye"><span class="header-section-number">30.0.70</span> Question 70: <code>thankyougoodbye</code></a></li>
+  <li><a href="#winter2013netw5" id="toc-winter2013netw5" class="nav-link active" data-scroll-target="#winter2013netw5"><span class="header-section-number">1</span> Winter2013Net(W5)</a>
+  <ul class="collapse">
+  <li><a href="#question-1-name.netid" id="toc-question-1-name.netid" class="nav-link" data-scroll-target="#question-1-name.netid"><span class="header-section-number">1.0.1</span> Question 1: <code>name.netid</code></a></li>
+  <li><a href="#question-2-list.friends" id="toc-question-2-list.friends" class="nav-link" data-scroll-target="#question-2-list.friends"><span class="header-section-number">1.0.2</span> Question 2: <code>List.friends</code></a></li>
+  <li><a href="#question-3-number.alter" id="toc-question-3-number.alter" class="nav-link" data-scroll-target="#question-3-number.alter"><span class="header-section-number">1.0.3</span> Question 3: <code>Number.alter</code></a></li>
+  <li><a href="#question-4-closeness" id="toc-question-4-closeness" class="nav-link" data-scroll-target="#question-4-closeness"><span class="header-section-number">1.0.4</span> Question 4: <code>Closeness</code></a></li>
+  <li><a href="#question-5-duration" id="toc-question-5-duration" class="nav-link" data-scroll-target="#question-5-duration"><span class="header-section-number">1.0.5</span> Question 5: <code>Duration</code></a></li>
+  <li><a href="#question-6-emotion" id="toc-question-6-emotion" class="nav-link" data-scroll-target="#question-6-emotion"><span class="header-section-number">1.0.6</span> Question 6: <code>Emotion</code></a></li>
+  <li><a href="#question-7-subjective.similar" id="toc-question-7-subjective.similar" class="nav-link" data-scroll-target="#question-7-subjective.similar"><span class="header-section-number">1.0.7</span> Question 7: <code>subjective.similar</code></a></li>
+  <li><a href="#question-8-social.context" id="toc-question-8-social.context" class="nav-link" data-scroll-target="#question-8-social.context"><span class="header-section-number">1.0.8</span> Question 8: <code>Social.context</code></a></li>
+  <li><a href="#question-9-freq.fall.2012" id="toc-question-9-freq.fall.2012" class="nav-link" data-scroll-target="#question-9-freq.fall.2012"><span class="header-section-number">1.0.9</span> Question 9: <code>Freq.fall.2012</code></a></li>
+  <li><a href="#question-10-rel.type" id="toc-question-10-rel.type" class="nav-link" data-scroll-target="#question-10-rel.type"><span class="header-section-number">1.0.10</span> Question 10: <code>Rel.type</code></a></li>
+  <li><a href="#question-11-alter1.other" id="toc-question-11-alter1.other" class="nav-link" data-scroll-target="#question-11-alter1.other"><span class="header-section-number">1.0.11</span> Question 11: <code>alter1.other</code></a></li>
+  <li><a href="#question-12-alter2.other" id="toc-question-12-alter2.other" class="nav-link" data-scroll-target="#question-12-alter2.other"><span class="header-section-number">1.0.12</span> Question 12: <code>alter2.other</code></a></li>
+  <li><a href="#question-13-alter3.other" id="toc-question-13-alter3.other" class="nav-link" data-scroll-target="#question-13-alter3.other"><span class="header-section-number">1.0.13</span> Question 13: <code>alter3.other</code></a></li>
+  <li><a href="#question-14-alter4.other" id="toc-question-14-alter4.other" class="nav-link" data-scroll-target="#question-14-alter4.other"><span class="header-section-number">1.0.14</span> Question 14: <code>alter4.other</code></a></li>
+  <li><a href="#question-15-alter5.other" id="toc-question-15-alter5.other" class="nav-link" data-scroll-target="#question-15-alter5.other"><span class="header-section-number">1.0.15</span> Question 15: <code>alter5.other</code></a></li>
+  <li><a href="#question-16-alter6.other" id="toc-question-16-alter6.other" class="nav-link" data-scroll-target="#question-16-alter6.other"><span class="header-section-number">1.0.16</span> Question 16: <code>alter6.other</code></a></li>
+  <li><a href="#question-17-alter7.other" id="toc-question-17-alter7.other" class="nav-link" data-scroll-target="#question-17-alter7.other"><span class="header-section-number">1.0.17</span> Question 17: <code>alter7.other</code></a></li>
+  <li><a href="#question-18-alter8.other" id="toc-question-18-alter8.other" class="nav-link" data-scroll-target="#question-18-alter8.other"><span class="header-section-number">1.0.18</span> Question 18: <code>alter8.other</code></a></li>
+  <li><a href="#question-19-alter9.other" id="toc-question-19-alter9.other" class="nav-link" data-scroll-target="#question-19-alter9.other"><span class="header-section-number">1.0.19</span> Question 19: <code>alter9.other</code></a></li>
+  <li><a href="#question-20-alter10.other" id="toc-question-20-alter10.other" class="nav-link" data-scroll-target="#question-20-alter10.other"><span class="header-section-number">1.0.20</span> Question 20: <code>alter10.other</code></a></li>
+  <li><a href="#question-21-alter11.other" id="toc-question-21-alter11.other" class="nav-link" data-scroll-target="#question-21-alter11.other"><span class="header-section-number">1.0.21</span> Question 21: <code>alter11.other</code></a></li>
+  <li><a href="#question-22-alter12.other" id="toc-question-22-alter12.other" class="nav-link" data-scroll-target="#question-22-alter12.other"><span class="header-section-number">1.0.22</span> Question 22: <code>alter12.other</code></a></li>
+  <li><a href="#question-23-alter13.other" id="toc-question-23-alter13.other" class="nav-link" data-scroll-target="#question-23-alter13.other"><span class="header-section-number">1.0.23</span> Question 23: <code>alter13.other</code></a></li>
+  <li><a href="#question-24-alter14.other" id="toc-question-24-alter14.other" class="nav-link" data-scroll-target="#question-24-alter14.other"><span class="header-section-number">1.0.24</span> Question 24: <code>alter14.other</code></a></li>
+  <li><a href="#question-25-alter15.other" id="toc-question-25-alter15.other" class="nav-link" data-scroll-target="#question-25-alter15.other"><span class="header-section-number">1.0.25</span> Question 25: <code>alter15.other</code></a></li>
+  <li><a href="#question-26-alter16.other" id="toc-question-26-alter16.other" class="nav-link" data-scroll-target="#question-26-alter16.other"><span class="header-section-number">1.0.26</span> Question 26: <code>alter16.other</code></a></li>
+  <li><a href="#question-27-alter17.other" id="toc-question-27-alter17.other" class="nav-link" data-scroll-target="#question-27-alter17.other"><span class="header-section-number">1.0.27</span> Question 27: <code>alter17.other</code></a></li>
+  <li><a href="#question-28-alter18.other" id="toc-question-28-alter18.other" class="nav-link" data-scroll-target="#question-28-alter18.other"><span class="header-section-number">1.0.28</span> Question 28: <code>alter18.other</code></a></li>
+  <li><a href="#question-29-alter19.other" id="toc-question-29-alter19.other" class="nav-link" data-scroll-target="#question-29-alter19.other"><span class="header-section-number">1.0.29</span> Question 29: <code>alter19.other</code></a></li>
+  <li><a href="#question-30-alter20.other" id="toc-question-30-alter20.other" class="nav-link" data-scroll-target="#question-30-alter20.other"><span class="header-section-number">1.0.30</span> Question 30: <code>alter20.other</code></a></li>
+  <li><a href="#question-31-phone.num.email" id="toc-question-31-phone.num.email" class="nav-link" data-scroll-target="#question-31-phone.num.email"><span class="header-section-number">1.0.31</span> Question 31: <code>Phone.num.email</code></a></li>
+  <li><a href="#question-32-notre.dame" id="toc-question-32-notre.dame" class="nav-link" data-scroll-target="#question-32-notre.dame"><span class="header-section-number">1.0.32</span> Question 32: <code>Notre.Dame</code></a></li>
+  <li><a href="#question-33-gender" id="toc-question-33-gender" class="nav-link" data-scroll-target="#question-33-gender"><span class="header-section-number">1.0.33</span> Question 33: <code>Gender</code></a></li>
+  <li><a href="#question-34-whatdormcontacts" id="toc-question-34-whatdormcontacts" class="nav-link" data-scroll-target="#question-34-whatdormcontacts"><span class="header-section-number">1.0.34</span> Question 34: <code>whatdormcontacts</code></a></li>
+  <li><a href="#question-35-classtogether" id="toc-question-35-classtogether" class="nav-link" data-scroll-target="#question-35-classtogether"><span class="header-section-number">1.0.35</span> Question 35: <code>classtogether</code></a></li>
+  <li><a href="#question-36-5.activities" id="toc-question-36-5.activities" class="nav-link" data-scroll-target="#question-36-5.activities"><span class="header-section-number">1.0.36</span> Question 36: <code>5.activities</code></a></li>
+  <li><a href="#question-37-same.activities" id="toc-question-37-same.activities" class="nav-link" data-scroll-target="#question-37-same.activities"><span class="header-section-number">1.0.37</span> Question 37: <code>same.activities</code></a></li>
+  <li><a href="#question-38-alter.music" id="toc-question-38-alter.music" class="nav-link" data-scroll-target="#question-38-alter.music"><span class="header-section-number">1.0.38</span> Question 38: <code>Alter.music</code></a></li>
+  <li><a href="#question-39-alter.movies" id="toc-question-39-alter.movies" class="nav-link" data-scroll-target="#question-39-alter.movies"><span class="header-section-number">1.0.39</span> Question 39: <code>Alter.movies</code></a></li>
+  <li><a href="#question-40-alter.books" id="toc-question-40-alter.books" class="nav-link" data-scroll-target="#question-40-alter.books"><span class="header-section-number">1.0.40</span> Question 40: <code>Alter.books</code></a></li>
+  <li><a href="#question-41-alter.sports" id="toc-question-41-alter.sports" class="nav-link" data-scroll-target="#question-41-alter.sports"><span class="header-section-number">1.0.41</span> Question 41: <code>Alter.sports</code></a></li>
+  <li><a href="#question-42-alter.games" id="toc-question-42-alter.games" class="nav-link" data-scroll-target="#question-42-alter.games"><span class="header-section-number">1.0.42</span> Question 42: <code>Alter.games</code></a></li>
+  <li><a href="#question-43-alter.outdoor" id="toc-question-43-alter.outdoor" class="nav-link" data-scroll-target="#question-43-alter.outdoor"><span class="header-section-number">1.0.43</span> Question 43: <code>Alter.outdoor</code></a></li>
+  <li><a href="#question-44-alter1.rel" id="toc-question-44-alter1.rel" class="nav-link" data-scroll-target="#question-44-alter1.rel"><span class="header-section-number">1.0.44</span> Question 44: <code>alter1.rel</code></a></li>
+  <li><a href="#question-45-alter2.rel" id="toc-question-45-alter2.rel" class="nav-link" data-scroll-target="#question-45-alter2.rel"><span class="header-section-number">1.0.45</span> Question 45: <code>alter2.rel</code></a></li>
+  <li><a href="#question-46-alter3.rel" id="toc-question-46-alter3.rel" class="nav-link" data-scroll-target="#question-46-alter3.rel"><span class="header-section-number">1.0.46</span> Question 46: <code>alter3.rel</code></a></li>
+  <li><a href="#question-47-alter4.rel" id="toc-question-47-alter4.rel" class="nav-link" data-scroll-target="#question-47-alter4.rel"><span class="header-section-number">1.0.47</span> Question 47: <code>alter4.rel</code></a></li>
+  <li><a href="#question-48-alter5.rel" id="toc-question-48-alter5.rel" class="nav-link" data-scroll-target="#question-48-alter5.rel"><span class="header-section-number">1.0.48</span> Question 48: <code>alter5.rel</code></a></li>
+  <li><a href="#question-49-alter6.rel" id="toc-question-49-alter6.rel" class="nav-link" data-scroll-target="#question-49-alter6.rel"><span class="header-section-number">1.0.49</span> Question 49: <code>alter6.rel</code></a></li>
+  <li><a href="#question-50-alter7.rel" id="toc-question-50-alter7.rel" class="nav-link" data-scroll-target="#question-50-alter7.rel"><span class="header-section-number">1.0.50</span> Question 50: <code>alter7.rel</code></a></li>
+  <li><a href="#question-51-alter8.rel" id="toc-question-51-alter8.rel" class="nav-link" data-scroll-target="#question-51-alter8.rel"><span class="header-section-number">1.0.51</span> Question 51: <code>alter8.rel</code></a></li>
+  <li><a href="#question-52-alter9.rel" id="toc-question-52-alter9.rel" class="nav-link" data-scroll-target="#question-52-alter9.rel"><span class="header-section-number">1.0.52</span> Question 52: <code>alter9.rel</code></a></li>
+  <li><a href="#question-53-alter10.rel" id="toc-question-53-alter10.rel" class="nav-link" data-scroll-target="#question-53-alter10.rel"><span class="header-section-number">1.0.53</span> Question 53: <code>alter10.rel</code></a></li>
+  <li><a href="#question-54-alter11.rel" id="toc-question-54-alter11.rel" class="nav-link" data-scroll-target="#question-54-alter11.rel"><span class="header-section-number">1.0.54</span> Question 54: <code>alter11.rel</code></a></li>
+  <li><a href="#question-55-alter12.rel" id="toc-question-55-alter12.rel" class="nav-link" data-scroll-target="#question-55-alter12.rel"><span class="header-section-number">1.0.55</span> Question 55: <code>alter12.rel</code></a></li>
+  <li><a href="#question-56-alter13.rel" id="toc-question-56-alter13.rel" class="nav-link" data-scroll-target="#question-56-alter13.rel"><span class="header-section-number">1.0.56</span> Question 56: <code>alter13.rel</code></a></li>
+  <li><a href="#question-57-alter14.rel" id="toc-question-57-alter14.rel" class="nav-link" data-scroll-target="#question-57-alter14.rel"><span class="header-section-number">1.0.57</span> Question 57: <code>alter14.rel</code></a></li>
+  <li><a href="#question-58-alter15.rel" id="toc-question-58-alter15.rel" class="nav-link" data-scroll-target="#question-58-alter15.rel"><span class="header-section-number">1.0.58</span> Question 58: <code>alter15.rel</code></a></li>
+  <li><a href="#question-59-alter16.rel" id="toc-question-59-alter16.rel" class="nav-link" data-scroll-target="#question-59-alter16.rel"><span class="header-section-number">1.0.59</span> Question 59: <code>alter16.rel</code></a></li>
+  <li><a href="#question-60-alter17.rel" id="toc-question-60-alter17.rel" class="nav-link" data-scroll-target="#question-60-alter17.rel"><span class="header-section-number">1.0.60</span> Question 60: <code>alter17.rel</code></a></li>
+  <li><a href="#question-61-alter18.rel" id="toc-question-61-alter18.rel" class="nav-link" data-scroll-target="#question-61-alter18.rel"><span class="header-section-number">1.0.61</span> Question 61: <code>alter18.rel</code></a></li>
+  <li><a href="#question-62-alter19.rel" id="toc-question-62-alter19.rel" class="nav-link" data-scroll-target="#question-62-alter19.rel"><span class="header-section-number">1.0.62</span> Question 62: <code>alter19.rel</code></a></li>
+  <li><a href="#question-63-listromance" id="toc-question-63-listromance" class="nav-link" data-scroll-target="#question-63-listromance"><span class="header-section-number">1.0.63</span> Question 63: <code>listromance</code></a></li>
+  <li><a href="#question-64-romancecalls" id="toc-question-64-romancecalls" class="nav-link" data-scroll-target="#question-64-romancecalls"><span class="header-section-number">1.0.64</span> Question 64: <code>romancecalls</code></a></li>
+  <li><a href="#question-65-romantic" id="toc-question-65-romantic" class="nav-link" data-scroll-target="#question-65-romantic"><span class="header-section-number">1.0.65</span> Question 65: <code>romantic</code></a></li>
+  <li><a href="#question-66-description.char" id="toc-question-66-description.char" class="nav-link" data-scroll-target="#question-66-description.char"><span class="header-section-number">1.0.66</span> Question 66: <code>Description.char</code></a></li>
+  <li><a href="#question-67-description.type" id="toc-question-67-description.type" class="nav-link" data-scroll-target="#question-67-description.type"><span class="header-section-number">1.0.67</span> Question 67: <code>Description.type</code></a></li>
+  <li><a href="#question-68-relationshipstart" id="toc-question-68-relationshipstart" class="nav-link" data-scroll-target="#question-68-relationshipstart"><span class="header-section-number">1.0.68</span> Question 68: <code>relationshipstart</code></a></li>
+  <li><a href="#question-69-relationshipend" id="toc-question-69-relationshipend" class="nav-link" data-scroll-target="#question-69-relationshipend"><span class="header-section-number">1.0.69</span> Question 69: <code>relationshipend</code></a></li>
+  <li><a href="#question-70-thankyougoodbye" id="toc-question-70-thankyougoodbye" class="nav-link" data-scroll-target="#question-70-thankyougoodbye"><span class="header-section-number">1.0.70</span> Question 70: <code>thankyougoodbye</code></a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Winter2013Net-W5-.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/Summer2011Net(W1).html">Network Survey Instruments</a></li><li class="breadcrumb-item"><a href="../Codebooks/Winter2013Net(W5).html"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="winter2013netw5" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Winter2013Net(W5)</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -516,15 +307,15 @@ ul.task-list li input[type="checkbox"] {
 <p>There are 70 questions in this survey The Social Network Survey</p>
 </div>
 </div>
-<section id="question-1-name.netid" class="level3" data-number="30.0.1">
-<h3 data-number="30.0.1" class="anchored" data-anchor-id="question-1-name.netid"><span class="header-section-number">30.0.1</span> Question 1: <code>name.netid</code></h3>
+<section id="question-1-name.netid" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="question-1-name.netid"><span class="header-section-number">1.0.1</span> Question 1: <code>name.netid</code></h3>
 <p>What is your name and your NetID? <em>Please write your answer(s) here:</em> - [ ] First Name</p>
 <p>Last Name</p>
 <p>NetID</p>
 <p>Cell Phone Number</p>
 </section>
-<section id="question-2-list.friends" class="level3" data-number="30.0.2">
-<h3 data-number="30.0.2" class="anchored" data-anchor-id="question-2-list.friends"><span class="header-section-number">30.0.2</span> Question 2: <code>List.friends</code></h3>
+<section id="question-2-list.friends" class="level3" data-number="1.0.2">
+<h3 data-number="1.0.2" class="anchored" data-anchor-id="question-2-list.friends"><span class="header-section-number">1.0.2</span> Question 2: <code>List.friends</code></h3>
 <p>In the next section we need to know who you consider to be in your social network. <strong>2. In the spaces below, please list up to 20 people (friends, family members, acquaintances, or other people) with whom you spend</strong> time communicating or interacting. Please input their full name using the “FirstName MiddleInitial LastName” format. <em>Please write your answer(s) here:</em> - [ ] 1</p>
 <p>2</p>
 <p>3</p>
@@ -536,270 +327,270 @@ ul.task-list li input[type="checkbox"] {
 <p>9</p>
 <p>10 11 12 13 14 15 16 17 18 19 20</p>
 </section>
-<section id="question-3-number.alter" class="level3" data-number="30.0.3">
-<h3 data-number="30.0.3" class="anchored" data-anchor-id="question-3-number.alter"><span class="header-section-number">30.0.3</span> Question 3: <code>Number.alter</code></h3>
+<section id="question-3-number.alter" class="level3" data-number="1.0.3">
+<h3 data-number="1.0.3" class="anchored" data-anchor-id="question-3-number.alter"><span class="header-section-number">1.0.3</span> Question 3: <code>Number.alter</code></h3>
 <p>Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. <strong>3. It will help us if you can tell us how many contacts are now in your list.</strong> You can change this number later if you add more people to your list. <em> </em>Please choose only one of the following:* - [ ] 1 - [ ] 2 - [ ] 3 - [ ] 4 - [ ] 5 - [ ] 6 - [ ] 7 - [ ] 8 - [ ] 9 - [ ] 10 - [ ] 11 - [ ] 12 - [ ] 13 - [ ] 14 - [ ] 15 - [ ] 16 - [ ] 17 - [ ] 18 - [ ] 19 - [ ] 20</p>
 <p>Tie relation In this section you will be asked about your relationship with each of the contact people on your list.</p>
 </section>
-<section id="question-4-closeness" class="level3" data-number="30.0.4">
-<h3 data-number="30.0.4" class="anchored" data-anchor-id="question-4-closeness"><span class="header-section-number">30.0.4</span> Question 4: <code>Closeness</code></h3>
+<section id="question-4-closeness" class="level3" data-number="1.0.4">
+<h3 data-number="1.0.4" class="anchored" data-anchor-id="question-4-closeness"><span class="header-section-number">1.0.4</span> Question 4: <code>Closeness</code></h3>
 <p><em>Please indicate the option that best describes your relationship with each person.</em> - [ ] Are you especially close in the sense that this is one of your closest personal contacts, - [ ] or are you merely close, in the sense that you enjoy the person, but don’t count him or her among your closest personal contacts, - [ ] or are you less than close in the sense that you don’t mind interacting with the person, but you have no wish to develop a friendship, - [ ] or are you distant in the sense that you really don’t enjoy spending time with the person unless it is necessary? <em>Please choose the appropriate response for each item:</em></p>
 <p>Especially close Close Less than close Distant</p>
 </section>
-<section id="question-5-duration" class="level3" data-number="30.0.5">
-<h3 data-number="30.0.5" class="anchored" data-anchor-id="question-5-duration"><span class="header-section-number">30.0.5</span> Question 5: <code>Duration</code></h3>
+<section id="question-5-duration" class="level3" data-number="1.0.5">
+<h3 data-number="1.0.5" class="anchored" data-anchor-id="question-5-duration"><span class="header-section-number">1.0.5</span> Question 5: <code>Duration</code></h3>
 <p>Approximately, how long in years have you known each person? Enter fraction of a year for periods shorter than a year. Here are some examples: Since the start of freshman year: 1.42 9 months: 0.75 5 months: 0.42 4 months: 0.33 3 months: 0.25 2 months: 0.16 1 month: 0.08</p>
 <p>Duration in years</p>
 </section>
-<section id="question-6-emotion" class="level3" data-number="30.0.6">
-<h3 data-number="30.0.6" class="anchored" data-anchor-id="question-6-emotion"><span class="header-section-number">30.0.6</span> Question 6: <code>Emotion</code></h3>
+<section id="question-6-emotion" class="level3" data-number="1.0.6">
+<h3 data-number="1.0.6" class="anchored" data-anchor-id="question-6-emotion"><span class="header-section-number">1.0.6</span> Question 6: <code>Emotion</code></h3>
 <p>Is the relationship you have with the person loving, exciting or significant? Check any that apply Check any that apply:</p>
 <p>Loving Exciting Significant</p>
 </section>
-<section id="question-7-subjective.similar" class="level3" data-number="30.0.7">
-<h3 data-number="30.0.7" class="anchored" data-anchor-id="question-7-subjective.similar"><span class="header-section-number">30.0.7</span> Question 7: <code>subjective.similar</code></h3>
+<section id="question-7-subjective.similar" class="level3" data-number="1.0.7">
+<h3 data-number="1.0.7" class="anchored" data-anchor-id="question-7-subjective.similar"><span class="header-section-number">1.0.7</span> Question 7: <code>subjective.similar</code></h3>
 <p>Overall how similar are each of your contacts to you? On a scale from 1 (not similar at all) to 10 (extremely similar). <em>Please choose the appropriate response for each item:</em></p>
 <p>1 2 3 4 5 6 7 8 9 10</p>
 </section>
-<section id="question-8-social.context" class="level3" data-number="30.0.8">
-<h3 data-number="30.0.8" class="anchored" data-anchor-id="question-8-social.context"><span class="header-section-number">30.0.8</span> Question 8: <code>Social.context</code></h3>
+<section id="question-8-social.context" class="level3" data-number="1.0.8">
+<h3 data-number="1.0.8" class="anchored" data-anchor-id="question-8-social.context"><span class="header-section-number">1.0.8</span> Question 8: <code>Social.context</code></h3>
 <p><em>Please indicate the social contexts in which you normally interact with this person.</em> - [ ] Check any that apply - [ ] Check any that apply:</p>
 <p>Off campus In class Outside class Your/Their dorm-­ room in dorm Religious Event At Home Club or team Work Tex Cal</p>
 </section>
-<section id="question-9-freq.fall.2012" class="level3" data-number="30.0.9">
-<h3 data-number="30.0.9" class="anchored" data-anchor-id="question-9-freq.fall.2012"><span class="header-section-number">30.0.9</span> Question 9: <code>Freq.fall.2012</code></h3>
+<section id="question-9-freq.fall.2012" class="level3" data-number="1.0.9">
+<h3 data-number="1.0.9" class="anchored" data-anchor-id="question-9-freq.fall.2012"><span class="header-section-number">1.0.9</span> Question 9: <code>Freq.fall.2012</code></h3>
 <p>On average, how frequently did you interact with each person during the fall semester? Please include phone call, text and email interactions as well as face-­to-­face interactions. <em>Please choose the appropriate response for each item:</em></p>
 <p>Daily Weekly Monthly Less often</p>
 </section>
-<section id="question-10-rel.type" class="level3" data-number="30.0.10">
-<h3 data-number="30.0.10" class="anchored" data-anchor-id="question-10-rel.type"><span class="header-section-number">30.0.10</span> Question 10: <code>Rel.type</code></h3>
+<section id="question-10-rel.type" class="level3" data-number="1.0.10">
+<h3 data-number="1.0.10" class="anchored" data-anchor-id="question-10-rel.type"><span class="header-section-number">1.0.10</span> Question 10: <code>Rel.type</code></h3>
 <p>What is their relationship to you? <em>Please choose the appropriate response for each item:</em></p>
 <p>Parent Sibling Other family Significant other Co-­ worker Friend Acquaintance Other</p>
 </section>
-<section id="question-11-alter1.other" class="level3" data-number="30.0.11">
-<h3 data-number="30.0.11" class="anchored" data-anchor-id="question-11-alter1.other"><span class="header-section-number">30.0.11</span> Question 11: <code>alter1.other</code></h3>
+<section id="question-11-alter1.other" class="level3" data-number="1.0.11">
+<h3 data-number="1.0.11" class="anchored" data-anchor-id="question-11-alter1.other"><span class="header-section-number">1.0.11</span> Question 11: <code>alter1.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-12-alter2.other" class="level3" data-number="30.0.12">
-<h3 data-number="30.0.12" class="anchored" data-anchor-id="question-12-alter2.other"><span class="header-section-number">30.0.12</span> Question 12: <code>alter2.other</code></h3>
+<section id="question-12-alter2.other" class="level3" data-number="1.0.12">
+<h3 data-number="1.0.12" class="anchored" data-anchor-id="question-12-alter2.other"><span class="header-section-number">1.0.12</span> Question 12: <code>alter2.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-13-alter3.other" class="level3" data-number="30.0.13">
-<h3 data-number="30.0.13" class="anchored" data-anchor-id="question-13-alter3.other"><span class="header-section-number">30.0.13</span> Question 13: <code>alter3.other</code></h3>
+<section id="question-13-alter3.other" class="level3" data-number="1.0.13">
+<h3 data-number="1.0.13" class="anchored" data-anchor-id="question-13-alter3.other"><span class="header-section-number">1.0.13</span> Question 13: <code>alter3.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-14-alter4.other" class="level3" data-number="30.0.14">
-<h3 data-number="30.0.14" class="anchored" data-anchor-id="question-14-alter4.other"><span class="header-section-number">30.0.14</span> Question 14: <code>alter4.other</code></h3>
+<section id="question-14-alter4.other" class="level3" data-number="1.0.14">
+<h3 data-number="1.0.14" class="anchored" data-anchor-id="question-14-alter4.other"><span class="header-section-number">1.0.14</span> Question 14: <code>alter4.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-15-alter5.other" class="level3" data-number="30.0.15">
-<h3 data-number="30.0.15" class="anchored" data-anchor-id="question-15-alter5.other"><span class="header-section-number">30.0.15</span> Question 15: <code>alter5.other</code></h3>
+<section id="question-15-alter5.other" class="level3" data-number="1.0.15">
+<h3 data-number="1.0.15" class="anchored" data-anchor-id="question-15-alter5.other"><span class="header-section-number">1.0.15</span> Question 15: <code>alter5.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-16-alter6.other" class="level3" data-number="30.0.16">
-<h3 data-number="30.0.16" class="anchored" data-anchor-id="question-16-alter6.other"><span class="header-section-number">30.0.16</span> Question 16: <code>alter6.other</code></h3>
+<section id="question-16-alter6.other" class="level3" data-number="1.0.16">
+<h3 data-number="1.0.16" class="anchored" data-anchor-id="question-16-alter6.other"><span class="header-section-number">1.0.16</span> Question 16: <code>alter6.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-17-alter7.other" class="level3" data-number="30.0.17">
-<h3 data-number="30.0.17" class="anchored" data-anchor-id="question-17-alter7.other"><span class="header-section-number">30.0.17</span> Question 17: <code>alter7.other</code></h3>
+<section id="question-17-alter7.other" class="level3" data-number="1.0.17">
+<h3 data-number="1.0.17" class="anchored" data-anchor-id="question-17-alter7.other"><span class="header-section-number">1.0.17</span> Question 17: <code>alter7.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-18-alter8.other" class="level3" data-number="30.0.18">
-<h3 data-number="30.0.18" class="anchored" data-anchor-id="question-18-alter8.other"><span class="header-section-number">30.0.18</span> Question 18: <code>alter8.other</code></h3>
+<section id="question-18-alter8.other" class="level3" data-number="1.0.18">
+<h3 data-number="1.0.18" class="anchored" data-anchor-id="question-18-alter8.other"><span class="header-section-number">1.0.18</span> Question 18: <code>alter8.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-19-alter9.other" class="level3" data-number="30.0.19">
-<h3 data-number="30.0.19" class="anchored" data-anchor-id="question-19-alter9.other"><span class="header-section-number">30.0.19</span> Question 19: <code>alter9.other</code></h3>
+<section id="question-19-alter9.other" class="level3" data-number="1.0.19">
+<h3 data-number="1.0.19" class="anchored" data-anchor-id="question-19-alter9.other"><span class="header-section-number">1.0.19</span> Question 19: <code>alter9.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-20-alter10.other" class="level3" data-number="30.0.20">
-<h3 data-number="30.0.20" class="anchored" data-anchor-id="question-20-alter10.other"><span class="header-section-number">30.0.20</span> Question 20: <code>alter10.other</code></h3>
+<section id="question-20-alter10.other" class="level3" data-number="1.0.20">
+<h3 data-number="1.0.20" class="anchored" data-anchor-id="question-20-alter10.other"><span class="header-section-number">1.0.20</span> Question 20: <code>alter10.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-21-alter11.other" class="level3" data-number="30.0.21">
-<h3 data-number="30.0.21" class="anchored" data-anchor-id="question-21-alter11.other"><span class="header-section-number">30.0.21</span> Question 21: <code>alter11.other</code></h3>
+<section id="question-21-alter11.other" class="level3" data-number="1.0.21">
+<h3 data-number="1.0.21" class="anchored" data-anchor-id="question-21-alter11.other"><span class="header-section-number">1.0.21</span> Question 21: <code>alter11.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-22-alter12.other" class="level3" data-number="30.0.22">
-<h3 data-number="30.0.22" class="anchored" data-anchor-id="question-22-alter12.other"><span class="header-section-number">30.0.22</span> Question 22: <code>alter12.other</code></h3>
+<section id="question-22-alter12.other" class="level3" data-number="1.0.22">
+<h3 data-number="1.0.22" class="anchored" data-anchor-id="question-22-alter12.other"><span class="header-section-number">1.0.22</span> Question 22: <code>alter12.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-23-alter13.other" class="level3" data-number="30.0.23">
-<h3 data-number="30.0.23" class="anchored" data-anchor-id="question-23-alter13.other"><span class="header-section-number">30.0.23</span> Question 23: <code>alter13.other</code></h3>
+<section id="question-23-alter13.other" class="level3" data-number="1.0.23">
+<h3 data-number="1.0.23" class="anchored" data-anchor-id="question-23-alter13.other"><span class="header-section-number">1.0.23</span> Question 23: <code>alter13.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-24-alter14.other" class="level3" data-number="30.0.24">
-<h3 data-number="30.0.24" class="anchored" data-anchor-id="question-24-alter14.other"><span class="header-section-number">30.0.24</span> Question 24: <code>alter14.other</code></h3>
+<section id="question-24-alter14.other" class="level3" data-number="1.0.24">
+<h3 data-number="1.0.24" class="anchored" data-anchor-id="question-24-alter14.other"><span class="header-section-number">1.0.24</span> Question 24: <code>alter14.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-25-alter15.other" class="level3" data-number="30.0.25">
-<h3 data-number="30.0.25" class="anchored" data-anchor-id="question-25-alter15.other"><span class="header-section-number">30.0.25</span> Question 25: <code>alter15.other</code></h3>
+<section id="question-25-alter15.other" class="level3" data-number="1.0.25">
+<h3 data-number="1.0.25" class="anchored" data-anchor-id="question-25-alter15.other"><span class="header-section-number">1.0.25</span> Question 25: <code>alter15.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-26-alter16.other" class="level3" data-number="30.0.26">
-<h3 data-number="30.0.26" class="anchored" data-anchor-id="question-26-alter16.other"><span class="header-section-number">30.0.26</span> Question 26: <code>alter16.other</code></h3>
+<section id="question-26-alter16.other" class="level3" data-number="1.0.26">
+<h3 data-number="1.0.26" class="anchored" data-anchor-id="question-26-alter16.other"><span class="header-section-number">1.0.26</span> Question 26: <code>alter16.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-27-alter17.other" class="level3" data-number="30.0.27">
-<h3 data-number="30.0.27" class="anchored" data-anchor-id="question-27-alter17.other"><span class="header-section-number">30.0.27</span> Question 27: <code>alter17.other</code></h3>
+<section id="question-27-alter17.other" class="level3" data-number="1.0.27">
+<h3 data-number="1.0.27" class="anchored" data-anchor-id="question-27-alter17.other"><span class="header-section-number">1.0.27</span> Question 27: <code>alter17.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-28-alter18.other" class="level3" data-number="30.0.28">
-<h3 data-number="30.0.28" class="anchored" data-anchor-id="question-28-alter18.other"><span class="header-section-number">30.0.28</span> Question 28: <code>alter18.other</code></h3>
+<section id="question-28-alter18.other" class="level3" data-number="1.0.28">
+<h3 data-number="1.0.28" class="anchored" data-anchor-id="question-28-alter18.other"><span class="header-section-number">1.0.28</span> Question 28: <code>alter18.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-29-alter19.other" class="level3" data-number="30.0.29">
-<h3 data-number="30.0.29" class="anchored" data-anchor-id="question-29-alter19.other"><span class="header-section-number">30.0.29</span> Question 29: <code>alter19.other</code></h3>
+<section id="question-29-alter19.other" class="level3" data-number="1.0.29">
+<h3 data-number="1.0.29" class="anchored" data-anchor-id="question-29-alter19.other"><span class="header-section-number">1.0.29</span> Question 29: <code>alter19.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 </section>
-<section id="question-30-alter20.other" class="level3" data-number="30.0.30">
-<h3 data-number="30.0.30" class="anchored" data-anchor-id="question-30-alter20.other"><span class="header-section-number">30.0.30</span> Question 30: <code>alter20.other</code></h3>
+<section id="question-30-alter20.other" class="level3" data-number="1.0.30">
+<h3 data-number="1.0.30" class="anchored" data-anchor-id="question-30-alter20.other"><span class="header-section-number">1.0.30</span> Question 30: <code>alter20.other</code></h3>
 <p><em>Please specify the relationship between and you.</em> - [ ] Only answer this question if the following conditions are met: - [ ] ° Answer was type8’Other’ at question ‘10 [Rel.type]’ (What is their relationship to you?) <em>Please write your answer here:</em></p>
 <p>Information on your contacts In this section you will be asked to provide information about each of your contacts.</p>
 </section>
-<section id="question-31-phone.num.email" class="level3" data-number="30.0.31">
-<h3 data-number="30.0.31" class="anchored" data-anchor-id="question-31-phone.num.email"><span class="header-section-number">30.0.31</span> Question 31: <code>Phone.num.email</code></h3>
+<section id="question-31-phone.num.email" class="level3" data-number="1.0.31">
+<h3 data-number="1.0.31" class="anchored" data-anchor-id="question-31-phone.num.email"><span class="header-section-number">1.0.31</span> Question 31: <code>Phone.num.email</code></h3>
 <p>In the next question, we will ask for several pieces of confidential information about your existing contacts. Specifically, we will be asking for the phone numbers and email addresses that you use to communicate with those contacts. We are asking for this information in order to measure your level of communication activity with these people. As you will recall, we are capturing communication activity from your smart-­phone containing the numbers and email addresses of the people that you speak with, email and text. By linking the information you provide, we will be able to measure the extent to which you communicate with each of these persons. It is important to note that we will not contact any of your contacts. All information will be kept strictly confidential on our secure servers that are only accessible by researchers on the NetSense project team.</p>
 <p>Phone number 555-­555-­5555 Email</p>
 </section>
-<section id="question-32-notre.dame" class="level3" data-number="30.0.32">
-<h3 data-number="30.0.32" class="anchored" data-anchor-id="question-32-notre.dame"><span class="header-section-number">30.0.32</span> Question 32: <code>Notre.Dame</code></h3>
+<section id="question-32-notre.dame" class="level3" data-number="1.0.32">
+<h3 data-number="1.0.32" class="anchored" data-anchor-id="question-32-notre.dame"><span class="header-section-number">1.0.32</span> Question 32: <code>Notre.Dame</code></h3>
 <p>What are your contacts’ relationship to Notre Dame? Have they attended Notre Dame, are they currently attending Notre Dame, will they be attending Notre Dame or did they graduate last semester? <em>Please choose the appropriate response for each item:</em></p>
 <p>Did attend Are attending Will attend Graduated last semester No relationship to ND</p>
 </section>
-<section id="question-33-gender" class="level3" data-number="30.0.33">
-<h3 data-number="30.0.33" class="anchored" data-anchor-id="question-33-gender"><span class="header-section-number">30.0.33</span> Question 33: <code>Gender</code></h3>
+<section id="question-33-gender" class="level3" data-number="1.0.33">
+<h3 data-number="1.0.33" class="anchored" data-anchor-id="question-33-gender"><span class="header-section-number">1.0.33</span> Question 33: <code>Gender</code></h3>
 <p><em>Please indicate the gender of each of your contacts.</em> <em>Please choose the appropriate response for each item:</em></p>
 <p>Female Male</p>
 </section>
-<section id="question-34-whatdormcontacts" class="level3" data-number="30.0.34">
-<h3 data-number="30.0.34" class="anchored" data-anchor-id="question-34-whatdormcontacts"><span class="header-section-number">30.0.34</span> Question 34: <code>whatdormcontacts</code></h3>
+<section id="question-34-whatdormcontacts" class="level3" data-number="1.0.34">
+<h3 data-number="1.0.34" class="anchored" data-anchor-id="question-34-whatdormcontacts"><span class="header-section-number">1.0.34</span> Question 34: <code>whatdormcontacts</code></h3>
 <p>Of the individuals you listed, what resident hall do they reside in? Please type ‘off campus’ or ‘does not apply’ for individuals who live off campus or do not attend Notre Dame. <em>Please write your answer(s) here:</em></p>
 </section>
-<section id="question-35-classtogether" class="level3" data-number="30.0.35">
-<h3 data-number="30.0.35" class="anchored" data-anchor-id="question-35-classtogether"><span class="header-section-number">30.0.35</span> Question 35: <code>classtogether</code></h3>
+<section id="question-35-classtogether" class="level3" data-number="1.0.35">
+<h3 data-number="1.0.35" class="anchored" data-anchor-id="question-35-classtogether"><span class="header-section-number">1.0.35</span> Question 35: <code>classtogether</code></h3>
 <p>For each of your contacts please tell us whether you have had any classes with that person. <em>Please choose the appropriate response for each item:</em></p>
 <p>Yes No Contact is not an ND student</p>
 <p>Interests and tastes In this part we will ask some questions about your tastes and preferences as well as those of your contacts.</p>
 </section>
-<section id="question-36-5.activities" class="level3" data-number="30.0.36">
-<h3 data-number="30.0.36" class="anchored" data-anchor-id="question-36-5.activities"><span class="header-section-number">30.0.36</span> Question 36: <code>5.activities</code></h3>
+<section id="question-36-5.activities" class="level3" data-number="1.0.36">
+<h3 data-number="1.0.36" class="anchored" data-anchor-id="question-36-5.activities"><span class="header-section-number">1.0.36</span> Question 36: <code>5.activities</code></h3>
 <p><em>Please list a total of five activities that you enjoy doing. Examples of activities could be bicycle riding, playing poker, watching soap</em> - [ ] operas, weight lifting, cooking, hiking, reading science fiction, collecting coins, listening to opera, playing basketball, sewing, Mel - [ ] Brook films, drinking, listening to The Beatles, etc. Be as specific as you like. <em>Please write your answer(s) here:</em> - [ ] 1 - [ ] 2 - [ ] 3 - [ ] 4 - [ ] 5</p>
 </section>
-<section id="question-37-same.activities" class="level3" data-number="30.0.37">
-<h3 data-number="30.0.37" class="anchored" data-anchor-id="question-37-same.activities"><span class="header-section-number">30.0.37</span> Question 37: <code>same.activities</code></h3>
+<section id="question-37-same.activities" class="level3" data-number="1.0.37">
+<h3 data-number="1.0.37" class="anchored" data-anchor-id="question-37-same.activities"><span class="header-section-number">1.0.37</span> Question 37: <code>same.activities</code></h3>
 <p>For each of your contacts, please indicate whether they also enjoy each of activities that you listed in the previous question. Check the appropriate boxes to indicate which activities each of your contacts enjoys. Check any that apply Check any that apply:</p>
 </section>
-<section id="question-38-alter.music" class="level3" data-number="30.0.38">
-<h3 data-number="30.0.38" class="anchored" data-anchor-id="question-38-alter.music"><span class="header-section-number">30.0.38</span> Question 38: <code>Alter.music</code></h3>
+<section id="question-38-alter.music" class="level3" data-number="1.0.38">
+<h3 data-number="1.0.38" class="anchored" data-anchor-id="question-38-alter.music"><span class="header-section-number">1.0.38</span> Question 38: <code>Alter.music</code></h3>
 <p><em>Please indicate how much you think each of your contacts enjoys listening to music.</em> <em>Please choose the appropriate response for each item:</em></p>
 <p>Very much Somewhat Not that much Not at all Don’t know</p>
 </section>
-<section id="question-39-alter.movies" class="level3" data-number="30.0.39">
-<h3 data-number="30.0.39" class="anchored" data-anchor-id="question-39-alter.movies"><span class="header-section-number">30.0.39</span> Question 39: <code>Alter.movies</code></h3>
+<section id="question-39-alter.movies" class="level3" data-number="1.0.39">
+<h3 data-number="1.0.39" class="anchored" data-anchor-id="question-39-alter.movies"><span class="header-section-number">1.0.39</span> Question 39: <code>Alter.movies</code></h3>
 <p><em>Please indicate how much you think each of your contacts enjoys watching movies.</em> <em>Please choose the appropriate response for each item:</em></p>
 <p>Very much Somewhat Not that much Not at all Don’t know</p>
 </section>
-<section id="question-40-alter.books" class="level3" data-number="30.0.40">
-<h3 data-number="30.0.40" class="anchored" data-anchor-id="question-40-alter.books"><span class="header-section-number">30.0.40</span> Question 40: <code>Alter.books</code></h3>
+<section id="question-40-alter.books" class="level3" data-number="1.0.40">
+<h3 data-number="1.0.40" class="anchored" data-anchor-id="question-40-alter.books"><span class="header-section-number">1.0.40</span> Question 40: <code>Alter.books</code></h3>
 <p><em>Please indicate how much you think each of your contacts enjoys reading books.</em> <em>Please choose the appropriate response for each item:</em></p>
 <p>Very much Somewhat Not that much Not at all Don’t know</p>
 </section>
-<section id="question-41-alter.sports" class="level3" data-number="30.0.41">
-<h3 data-number="30.0.41" class="anchored" data-anchor-id="question-41-alter.sports"><span class="header-section-number">30.0.41</span> Question 41: <code>Alter.sports</code></h3>
+<section id="question-41-alter.sports" class="level3" data-number="1.0.41">
+<h3 data-number="1.0.41" class="anchored" data-anchor-id="question-41-alter.sports"><span class="header-section-number">1.0.41</span> Question 41: <code>Alter.sports</code></h3>
 <p><em>Please indicate how much you think each of your contacts enjoys following sports.</em> <em>Please choose the appropriate response for each item:</em></p>
 <p>Very much Somewhat Not that much Not at all Don’t know</p>
 </section>
-<section id="question-42-alter.games" class="level3" data-number="30.0.42">
-<h3 data-number="30.0.42" class="anchored" data-anchor-id="question-42-alter.games"><span class="header-section-number">30.0.42</span> Question 42: <code>Alter.games</code></h3>
+<section id="question-42-alter.games" class="level3" data-number="1.0.42">
+<h3 data-number="1.0.42" class="anchored" data-anchor-id="question-42-alter.games"><span class="header-section-number">1.0.42</span> Question 42: <code>Alter.games</code></h3>
 <p><em>Please indicate how much you think each of your contacts enjoys playing games.</em> <em>Please choose the appropriate response for each item:</em></p>
 <p>Very much Somewhat Not that much Not at all Don’t know</p>
 </section>
-<section id="question-43-alter.outdoor" class="level3" data-number="30.0.43">
-<h3 data-number="30.0.43" class="anchored" data-anchor-id="question-43-alter.outdoor"><span class="header-section-number">30.0.43</span> Question 43: <code>Alter.outdoor</code></h3>
+<section id="question-43-alter.outdoor" class="level3" data-number="1.0.43">
+<h3 data-number="1.0.43" class="anchored" data-anchor-id="question-43-alter.outdoor"><span class="header-section-number">1.0.43</span> Question 43: <code>Alter.outdoor</code></h3>
 <p><em>Please indicate how much you think each of your contacts enjoys outdoor activities.</em> <em>Please choose the appropriate response for each item:</em></p>
 <p>Very much Somewhat Not that much Not at all Don’t know</p>
 <p>Relations among your contacts In this section we ask you to indicate the relations among your contacts</p>
 </section>
-<section id="question-44-alter1.rel" class="level3" data-number="30.0.44">
-<h3 data-number="30.0.44" class="anchored" data-anchor-id="question-44-alter1.rel"><span class="header-section-number">30.0.44</span> Question 44: <code>alter1.rel</code></h3>
+<section id="question-44-alter1.rel" class="level3" data-number="1.0.44">
+<h3 data-number="1.0.44" class="anchored" data-anchor-id="question-44-alter1.rel"><span class="header-section-number">1.0.44</span> Question 44: <code>alter1.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that you listed? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to A2’2’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-45-alter2.rel" class="level3" data-number="30.0.45">
-<h3 data-number="30.0.45" class="anchored" data-anchor-id="question-45-alter2.rel"><span class="header-section-number">30.0.45</span> Question 45: <code>alter2.rel</code></h3>
+<section id="question-45-alter2.rel" class="level3" data-number="1.0.45">
+<h3 data-number="1.0.45" class="anchored" data-anchor-id="question-45-alter2.rel"><span class="header-section-number">1.0.45</span> Question 45: <code>alter2.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to A3’3’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-46-alter3.rel" class="level3" data-number="30.0.46">
-<h3 data-number="30.0.46" class="anchored" data-anchor-id="question-46-alter3.rel"><span class="header-section-number">30.0.46</span> Question 46: <code>alter3.rel</code></h3>
+<section id="question-46-alter3.rel" class="level3" data-number="1.0.46">
+<h3 data-number="1.0.46" class="anchored" data-anchor-id="question-46-alter3.rel"><span class="header-section-number">1.0.46</span> Question 46: <code>alter3.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to A4’4’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-47-alter4.rel" class="level3" data-number="30.0.47">
-<h3 data-number="30.0.47" class="anchored" data-anchor-id="question-47-alter4.rel"><span class="header-section-number">30.0.47</span> Question 47: <code>alter4.rel</code></h3>
+<section id="question-47-alter4.rel" class="level3" data-number="1.0.47">
+<h3 data-number="1.0.47" class="anchored" data-anchor-id="question-47-alter4.rel"><span class="header-section-number">1.0.47</span> Question 47: <code>alter4.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to A5’5’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-48-alter5.rel" class="level3" data-number="30.0.48">
-<h3 data-number="30.0.48" class="anchored" data-anchor-id="question-48-alter5.rel"><span class="header-section-number">30.0.48</span> Question 48: <code>alter5.rel</code></h3>
+<section id="question-48-alter5.rel" class="level3" data-number="1.0.48">
+<h3 data-number="1.0.48" class="anchored" data-anchor-id="question-48-alter5.rel"><span class="header-section-number">1.0.48</span> Question 48: <code>alter5.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to A6’6’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-49-alter6.rel" class="level3" data-number="30.0.49">
-<h3 data-number="30.0.49" class="anchored" data-anchor-id="question-49-alter6.rel"><span class="header-section-number">30.0.49</span> Question 49: <code>alter6.rel</code></h3>
+<section id="question-49-alter6.rel" class="level3" data-number="1.0.49">
+<h3 data-number="1.0.49" class="anchored" data-anchor-id="question-49-alter6.rel"><span class="header-section-number">1.0.49</span> Question 49: <code>alter6.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to A7’7’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-50-alter7.rel" class="level3" data-number="30.0.50">
-<h3 data-number="30.0.50" class="anchored" data-anchor-id="question-50-alter7.rel"><span class="header-section-number">30.0.50</span> Question 50: <code>alter7.rel</code></h3>
+<section id="question-50-alter7.rel" class="level3" data-number="1.0.50">
+<h3 data-number="1.0.50" class="anchored" data-anchor-id="question-50-alter7.rel"><span class="header-section-number">1.0.50</span> Question 50: <code>alter7.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to A8’8’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-51-alter8.rel" class="level3" data-number="30.0.51">
-<h3 data-number="30.0.51" class="anchored" data-anchor-id="question-51-alter8.rel"><span class="header-section-number">30.0.51</span> Question 51: <code>alter8.rel</code></h3>
+<section id="question-51-alter8.rel" class="level3" data-number="1.0.51">
+<h3 data-number="1.0.51" class="anchored" data-anchor-id="question-51-alter8.rel"><span class="header-section-number">1.0.51</span> Question 51: <code>alter8.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to A9’9’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-52-alter9.rel" class="level3" data-number="30.0.52">
-<h3 data-number="30.0.52" class="anchored" data-anchor-id="question-52-alter9.rel"><span class="header-section-number">30.0.52</span> Question 52: <code>alter9.rel</code></h3>
+<section id="question-52-alter9.rel" class="level3" data-number="1.0.52">
+<h3 data-number="1.0.52" class="anchored" data-anchor-id="question-52-alter9.rel"><span class="header-section-number">1.0.52</span> Question 52: <code>alter9.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AA’10’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-53-alter10.rel" class="level3" data-number="30.0.53">
-<h3 data-number="30.0.53" class="anchored" data-anchor-id="question-53-alter10.rel"><span class="header-section-number">30.0.53</span> Question 53: <code>alter10.rel</code></h3>
+<section id="question-53-alter10.rel" class="level3" data-number="1.0.53">
+<h3 data-number="1.0.53" class="anchored" data-anchor-id="question-53-alter10.rel"><span class="header-section-number">1.0.53</span> Question 53: <code>alter10.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AB’11’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-54-alter11.rel" class="level3" data-number="30.0.54">
-<h3 data-number="30.0.54" class="anchored" data-anchor-id="question-54-alter11.rel"><span class="header-section-number">30.0.54</span> Question 54: <code>alter11.rel</code></h3>
+<section id="question-54-alter11.rel" class="level3" data-number="1.0.54">
+<h3 data-number="1.0.54" class="anchored" data-anchor-id="question-54-alter11.rel"><span class="header-section-number">1.0.54</span> Question 54: <code>alter11.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AC’12’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-55-alter12.rel" class="level3" data-number="30.0.55">
-<h3 data-number="30.0.55" class="anchored" data-anchor-id="question-55-alter12.rel"><span class="header-section-number">30.0.55</span> Question 55: <code>alter12.rel</code></h3>
+<section id="question-55-alter12.rel" class="level3" data-number="1.0.55">
+<h3 data-number="1.0.55" class="anchored" data-anchor-id="question-55-alter12.rel"><span class="header-section-number">1.0.55</span> Question 55: <code>alter12.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AD’13’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-56-alter13.rel" class="level3" data-number="30.0.56">
-<h3 data-number="30.0.56" class="anchored" data-anchor-id="question-56-alter13.rel"><span class="header-section-number">30.0.56</span> Question 56: <code>alter13.rel</code></h3>
+<section id="question-56-alter13.rel" class="level3" data-number="1.0.56">
+<h3 data-number="1.0.56" class="anchored" data-anchor-id="question-56-alter13.rel"><span class="header-section-number">1.0.56</span> Question 56: <code>alter13.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AE’14’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-57-alter14.rel" class="level3" data-number="30.0.57">
-<h3 data-number="30.0.57" class="anchored" data-anchor-id="question-57-alter14.rel"><span class="header-section-number">30.0.57</span> Question 57: <code>alter14.rel</code></h3>
+<section id="question-57-alter14.rel" class="level3" data-number="1.0.57">
+<h3 data-number="1.0.57" class="anchored" data-anchor-id="question-57-alter14.rel"><span class="header-section-number">1.0.57</span> Question 57: <code>alter14.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AF’15’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-58-alter15.rel" class="level3" data-number="30.0.58">
-<h3 data-number="30.0.58" class="anchored" data-anchor-id="question-58-alter15.rel"><span class="header-section-number">30.0.58</span> Question 58: <code>alter15.rel</code></h3>
+<section id="question-58-alter15.rel" class="level3" data-number="1.0.58">
+<h3 data-number="1.0.58" class="anchored" data-anchor-id="question-58-alter15.rel"><span class="header-section-number">1.0.58</span> Question 58: <code>alter15.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AG’16’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-59-alter16.rel" class="level3" data-number="30.0.59">
-<h3 data-number="30.0.59" class="anchored" data-anchor-id="question-59-alter16.rel"><span class="header-section-number">30.0.59</span> Question 59: <code>alter16.rel</code></h3>
+<section id="question-59-alter16.rel" class="level3" data-number="1.0.59">
+<h3 data-number="1.0.59" class="anchored" data-anchor-id="question-59-alter16.rel"><span class="header-section-number">1.0.59</span> Question 59: <code>alter16.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AH’17’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-60-alter17.rel" class="level3" data-number="30.0.60">
-<h3 data-number="30.0.60" class="anchored" data-anchor-id="question-60-alter17.rel"><span class="header-section-number">30.0.60</span> Question 60: <code>alter17.rel</code></h3>
+<section id="question-60-alter17.rel" class="level3" data-number="1.0.60">
+<h3 data-number="1.0.60" class="anchored" data-anchor-id="question-60-alter17.rel"><span class="header-section-number">1.0.60</span> Question 60: <code>alter17.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AI’18’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-61-alter18.rel" class="level3" data-number="30.0.61">
-<h3 data-number="30.0.61" class="anchored" data-anchor-id="question-61-alter18.rel"><span class="header-section-number">30.0.61</span> Question 61: <code>alter18.rel</code></h3>
+<section id="question-61-alter18.rel" class="level3" data-number="1.0.61">
+<h3 data-number="1.0.61" class="anchored" data-anchor-id="question-61-alter18.rel"><span class="header-section-number">1.0.61</span> Question 61: <code>alter18.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. * Only answer this question if the following conditions are met: ° Answer was greater than or equal to AJ’19’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 </section>
-<section id="question-62-alter19.rel" class="level3" data-number="30.0.62">
-<h3 data-number="30.0.62" class="anchored" data-anchor-id="question-62-alter19.rel"><span class="header-section-number">30.0.62</span> Question 62: <code>alter19.rel</code></h3>
+<section id="question-62-alter19.rel" class="level3" data-number="1.0.62">
+<h3 data-number="1.0.62" class="anchored" data-anchor-id="question-62-alter19.rel"><span class="header-section-number">1.0.62</span> Question 62: <code>alter19.rel</code></h3>
 <p>As far as you know, does know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think does not know that person. Only answer this question if the following conditions are met: ° Answer was greater than or equal to AK’20’ at question ‘3 [Number.alter]’ ( Now you have a list of your contacts. Is anyone significant missing? Is there someone important whom you are close to or interact with regularly but you forget to input the name in the first question. Please do not hesitate to click the “Previous” button at the bottom of each page to go back so you can add their names. 3. It will help us if you can tell us how many contacts are now in your list. You can change this number later if you add more people to your list. ) Check any that apply:</p>
 <p>Romantic Relationships</p>
 </section>
-<section id="question-63-listromance" class="level3" data-number="30.0.63">
-<h3 data-number="30.0.63" class="anchored" data-anchor-id="question-63-listromance"><span class="header-section-number">30.0.63</span> Question 63: <code>listromance</code></h3>
+<section id="question-63-listromance" class="level3" data-number="1.0.63">
+<h3 data-number="1.0.63" class="anchored" data-anchor-id="question-63-listromance"><span class="header-section-number">1.0.63</span> Question 63: <code>listromance</code></h3>
 <p><em>Please list 10 individuals whom you have had an emotional, romantic or physical relation with and/or toward whom you have had</em> - [ ] romantic or sexual feelings since arriving at Notre Dame in August 2011. <em>Please input their full name using the “FirstName, MiddleInitial Lastname” format.</em> <em>Please consider individuals whom you had brief or long, reciprocated/non-­reciprocated, purely emotional or purely physical,</em> - [ ] heterosexual or homosexual crush, attraction towards, the hots towards, often flirted with, had serious or non-­serious interest in, - [ ] went on dates with, was in a relationship with, hooked-­up or were in a marriage with. It is not necessary that the listed individual - [ ] was aware of this or had the same feelings towards you.</p>
 <p>(Reminder: All information that your provide to us through this survey is confidential. In all reports and presentations individuals will not be identifiable. Also, no one will see your answers except the researchers involved in the NetSense project. ) <em>Please write your answer(s) here:</em> - [ ] 1</p>
 <p>2</p>
@@ -812,46 +603,47 @@ ul.task-list li input[type="checkbox"] {
 <p>9</p>
 <p>10</p>
 </section>
-<section id="question-64-romancecalls" class="level3" data-number="30.0.64">
-<h3 data-number="30.0.64" class="anchored" data-anchor-id="question-64-romancecalls"><span class="header-section-number">30.0.64</span> Question 64: <code>romancecalls</code></h3>
+<section id="question-64-romancecalls" class="level3" data-number="1.0.64">
+<h3 data-number="1.0.64" class="anchored" data-anchor-id="question-64-romancecalls"><span class="header-section-number">1.0.64</span> Question 64: <code>romancecalls</code></h3>
 <p><em>Please provide the cell number for each of these contacts.</em></p>
 <p>Cell</p>
 </section>
-<section id="question-65-romantic" class="level3" data-number="30.0.65">
-<h3 data-number="30.0.65" class="anchored" data-anchor-id="question-65-romantic"><span class="header-section-number">30.0.65</span> Question 65: <code>romantic</code></h3>
+<section id="question-65-romantic" class="level3" data-number="1.0.65">
+<h3 data-number="1.0.65" class="anchored" data-anchor-id="question-65-romantic"><span class="header-section-number">1.0.65</span> Question 65: <code>romantic</code></h3>
 <p><em>Please provide a simple description of the relationship, and approximate dates when it ‘began’ and when it ‘ended’.</em> <em>Please place the dates in approximate dd/mm/yyyy format.</em></p>
 <p>Short Description of the nature of the Relationship When did this relationship begin? When did this relationship end?</p>
 </section>
-<section id="question-66-description.char" class="level3" data-number="30.0.66">
-<h3 data-number="30.0.66" class="anchored" data-anchor-id="question-66-description.char"><span class="header-section-number">30.0.66</span> Question 66: <code>Description.char</code></h3>
+<section id="question-66-description.char" class="level3" data-number="1.0.66">
+<h3 data-number="1.0.66" class="anchored" data-anchor-id="question-66-description.char"><span class="header-section-number">1.0.66</span> Question 66: <code>Description.char</code></h3>
 <p><em>Please select the terms that you would associate with this relationship.</em> - [ ] Check any that apply:</p>
 <p>loving significant exciting unreciprocated physical sexual romantic platonic tr lo</p>
 </section>
-<section id="question-67-description.type" class="level3" data-number="30.0.67">
-<h3 data-number="30.0.67" class="anchored" data-anchor-id="question-67-description.type"><span class="header-section-number">30.0.67</span> Question 67: <code>Description.type</code></h3>
+<section id="question-67-description.type" class="level3" data-number="1.0.67">
+<h3 data-number="1.0.67" class="anchored" data-anchor-id="question-67-description.type"><span class="header-section-number">1.0.67</span> Question 67: <code>Description.type</code></h3>
 <p><em>Please select the terms that you would use to describe this relationship’s type.</em> - [ ] Check any that apply:</p>
 <p>crush flirted with hook up rebound casual fling on-­ again/off-­ again dated serious considere marrying</p>
 </section>
-<section id="question-68-relationshipstart" class="level3" data-number="30.0.68">
-<h3 data-number="30.0.68" class="anchored" data-anchor-id="question-68-relationshipstart"><span class="header-section-number">30.0.68</span> Question 68: <code>relationshipstart</code></h3>
+<section id="question-68-relationshipstart" class="level3" data-number="1.0.68">
+<h3 data-number="1.0.68" class="anchored" data-anchor-id="question-68-relationshipstart"><span class="header-section-number">1.0.68</span> Question 68: <code>relationshipstart</code></h3>
 <p>First consider the beginning or courting phases of these relationships. Please provide a short response.</p>
 <p>By courting, we mean the period of trying to ‘woo’ or ‘impress’ or ‘get their attention’ or ‘hanging out alot’ that preceeds a relationship becoming more intimate, either physically or emotionally.</p>
 <p>In the beginning, who pursued who? How long did the courting period last? How did the courting period end?</p>
 </section>
-<section id="question-69-relationshipend" class="level3" data-number="30.0.69">
-<h3 data-number="30.0.69" class="anchored" data-anchor-id="question-69-relationshipend"><span class="header-section-number">30.0.69</span> Question 69: <code>relationshipend</code></h3>
+<section id="question-69-relationshipend" class="level3" data-number="1.0.69">
+<h3 data-number="1.0.69" class="anchored" data-anchor-id="question-69-relationshipend"><span class="header-section-number">1.0.69</span> Question 69: <code>relationshipend</code></h3>
 <p>For the following questions we are interested in the ending phases of these relationships. Please provide a short response.</p>
 <p>By relationship end, we mean the point in which the individuals in the relationship stopped interacting, or interaction significantly changed.</p>
 <p>By grieving period, we mean the period following the end of the relationship in which it had an effect on your mood and your desire/ability to interact with other people.</p>
 <p>How did the relationship end? Who ended it? how long did you grieve after the relationship ended?</p>
 <p>Thank you for participating in this Survey We, at the NetSense team, want to thank you again for your participation in this study. The data that you have provided us has given us an unpresidented look into the formation of personal networks, never before understood at this detail. This only possible because your commitment to this study, throughout its complications and problems. We want to extend our deepest gratitude and wish you luck on your spring semester. Go Irish, The NetSense Team</p>
 </section>
-<section id="question-70-thankyougoodbye" class="level3" data-number="30.0.70">
-<h3 data-number="30.0.70" class="anchored" data-anchor-id="question-70-thankyougoodbye"><span class="header-section-number">30.0.70</span> Question 70: <code>thankyougoodbye</code></h3>
+<section id="question-70-thankyougoodbye" class="level3" data-number="1.0.70">
+<h3 data-number="1.0.70" class="anchored" data-anchor-id="question-70-thankyougoodbye"><span class="header-section-number">1.0.70</span> Question 70: <code>thankyougoodbye</code></h3>
 <p><em>Please leave any comments you may have</em> <em>Please write your answer here:</em></p>
 <p>31.12.1969 – 19:00 Submit your survey. Thank you for completing this survey.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -942,6 +734,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1255,19 +1052,20 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../Codebooks/Fall2012Net(W4).html" class="pagination-link" aria-label="Fall2012Net(W4)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../Codebooks/Summer2013Net(W6).html" class="pagination-link" aria-label="Summer2013Net(W6)">
-        <span class="nav-page-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 NetSense Research Team</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

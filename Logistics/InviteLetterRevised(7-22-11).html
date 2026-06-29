@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>inviteletterrevised(7-22-11 – NetSense Study Codebook</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-c3d1e225d849e29a5da9db11878cc23d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">NetSense Study Codebook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-datasets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Datasets</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-datasets">    
+        <li>
+    <a class="dropdown-item" href="../surveys.html">
+ <span class="dropdown-text">Demographic Surveys</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../networks.html">
+ <span class="dropdown-text">Network Surveys</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../proximity.html">
+ <span class="dropdown-text">Bluetooth Proximity</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../catalog.html"> 
+<span class="menu-text">Interactive Catalog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../download.html"> 
+<span class="menu-text">Data Download</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-survey-instruments" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Survey Instruments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-survey-instruments">    
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2011Demog(W1).html">
+ <span class="dropdown-text">Summer2011Demog(W1)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Spring2012Demog(W2).html">
+ <span class="dropdown-text">Spring2012Demog(W2)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2012Demog(W3).html">
+ <span class="dropdown-text">Summer2012Demog(W3)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Fall2012Demog(W4).html">
+ <span class="dropdown-text">Fall2012Demog(W4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Winter2013Demog(W5).html">
+ <span class="dropdown-text">Winter2013Demog(W5)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2013Demog(W6).html">
+ <span class="dropdown-text">Summer2013Demog(W6)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2011Net(W1).html">
+ <span class="dropdown-text">Summer2011Net(W1)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Spring2012Net(W2).html">
+ <span class="dropdown-text">Spring2012Net(W2)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2012Net(W3).html">
+ <span class="dropdown-text">Summer2012Net(W3)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Fall2012Net(W4).html">
+ <span class="dropdown-text">Fall2012Net(W4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Winter2013Net(W5).html">
+ <span class="dropdown-text">Winter2013Net(W5)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2013Net(W6).html">
+ <span class="dropdown-text">Summer2013Net(W6)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../citation.html"> 
+<span class="menu-text">Citation</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/olizardo/NetSense"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="InviteLetterRevised-7-22-11-.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<p>On behalf of the University of Notre Dame <em>NetSense</em> Project team, we want to personally invite you to participate in an exciting and important research study that we will be conducting over the next two years. The purpose of this study is to learn about how social networks form and change over time and how they help to spread ideas and information from one person to another. The study is being conducted by a research team of sociologists, computer scientists and engineers affiliated with two research centers at Notre Dame, <a href="http://icensa.nd.edu/"><u>the Interdisciplinary Center for Network Science and Applications (iCeNSA)</u></a> and the <a href="http://wireless.nd.edu/"><u>Wireless Institute</u></a>. The research work is funded by a grant from the National Science Foundation.</p>
+<p>You are one of two hundred (200) students selected to participate in this study because you will be a first year student at Notre Dame residing in one of the four residence halls included in this study: Pangborn, Fisher, Dillon, and Welsh Family.</p>
+<p><strong>If you want to participate in this study please go to our website, <a href="http://netsense.nd.edu/"><u>netsense.nd.edu</u></a>, to sign up and learn more about the study.</strong> The remainder of this email contains basic information about the study and what you need to do to sign up.</p>
+<p>If you agree to participate in this study, we will loan you a high-end smart phone, the <a href="http://support.sprint.com/support/device/Samsung/Samsung_Epic-dvc2200001prd/?ECID=vanity:epicsupport"><em><u>Samsung Epic 4G</u></em></a>, along with a plan from Sprint that includes <strong>unlimited texting, unlimited data, unlimited voice calls</strong> to and from other cellular telephones, and <strong>unlimited night and weekend calls</strong>. You will have 200 voice call minutes per month (for calls to and from landlines). This plan will be provided to you at <strong>no charge</strong>. You will be able to use this phone for your own personal use until the end of the study at the close of the academic year in May of 2013.</p>
+<p>We will be distributing the phones to participants upon their arrival on campus between August 19<sup>th</sup> and August 22<sup>nd</sup>. At that time we will hold an orientation session during which we will provide you with information on the research project, your smart phone, and the technical support system we have put in place to help you with any problems you might have using your phone.</p>
+<p>If you agree to participate in the study, we ask that you:</p>
+<ul>
+<li><p>Carry the Samsung Epic smartphone with you when you would normally carry a cellular telephone</p></li>
+<li><p>Use the phone as your primary communication device for the duration of this study</p></li>
+<li><p>Keep the device charged and operational to the best of your ability</p></li>
+<li><p>Return it to us at the end of the study period</p></li>
+</ul>
+<p>The phone that you will receive will be specially programmed by us to capture in the background information that we need in order to map social networks and how they change over time. We will do this by capturing information about how you are using the phone, with whom you are communicating, and whether those communications are through voice calls, texts or emails. <em>We will not collect information on the content of your telephone calls, emails, text messages or other forms of communication</em>.</p>
+<p>We want to personally assure you that great pains have been taken to ensure that all of the information gathered will be kept confidential. The researchers on this project have a great deal of experience working with confidential data and creating secure systems. We have also worked with Notre Dame’s Institutional Review Board to ensure that our research meets the high standards for security and the protection of human subject data. The details concerning what data will be gathered and how it will be protected can be found on-line on the project website at <a href="http://netsense.nd.edu/"><u>netsense.nd.edu</u></a> and in the consent forms available through the website that must be signed in order for you to participate in the study.</p>
+<p>It is important to note that all published research and reports will not include any information that could be used to identify individual participants in this study. As researchers, we are interested in general network patterns and not the specifics of any single individual’s network or usage patterns. Our research and publications will focus on network and usage patterns by looking at an aggregate of behavior (ex. male vs.&nbsp;female, business vs.&nbsp;engineering, etc.). Particularly, the research focuses on where and how different types of individuals utilize digital communications to connect to other people, not the actual content of the communication itself.</p>
+<p>We encourage you to visit the project website (<a href="http://netsense.nd.edu/"><u>netsense.nd.edu</u></a>) to learn more about our study and who we are, and to find answers to questions about the project. Please do not hesitate to contact any of the researchers in the study for further questions either by e-mail or by phone.</p>
+<p><strong>We hope that you will accept our invitation to participate in this exciting study. If you do decide to participate, we ask that you do the following as soon as possible:</strong></p>
+<p>Go to our website, <a href="http://netsense.nd.edu/"><u>netsense.nd.edu</u></a>, and register for the study and answer a few questions.</p>
+<ul>
+<li><p>Fill out the consent form.</p>
+<ul>
+<li><p><em>If you are under 18 years old</em>, download both the Parental Consent Form <em>and</em> the Student Assent Form.</p></li>
+<li><p><em>If you are 18 years old or older,</em> download the Student Consent Form.</p></li>
+</ul></li>
+<li><p>Print out the forms that you have downloaded, fill them out, and sign and date them. <em>If you are under 18 years old, be sure that your parent or guardian fills in the parental consent form and signs it.</em></p></li>
+<li><p>Submit the completed and signed forms by either:</p>
+<ul>
+<li><p>Scanning the forms and emailing the forms to <a href="mailto:netsense-main-email@nd.edu"><u>netsense@nd.edu</u></a></p></li>
+<li><p>Taking pictures of the consent forms and emailing them to <a href="mailto:netsense-main-email@nd.edu"><u>netsense@nd.edu</u></a></p></li>
+<li><p>Faxing the consent forms to Yentl Ceballo at iCeNSA: 574. 631.5952</p></li>
+</ul></li>
+</ul>
+<p>Once we receive your documents, you will be eligible to participate in the research study. The study is limited to 200 students and participation will be prioritized on a first come first serve basis.</p>
+<p>Please read over the consent forms carefully and feel free to contact the researchers if you have any questions or need clarification. Your decision is requested within a week of receipt of this invitation letter. Participants will be accepted until the quota of 200 students is satisfied.</p>
+<p>Thank you very much for helping our team with this exciting and important study of social networks.</p>
+<p>Sincerely,</p>
+<p>David Hachen, Omar Lizardo<br>
+iCeNSA</p>
+<p>Department of Sociology</p>
+<p><a href="mailto:dhachen@nd.edu"><u>dhachen@nd.edu</u></a>, <a href="mailto:olizardo@nd.edu"><u>olizardo@nd.edu</u></a></p>
+<p>574 631-5745, 574 631-1855</p>
+<p>Aaron Striegel, Christian Poellabauer</p>
+<p>Wireless Institute</p>
+<p>Department of Computer Science and Engineering</p>
+<p><a href="mailto:striegel@nd.edu"><u>striegel@nd.edu</u></a>, <a href="mailto:cpoellab@nd.edu"><u>cpoellab@nd.edu</u></a></p>
+<p>574 631-6896, 574 631-9131</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 NetSense Research Team</p>
+<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

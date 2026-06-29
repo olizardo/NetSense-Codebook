@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; BluetoothProximity – NetSense Study Codebook</title>
+<title>bluetoothproximity – NetSense Study Codebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Codebooks/CodeBook(netsense_entry_recoded_12_5).html" rel="next">
-<link href="../Metadata and Mappings/BT_egoid_mapping.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -44,13 +42,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fee066a00baa590e8925199ba1c8ceb4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c3d1e225d849e29a5da9db11878cc23d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -77,353 +75,149 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Metadata and Mappings/BluetoothProximity.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">NetSense Study Codebook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-datasets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Datasets</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-datasets">    
+        <li>
+    <a class="dropdown-item" href="../surveys.html">
+ <span class="dropdown-text">Demographic Surveys</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../networks.html">
+ <span class="dropdown-text">Network Surveys</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../proximity.html">
+ <span class="dropdown-text">Bluetooth Proximity</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../catalog.html"> 
+<span class="menu-text">Interactive Catalog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../download.html"> 
+<span class="menu-text">Data Download</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-survey-instruments" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Survey Instruments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-survey-instruments">    
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2011Demog(W1).html">
+ <span class="dropdown-text">Summer2011Demog(W1)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Spring2012Demog(W2).html">
+ <span class="dropdown-text">Spring2012Demog(W2)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2012Demog(W3).html">
+ <span class="dropdown-text">Summer2012Demog(W3)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Fall2012Demog(W4).html">
+ <span class="dropdown-text">Fall2012Demog(W4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Winter2013Demog(W5).html">
+ <span class="dropdown-text">Winter2013Demog(W5)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2013Demog(W6).html">
+ <span class="dropdown-text">Summer2013Demog(W6)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2011Net(W1).html">
+ <span class="dropdown-text">Summer2011Net(W1)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Spring2012Net(W2).html">
+ <span class="dropdown-text">Spring2012Net(W2)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2012Net(W3).html">
+ <span class="dropdown-text">Summer2012Net(W3)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Fall2012Net(W4).html">
+ <span class="dropdown-text">Fall2012Net(W4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Winter2013Net(W5).html">
+ <span class="dropdown-text">Winter2013Net(W5)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2013Net(W6).html">
+ <span class="dropdown-text">Summer2013Net(W6)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../citation.html"> 
+<span class="menu-text">Citation</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/olizardo/NetSense"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">NetSense Study Codebook</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Survey &amp; Network Datasets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../surveys.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Demographic, Behavioral, &amp; Quiz Surveys</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Social Network Surveys</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../proximity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bluetooth Proximity Logs</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Searchable Catalogs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../catalog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Searchable Variable Catalog</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../citation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Metadata and Mappings</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/07275-Codebook.txt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BT-variable-description.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BluetoothProximity.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/CodeBook(netsense_entry_recoded_12_5).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Codebook for arcWeeklyTableCombined.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Files Overview 7_30_14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Files Overview 7_30_14.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Structures and Variables for NetSense.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data Structures and Variables for NetSense.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Dorm Distances.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/DormValueLabels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/EdgleListRenumberCodebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Edge List Renumbered Codebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Ego and Alter Coding Conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Ego and Alter Coding Conventions.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/IAmSomeoneIndices(extraversion).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">I Am Someone Indices (Extraversion)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Interesting_data.txt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Interesting_data.txt.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/ND-academic-calendar-2011_2012.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ND Academic Calendar 2011-2012</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/PolQuizzesCodebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/QuizDataCodebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Semester Dates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/personality-inventory-coding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Personality Inventory Coding</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Network Survey Instruments</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2011Net(W1).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Summer2011Net(W1)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Spring2012Net(W2).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Spring2012Net(W2)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2012Net(W3).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Summer2012Net(W3)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Fall2012Net(W4).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Winter2013Net(W5).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2013Net(W6).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Demographic Survey Instruments</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2011Demog(W1).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Summer2011Demog(W1)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Spring2012Demog(W2).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spring2012Demog(W2)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2012Demog(W3).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Summer2012Demog(W3)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Fall2012Demog(W4).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fall2012Demog(W4)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Winter2013Demog(W5).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Winter2013Demog(W5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2013Demog(W6).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Summer2013Demog(W6)</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#bluetoothproximity" id="toc-bluetoothproximity" class="nav-link active" data-scroll-target="#bluetoothproximity"><span class="header-section-number">1</span> BluetoothProximity</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="BluetoothProximity.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Metadata and Mappings/BluetoothProximity.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="bluetoothproximity" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> BluetoothProximity</h1>
 <p>1 Face-to-Face Proximity Estimation Using Bluetooth On Smartphones Shu Liu, Yingxin Jiang, and Aaron Striegel, Member, IEEE ! Abstract—The availability of “always-on” communications has tremen- dous implications for how people interact socially. In particular, sociolo- gists are interested in the question if such pervasive access increases or decreases face-to-face interactions. Unlike triangulation which seeks to precisely deﬁne position, the question of face-to-face interaction reduces to one of proximity, i.e.&nbsp;are the individuals within a certain distance? Moreover, the problem of proximity estimation is complicated by the fact that the measurement must be quite precise (1-1.5m) and can cover a wide variety of environments. Existing approaches such as GPS and WiFi triangulation are insufﬁcient to meet the requirements of accuracy and ﬂexibility. In contrast, Bluetooth, which is commonly available on most smartphones, provides a compelling alternative for proximity es- timation. In this paper, we demonstrate through experimental studies the efﬁcacy of Bluetooth for this exact purpose. We propose a proximity estimation model to determine the distance based on the RSSI values of Bluetooth and light sensor data in different environments. We present several real world scenarios and explore Bluetooth proximity estimation on Android with respect to accuracy and power consumption. Index Terms—Bluetooth, RSSI, proximity estimation model, smart- phone, face-to-face proximity 1 INTRODUCTION In recent years, the presence of portable devices rang- ing from the traditional laptop to fully ﬂedged smart- phones has introduced low-cost, always-on network con- nectivity to signiﬁcant swaths of society. Network ap- plications designed for communication and connectivity provide the facility for people to reach anywhere at any time in the mobile network fabric. Digital communica- tion [2], such as texting and social networking, connect individuals and communities with ever expanding infor- mation ﬂows, all the while becoming increasingly more interwoven. There are compelling research questions whether such digital social interactions are modifying the nature and frequency of human social interactions. A key metric for sociologists is whether these networks facilitate face-to-face interactions or whether these net- works impede face-to-face interactions. • S. Liu, Y. Jiang and A. Striegel are with the Department of Computer Science and Engineering, University of Notre Dame, Notre Dame, IN, 46556. E-mail: sliu6@nd.edu, yjiang3@nd.edu, striegel@nd.edu • This paper is an extension of the paper that appeared in the ICCCN WiMAN workshop 2011 [1]. Studies have shown that collecting occurrences of communications based on self-reporting, where subjects are asked about their social interaction proximity, is unreliable since the accuracy depends upon the recency and salience of the interactions [3]. With the increasing availability of data in logs generated by smartphones, there are tremendous opportunities for collecting data automatically [4]–[6]. The critical technical challenge is how to measure face-to-face interactions, i.e.&nbsp;are two or more individuals within a certain distance that could afford such interactions? Interactions are not limited to any particular area and can take place at a wide variety of locations, ranging from sitting and chatting in a Starbucks coffee shop to walking and chatting across a college campus. As will be explored later in the paper, for most face-to-face interactions, the approximate distance between individ- uals in casual conversation is within 0.5 to 2.5 meters (Section IV presents empirical evidence supporting this claim.). The natural solution would seem to be either WiFi triangulation [7], cell phone triangulation [8], GPS, or a combination of all three. However, none of these solutions are ideal or sufﬁcient. Although WiFi triangu- lation can present a reasonable degree of accuracy, its accuracy in all but the most dense WiFi deployments is insufﬁcient, ranging on the order of 3 to 30 meters [7]. Similarly, cell phone triangulation suffers from an even worse accuracy [8]. Moreover, while WiFi is reasonably pervasive, WiFi tends to generally be sparser in green spaces, i.e.&nbsp;outdoor spaces. Notably, GPS suffers from both an accuracy shortcoming (5-50m) as well as a lack of viability indoors [9]. However, it is important to note that face-to-face interaction does not demand an absolute position as offered by the previously mentioned schemes but rather requires a determination of proximity. With that impor- tant shift of the problem deﬁnition, Bluetooth emerges as a plausible alternative, offering both accuracy (1- 1.2m) [10] and ubiquity (most modern smartphones come with Bluetooth) [11]. Although some prior work has attempted to use the detection of Bluetooth to indi- cate nearness [3], it is not enough for the face-to-face proximity estimation. The question addressed by this paper is to what extent Bluetooth can be an accurate estimator of such proximity.</p>
 <p>2 To summarize, our work makes the following contri- butions: • We demonstrate the viability of using Bluetooth for the purposes of face-to-face proximity estimation and propose a proximity estimation model with appropriate smoothing and consideration of a wide variety of typical environments. • We study the relationship between the value of Bluetooth RSSI and distance based on empirical measurements and compare the results with the the- oretical results using the radio propagation model. • We explore the energy efﬁciency and accuracy of Bluetooth compared with WiFi and GPS via real-life measurements. • We deploy an application “PhoneMonitor” which collects data such as Bluetooth RSSI values on 196 Android-bases phones. Based on the data collec- tion platform, we are able to use the proximity estimation model across several real-world cases to provide high accurate determination of face-to-face interaction distance. The remainder of the paper is organized as follows. In Section II, we start with an introduction of related approaches to relative distance determination indoors and outdoors. Afterwards, in Section III the data col- lecting system built on smartphones is documented. In Section IV the results of empirical tests are evaluated and compared. Based on these practical results, a proxim- ity estimation model with smoothing and environment differentiation is proposed. In Section V the data in different real-world cases are analyzed by using the model. Finally, we suggest ways to extend this work to future communication research in Section VI. 2 RELATED WORK Over the years, there has been a signiﬁcant body of work addressing how to determine position through wireless signals [9]. For the purposes of this paper, we are interested in techniques that are based on commonly available technologies in smartphones, i.e.&nbsp;WiFi, GPS and Bluetooth. Particularly, we are interested in techniques that can be applied at the smartphone itself without signiﬁcant changes to the infrastructure. For most position techniques which aim to deliver on absolute position, distance/angle estimation techniques are used to calculate the distances and then the loca- tions are plotted based on the known reference loca- tions with the help of triangulation or trilateration [7]. Different methods can be used to estimate such infor- mation which include time of arrival/time difference of arrival (ToA/TDoA) [12], angle of arrival (AoA) [13] and RSSI [14]. In TDoA, the difference in arrived signal time and transmitted signal time gives estimated distance. TDoA is efﬁciently used by GPS and has the potential for very high accuracy. The method of angle of arrival (AoA) uses an array of antennas to measure the angle of the signal received and is combined with TDoA to reduce error rate. In contrast to TDoA and AoA techniques which tend to require a much costlier implementation and infras- tructure, RSSI-based techniques rely on the theory that the received signal strength is inversely proportional to the square of the distance. RSSI-based method is one of the most commonly implemented techniques, due to its practicality, low cost and availability. Numerous work has been explored in the literature leveraging RSSI of WiFi [7], [15], [16] and Bluetooth [10], [17], [18]. Theoretically, a known radio propagation model can be used to convert the signal strength into distance. However, in real world environments, the indicator is highly inﬂuenced by noise, obstacles and the type of antenna, which make it difﬁcult to calibrate. Recently there has been work combining the WiFi triangulation or Bluetooth with GPS techniques together to reach higher location accuracy. In [19] an indoor local- ization method with a median localization error of 2-7m is introduced. It assumes the indoor scenarios are places like shopping mall where GPS data can get occasionally. Without explicit WiFi access point pre-deployment cali- bration, a genetic algorithm called EZ Localization run- ning on the server calculates the location based on the WiFi RSSI information and occasionally obtained GPS data on client smartphones. However, such accuracy still cannot satisfy the requirement of face-to-face proximity estimation. Based on sensing and proximity detection techniques, a portable software architecture for indoor- outdoor location sensing is proposed in [20]. The results can tell whether the cell phone is indoor or outdoor but the deployment cost is still high to maintain the robust Bluetooth RSSI sensing indoors. Table I summarizes the differences of techniques, their prominent features and the performance [14], [21]. TABLE 1: Different location techniques comparison Bluetooth WiFi GPS HW costs Medium High High Coverage High High(Indoor) High (Outdoor) Power Usage Medium High High Accuracy 1-4m 2-30m 5-50m Security High High Not applicable Antti et al.&nbsp;presented the design and implementation of a Bluetooth Local Positioning Application (BLPA) [22]. BLPA converts the received signal power level to dis- tance estimate according to a simple propagation model, then BLPA computes 3-D position estimate on the basis of distance estimates. The accuracy of BLPA is reported to be 3.76 m. However all the results are based on the propagation model which is only suitable for speciﬁc controlled environments. From a speciﬁc work perspectives, the works of Nathan et al. [3], [4] are highly relevant to the paper. In those studies, the authors use the ability to detect Bluetooth signals as indicators for people nearby within the Bluetooth range (around 10m). However, such in- dication does not meet the requirement of face-to-face</p>
 <p>3 proximity detection. In class, a student may discuss with others sitting beside him/her, but face-to-face talk is dif- ﬁcult with the students on the other side of the classroom even they are still in the Bluetooth range. In contrast, we focus on a ﬁner grain of proximity estimation to provide accuracy on the order of 1 to 1.5 meters in which people may have face-to-face interaction. 3 SOFTWARE DESIGN AND IMPLEMENTATION The goal of our work is to estimate the proximity among two or more users with Bluetooth RSSI values logged on smartphones. In this section, we present the software architecture of data collection system, describe the data we get and compare the battery consumption by using different location techniques on smartphones. 3.1 Data Collection System As illustrated in Figure 1, an application named PhoneMonitor collects Bluetooth data including the de- tailed values of RSSI, MAC address, and Bluetooth identiﬁer (BTID). The data is recorded in SD card once the phone detects other Bluetooth devices around. In addition to Bluetooth, data points from a variety of other subsystems (light sensor, battery level and etc.) are gathered in order to compare and improve the proximity estimation. Separate threads are employed to compen- sate for the variety of speeds at which the respective sub- systems offer relevant data. We also record the location data reported by both GPS and network providers (either WiFi or cell network). In order to determine whether the phone is sheltered (e.g.&nbsp;inside a backpack or in hand) and the surroundings (e.g.&nbsp;inside or outside buildings) during the daytime, we keep track of the light sensor data. The battery usage percentage is recorded for the energy consumption comparison. Linux Kernel Library, Virtual Machine PhoneMonitor Application MonitorService GUI Activity Bluetooth Time BTID RSSI MAC Address Location by GPS Time Latitude Longitude Light Time Strength Battery Time Percentage Charging SQLite Database Server Phone Send data periodically and securely Location by network providers Time Latitude Longitude Fig. 1: Software architecture The application starts automatically when the phone power is turned on and runs passively in the background on Samsung Nexus S 4G using Android OS version 2.3 (Gingerbread). The Android platform was selected for its customization capabilities through normal API or rooted/customized interfaces with respect to hardware- level interactions. We keep the data records in a local SQLite database on the phone and upload them to MySQL database on the servers periodically with AES security for backup and analysis. With current Android APIs, each kind of data is invoked through the corre- sponding function calls. The default sensing granularity in terms of updating time interval for Bluetooth is 30 seconds. Intuitively, larger time intervals can help save energy, hence we also enable the changing of such sensing interval in order to explore its impact on the energy consumption. Unfortunately, in order to protect users from people trying to hack into their phones, phones by default do not allow Bluetooth to always be discoverable in Android 2.3. Thus we must root the phone and ﬂash CyanogenMod in order to enable Bluetooth to be dis- coverable all of the time while in the experiments. The root process does not overwrite the shipped ROM on the device. During the development another consideration about Bluetooth is the difference between Bluetooth discovery and pairing. Since in our tests there is no need to create Bluetooth connections among phones, we simply call the method of startDiscovery() to return the found devices with RSSI values instead of sending pairing request to other phones. There are more than one million Bluetooth records collected per week. Figure 2 shows the distribution of the Bluetooth RSSI values collected from 196 phones in one week (more details will be discussed in Section IV and Section V). The data collected includes both indoor and outdoor environments. As it shows, the most prevalent value is around -76dBm which indicates much more than 5m indoor and nearly 5m outdoor as will be shown later. Therefore, an unﬁltered detection method such as [3], [4] is not enough to estimate the face-to-face proximity and we use a more accurate method in Section IV to solve this problem. Moreover, we introduce various smoothing effects and take advantage of empirical observations to function across a wide variety of typical environments. 3.2 Power Comparison Energy is one of the most important considerations for applications on smartphones. Compared to a PC, the energy of mobile phones is quite limited. Therefore it is essential to utilize an energy saving method in the system. Before we reveal the relationship between Bluetooth RSSI values and the distance, we compare the energy consumption of Bluetooth, WiFi and GPS in order to ensure that Bluetooth is suitable for proximity estimation on smartphones. In order to test the energy consumption of Bluetooth, WiFi and GPS, evaluations were separately run on three</p>
@@ -440,6 +234,7 @@ ul.task-list li input[type="checkbox"] {
 <p>13 proximity. Then we proposed the proximity estimation model by combining Bluetooth RSSI value, light sensor data as well as data smoothing together. By developing and deploying the application “PhoneMonitor” on 196 phones, we recorded data reported from devices in different occasions. We applied the proximity estimation model on the realistic data and analyzed the proximity among the participates as well as the symmetry of proximity. Compared with the method of collecting all devices around, the accuracy of utilizing proximity esti- mation model to estimate whether two devices are in a direct communication distance is improved dramatically. We also compared the battery usage and accuracy of our method with other different location methods such as WiFi triangulation and GPS. The results demonstrates that Bluetooth offers an effective mechanism that is accurate and power-efﬁcient for measuring face-to-face proximity. For our future work, we intend to improve our thresh- old algorithms with data mining. The thresholds used in the proximity estimation model are based on the experiment results on Nexus S 4G phones. For different phones, such threshold may be different. Therefore, a more general method is necessary to determine the rela- tionship between Bluetooth RSSI values and the face-to- face proximity. With more data reported in the next fol- lowing two years, a more efﬁcient data mining algorithm is needed to analyze the data. During the nighttime, only the data reported by light sensor is not reliable. One possible method to solve this problem is to take atmospheric pressure into consideration to determine whether the phone is indoor or outdoor. ACKNOWLEDGEMENT This work was funded in part by the National Science Foundation through grant IIS-0968529. We would also like to thank our collaborators, Dr.&nbsp;Christian Poellabauer, Dr.&nbsp;David Hachen, and Dr.&nbsp;Omar Lizardo. Great thanks to Sprint who provides us more than 200 phones and free data plan for the experiments. REFERENCES [1] S. Liu and A. Striegel, “Accurate extraction of face-to-face prox- imity using smartphones and Bluetooth,” in Computer Communi- cations and Networks (ICCCN), 2011 Proceedings of 20th International Conference on. IEEE, 2011, pp.&nbsp;1–5. [2] A. Mitra, Digital Communications: From E-mail to the Cyber Commu- nity. New York, USA: Chelsea House Publications, 2010. [3] A. P. Nathan Eagle and D. Lazer, “Inferring social network structure using mobile phone data,” Proc. of the National Academy of Sciences (PNAS), vol.&nbsp;106, no. 36, pp.&nbsp;15 274–15 278, September 2009. [4] N. Eagle and A. Pentland, “Social serendipity: Mobilizing social software,” IEEE Pervasive Computing, vol.&nbsp;4, no. 2, pp.&nbsp;28–34, 2005. [5] M. N. Juuso Karikoski, “Measuring social relations with multi- ple datasets,” International Journal of Social Computing and Cyber- Physical Systems, vol.&nbsp;1, no. 1, pp.&nbsp;98–113, November 2011. [6] H. Falaki, R. Mahajan, S. Kandula, D. Lymberopoulos, R. Govin- dan, and D. Estrin, “Diversity in smartphone usage,” in Proceed- ings of the 8th international conference on Mobile systems, applications, and services. ACM, 2010, pp.&nbsp;179–194. [7] F. Izquierdo, M. Ciurana, F. Barcelo, J. Paradells, and E. Zola, “Performance evaluation of a TOA-based trilateration method to locate terminals in WLAN,” in Wireless Pervasive Computing, 2006 1st International Symposium on, jan. 2006, pp.&nbsp;1–6. [8] V. Otsason, A. Varshavsky, A. LaMarca, and E. De Lara, “Accurate GSM indoor localization,” UbiComp 2005: Ubiquitous Computing, pp.&nbsp;903–921, 2005. [9] V. Zeimpekis, G. M. Giaglis, and G. Lekakos, “A taxonomy of indoor and outdoor positioning techniques for mobile location services,” SIGecom Exch., vol.&nbsp;3, pp.&nbsp;19–27, December 2002. [10] S. Zhou and J. Pollard, “Position measurement using Bluetooth,” Consumer Electronics, IEEE Transactions on, vol.&nbsp;52, no. 2, pp.&nbsp;555– 558, May 2006. [11] A. O. M. Raento and N. Eagle, “Smartphones: An emerging tool for social scientists,” Sociological Methods Research, vol.&nbsp;37, no. 3, pp.&nbsp;426–454, 2009. [12] L. Cong and W. Zhuang, “Non-line-of-sight error mitigation in TDOA mobile location,” in GLOBECOM 2001: Global Telecommu- nications Conference, vol.&nbsp;1. IEEE, 2001, pp.&nbsp;680–684. [13] S. Venkatraman and J. Caffery Jr, “Hybrid toa/aoa techniques for mobile location in non-line-of-sight environments,” in WCNC 2004: Wireless Communications and Networking Conference, vol.&nbsp;1. IEEE, 2004, pp.&nbsp;274–278. [14] H. Liu, H. Darabi, P. Banerjee, and J. Liu, “Survey of wireless indoor positioning techniques and systems,” Systems, Man, and Cybernetics, Part C: Applications and Reviews, IEEE Transactions on, vol.&nbsp;37, no. 6, pp.&nbsp;1067 –1080, November 2007. [15] M. Youssef, A. Agrawala, and A. Udaya Shankar, “WLAN loca- tion determination via clustering and probability distributions,” in PerCom 2003: Pervasive Computing and Communications, March 2003, pp.&nbsp;143–150. [16] A. Ladd, K. Bekris, A. Rudys, D. Wallach, and L. Kavraki, “On the feasibility of using wireless ethernet for indoor localization,” Robotics and Automation, IEEE Transactions on, vol.&nbsp;20, no. 3, pp. 555–559, June 2004. [17] L. Pei, R. Chen, J. Liu, H. Kuusniemi, T. Tenhunen, and Y. Chen, “Using inquiry-based Bluetooth rssi probability distributions for indoor positioning,” Journal of Global Positioning Systems, vol.&nbsp;9, no. 2, pp.&nbsp;122–130, 2010. [18] F. Subhan, H. Hasbullah, A. Rozyyev, and S. Bakhsh, “Indoor positioning in Bluetooth networks using ﬁngerprinting and lat- eration approach,” in Information Science and Applications (ICISA), 2011 International Conference on. IEEE, 2011, pp.&nbsp;1–9. [19] K. Chintalapudi, A. Padmanabha Iyer, and V. Padmanabhan, “In- door localization without the pain,” in Proceedings of the sixteenth annual international conference on Mobile computing and networking. ACM, 2010, pp.&nbsp;173–184. [20] C. di Flora, M. Ficco, S. Russo, and V. Vecchio, “Indoor and outdoor location based services for portable wireless devices,” in Distributed Computing Systems Workshops, 2005. 25th IEEE Inter- national Conference on, June 2005, pp.&nbsp;244–250. [21] J. Figueiras and S. Frattasi, “Mobile positioning and tracking,” Wiley Online Library, Tech. Rep., 2010. [22] A. Kotanen, M. Hannikainen, H. Leppakoski, and T. Hamalainen, “Experiments on local positioning with Bluetooth,” in ITCC 2003: Information Technology: Coding and Computing, april 2003, pp.&nbsp;297– 303.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -529,6 +324,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -842,19 +642,20 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="pagination-link" aria-label="Bluetooth to EgoID Mapping">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../Codebooks/CodeBook(netsense_entry_recoded_12_5).html" class="pagination-link" aria-label="CodeBook(netsense_entry_recoded_12_5)">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 NetSense Research Team</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

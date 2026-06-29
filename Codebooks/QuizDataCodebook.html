@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>23&nbsp; QuizDataCodebook – NetSense Study Codebook</title>
+<title>quizdatacodebook – NetSense Study Codebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../Metadata and Mappings/Semester Dates.html" rel="next">
-<link href="../Codebooks/PolQuizzesCodebook.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -44,13 +42,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fee066a00baa590e8925199ba1c8ceb4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c3d1e225d849e29a5da9db11878cc23d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -77,399 +75,192 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Codebooks/QuizDataCodebook.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">NetSense Study Codebook</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-datasets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Datasets</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-datasets">    
+        <li>
+    <a class="dropdown-item" href="../surveys.html">
+ <span class="dropdown-text">Demographic Surveys</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../networks.html">
+ <span class="dropdown-text">Network Surveys</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../proximity.html">
+ <span class="dropdown-text">Bluetooth Proximity</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../catalog.html"> 
+<span class="menu-text">Interactive Catalog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../download.html"> 
+<span class="menu-text">Data Download</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-survey-instruments" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Survey Instruments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-survey-instruments">    
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2011Demog(W1).html">
+ <span class="dropdown-text">Summer2011Demog(W1)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Spring2012Demog(W2).html">
+ <span class="dropdown-text">Spring2012Demog(W2)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2012Demog(W3).html">
+ <span class="dropdown-text">Summer2012Demog(W3)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Fall2012Demog(W4).html">
+ <span class="dropdown-text">Fall2012Demog(W4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Winter2013Demog(W5).html">
+ <span class="dropdown-text">Winter2013Demog(W5)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2013Demog(W6).html">
+ <span class="dropdown-text">Summer2013Demog(W6)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2011Net(W1).html">
+ <span class="dropdown-text">Summer2011Net(W1)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Spring2012Net(W2).html">
+ <span class="dropdown-text">Spring2012Net(W2)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2012Net(W3).html">
+ <span class="dropdown-text">Summer2012Net(W3)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Fall2012Net(W4).html">
+ <span class="dropdown-text">Fall2012Net(W4)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Winter2013Net(W5).html">
+ <span class="dropdown-text">Winter2013Net(W5)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Codebooks/Summer2013Net(W6).html">
+ <span class="dropdown-text">Summer2013Net(W6)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../citation.html"> 
+<span class="menu-text">Citation</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/olizardo/NetSense"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">NetSense Study Codebook</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Survey &amp; Network Datasets</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../surveys.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Demographic, Behavioral, &amp; Quiz Surveys</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../networks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Social Network Surveys</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../proximity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bluetooth Proximity Logs</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Searchable Catalogs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../catalog.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Searchable Variable Catalog</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../citation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Citation Guide</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Metadata and Mappings</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/07275-Codebook.txt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">07275-Codebook.txt.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BT-variable-description.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">BT-variable-description.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BT_egoid_mapping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bluetooth to EgoID Mapping</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/BluetoothProximity.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">BluetoothProximity</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/CodeBook(netsense_entry_recoded_12_5).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">CodeBook(netsense_entry_recoded_12_5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Codebook for arcWeeklyTableCombined.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Codebook for arcWeeklyTableCombined</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Files Overview 7_30_14.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Data Files Overview 7_30_14.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Structures and Variables for NetSense.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Data Structures and Variables for NetSense.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Data Summary (1-18-16).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Data Summary (1-18-16).html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Dorm Distances.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Dorm Distances</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/DormValueLabels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Dorm Value Labels</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/EdgleListRenumberCodebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Edge List Renumbered Codebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Ego and Alter Coding Conventions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Ego and Alter Coding Conventions.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/IAmSomeoneIndices(extraversion).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">I Am Someone Indices (Extraversion)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Interesting_data.txt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Interesting_data.txt.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/ND-academic-calendar-2011_2012.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">ND Academic Calendar 2011-2012</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/PolQuizzesCodebook.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/QuizDataCodebook.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/Semester Dates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Metadata and Mappings/personality-inventory-coding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Personality Inventory Coding</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Network Survey Instruments</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2011Net(W1).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Summer2011Net(W1)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Spring2012Net(W2).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Spring2012Net(W2)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2012Net(W3).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Summer2012Net(W3)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Fall2012Net(W4).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Fall2012Net(W4)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Winter2013Net(W5).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Winter2013Net(W5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2013Net(W6).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Summer2013Net(W6)</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Demographic Survey Instruments</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2011Demog(W1).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Summer2011Demog(W1)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Spring2012Demog(W2).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spring2012Demog(W2)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2012Demog(W3).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Summer2012Demog(W3)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Fall2012Demog(W4).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Fall2012Demog(W4)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Winter2013Demog(W5).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Winter2013Demog(W5)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Codebooks/Summer2013Demog(W6).html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Summer2013Demog(W6)</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#variable-phonenumber" id="toc-variable-phonenumber" class="nav-link active" data-scroll-target="#variable-phonenumber"><span class="header-section-number">23.0.1</span> Variable: <code>phonenumber</code></a></li>
-  <li><a href="#variable-phoneworkq1" id="toc-variable-phoneworkq1" class="nav-link" data-scroll-target="#variable-phoneworkq1"><span class="header-section-number">23.0.2</span> Variable: <code>phoneworkQ1</code></a></li>
-  <li><a href="#variable-fbgameq2" id="toc-variable-fbgameq2" class="nav-link" data-scroll-target="#variable-fbgameq2"><span class="header-section-number">23.0.3</span> Variable: <code>fbgameQ2</code></a></li>
-  <li><a href="#variable-fbgame4gq2" id="toc-variable-fbgame4gq2" class="nav-link" data-scroll-target="#variable-fbgame4gq2"><span class="header-section-number">23.0.4</span> Variable: <code>fbgame4gQ2</code></a></li>
-  <li><a href="#variable-_mergeq2" id="toc-variable-_mergeq2" class="nav-link" data-scroll-target="#variable-_mergeq2"><span class="header-section-number">23.0.5</span> Variable: <code>_mergeQ2</code></a></li>
-  <li><a href="#variable-prevphoneq3" id="toc-variable-prevphoneq3" class="nav-link" data-scroll-target="#variable-prevphoneq3"><span class="header-section-number">23.0.6</span> Variable: <code>prevphoneQ3</code></a></li>
-  <li><a href="#variable-_mergeq3" id="toc-variable-_mergeq3" class="nav-link" data-scroll-target="#variable-_mergeq3"><span class="header-section-number">23.0.7</span> Variable: <code>_mergeQ3</code></a></li>
-  <li><a href="#variable-fallbreakq4" id="toc-variable-fallbreakq4" class="nav-link" data-scroll-target="#variable-fallbreakq4"><span class="header-section-number">23.0.8</span> Variable: <code>fallbreakQ4</code></a></li>
-  <li><a href="#variable-uscgameq4" id="toc-variable-uscgameq4" class="nav-link" data-scroll-target="#variable-uscgameq4"><span class="header-section-number">23.0.9</span> Variable: <code>uscgameQ4</code></a></li>
-  <li><a href="#variable-_mergeq4" id="toc-variable-_mergeq4" class="nav-link" data-scroll-target="#variable-_mergeq4"><span class="header-section-number">23.0.10</span> Variable: <code>_mergeQ4</code></a></li>
-  <li><a href="#variable-healthq6" id="toc-variable-healthq6" class="nav-link" data-scroll-target="#variable-healthq6"><span class="header-section-number">23.0.11</span> Variable: <code>healthQ6</code></a></li>
-  <li><a href="#variable-_mergeq7" id="toc-variable-_mergeq7" class="nav-link" data-scroll-target="#variable-_mergeq7"><span class="header-section-number">23.0.12</span> Variable: <code>_mergeQ7</code></a></li>
-  <li><a href="#variable-videogameq8" id="toc-variable-videogameq8" class="nav-link" data-scroll-target="#variable-videogameq8"><span class="header-section-number">23.0.13</span> Variable: <code>videogameQ8</code></a></li>
-  <li><a href="#variable-_mergeq8" id="toc-variable-_mergeq8" class="nav-link" data-scroll-target="#variable-_mergeq8"><span class="header-section-number">23.0.14</span> Variable: <code>_mergeQ8</code></a></li>
-  <li><a href="#variable-overwhelmedq9" id="toc-variable-overwhelmedq9" class="nav-link" data-scroll-target="#variable-overwhelmedq9"><span class="header-section-number">23.0.15</span> Variable: <code>overwhelmedQ9</code></a></li>
-  <li><a href="#variable-calmq9" id="toc-variable-calmq9" class="nav-link" data-scroll-target="#variable-calmq9"><span class="header-section-number">23.0.16</span> Variable: <code>calmQ9</code></a></li>
-  <li><a href="#variable-overallq9" id="toc-variable-overallq9" class="nav-link" data-scroll-target="#variable-overallq9"><span class="header-section-number">23.0.17</span> Variable: <code>overallQ9</code></a></li>
-  <li><a href="#variable-_mergeq9" id="toc-variable-_mergeq9" class="nav-link" data-scroll-target="#variable-_mergeq9"><span class="header-section-number">23.0.18</span> Variable: <code>_mergeQ9</code></a></li>
-  <li><a href="#variable-healthq10" id="toc-variable-healthq10" class="nav-link" data-scroll-target="#variable-healthq10"><span class="header-section-number">23.0.19</span> Variable: <code>healthQ10</code></a></li>
-  <li><a href="#variable-_mergeq10" id="toc-variable-_mergeq10" class="nav-link" data-scroll-target="#variable-_mergeq10"><span class="header-section-number">23.0.20</span> Variable: <code>_mergeQ10</code></a></li>
-  <li><a href="#variable-_mergeq11" id="toc-variable-_mergeq11" class="nav-link" data-scroll-target="#variable-_mergeq11"><span class="header-section-number">23.0.21</span> Variable: <code>_mergeQ11</code></a></li>
-  <li><a href="#variable-days" id="toc-variable-days" class="nav-link" data-scroll-target="#variable-days"><span class="header-section-number">23.0.22</span> Variable: <code>Days</code></a></li>
-  <li><a href="#variable-videogameq12" id="toc-variable-videogameq12" class="nav-link" data-scroll-target="#variable-videogameq12"><span class="header-section-number">23.0.23</span> Variable: <code>videogameQ12</code></a></li>
-  <li><a href="#variable-_mergeq12" id="toc-variable-_mergeq12" class="nav-link" data-scroll-target="#variable-_mergeq12"><span class="header-section-number">23.0.24</span> Variable: <code>_mergeQ12</code></a></li>
-  <li><a href="#variable-calmq13" id="toc-variable-calmq13" class="nav-link" data-scroll-target="#variable-calmq13"><span class="header-section-number">23.0.25</span> Variable: <code>calmQ13</code></a></li>
-  <li><a href="#variable-freshq13" id="toc-variable-freshq13" class="nav-link" data-scroll-target="#variable-freshq13"><span class="header-section-number">23.0.26</span> Variable: <code>freshQ13</code></a></li>
-  <li><a href="#variable-overallq13" id="toc-variable-overallq13" class="nav-link" data-scroll-target="#variable-overallq13"><span class="header-section-number">23.0.27</span> Variable: <code>overallQ13</code></a></li>
-  <li><a href="#variable-_mergeq13" id="toc-variable-_mergeq13" class="nav-link" data-scroll-target="#variable-_mergeq13"><span class="header-section-number">23.0.28</span> Variable: <code>_mergeQ13</code></a></li>
-  <li><a href="#variable-healthq14" id="toc-variable-healthq14" class="nav-link" data-scroll-target="#variable-healthq14"><span class="header-section-number">23.0.29</span> Variable: <code>healthQ14</code></a></li>
-  <li><a href="#variable-_mergeq14" id="toc-variable-_mergeq14" class="nav-link" data-scroll-target="#variable-_mergeq14"><span class="header-section-number">23.0.30</span> Variable: <code>_mergeQ14</code></a></li>
-  <li><a href="#variable-_mergeq15" id="toc-variable-_mergeq15" class="nav-link" data-scroll-target="#variable-_mergeq15"><span class="header-section-number">23.0.31</span> Variable: <code>_mergeQ15</code></a></li>
-  <li><a href="#variable-days-1" id="toc-variable-days-1" class="nav-link" data-scroll-target="#variable-days-1"><span class="header-section-number">23.0.32</span> Variable: <code>Days</code></a></li>
-  <li><a href="#variable-videogameq16" id="toc-variable-videogameq16" class="nav-link" data-scroll-target="#variable-videogameq16"><span class="header-section-number">23.0.33</span> Variable: <code>videogameQ16</code></a></li>
-  <li><a href="#variable-_mergeq16" id="toc-variable-_mergeq16" class="nav-link" data-scroll-target="#variable-_mergeq16"><span class="header-section-number">23.0.34</span> Variable: <code>_mergeQ16</code></a></li>
-  <li><a href="#variable-calmq17" id="toc-variable-calmq17" class="nav-link" data-scroll-target="#variable-calmq17"><span class="header-section-number">23.0.35</span> Variable: <code>calmQ17</code></a></li>
-  <li><a href="#variable-freshq17" id="toc-variable-freshq17" class="nav-link" data-scroll-target="#variable-freshq17"><span class="header-section-number">23.0.36</span> Variable: <code>freshQ17</code></a></li>
-  <li><a href="#variable-overallq17" id="toc-variable-overallq17" class="nav-link" data-scroll-target="#variable-overallq17"><span class="header-section-number">23.0.37</span> Variable: <code>overallQ17</code></a></li>
-  <li><a href="#variable-_mergeq17" id="toc-variable-_mergeq17" class="nav-link" data-scroll-target="#variable-_mergeq17"><span class="header-section-number">23.0.38</span> Variable: <code>_mergeQ17</code></a></li>
-  <li><a href="#variable-healthq18" id="toc-variable-healthq18" class="nav-link" data-scroll-target="#variable-healthq18"><span class="header-section-number">23.0.39</span> Variable: <code>healthQ18</code></a></li>
-  <li><a href="#variable-during" id="toc-variable-during" class="nav-link" data-scroll-target="#variable-during"><span class="header-section-number">23.0.40</span> Variable: <code>During</code></a></li>
-  <li><a href="#variable-_mergeq19" id="toc-variable-_mergeq19" class="nav-link" data-scroll-target="#variable-_mergeq19"><span class="header-section-number">23.0.41</span> Variable: <code>_mergeQ19</code></a></li>
+  <li><a href="#quizdatacodebook" id="toc-quizdatacodebook" class="nav-link active" data-scroll-target="#quizdatacodebook"><span class="header-section-number">1</span> QuizDataCodebook</a>
+  <ul class="collapse">
+  <li><a href="#variable-phonenumber" id="toc-variable-phonenumber" class="nav-link" data-scroll-target="#variable-phonenumber"><span class="header-section-number">1.0.1</span> Variable: <code>phonenumber</code></a></li>
+  <li><a href="#variable-phoneworkq1" id="toc-variable-phoneworkq1" class="nav-link" data-scroll-target="#variable-phoneworkq1"><span class="header-section-number">1.0.2</span> Variable: <code>phoneworkQ1</code></a></li>
+  <li><a href="#variable-fbgameq2" id="toc-variable-fbgameq2" class="nav-link" data-scroll-target="#variable-fbgameq2"><span class="header-section-number">1.0.3</span> Variable: <code>fbgameQ2</code></a></li>
+  <li><a href="#variable-fbgame4gq2" id="toc-variable-fbgame4gq2" class="nav-link" data-scroll-target="#variable-fbgame4gq2"><span class="header-section-number">1.0.4</span> Variable: <code>fbgame4gQ2</code></a></li>
+  <li><a href="#variable-_mergeq2" id="toc-variable-_mergeq2" class="nav-link" data-scroll-target="#variable-_mergeq2"><span class="header-section-number">1.0.5</span> Variable: <code>_mergeQ2</code></a></li>
+  <li><a href="#variable-prevphoneq3" id="toc-variable-prevphoneq3" class="nav-link" data-scroll-target="#variable-prevphoneq3"><span class="header-section-number">1.0.6</span> Variable: <code>prevphoneQ3</code></a></li>
+  <li><a href="#variable-_mergeq3" id="toc-variable-_mergeq3" class="nav-link" data-scroll-target="#variable-_mergeq3"><span class="header-section-number">1.0.7</span> Variable: <code>_mergeQ3</code></a></li>
+  <li><a href="#variable-fallbreakq4" id="toc-variable-fallbreakq4" class="nav-link" data-scroll-target="#variable-fallbreakq4"><span class="header-section-number">1.0.8</span> Variable: <code>fallbreakQ4</code></a></li>
+  <li><a href="#variable-uscgameq4" id="toc-variable-uscgameq4" class="nav-link" data-scroll-target="#variable-uscgameq4"><span class="header-section-number">1.0.9</span> Variable: <code>uscgameQ4</code></a></li>
+  <li><a href="#variable-_mergeq4" id="toc-variable-_mergeq4" class="nav-link" data-scroll-target="#variable-_mergeq4"><span class="header-section-number">1.0.10</span> Variable: <code>_mergeQ4</code></a></li>
+  <li><a href="#variable-healthq6" id="toc-variable-healthq6" class="nav-link" data-scroll-target="#variable-healthq6"><span class="header-section-number">1.0.11</span> Variable: <code>healthQ6</code></a></li>
+  <li><a href="#variable-_mergeq7" id="toc-variable-_mergeq7" class="nav-link" data-scroll-target="#variable-_mergeq7"><span class="header-section-number">1.0.12</span> Variable: <code>_mergeQ7</code></a></li>
+  <li><a href="#variable-videogameq8" id="toc-variable-videogameq8" class="nav-link" data-scroll-target="#variable-videogameq8"><span class="header-section-number">1.0.13</span> Variable: <code>videogameQ8</code></a></li>
+  <li><a href="#variable-_mergeq8" id="toc-variable-_mergeq8" class="nav-link" data-scroll-target="#variable-_mergeq8"><span class="header-section-number">1.0.14</span> Variable: <code>_mergeQ8</code></a></li>
+  <li><a href="#variable-overwhelmedq9" id="toc-variable-overwhelmedq9" class="nav-link" data-scroll-target="#variable-overwhelmedq9"><span class="header-section-number">1.0.15</span> Variable: <code>overwhelmedQ9</code></a></li>
+  <li><a href="#variable-calmq9" id="toc-variable-calmq9" class="nav-link" data-scroll-target="#variable-calmq9"><span class="header-section-number">1.0.16</span> Variable: <code>calmQ9</code></a></li>
+  <li><a href="#variable-overallq9" id="toc-variable-overallq9" class="nav-link" data-scroll-target="#variable-overallq9"><span class="header-section-number">1.0.17</span> Variable: <code>overallQ9</code></a></li>
+  <li><a href="#variable-_mergeq9" id="toc-variable-_mergeq9" class="nav-link" data-scroll-target="#variable-_mergeq9"><span class="header-section-number">1.0.18</span> Variable: <code>_mergeQ9</code></a></li>
+  <li><a href="#variable-healthq10" id="toc-variable-healthq10" class="nav-link" data-scroll-target="#variable-healthq10"><span class="header-section-number">1.0.19</span> Variable: <code>healthQ10</code></a></li>
+  <li><a href="#variable-_mergeq10" id="toc-variable-_mergeq10" class="nav-link" data-scroll-target="#variable-_mergeq10"><span class="header-section-number">1.0.20</span> Variable: <code>_mergeQ10</code></a></li>
+  <li><a href="#variable-_mergeq11" id="toc-variable-_mergeq11" class="nav-link" data-scroll-target="#variable-_mergeq11"><span class="header-section-number">1.0.21</span> Variable: <code>_mergeQ11</code></a></li>
+  <li><a href="#variable-days" id="toc-variable-days" class="nav-link" data-scroll-target="#variable-days"><span class="header-section-number">1.0.22</span> Variable: <code>Days</code></a></li>
+  <li><a href="#variable-videogameq12" id="toc-variable-videogameq12" class="nav-link" data-scroll-target="#variable-videogameq12"><span class="header-section-number">1.0.23</span> Variable: <code>videogameQ12</code></a></li>
+  <li><a href="#variable-_mergeq12" id="toc-variable-_mergeq12" class="nav-link" data-scroll-target="#variable-_mergeq12"><span class="header-section-number">1.0.24</span> Variable: <code>_mergeQ12</code></a></li>
+  <li><a href="#variable-calmq13" id="toc-variable-calmq13" class="nav-link" data-scroll-target="#variable-calmq13"><span class="header-section-number">1.0.25</span> Variable: <code>calmQ13</code></a></li>
+  <li><a href="#variable-freshq13" id="toc-variable-freshq13" class="nav-link" data-scroll-target="#variable-freshq13"><span class="header-section-number">1.0.26</span> Variable: <code>freshQ13</code></a></li>
+  <li><a href="#variable-overallq13" id="toc-variable-overallq13" class="nav-link" data-scroll-target="#variable-overallq13"><span class="header-section-number">1.0.27</span> Variable: <code>overallQ13</code></a></li>
+  <li><a href="#variable-_mergeq13" id="toc-variable-_mergeq13" class="nav-link" data-scroll-target="#variable-_mergeq13"><span class="header-section-number">1.0.28</span> Variable: <code>_mergeQ13</code></a></li>
+  <li><a href="#variable-healthq14" id="toc-variable-healthq14" class="nav-link" data-scroll-target="#variable-healthq14"><span class="header-section-number">1.0.29</span> Variable: <code>healthQ14</code></a></li>
+  <li><a href="#variable-_mergeq14" id="toc-variable-_mergeq14" class="nav-link" data-scroll-target="#variable-_mergeq14"><span class="header-section-number">1.0.30</span> Variable: <code>_mergeQ14</code></a></li>
+  <li><a href="#variable-_mergeq15" id="toc-variable-_mergeq15" class="nav-link" data-scroll-target="#variable-_mergeq15"><span class="header-section-number">1.0.31</span> Variable: <code>_mergeQ15</code></a></li>
+  <li><a href="#variable-days-1" id="toc-variable-days-1" class="nav-link" data-scroll-target="#variable-days-1"><span class="header-section-number">1.0.32</span> Variable: <code>Days</code></a></li>
+  <li><a href="#variable-videogameq16" id="toc-variable-videogameq16" class="nav-link" data-scroll-target="#variable-videogameq16"><span class="header-section-number">1.0.33</span> Variable: <code>videogameQ16</code></a></li>
+  <li><a href="#variable-_mergeq16" id="toc-variable-_mergeq16" class="nav-link" data-scroll-target="#variable-_mergeq16"><span class="header-section-number">1.0.34</span> Variable: <code>_mergeQ16</code></a></li>
+  <li><a href="#variable-calmq17" id="toc-variable-calmq17" class="nav-link" data-scroll-target="#variable-calmq17"><span class="header-section-number">1.0.35</span> Variable: <code>calmQ17</code></a></li>
+  <li><a href="#variable-freshq17" id="toc-variable-freshq17" class="nav-link" data-scroll-target="#variable-freshq17"><span class="header-section-number">1.0.36</span> Variable: <code>freshQ17</code></a></li>
+  <li><a href="#variable-overallq17" id="toc-variable-overallq17" class="nav-link" data-scroll-target="#variable-overallq17"><span class="header-section-number">1.0.37</span> Variable: <code>overallQ17</code></a></li>
+  <li><a href="#variable-_mergeq17" id="toc-variable-_mergeq17" class="nav-link" data-scroll-target="#variable-_mergeq17"><span class="header-section-number">1.0.38</span> Variable: <code>_mergeQ17</code></a></li>
+  <li><a href="#variable-healthq18" id="toc-variable-healthq18" class="nav-link" data-scroll-target="#variable-healthq18"><span class="header-section-number">1.0.39</span> Variable: <code>healthQ18</code></a></li>
+  <li><a href="#variable-during" id="toc-variable-during" class="nav-link" data-scroll-target="#variable-during"><span class="header-section-number">1.0.40</span> Variable: <code>During</code></a></li>
+  <li><a href="#variable-_mergeq19" id="toc-variable-_mergeq19" class="nav-link" data-scroll-target="#variable-_mergeq19"><span class="header-section-number">1.0.41</span> Variable: <code>_mergeQ19</code></a></li>
+  </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="QuizDataCodebook.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Codebooks/07275-Codebook.txt.html">Metadata and Mappings</a></li><li class="breadcrumb-item"><a href="../Codebooks/QuizDataCodebook.html"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">QuizDataCodebook</span></h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="quizdatacodebook" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> QuizDataCodebook</h1>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -483,8 +274,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The following is derived from the original Stata codebook logs.</p>
 </div>
 </div>
-<section id="variable-phonenumber" class="level3" data-number="23.0.1">
-<h3 data-number="23.0.1" class="anchored" data-anchor-id="variable-phonenumber"><span class="header-section-number">23.0.1</span> Variable: <code>phonenumber</code></h3>
+<section id="variable-phonenumber" class="level3" data-number="1.0.1">
+<h3 data-number="1.0.1" class="anchored" data-anchor-id="variable-phonenumber"><span class="header-section-number">1.0.1</span> Variable: <code>phonenumber</code></h3>
 <pre class="text"><code>phonenumber                                                         (unlabeled)
                   type:  numeric (double)
                  range:  [5.744e+09,5.745e+09]        units:  100
@@ -494,8 +285,8 @@ ul.task-list li input[type="checkbox"] {
            percentiles:        10%       25%       50%       75%       90%
                            5.7e+09   5.7e+09   5.7e+09   5.7e+09   5.7e+09</code></pre>
 </section>
-<section id="variable-phoneworkq1" class="level3" data-number="23.0.2">
-<h3 data-number="23.0.2" class="anchored" data-anchor-id="variable-phoneworkq1"><span class="header-section-number">23.0.2</span> Variable: <code>phoneworkQ1</code></h3>
+<section id="variable-phoneworkq1" class="level3" data-number="1.0.2">
+<h3 data-number="1.0.2" class="anchored" data-anchor-id="variable-phoneworkq1"><span class="header-section-number">1.0.2</span> Variable: <code>phoneworkQ1</code></h3>
 <pre class="text"><code>phoneworkQ1                                  How is your smartphone working- Q1
                   type:  numeric (long)
                  label:  phone
@@ -508,8 +299,8 @@ ul.task-list li input[type="checkbox"] {
                              1         4  Dont know
                             51         .  </code></pre>
 </section>
-<section id="variable-fbgameq2" class="level3" data-number="23.0.3">
-<h3 data-number="23.0.3" class="anchored" data-anchor-id="variable-fbgameq2"><span class="header-section-number">23.0.3</span> Variable: <code>fbgameQ2</code></h3>
+<section id="variable-fbgameq2" class="level3" data-number="1.0.3">
+<h3 data-number="1.0.3" class="anchored" data-anchor-id="variable-fbgameq2"><span class="header-section-number">1.0.3</span> Variable: <code>fbgameQ2</code></h3>
 <pre class="text"><code>fbgameQ2                                  Did you go to the game? Quiz 2 9/5/11
                   type:  numeric (long)
                  label:  yesno
@@ -521,8 +312,8 @@ ul.task-list li input[type="checkbox"] {
                             41         .
 </code></pre>
 </section>
-<section id="variable-fbgame4gq2" class="level3" data-number="23.0.4">
-<h3 data-number="23.0.4" class="anchored" data-anchor-id="variable-fbgame4gq2"><span class="header-section-number">23.0.4</span> Variable: <code>fbgame4gQ2</code></h3>
+<section id="variable-fbgame4gq2" class="level3" data-number="1.0.4">
+<h3 data-number="1.0.4" class="anchored" data-anchor-id="variable-fbgame4gq2"><span class="header-section-number">1.0.4</span> Variable: <code>fbgame4gQ2</code></h3>
 <pre class="text"><code>fbgame4gQ2              Did you use the Nexus 4G during the game? Quiz 2 9/5/11
                   type:  numeric (long)
                  label:  yesno
@@ -533,8 +324,8 @@ ul.task-list li input[type="checkbox"] {
                            127         1  Yes
                             41         .  </code></pre>
 </section>
-<section id="variable-_mergeq2" class="level3" data-number="23.0.5">
-<h3 data-number="23.0.5" class="anchored" data-anchor-id="variable-_mergeq2"><span class="header-section-number">23.0.5</span> Variable: <code>_mergeQ2</code></h3>
+<section id="variable-_mergeq2" class="level3" data-number="1.0.5">
+<h3 data-number="1.0.5" class="anchored" data-anchor-id="variable-_mergeq2"><span class="header-section-number">1.0.5</span> Variable: <code>_mergeQ2</code></h3>
 <pre class="text"><code>_mergeQ2                                                            (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -546,8 +337,8 @@ ul.task-list li input[type="checkbox"] {
                            131         3  matched (3)
                             27         .  </code></pre>
 </section>
-<section id="variable-prevphoneq3" class="level3" data-number="23.0.6">
-<h3 data-number="23.0.6" class="anchored" data-anchor-id="variable-prevphoneq3"><span class="header-section-number">23.0.6</span> Variable: <code>prevphoneQ3</code></h3>
+<section id="variable-prevphoneq3" class="level3" data-number="1.0.6">
+<h3 data-number="1.0.6" class="anchored" data-anchor-id="variable-prevphoneq3"><span class="header-section-number">1.0.6</span> Variable: <code>prevphoneQ3</code></h3>
 <pre class="text"><code>prevphoneQ3       How often do you use your previous cell phone? Quiz 3 9/27/11
                   type:  numeric (long)
                  label:  phone, but 1 nonmissing value is not labeled
@@ -571,8 +362,8 @@ facebookQ3            Are you using Facebook on your smartphone? Quiz 3 9/27/11
                              9         1  Yes
                             21         .  </code></pre>
 </section>
-<section id="variable-_mergeq3" class="level3" data-number="23.0.7">
-<h3 data-number="23.0.7" class="anchored" data-anchor-id="variable-_mergeq3"><span class="header-section-number">23.0.7</span> Variable: <code>_mergeQ3</code></h3>
+<section id="variable-_mergeq3" class="level3" data-number="1.0.7">
+<h3 data-number="1.0.7" class="anchored" data-anchor-id="variable-_mergeq3"><span class="header-section-number">1.0.7</span> Variable: <code>_mergeQ3</code></h3>
 <pre class="text"><code>_mergeQ3                                                            (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -584,8 +375,8 @@ facebookQ3            Are you using Facebook on your smartphone? Quiz 3 9/27/11
                            155         3  matched (3)
                              7         .  </code></pre>
 </section>
-<section id="variable-fallbreakq4" class="level3" data-number="23.0.8">
-<h3 data-number="23.0.8" class="anchored" data-anchor-id="variable-fallbreakq4"><span class="header-section-number">23.0.8</span> Variable: <code>fallbreakQ4</code></h3>
+<section id="variable-fallbreakq4" class="level3" data-number="1.0.8">
+<h3 data-number="1.0.8" class="anchored" data-anchor-id="variable-fallbreakq4"><span class="header-section-number">1.0.8</span> Variable: <code>fallbreakQ4</code></h3>
 <pre class="text"><code>fallbreakQ4      What are you going to do during the fall break? Quiz 4 9/27/11
                   type:  numeric (long)
                  label:  fallbreak
@@ -598,8 +389,8 @@ facebookQ3            Are you using Facebook on your smartphone? Quiz 3 9/27/11
                              6         4  Participate in a service project
                              6         .  </code></pre>
 </section>
-<section id="variable-uscgameq4" class="level3" data-number="23.0.9">
-<h3 data-number="23.0.9" class="anchored" data-anchor-id="variable-uscgameq4"><span class="header-section-number">23.0.9</span> Variable: <code>uscgameQ4</code></h3>
+<section id="variable-uscgameq4" class="level3" data-number="1.0.9">
+<h3 data-number="1.0.9" class="anchored" data-anchor-id="variable-uscgameq4"><span class="header-section-number">1.0.9</span> Variable: <code>uscgameQ4</code></h3>
 <pre class="text"><code>uscgameQ4                 Are you coming back for the USC game? Quiz 4 10/24/11
                   type:  numeric (long)
                  label:  yesno
@@ -611,8 +402,8 @@ facebookQ3            Are you using Facebook on your smartphone? Quiz 3 9/27/11
                            176         1  Yes
                              6         .  </code></pre>
 </section>
-<section id="variable-_mergeq4" class="level3" data-number="23.0.10">
-<h3 data-number="23.0.10" class="anchored" data-anchor-id="variable-_mergeq4"><span class="header-section-number">23.0.10</span> Variable: <code>_mergeQ4</code></h3>
+<section id="variable-_mergeq4" class="level3" data-number="1.0.10">
+<h3 data-number="1.0.10" class="anchored" data-anchor-id="variable-_mergeq4"><span class="header-section-number">1.0.10</span> Variable: <code>_mergeQ4</code></h3>
 <pre class="text"><code>_mergeQ4                                                            (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -731,8 +522,8 @@ _mergeQ5                                                            (unlabeled)
                              1         2  using only (2)
                            187         3  matched (3)</code></pre>
 </section>
-<section id="variable-healthq6" class="level3" data-number="23.0.11">
-<h3 data-number="23.0.11" class="anchored" data-anchor-id="variable-healthq6"><span class="header-section-number">23.0.11</span> Variable: <code>healthQ6</code></h3>
+<section id="variable-healthq6" class="level3" data-number="1.0.11">
+<h3 data-number="1.0.11" class="anchored" data-anchor-id="variable-healthq6"><span class="header-section-number">1.0.11</span> Variable: <code>healthQ6</code></h3>
 <pre class="text"><code>healthQ6             How would you describe your current health? Quiz 6 11_3_11
                   type:  numeric (long)
                  label:  health
@@ -918,8 +709,8 @@ Days in the last week did you discuss THEATRE/ART outside of class? Quiz 7 11_1
                              2         5  7 Days
                              9         .  </code></pre>
 </section>
-<section id="variable-_mergeq7" class="level3" data-number="23.0.12">
-<h3 data-number="23.0.12" class="anchored" data-anchor-id="variable-_mergeq7"><span class="header-section-number">23.0.12</span> Variable: <code>_mergeQ7</code></h3>
+<section id="variable-_mergeq7" class="level3" data-number="1.0.12">
+<h3 data-number="1.0.12" class="anchored" data-anchor-id="variable-_mergeq7"><span class="header-section-number">1.0.12</span> Variable: <code>_mergeQ7</code></h3>
 <pre class="text"><code>_mergeQ7                                                            (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -992,8 +783,8 @@ alcoholQ8
                             14         .
 </code></pre>
 </section>
-<section id="variable-videogameq8" class="level3" data-number="23.0.13">
-<h3 data-number="23.0.13" class="anchored" data-anchor-id="variable-videogameq8"><span class="header-section-number">23.0.13</span> Variable: <code>videogameQ8</code></h3>
+<section id="variable-videogameq8" class="level3" data-number="1.0.13">
+<h3 data-number="1.0.13" class="anchored" data-anchor-id="variable-videogameq8"><span class="header-section-number">1.0.13</span> Variable: <code>videogameQ8</code></h3>
 <pre class="text"><code>videogameQ8    Days in the last week did you play video game? Quiz 8 11_16_2011
                   type:  numeric (long)
                  label:  days
@@ -1007,8 +798,8 @@ alcoholQ8
                              3         5  7 Days
                             14         .  </code></pre>
 </section>
-<section id="variable-_mergeq8" class="level3" data-number="23.0.14">
-<h3 data-number="23.0.14" class="anchored" data-anchor-id="variable-_mergeq8"><span class="header-section-number">23.0.14</span> Variable: <code>_mergeQ8</code></h3>
+<section id="variable-_mergeq8" class="level3" data-number="1.0.14">
+<h3 data-number="1.0.14" class="anchored" data-anchor-id="variable-_mergeq8"><span class="header-section-number">1.0.14</span> Variable: <code>_mergeQ8</code></h3>
 <pre class="text"><code>_mergeQ8                                                            (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1018,8 +809,8 @@ alcoholQ8
                             14         1  master only (1)
                            182         3  matched (3)</code></pre>
 </section>
-<section id="variable-overwhelmedq9" class="level3" data-number="23.0.15">
-<h3 data-number="23.0.15" class="anchored" data-anchor-id="variable-overwhelmedq9"><span class="header-section-number">23.0.15</span> Variable: <code>overwhelmedQ9</code></h3>
+<section id="variable-overwhelmedq9" class="level3" data-number="1.0.15">
+<h3 data-number="1.0.15" class="anchored" data-anchor-id="variable-overwhelmedq9"><span class="header-section-number">1.0.15</span> Variable: <code>overwhelmedQ9</code></h3>
 <pre class="text"><code>overwhelmedQ9   Days in the last week did you feel overwhelmed? Quiz 9 11_20_11
                   type:  numeric (long)
                  label:  days
@@ -1046,8 +837,8 @@ cheerfulQ9  Days in the last week did you attend feel cheerful? Quiz 9 11_20_11
                             27         5  7 Days
                              6         .  </code></pre>
 </section>
-<section id="variable-calmq9" class="level3" data-number="23.0.16">
-<h3 data-number="23.0.16" class="anchored" data-anchor-id="variable-calmq9"><span class="header-section-number">23.0.16</span> Variable: <code>calmQ9</code></h3>
+<section id="variable-calmq9" class="level3" data-number="1.0.16">
+<h3 data-number="1.0.16" class="anchored" data-anchor-id="variable-calmq9"><span class="header-section-number">1.0.16</span> Variable: <code>calmQ9</code></h3>
 <pre class="text"><code>calmQ9     Days in the last week did you feel calm and relaxed? Quiz 9 11_20_11
                   type:  numeric (long)
                  label:  days
@@ -1100,8 +891,8 @@ interestQ9
                             30         5  7 Days
                              6         .  </code></pre>
 </section>
-<section id="variable-overallq9" class="level3" data-number="23.0.17">
-<h3 data-number="23.0.17" class="anchored" data-anchor-id="variable-overallq9"><span class="header-section-number">23.0.17</span> Variable: <code>overallQ9</code></h3>
+<section id="variable-overallq9" class="level3" data-number="1.0.17">
+<h3 data-number="1.0.17" class="anchored" data-anchor-id="variable-overallq9"><span class="header-section-number">1.0.17</span> Variable: <code>overallQ9</code></h3>
 <pre class="text"><code>overallQ9       Days in the last week did you feel overwhelmed? Quiz 9 11_20_11
                   type:  numeric (long)
                  label:  overall
@@ -1117,8 +908,8 @@ interestQ9
                              6         .
 </code></pre>
 </section>
-<section id="variable-_mergeq9" class="level3" data-number="23.0.18">
-<h3 data-number="23.0.18" class="anchored" data-anchor-id="variable-_mergeq9"><span class="header-section-number">23.0.18</span> Variable: <code>_mergeQ9</code></h3>
+<section id="variable-_mergeq9" class="level3" data-number="1.0.18">
+<h3 data-number="1.0.18" class="anchored" data-anchor-id="variable-_mergeq9"><span class="header-section-number">1.0.18</span> Variable: <code>_mergeQ9</code></h3>
 <pre class="text"><code>_mergeQ9                                                            (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1128,8 +919,8 @@ interestQ9
                              6         1  master only (1)
                            190         3  matched (3)</code></pre>
 </section>
-<section id="variable-healthq10" class="level3" data-number="23.0.19">
-<h3 data-number="23.0.19" class="anchored" data-anchor-id="variable-healthq10"><span class="header-section-number">23.0.19</span> Variable: <code>healthQ10</code></h3>
+<section id="variable-healthq10" class="level3" data-number="1.0.19">
+<h3 data-number="1.0.19" class="anchored" data-anchor-id="variable-healthq10"><span class="header-section-number">1.0.19</span> Variable: <code>healthQ10</code></h3>
 <pre class="text"><code>healthQ10        How would you describe your current health? Quiz 10 11/23/2011
                   type:  numeric (long)
                  label:  health
@@ -1226,8 +1017,8 @@ embarrassedQ10                         During the last week, how many days did
                              1         5  7 Days
                             16         .  </code></pre>
 </section>
-<section id="variable-_mergeq10" class="level3" data-number="23.0.20">
-<h3 data-number="23.0.20" class="anchored" data-anchor-id="variable-_mergeq10"><span class="header-section-number">23.0.20</span> Variable: <code>_mergeQ10</code></h3>
+<section id="variable-_mergeq10" class="level3" data-number="1.0.20">
+<h3 data-number="1.0.20" class="anchored" data-anchor-id="variable-_mergeq10"><span class="header-section-number">1.0.20</span> Variable: <code>_mergeQ10</code></h3>
 <pre class="text"><code>_mergeQ10                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1346,8 +1137,8 @@ Days in the last week did you discuss THEATRE/ART outside of class? Quiz 11 11/
                              4         5  7 Days
                             18         .  </code></pre>
 </section>
-<section id="variable-_mergeq11" class="level3" data-number="23.0.21">
-<h3 data-number="23.0.21" class="anchored" data-anchor-id="variable-_mergeq11"><span class="header-section-number">23.0.21</span> Variable: <code>_mergeQ11</code></h3>
+<section id="variable-_mergeq11" class="level3" data-number="1.0.21">
+<h3 data-number="1.0.21" class="anchored" data-anchor-id="variable-_mergeq11"><span class="header-section-number">1.0.21</span> Variable: <code>_mergeQ11</code></h3>
 <pre class="text"><code>_mergeQ11                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1410,8 +1201,8 @@ Days in the last week did you watch live artistic performance? Quiz 12 11/30/20
                             22         .  
 alcoholQ12</code></pre>
 </section>
-<section id="variable-days" class="level3" data-number="23.0.22">
-<h3 data-number="23.0.22" class="anchored" data-anchor-id="variable-days"><span class="header-section-number">23.0.22</span> Variable: <code>Days</code></h3>
+<section id="variable-days" class="level3" data-number="1.0.22">
+<h3 data-number="1.0.22" class="anchored" data-anchor-id="variable-days"><span class="header-section-number">1.0.22</span> Variable: <code>Days</code></h3>
 <pre class="text"><code>Days in the last week did you consume an alcoholic beverage? Quiz 12 11/30/2011
                   type:  numeric (long)
                  label:  days
@@ -1425,8 +1216,8 @@ alcoholQ12</code></pre>
                              1         5  7 Days
                             22         .  </code></pre>
 </section>
-<section id="variable-videogameq12" class="level3" data-number="23.0.23">
-<h3 data-number="23.0.23" class="anchored" data-anchor-id="variable-videogameq12"><span class="header-section-number">23.0.23</span> Variable: <code>videogameQ12</code></h3>
+<section id="variable-videogameq12" class="level3" data-number="1.0.23">
+<h3 data-number="1.0.23" class="anchored" data-anchor-id="variable-videogameq12"><span class="header-section-number">1.0.23</span> Variable: <code>videogameQ12</code></h3>
 <pre class="text"><code>videogameQ12  Days in the last week did you play video game? Quiz 12 11/30/2011
                   type:  numeric (long)
                  label:  days
@@ -1441,8 +1232,8 @@ alcoholQ12</code></pre>
                              2         5  7 Days
                             22         .  </code></pre>
 </section>
-<section id="variable-_mergeq12" class="level3" data-number="23.0.24">
-<h3 data-number="23.0.24" class="anchored" data-anchor-id="variable-_mergeq12"><span class="header-section-number">23.0.24</span> Variable: <code>_mergeQ12</code></h3>
+<section id="variable-_mergeq12" class="level3" data-number="1.0.24">
+<h3 data-number="1.0.24" class="anchored" data-anchor-id="variable-_mergeq12"><span class="header-section-number">1.0.24</span> Variable: <code>_mergeQ12</code></h3>
 <pre class="text"><code>_mergeQ12                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1479,8 +1270,8 @@ cheerfulQ13
                             20         5  7 Days
                             84         .  </code></pre>
 </section>
-<section id="variable-calmq13" class="level3" data-number="23.0.25">
-<h3 data-number="23.0.25" class="anchored" data-anchor-id="variable-calmq13"><span class="header-section-number">23.0.25</span> Variable: <code>calmQ13</code></h3>
+<section id="variable-calmq13" class="level3" data-number="1.0.25">
+<h3 data-number="1.0.25" class="anchored" data-anchor-id="variable-calmq13"><span class="header-section-number">1.0.25</span> Variable: <code>calmQ13</code></h3>
 <pre class="text"><code>calmQ13  Days in the last week did you feel calm and relaxed? Quiz 13 12/4/2011
                   type:  numeric (long)
                  label:  days
@@ -1507,8 +1298,8 @@ activeQ13
                              7         5  7 Days
                             84         .  </code></pre>
 </section>
-<section id="variable-freshq13" class="level3" data-number="23.0.26">
-<h3 data-number="23.0.26" class="anchored" data-anchor-id="variable-freshq13"><span class="header-section-number">23.0.26</span> Variable: <code>freshQ13</code></h3>
+<section id="variable-freshq13" class="level3" data-number="1.0.26">
+<h3 data-number="1.0.26" class="anchored" data-anchor-id="variable-freshq13"><span class="header-section-number">1.0.26</span> Variable: <code>freshQ13</code></h3>
 <pre class="text"><code>freshQ13            Days in the last week did you feel fresh? Quiz 13 12/4/2011
                   type:  numeric (long)
                  label:  days
@@ -1536,8 +1327,8 @@ interestQ13
                             22         5  7 Days
                             84         .  </code></pre>
 </section>
-<section id="variable-overallq13" class="level3" data-number="23.0.27">
-<h3 data-number="23.0.27" class="anchored" data-anchor-id="variable-overallq13"><span class="header-section-number">23.0.27</span> Variable: <code>overallQ13</code></h3>
+<section id="variable-overallq13" class="level3" data-number="1.0.27">
+<h3 data-number="1.0.27" class="anchored" data-anchor-id="variable-overallq13"><span class="header-section-number">1.0.27</span> Variable: <code>overallQ13</code></h3>
 <pre class="text"><code>overallQ13    Days in the last week did you feel overwhelmed? Quiz 13 12/4/2011
                   type:  numeric (long)
                  label:  overall
@@ -1552,8 +1343,8 @@ interestQ13
                              1         6  Not sure
                             84         .  </code></pre>
 </section>
-<section id="variable-_mergeq13" class="level3" data-number="23.0.28">
-<h3 data-number="23.0.28" class="anchored" data-anchor-id="variable-_mergeq13"><span class="header-section-number">23.0.28</span> Variable: <code>_mergeQ13</code></h3>
+<section id="variable-_mergeq13" class="level3" data-number="1.0.28">
+<h3 data-number="1.0.28" class="anchored" data-anchor-id="variable-_mergeq13"><span class="header-section-number">1.0.28</span> Variable: <code>_mergeQ13</code></h3>
 <pre class="text"><code>_mergeQ13                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1564,8 +1355,8 @@ interestQ13
                             84         1  master only (1)
                            112         3  matched (3)</code></pre>
 </section>
-<section id="variable-healthq14" class="level3" data-number="23.0.29">
-<h3 data-number="23.0.29" class="anchored" data-anchor-id="variable-healthq14"><span class="header-section-number">23.0.29</span> Variable: <code>healthQ14</code></h3>
+<section id="variable-healthq14" class="level3" data-number="1.0.29">
+<h3 data-number="1.0.29" class="anchored" data-anchor-id="variable-healthq14"><span class="header-section-number">1.0.29</span> Variable: <code>healthQ14</code></h3>
 <pre class="text"><code>healthQ14         How would you describe your current health? Quiz 14 12/7/2011
                   type:  numeric (long)
                  label:  health
@@ -1640,8 +1431,8 @@ embarrassedQ14                         During the last week, how many days did
                              1         2  1 - 2 Days
                            194         .  </code></pre>
 </section>
-<section id="variable-_mergeq14" class="level3" data-number="23.0.30">
-<h3 data-number="23.0.30" class="anchored" data-anchor-id="variable-_mergeq14"><span class="header-section-number">23.0.30</span> Variable: <code>_mergeQ14</code></h3>
+<section id="variable-_mergeq14" class="level3" data-number="1.0.30">
+<h3 data-number="1.0.30" class="anchored" data-anchor-id="variable-_mergeq14"><span class="header-section-number">1.0.30</span> Variable: <code>_mergeQ14</code></h3>
 <pre class="text"><code>_mergeQ14                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1755,8 +1546,8 @@ Days in the last week did you discuss THEATRE/ART outside of class? Quiz 15 12/
                              3         3  3 - 4 Days
                            168         .  </code></pre>
 </section>
-<section id="variable-_mergeq15" class="level3" data-number="23.0.31">
-<h3 data-number="23.0.31" class="anchored" data-anchor-id="variable-_mergeq15"><span class="header-section-number">23.0.31</span> Variable: <code>_mergeQ15</code></h3>
+<section id="variable-_mergeq15" class="level3" data-number="1.0.31">
+<h3 data-number="1.0.31" class="anchored" data-anchor-id="variable-_mergeq15"><span class="header-section-number">1.0.31</span> Variable: <code>_mergeQ15</code></h3>
 <pre class="text"><code>_mergeQ15                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1817,8 +1608,8 @@ Days in the last week did you watch live artistic performance? Quiz 16 12/14/20
                             14         .  
 alcoholQ16</code></pre>
 </section>
-<section id="variable-days-1" class="level3" data-number="23.0.32">
-<h3 data-number="23.0.32" class="anchored" data-anchor-id="variable-days-1"><span class="header-section-number">23.0.32</span> Variable: <code>Days</code></h3>
+<section id="variable-days-1" class="level3" data-number="1.0.32">
+<h3 data-number="1.0.32" class="anchored" data-anchor-id="variable-days-1"><span class="header-section-number">1.0.32</span> Variable: <code>Days</code></h3>
 <pre class="text"><code>Days in the last week did you consume an alcoholic beverage? Quiz 16 12/14/2011
                   type:  numeric (long)
                  label:  days
@@ -1831,8 +1622,8 @@ alcoholQ16</code></pre>
                              4         3  3 - 4 Days
                             14         .  </code></pre>
 </section>
-<section id="variable-videogameq16" class="level3" data-number="23.0.33">
-<h3 data-number="23.0.33" class="anchored" data-anchor-id="variable-videogameq16"><span class="header-section-number">23.0.33</span> Variable: <code>videogameQ16</code></h3>
+<section id="variable-videogameq16" class="level3" data-number="1.0.33">
+<h3 data-number="1.0.33" class="anchored" data-anchor-id="variable-videogameq16"><span class="header-section-number">1.0.33</span> Variable: <code>videogameQ16</code></h3>
 <pre class="text"><code>videogameQ16  Days in the last week did you play video game? Quiz 16 12/14/2011
                   type:  numeric (long)
                  label:  days
@@ -1846,8 +1637,8 @@ alcoholQ16</code></pre>
                              4         5  7 Days
                             14         .  </code></pre>
 </section>
-<section id="variable-_mergeq16" class="level3" data-number="23.0.34">
-<h3 data-number="23.0.34" class="anchored" data-anchor-id="variable-_mergeq16"><span class="header-section-number">23.0.34</span> Variable: <code>_mergeQ16</code></h3>
+<section id="variable-_mergeq16" class="level3" data-number="1.0.34">
+<h3 data-number="1.0.34" class="anchored" data-anchor-id="variable-_mergeq16"><span class="header-section-number">1.0.34</span> Variable: <code>_mergeQ16</code></h3>
 <pre class="text"><code>_mergeQ16                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1884,8 +1675,8 @@ cheerfulQ17
                             24         5  7 Days
                             27         .  </code></pre>
 </section>
-<section id="variable-calmq17" class="level3" data-number="23.0.35">
-<h3 data-number="23.0.35" class="anchored" data-anchor-id="variable-calmq17"><span class="header-section-number">23.0.35</span> Variable: <code>calmQ17</code></h3>
+<section id="variable-calmq17" class="level3" data-number="1.0.35">
+<h3 data-number="1.0.35" class="anchored" data-anchor-id="variable-calmq17"><span class="header-section-number">1.0.35</span> Variable: <code>calmQ17</code></h3>
 <pre class="text"><code>calmQ17 Days in the last week did you feel calm and relaxed? Quiz 17 12/18/2011
                   type:  numeric (long)
                  label:  days
@@ -1913,8 +1704,8 @@ activeQ17
                             10         5  7 Days
                             27         .  </code></pre>
 </section>
-<section id="variable-freshq17" class="level3" data-number="23.0.36">
-<h3 data-number="23.0.36" class="anchored" data-anchor-id="variable-freshq17"><span class="header-section-number">23.0.36</span> Variable: <code>freshQ17</code></h3>
+<section id="variable-freshq17" class="level3" data-number="1.0.36">
+<h3 data-number="1.0.36" class="anchored" data-anchor-id="variable-freshq17"><span class="header-section-number">1.0.36</span> Variable: <code>freshQ17</code></h3>
 <pre class="text"><code>freshQ17           Days in the last week did you feel fresh? Quiz 17 12/18/2011
                   type:  numeric (long)
                  label:  days
@@ -1941,8 +1732,8 @@ interestQ17
                             24         5  7 Days
                             27         .  </code></pre>
 </section>
-<section id="variable-overallq17" class="level3" data-number="23.0.37">
-<h3 data-number="23.0.37" class="anchored" data-anchor-id="variable-overallq17"><span class="header-section-number">23.0.37</span> Variable: <code>overallQ17</code></h3>
+<section id="variable-overallq17" class="level3" data-number="1.0.37">
+<h3 data-number="1.0.37" class="anchored" data-anchor-id="variable-overallq17"><span class="header-section-number">1.0.37</span> Variable: <code>overallQ17</code></h3>
 <pre class="text"><code>overallQ17   Days in the last week did you feel overwhelmed? Quiz 17 12/18/2011
                   type:  numeric (long)
                  label:  overall
@@ -1958,8 +1749,8 @@ interestQ17
                              2         6  Not sure
                             27         .  </code></pre>
 </section>
-<section id="variable-_mergeq17" class="level3" data-number="23.0.38">
-<h3 data-number="23.0.38" class="anchored" data-anchor-id="variable-_mergeq17"><span class="header-section-number">23.0.38</span> Variable: <code>_mergeQ17</code></h3>
+<section id="variable-_mergeq17" class="level3" data-number="1.0.38">
+<h3 data-number="1.0.38" class="anchored" data-anchor-id="variable-_mergeq17"><span class="header-section-number">1.0.38</span> Variable: <code>_mergeQ17</code></h3>
 <pre class="text"><code>_mergeQ17                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -1969,8 +1760,8 @@ interestQ17
                             27         1  master only (1)
                            169         3  matched (3)</code></pre>
 </section>
-<section id="variable-healthq18" class="level3" data-number="23.0.39">
-<h3 data-number="23.0.39" class="anchored" data-anchor-id="variable-healthq18"><span class="header-section-number">23.0.39</span> Variable: <code>healthQ18</code></h3>
+<section id="variable-healthq18" class="level3" data-number="1.0.39">
+<h3 data-number="1.0.39" class="anchored" data-anchor-id="variable-healthq18"><span class="header-section-number">1.0.39</span> Variable: <code>healthQ18</code></h3>
 <pre class="text"><code>healthQ18        How would you describe your current health? Quiz 18 12/21/2011
                   type:  numeric (long)
                  label:  health
@@ -1999,8 +1790,8 @@ During the last week how often did you exercise or play sports? Quiz 18 12/21/2
                             30         .  
 sleepQ18</code></pre>
 </section>
-<section id="variable-during" class="level3" data-number="23.0.40">
-<h3 data-number="23.0.40" class="anchored" data-anchor-id="variable-during"><span class="header-section-number">23.0.40</span> Variable: <code>During</code></h3>
+<section id="variable-during" class="level3" data-number="1.0.40">
+<h3 data-number="1.0.40" class="anchored" data-anchor-id="variable-during"><span class="header-section-number">1.0.40</span> Variable: <code>During</code></h3>
 <pre class="text"><code>During the last week, how much sleep did you get each night? Quiz 18 12/21/2011
                   type:  numeric (long)
                  label:  sleep
@@ -2188,8 +1979,8 @@ Days in the last week did you discuss THEATRE/ART outside of class? QUIZ 19 12/
                              2         5  7 Days
                             53         .  </code></pre>
 </section>
-<section id="variable-_mergeq19" class="level3" data-number="23.0.41">
-<h3 data-number="23.0.41" class="anchored" data-anchor-id="variable-_mergeq19"><span class="header-section-number">23.0.41</span> Variable: <code>_mergeQ19</code></h3>
+<section id="variable-_mergeq19" class="level3" data-number="1.0.41">
+<h3 data-number="1.0.41" class="anchored" data-anchor-id="variable-_mergeq19"><span class="header-section-number">1.0.41</span> Variable: <code>_mergeQ19</code></h3>
 <pre class="text"><code>_mergeQ19                                                           (unlabeled)
                   type:  numeric (byte)
                  label:  _merge
@@ -2206,6 +1997,7 @@ Days in the last week did you discuss THEATRE/ART outside of class? QUIZ 19 12/
 </code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -2296,6 +2088,11 @@ Days in the last week did you discuss THEATRE/ART outside of class? QUIZ 19 12/
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -2609,19 +2406,20 @@ Days in the last week did you discuss THEATRE/ART outside of class? QUIZ 19 12/
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../Codebooks/PolQuizzesCodebook.html" class="pagination-link" aria-label="PolQuizzesCodebook">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">PolQuizzesCodebook</span></span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../Metadata and Mappings/Semester Dates.html" class="pagination-link" aria-label="Semester Dates">
-        <span class="nav-page-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Semester Dates</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© 2026 NetSense Research Team</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
