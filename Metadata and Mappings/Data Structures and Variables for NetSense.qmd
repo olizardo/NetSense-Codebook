@@ -1,0 +1,28 @@
+Data Structures and Variables for NetSense
+
+There are three types of data:
+
+- Event data: indicating when a communication event occurred and between
+  whom (and other information)
+
+- Dyadic data: For a give time period, frequencies of interaction
+  between two nodes. Created by collapsing event data over a time period
+  and over node pairs.
+
+- Node data: For a given time period, counts of people i communicated
+  with (degree), along with activity levels
+
+For the dyadic and node data the notation references nodes i and j, and
+time period t.
+
+e~ijt~ = 1. An **edge** exists if in time period t (e.g., week 1) i
+initiated a communication event with j.
+
+If e~ijt~ = e~jit~ = 1, the tie is mutual in that week.
+
+We defined a **new tie,** e\*ijt = 1 as one where eijt= 1 and ejit' = 1
+where t' ≤ t. That is one edge has occurred in that week or a prior
+week, and now the other edge occurs in week t.
+
+We define an active tie in a given week, aijt = 1, if e\*ijt' = 1 for t'
+≤ t and eijt = 1 or ejit= 1

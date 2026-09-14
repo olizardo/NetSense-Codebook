@@ -1,0 +1,7 @@
+# Dorm Value Labels
+
+This document contains the value labels for the student dormitories. Because the original document is a scanned image, the text cannot be extracted, but you can view the document below. 
+
+[Download Dorm Value Labels (PDF)](DormValueLabels.pdf)
+
+<iframe src="DormValueLabels.pdf" width="100%" height="800px"></iframe>

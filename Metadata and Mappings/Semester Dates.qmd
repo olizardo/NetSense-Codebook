@@ -1,0 +1,12 @@
+# Semester Dates
+
+This table outlines the beginning and end dates for each semester of the study.
+
+```{r}
+#| echo: false
+#| message: false
+library(readr)
+library(knitr)
+df <- read_csv("Semester Dates.csv", show_col_types = FALSE)
+kable(df)
+```

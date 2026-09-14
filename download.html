@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Download – NetSense Study Codebook</title>
+<title>download – NetSense Study Codebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -160,54 +160,70 @@ window.Quarto = {
  <span class="menu-text">Survey Instruments</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-survey-instruments">    
+        <li class="dropdown-header">Demographic Surveys</li>
         <li>
     <a class="dropdown-item" href="./Codebooks/Summer2011Demog(W1).html">
- <span class="dropdown-text">Summer2011Demog(W1)</span></a>
+ <span class="dropdown-text">Wave 1: Summer 2011 (Demog)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Spring2012Demog(W2).html">
- <span class="dropdown-text">Spring2012Demog(W2)</span></a>
+ <span class="dropdown-text">Wave 2: Spring 2012 (Demog)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Summer2012Demog(W3).html">
- <span class="dropdown-text">Summer2012Demog(W3)</span></a>
+ <span class="dropdown-text">Wave 3: Summer 2012 (Demog)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Fall2012Demog(W4).html">
- <span class="dropdown-text">Fall2012Demog(W4)</span></a>
+ <span class="dropdown-text">Wave 4: Fall 2012 (Demog)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Winter2013Demog(W5).html">
- <span class="dropdown-text">Winter2013Demog(W5)</span></a>
+ <span class="dropdown-text">Wave 5: Winter 2013 (Demog)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Summer2013Demog(W6).html">
- <span class="dropdown-text">Summer2013Demog(W6)</span></a>
+ <span class="dropdown-text">Wave 6: Summer 2013 (Demog)</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Network Surveys</li>
         <li>
     <a class="dropdown-item" href="./Codebooks/Summer2011Net(W1).html">
- <span class="dropdown-text">Summer2011Net(W1)</span></a>
+ <span class="dropdown-text">Wave 1: Summer 2011 (Network)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Spring2012Net(W2).html">
- <span class="dropdown-text">Spring2012Net(W2)</span></a>
+ <span class="dropdown-text">Wave 2: Spring 2012 (Network)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Summer2012Net(W3).html">
- <span class="dropdown-text">Summer2012Net(W3)</span></a>
+ <span class="dropdown-text">Wave 3: Summer 2012 (Network)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Fall2012Net(W4).html">
- <span class="dropdown-text">Fall2012Net(W4)</span></a>
+ <span class="dropdown-text">Wave 4: Fall 2012 (Network)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Winter2013Net(W5).html">
- <span class="dropdown-text">Winter2013Net(W5)</span></a>
+ <span class="dropdown-text">Wave 5: Winter 2013 (Network)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./Codebooks/Summer2013Net(W6).html">
- <span class="dropdown-text">Summer2013Net(W6)</span></a>
+ <span class="dropdown-text">Wave 6: Summer 2013 (Network)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li class="dropdown-header">Specialized Codebooks</li>
+        <li>
+    <a class="dropdown-item" href="./Codebooks/QuizDataCodebook.html">
+ <span class="dropdown-text">Weekly Quiz Codebook</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Codebooks/PolQuizzesCodebook.html">
+ <span class="dropdown-text">Political Quizzes Codebook</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./Codebooks/EdgleListRenumberCodebook.html">
+ <span class="dropdown-text">Edge List Codebook</span></a>
   </li>  
     </ul>
   </li>
@@ -242,89 +258,104 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#longitudinal-network-and-demographic-surveys" id="toc-longitudinal-network-and-demographic-surveys" class="nav-link active" data-scroll-target="#longitudinal-network-and-demographic-surveys"><span class="header-section-number">1</span> Longitudinal Network and Demographic Surveys</a></li>
-  <li><a href="#perceived-alter-to-alter-network-ties" id="toc-perceived-alter-to-alter-network-ties" class="nav-link" data-scroll-target="#perceived-alter-to-alter-network-ties"><span class="header-section-number">2</span> Perceived Alter-to-Alter Network Ties</a></li>
-  <li><a href="#ego-network-structural-metrics" id="toc-ego-network-structural-metrics" class="nav-link" data-scroll-target="#ego-network-structural-metrics"><span class="header-section-number">3</span> Ego-Network Structural Metrics</a></li>
-  <li><a href="#bluetooth-proximity-data" id="toc-bluetooth-proximity-data" class="nav-link" data-scroll-target="#bluetooth-proximity-data"><span class="header-section-number">4</span> Bluetooth Proximity Data</a></li>
-  <li><a href="#anonymized-telemetry-data" id="toc-anonymized-telemetry-data" class="nav-link" data-scroll-target="#anonymized-telemetry-data"><span class="header-section-number">5</span> Anonymized Telemetry Data</a></li>
-  <li><a href="#variable-catalog" id="toc-variable-catalog" class="nav-link" data-scroll-target="#variable-catalog"><span class="header-section-number">6</span> Variable Catalog</a></li>
+  <li><a href="#sec-download" id="toc-sec-download" class="nav-link active" data-scroll-target="#sec-download"><span class="header-section-number">1</span> Data Download</a>
+  <ul class="collapse">
+  <li><a href="#longitudinal-social-network-surveys" id="toc-longitudinal-social-network-surveys" class="nav-link" data-scroll-target="#longitudinal-social-network-surveys"><span class="header-section-number">1.1</span> Longitudinal Social Network Surveys</a></li>
+  <li><a href="#perceived-alter-to-alter-network-ties" id="toc-perceived-alter-to-alter-network-ties" class="nav-link" data-scroll-target="#perceived-alter-to-alter-network-ties"><span class="header-section-number">1.2</span> Perceived Alter-to-Alter Network Ties</a></li>
+  <li><a href="#ego-network-structural-metrics" id="toc-ego-network-structural-metrics" class="nav-link" data-scroll-target="#ego-network-structural-metrics"><span class="header-section-number">1.3</span> Ego-Network Structural Metrics</a></li>
+  <li><a href="#longitudinal-demographic-behavioral-surveys" id="toc-longitudinal-demographic-behavioral-surveys" class="nav-link" data-scroll-target="#longitudinal-demographic-behavioral-surveys"><span class="header-section-number">1.4</span> Longitudinal Demographic &amp; Behavioral Surveys</a></li>
+  <li><a href="#high-frequency-quiz-responses-master" id="toc-high-frequency-quiz-responses-master" class="nav-link" data-scroll-target="#high-frequency-quiz-responses-master"><span class="header-section-number">1.5</span> High-Frequency Quiz Responses (Master)</a></li>
+  <li><a href="#physical-proximity-networks-bluetooth" id="toc-physical-proximity-networks-bluetooth" class="nav-link" data-scroll-target="#physical-proximity-networks-bluetooth"><span class="header-section-number">1.6</span> Physical Proximity Networks (Bluetooth)</a></li>
+  <li><a href="#variable-catalog-mapping-dictionaries" id="toc-variable-catalog-mapping-dictionaries" class="nav-link" data-scroll-target="#variable-catalog-mapping-dictionaries"><span class="header-section-number">1.7</span> Variable Catalog &amp; Mapping Dictionaries</a></li>
+  <li><a href="#communication-telemetry-data" id="toc-communication-telemetry-data" class="nav-link" data-scroll-target="#communication-telemetry-data"><span class="header-section-number">1.8</span> Communication Telemetry Data</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="download.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Data Download</h1>
+
+
+
+<section id="sec-download" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Data Download</h1>
+<p>The cleaned, de-identified datasets from the NetSense study are available for open academic research. All files have been programmatically scrubbed of sensitive personal identifiers (including student names, email addresses, NetIDs, and raw telephone numbers).</p>
+<hr>
+<section id="longitudinal-social-network-surveys" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="longitudinal-social-network-surveys"><span class="header-section-number">1.1</span> Longitudinal Social Network Surveys</h2>
+<p>Longitudinal panel tracking dyadic nominations between students across Waves 1–8 (<span class="math inline">\(N = 11,818\)</span> nominations). Includes subjective closeness, relationship duration, tie categories, contact frequencies, and emotional profiles.</p>
+<p><a href="Data/network_surveys_longitudinal_clean.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> CSV Dataset (.csv, 33 MB)</a> <a href="Data/network_surveys_longitudinal_clean.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 600 KB)</a> <a href="Data/network_surveys_longitudinal_clean.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 89 MB)</a> <a href="Data/network_surveys_longitudinal_clean.sav" class="download-btn download-sav"><i class="bi bi-file-earmark-bar-graph"></i> SPSS Dataset (.sav, 4 MB)</a></p>
+<hr>
+</section>
+<section id="perceived-alter-to-alter-network-ties" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="perceived-alter-to-alter-network-ties"><span class="header-section-number">1.2</span> Perceived Alter-to-Alter Network Ties</h2>
+<p>Dyadic edge list capturing all perceived acquaintance ties between nominated alters within each participant’s personal network across Waves 1–5, 7, and 8 (<span class="math inline">\(N = 29,473\)</span> perceived ties).</p>
+<p><a href="Data/alter_alter_ties_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Alter-Alter Ties (.csv, 1.4 MB)</a> <a href="Data/alter_alter_ties_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Alter-Alter Ties (.rds, 180 KB)</a> <a href="Data/alter_alter_ties_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Alter-Alter Ties (.dta, 2.1 MB)</a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Wave 6 Survey Design
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Perceived alter-to-alter tie data was deliberately omitted from the Wave 6 (Summer 2013) survey instrument to reduce respondent burden during summer break. Full alter-to-alter batteries were reinstated in Waves 7 and 8.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="ego-network-structural-metrics" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="ego-network-structural-metrics"><span class="header-section-number">1.3</span> Ego-Network Structural Metrics</h2>
+<p>Longitudinal summary panel (<span class="math inline">\(N = 804\)</span> ego-waves) tracking personal network size (<span class="math inline">\(k\)</span>), potential alter pairs (<span class="math inline">\(\binom{k}{2}\)</span>), reported ties, and personal network density / local clustering coefficients.</p>
+<p><a href="Data/ego_network_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Metrics (.csv, 42 KB)</a> <a href="Data/ego_network_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Ego Metrics (.rds, 10 KB)</a> <a href="Data/ego_network_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Ego Metrics (.dta, 85 KB)</a></p>
+<hr>
+</section>
+<section id="longitudinal-demographic-behavioral-surveys" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="longitudinal-demographic-behavioral-surveys"><span class="header-section-number">1.4</span> Longitudinal Demographic &amp; Behavioral Surveys</h2>
+<p>Wide individual-level panel (<span class="math inline">\(N = 203\)</span> students, 1,556 variables) tracking demographic backgrounds, Big Five personality inventories, GPAs, lifestyles, sleep habits, musical tastes, and activities across Waves 1–6.</p>
+<p><a href="Surveys/demographics_longitudinal_clean.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> CSV Dataset (.csv, 2.7 MB)</a> <a href="Surveys/demographics_longitudinal_clean.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 280 KB)</a> <a href="Surveys/demographics_longitudinal_clean.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 6.2 MB)</a> <a href="Surveys/demographics_longitudinal_clean.sav" class="download-btn download-sav"><i class="bi bi-file-earmark-bar-graph"></i> SPSS Dataset (.sav, 4.3 MB)</a></p>
+<hr>
+</section>
+<section id="high-frequency-quiz-responses-master" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="high-frequency-quiz-responses-master"><span class="header-section-number">1.5</span> High-Frequency Quiz Responses (Master)</h2>
+<p>High-frequency survey check-ins across semesters (<span class="math inline">\(N = 194\)</span> students, 146 variables) measuring student emotional well-being, health, and campus engagement.</p>
+<p><a href="Data/Quizzes/Quiz_Responses_Master.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Quiz CSV (.csv, 65 KB)</a> <a href="Data/Quizzes/Quiz_Responses_Master.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Quiz Stata (.dta, 320 KB)</a></p>
+<hr>
+</section>
+<section id="physical-proximity-networks-bluetooth" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="physical-proximity-networks-bluetooth"><span class="header-section-number">1.6</span> Physical Proximity Networks (Bluetooth)</h2>
+<p>Aggregated undirected weekly contact networks (<span class="math inline">\(N = 165,967\)</span> dyad-weeks) based on high-resolution Bluetooth proximity episodes across academic weeks 8–41.</p>
+<p><a href="Data/weekly_contact_networks_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Weekly Contact Networks (.csv, 6.7 MB)</a> <a href="Metadata and Mappings/BT_egoid_mapping.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Bluetooth-to-EgoID Key (.csv, 3 KB)</a></p>
+<hr>
+</section>
+<section id="variable-catalog-mapping-dictionaries" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="variable-catalog-mapping-dictionaries"><span class="header-section-number">1.7</span> Variable Catalog &amp; Mapping Dictionaries</h2>
+<p>Comprehensive machine-readable dictionary covering all survey variables, survey questions, and response value labels.</p>
+<p><a href="Metadata and Mappings/variable_catalog.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Full Variable Catalog (.csv, 450 KB)</a> <a href="Metadata and Mappings/Dorm Distances.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-spreadsheet"></i> Dorm Distances Matrix (.csv, 2 KB)</a> <a href="Metadata and Mappings/Semester Dates.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-spreadsheet"></i> Semester Dates (.csv, 1 KB)</a></p>
+<hr>
+</section>
+<section id="communication-telemetry-data" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="communication-telemetry-data"><span class="header-section-number">1.8</span> Communication Telemetry Data</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Restricted Access
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Due to institutional review board (IRB) privacy restrictions and massive data volumes (exceeding 25 GB), raw and fine-grained communication telemetry logs (phone call duration logs, SMS message timestamps, and email traffic) cannot be hosted directly for public web download.</p>
+<p>Aggregated weekly communication volumes (indegree, outdegree, and weekly text/voice flows) are available in <code>Data/weekly_aggregated_metrics/</code>. Researchers interested in accessing de-identified communication logs for replication purposes should contact the study investigators at <strong>netsense@nd.edu</strong>.</p>
+</div>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>The cleaned and standardized data from the NetSense study is available for download here. These files have been processed to remove personally identifiable information (PII) such as names and exact phone numbers.</p>
-<section id="longitudinal-network-and-demographic-surveys" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="longitudinal-network-and-demographic-surveys"><span class="header-section-number">1</span> Longitudinal Network and Demographic Surveys</h2>
-<p>The merged longitudinal dataset containing both demographic survey responses and network ties across all waves.</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/network_surveys_longitudinal_clean.csv">Download as CSV</a> (33 MB)</li>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/network_surveys_longitudinal_clean.dta">Download as Stata .dta</a> (89 MB)</li>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/network_surveys_longitudinal_clean.rds">Download as R .rds</a> (600 KB)</li>
-</ul>
 </section>
-<section id="perceived-alter-to-alter-network-ties" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="perceived-alter-to-alter-network-ties"><span class="header-section-number">2</span> Perceived Alter-to-Alter Network Ties</h2>
-<p>Dyadic edge list capturing all perceived acquaintance ties between nominated alters within each participant’s ego network across Waves 1–5, 7, and 8 (29,473 ties).</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/alter_alter_ties_longitudinal.csv">Download Alter-Alter Ties as CSV</a> (1.4 MB)</li>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/alter_alter_ties_longitudinal.dta">Download Alter-Alter Ties as Stata .dta</a> (2.1 MB)</li>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/alter_alter_ties_longitudinal.rds">Download Alter-Alter Ties as R .rds</a> (180 KB)</li>
-</ul>
-</section>
-<section id="ego-network-structural-metrics" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="ego-network-structural-metrics"><span class="header-section-number">3</span> Ego-Network Structural Metrics</h2>
-<p>Longitudinal ego-level structural indicators (<span class="math inline">\(N = 804\)</span> ego-waves) tracking personal network size (<span class="math inline">\(k\)</span>), potential alter pairs (<span class="math inline">\(\binom{k}{2}\)</span>), perceived ties, and alter network density (clustering coefficient).</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/ego_network_metrics_longitudinal.csv">Download Ego-Network Metrics as CSV</a> (42 KB)</li>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/ego_network_metrics_longitudinal.dta">Download Ego-Network Metrics as Stata .dta</a> (85 KB)</li>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/ego_network_metrics_longitudinal.rds">Download Ego-Network Metrics as R .rds</a> (10 KB)</li>
-</ul>
-</section>
-<section id="bluetooth-proximity-data" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="bluetooth-proximity-data"><span class="header-section-number">4</span> Bluetooth Proximity Data</h2>
-<p>Aggregated weekly contact networks based on high-resolution Bluetooth proximity episodes.</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/weekly_contact_networks_longitudinal.csv">Download Weekly Contact Networks (CSV)</a></li>
-</ul>
-</section>
-<section id="anonymized-telemetry-data" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="anonymized-telemetry-data"><span class="header-section-number">5</span> Anonymized Telemetry Data</h2>
-<p>Large-scale communications telemetry. (Note: These files are quite large.)</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/Anonymized_Telemetry/phonecalls_anonymized.csv">Phone Calls (CSV)</a></li>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/Anonymized_Telemetry/sms_anonymized.csv">SMS (CSV)</a></li>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Data/Anonymized_Telemetry/emails_anonymized.csv">Emails (CSV)</a></li>
-</ul>
-</section>
-<section id="variable-catalog" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="variable-catalog"><span class="header-section-number">6</span> Variable Catalog</h2>
-<p>The complete variable dictionary across all datasets.</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/olizardo/NetSense/main/Metadata%20and%20Mappings/variable_catalog.csv">Download Variable Catalog (CSV)</a></li>
-</ul>
-
-
 </section>
 
 </main> <!-- /main -->

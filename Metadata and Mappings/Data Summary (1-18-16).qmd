@@ -1,0 +1,60 @@
+Data as of 1/18/2016 ( most of this is in NetSense/DATA/Annon Data)
+
+Revised 3/4/16
+
+- *NetSenseBehavioralDataActiveEffectiveByWeek.csv*: Arc list with
+  weekly indicators of whether arc was active and/or effective in each
+  week (weeks 0-107). Created by Matt from event data
+
+- *NetSenseBehavioralDataCodedForR.csv*: Event list created by Matt.
+  Very big
+
+  - EgoID - from whose phone data retrieved
+
+  - See document *Ego and Alter Coding Conventions* for coding of ego
+    and alters
+
+- *demsurveyMergedCodedDisID.csv*: Merged Survey data (wide) with
+  identifying info removed. Created by Lizardo from
+  *demsurveyEncodedAC.csv* which was created by Matt. See
+  dis-identifying-code.do and demsurveyIdentifiers.csv in
+  DATA/Demographic Survey .\
+  \
+  NOTE: Club codes have been merged in. For what codes mean see
+  20152303_clubs_list_master_code_csv and 20153203_clubs_list_code_key
+  in DOCUMENTATION/Clubs Coding
+
+- *demsurveyEncodedAC.csv*: NOT REMOVE ID STUFF. NEED TO RUN OMAR'S .DO
+  PROGRAM
+
+- *netsurveysMergedWideCodedFDAC.csv*: Created my Matt. This is list of
+  all alters named by a study participant in 1 of the six waves for the
+  network survey. \[***Merged in codes for activities names by ego based
+  on Carly coding \-- see Documentation/Activities Coding***\]. Data is
+  only some of the data from network survey: NEED TO GO OVER THIS FILE
+
+- *arcWeeklyTableCombined.csv*: Created by Matt. Extended version of
+  *NetSenseBehavioralDataActiveEffectiveByWeek.csv.* This file has for
+  each arc (pair) a set of measures for both the week (frequency, freq
+  broken down by text vs calls, active and effective dummy, sums for sms
+  length and calls duration, reciprocated dummy and weighted) and
+  cumulative (e.g, effective age, active age, cumul freq, etc.) Need to
+  get full documentation from Matt
+
+Other Data
+
+- *top20survey.xlsx*: Edge list with information on alter of
+  participants/ego (gender, closeness, relaton, ND, years known) obtain
+  from ego through a google "form." This is in NetSenseTop20 folder.
+
+- Grade data: Raw file from registrar is Hachen Final Grade Report.xlsx.
+  Uses anon id numbers for subjects. Codes are on Grade Codes sheet.
+  Mike generated dyad file that list all pairs of instudy subjects that
+  took the same class in a given semester. File is
+  ClassDyads-2015-09-30.csv. Data needs to be merged into ???? Also need
+  to get the grade data in order, and work on identifying students with
+  similar courses (courses in same subject area).
+
+- quiz data: These were pushed to students. There were two sets, a
+  general set with lots of questions and a political set around the
+  elections. They are in DATA/Quiz Data folder. y

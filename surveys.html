@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>citation – NetSense Study Codebook</title>
+<title>surveys – NetSense Study Codebook</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -109,35 +109,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -267,7 +238,7 @@ window.Quarto = {
 <span class="menu-text">Reports &amp; Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./citation.html" aria-current="page"> 
+    <a class="nav-link" href="./citation.html"> 
 <span class="menu-text">Citation</span></a>
   </li>  
 </ul>
@@ -293,21 +264,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-citation" id="toc-sec-citation" class="nav-link active" data-scroll-target="#sec-citation"><span class="header-section-number">1</span> Citation Guide</a>
+  <li><a href="#sec-surveys" id="toc-sec-surveys" class="nav-link active" data-scroll-target="#sec-surveys"><span class="header-section-number">1</span> Demographic, Behavioral, &amp; Quiz Surveys</a>
   <ul class="collapse">
-  <li><a href="#dataset-statistics-at-a-glance" id="toc-dataset-statistics-at-a-glance" class="nav-link" data-scroll-target="#dataset-statistics-at-a-glance"><span class="header-section-number">1.1</span> Dataset Statistics at a Glance</a></li>
-  <li><a href="#citing-the-netsense-dataset" id="toc-citing-the-netsense-dataset" class="nav-link" data-scroll-target="#citing-the-netsense-dataset"><span class="header-section-number">1.2</span> 1. Citing the NetSense Dataset</a>
-  <ul class="collapse">
-  <li><a href="#apa-7th-edition" id="toc-apa-7th-edition" class="nav-link" data-scroll-target="#apa-7th-edition"><span class="header-section-number">1.2.1</span> APA 7th Edition</a></li>
-  <li><a href="#chicago-manual-of-style-author-date" id="toc-chicago-manual-of-style-author-date" class="nav-link" data-scroll-target="#chicago-manual-of-style-author-date"><span class="header-section-number">1.2.2</span> Chicago Manual of Style (Author-Date)</a></li>
-  </ul></li>
-  <li><a href="#citing-this-codebook-standardized-panels" id="toc-citing-this-codebook-standardized-panels" class="nav-link" data-scroll-target="#citing-this-codebook-standardized-panels"><span class="header-section-number">1.3</span> 2. Citing this Codebook &amp; Standardized Panels</a>
-  <ul class="collapse">
-  <li><a href="#apa-7th-edition-1" id="toc-apa-7th-edition-1" class="nav-link" data-scroll-target="#apa-7th-edition-1"><span class="header-section-number">1.3.1</span> APA 7th Edition</a></li>
-  <li><a href="#chicago-manual-of-style-author-date-1" id="toc-chicago-manual-of-style-author-date-1" class="nav-link" data-scroll-target="#chicago-manual-of-style-author-date-1"><span class="header-section-number">1.3.2</span> Chicago Manual of Style (Author-Date)</a></li>
-  </ul></li>
-  <li><a href="#bibtex-entries" id="toc-bibtex-entries" class="nav-link" data-scroll-target="#bibtex-entries"><span class="header-section-number">1.4</span> 3. BibTeX Entries</a></li>
-  <li><a href="#funding-and-acknowledgments" id="toc-funding-and-acknowledgments" class="nav-link" data-scroll-target="#funding-and-acknowledgments"><span class="header-section-number">1.5</span> 4. Funding and Acknowledgments</a></li>
+  <li><a href="#main-demographic-surveys" id="toc-main-demographic-surveys" class="nav-link" data-scroll-target="#main-demographic-surveys"><span class="header-section-number">1.1</span> Main Demographic Surveys</a></li>
+  <li><a href="#dataset-quick-profile" id="toc-dataset-quick-profile" class="nav-link" data-scroll-target="#dataset-quick-profile"><span class="header-section-number">1.2</span> Dataset Quick Profile</a></li>
+  <li><a href="#major-variable-groupings" id="toc-major-variable-groupings" class="nav-link" data-scroll-target="#major-variable-groupings"><span class="header-section-number">1.3</span> Major Variable Groupings</a></li>
+  <li><a href="#quiz-responses-master" id="toc-quiz-responses-master" class="nav-link" data-scroll-target="#quiz-responses-master"><span class="header-section-number">1.4</span> Quiz Responses (Master)</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -318,133 +280,124 @@ window.Quarto = {
 
 
 
-<section id="sec-citation" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Citation Guide</h1>
-<p>If you use the NetSense dataset, the de-identified data panels, or this Quarto codebook in an academic publication, presentation, or report, please cite both the original dataset and this codebook as described below.</p>
+<section id="sec-surveys" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Demographic, Behavioral, &amp; Quiz Surveys</h1>
+<p>This section describes the individual-level demographic and behavioral survey datasets, as well as the specialized quiz responses. You can download the complete, de-identified longitudinal panels below.</p>
+<section id="main-demographic-surveys" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="main-demographic-surveys"><span class="header-section-number">1.1</span> Main Demographic Surveys</h2>
+<p><a href="Surveys/demographics_longitudinal_clean.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download CSV Dataset (.csv)</a> <a href="Surveys/demographics_longitudinal_clean.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds)</a> <a href="Surveys/demographics_longitudinal_clean.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta)</a> <a href="Surveys/demographics_longitudinal_clean.sav" class="download-btn download-sav"><i class="bi bi-file-earmark-bar-graph"></i> Download SPSS Dataset (.sav)</a></p>
+<p><strong>Interactive Survey Instruments</strong></p>
+<p>Explore the fully digitized survey instruments for each wave below:</p>
+<ul>
+<li><a href="./Codebooks/Summer2011Demog(W1).html">Wave 1: Summer 2011 Demographic Survey</a></li>
+<li><a href="./Codebooks/Spring2012Demog(W2).html">Wave 2: Spring 2012 Demographic Survey</a></li>
+<li><a href="./Codebooks/Summer2012Demog(W3).html">Wave 3: Summer 2012 Demographic Survey</a></li>
+<li><a href="./Codebooks/Fall2012Demog(W4).html">Wave 4: Fall 2012 Demographic Survey</a></li>
+<li><a href="./Codebooks/Winter2013Demog(W5).html">Wave 5: Winter 2013 Demographic Survey</a></li>
+<li><a href="./Codebooks/Summer2013Demog(W6).html">Wave 6: Summer 2013 Demographic Survey</a></li>
+</ul>
+<p>This dataset combines survey responses from 203 Notre Dame students across 6 consecutive waves, capturing demographic backgrounds, personality inventories (e.g., Big Five), academic metrics (GPAs), musical and artistic preferences, lifestyle behaviors, and campus engagement.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Security &amp; Privacy Scrubbing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The raw demographic dataset originally contained sensitive participant identifiers. A secure, programmatic R script (<code>Code/scrub_demographics.R</code>) has been run to drop 38 personal identifying columns containing: - Participant first names and last names (<code>firstname_*</code>, <code>lastname_*</code>, <code>v1532</code>, <code>v1180</code>, etc.) - University NetIDs and emails (<code>netid</code>, <code>netid_*</code>, <code>emailaddress_*</code>) - Raw cellular telephone numbers (<code>phonenumber</code>)</p>
+</div>
+</div>
 <hr>
-<section id="dataset-statistics-at-a-glance" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="dataset-statistics-at-a-glance"><span class="header-section-number">1.1</span> Dataset Statistics at a Glance</h2>
-<p>Below is a quick reference table showing the sizes and scopes of the standardized datasets available in this release.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
+</section>
+<section id="dataset-quick-profile" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="dataset-quick-profile"><span class="header-section-number">1.2</span> Dataset Quick Profile</h2>
+<p>Below is a quick programmatic summary of the clean demographic survey data loaded directly from the processed CSV.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load clean demographics dataset</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>dem_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Surveys/demographics_longitudinal_clean.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Profile metrics</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>profile <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Metric =</span> <span class="fu">c</span>(<span class="st">"Total Students (Egos)"</span>, <span class="st">"Total Survey Attributes"</span>, <span class="st">"Sensitive Columns Safely Dropped"</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Value =</span> <span class="fu">c</span>(<span class="fu">nrow</span>(dem_df), <span class="fu">ncol</span>(dem_df), <span class="dv">38</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(profile, <span class="at">caption =</span> <span class="st">"Processed Demographic Survey Profile"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-dem-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dem-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Processed Demographic Survey Profile
+</figcaption>
+<div aria-describedby="tbl-dem-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th>Dataset Stream</th>
-<th>Core File</th>
-<th>Record Level / Row Count</th>
-<th>Variable Count</th>
-<th>Time Span / Scope</th>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: right;">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Demographic Surveys</strong></td>
-<td><code>demographics_longitudinal_clean.csv</code></td>
-<td>Individual (<span class="math inline">\(N = 203\)</span> students)</td>
-<td>1,556 attributes</td>
-<td>Waves 1 to 6 (Longitudinal)</td>
+<td style="text-align: left;">Total Students (Egos)</td>
+<td style="text-align: right;">203</td>
 </tr>
 <tr class="even">
-<td><strong>Social Network Surveys</strong></td>
-<td><code>network_surveys_longitudinal_clean.csv</code></td>
-<td>Directed nomination dyad (<span class="math inline">\(N = 11,818\)</span>)</td>
-<td>979 attributes</td>
-<td>Waves 1 to 8 (Panel)</td>
+<td style="text-align: left;">Total Survey Attributes</td>
+<td style="text-align: right;">1556</td>
 </tr>
 <tr class="odd">
-<td><strong>Proximity Networks</strong></td>
-<td><code>weekly_contact_networks_longitudinal.csv</code></td>
-<td>Undirected dyad-week (<span class="math inline">\(N = 165,967\)</span>)</td>
-<td>7 attributes</td>
-<td>Weeks 8 to 41 (34 academic weeks)</td>
-</tr>
-<tr class="even">
-<td><strong>Bluetooth Mapping</strong></td>
-<td><code>BT_egoid_mapping.csv</code></td>
-<td>Individual (<span class="math inline">\(N = 189\)</span> devices)</td>
-<td>2 attributes</td>
-<td>Device-to-ID Crosswalk</td>
-</tr>
-<tr class="odd">
-<td><strong>Variable Catalog</strong></td>
-<td><code>variable_catalog.csv</code></td>
-<td>Attribute (<span class="math inline">\(N = 3,651\)</span> variables)</td>
-<td>3 attributes</td>
-<td>Compiled metadata dictionary</td>
+<td style="text-align: left;">Sensitive Columns Safely Dropped</td>
+<td style="text-align: right;">38</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</figure>
+</div>
+</div>
 <hr>
 </section>
-<section id="citing-the-netsense-dataset" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="citing-the-netsense-dataset"><span class="header-section-number">1.2</span> 1. Citing the NetSense Dataset</h2>
-<p>To credit the principal investigators and the University of Notre Dame for compiling the original multiwave dataset, please use the following citation:</p>
-<section id="apa-7th-edition" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="apa-7th-edition"><span class="header-section-number">1.2.1</span> APA 7th Edition</h3>
-<blockquote class="blockquote">
-<p>Striegel, A., Hachen, D., Poellabauer, C., &amp; Lizardo, O. (2026). <em>The NetSense Study: A Multiwave Dataset of Student Social Networks, Demographics, and Bluetooth Proximity at Notre Dame</em> (Version 2.0) [Data set]. University of Notre Dame. https://github.com/your-username/your-repository-name</p>
-</blockquote>
-</section>
-<section id="chicago-manual-of-style-author-date" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="chicago-manual-of-style-author-date"><span class="header-section-number">1.2.2</span> Chicago Manual of Style (Author-Date)</h3>
-<blockquote class="blockquote">
-<p>Striegel, Aaron, David Hachen, Christian Poellabauer, and Omar Lizardo. 2026. <em>The NetSense Study: A Multiwave Dataset of Student Social Networks, Demographics, and Bluetooth Proximity at Notre Dame</em>. Version 2.0. Dataset. University of Notre Dame. https://github.com/your-username/your-repository-name.</p>
-</blockquote>
+<section id="major-variable-groupings" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="major-variable-groupings"><span class="header-section-number">1.3</span> Major Variable Groupings</h2>
+<p>With 1,556 attributes, variables are suffixed with a wave number (e.g.&nbsp;<code>_1</code> for Wave 1, <code>_6</code> for Wave 6) to track changes over time. Some of the core groupings include:</p>
+<ul>
+<li><strong>Demographics</strong>: Participant gender (<code>gender_1</code>), ethnicity, family background, and dorm locations.</li>
+<li><strong>Academic Performance</strong>: Semester-by-semester GPAs (e.g., <code>firstsemgpa_2</code>, <code>gpa_6</code>).</li>
+<li><strong>Personality Scales</strong>: Big Five traits (Extraversion, Neuroticism, Openness, Agreeableness, Conscientiousness).</li>
+<li><strong>Lifestyles and Habits</strong>: Alcohol use, smoking, sleep habits, and smartphone usage metrics (e.g., <code>phoneuse*_1</code>).</li>
+<li><strong>Cultural Tastes</strong>: Music genres, movies, books, and artistic preferences (e.g., <code>bigband_1</code>, <code>classicrock_1</code>, <code>jazz_1</code>, <code>rap_1</code>).</li>
+</ul>
 <hr>
 </section>
-</section>
-<section id="citing-this-codebook-standardized-panels" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="citing-this-codebook-standardized-panels"><span class="header-section-number">1.3</span> 2. Citing this Codebook &amp; Standardized Panels</h2>
-<p>If your analysis leverages the standardized demographics panel, consolidated network waves, or the aggregated weekly physical proximity networks produced by this repository, please cite this resource:</p>
-<section id="apa-7th-edition-1" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="apa-7th-edition-1"><span class="header-section-number">1.3.1</span> APA 7th Edition</h3>
-<blockquote class="blockquote">
-<p>NetSense Research Team. (2026). <em>NetSense Study Interactive Codebook and Standardized Data Website</em> (Version 2.0) [Computer software]. https://your-username.github.io/your-repository-name/</p>
-</blockquote>
-</section>
-<section id="chicago-manual-of-style-author-date-1" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="chicago-manual-of-style-author-date-1"><span class="header-section-number">1.3.2</span> Chicago Manual of Style (Author-Date)</h3>
-<blockquote class="blockquote">
-<p>NetSense Research Team. 2026. <em>NetSense Study Interactive Codebook and Standardized Data Website</em>. Version 2.0. Computer software. https://your-username.github.io/your-repository-name/.</p>
-</blockquote>
-<hr>
-</section>
-</section>
-<section id="bibtex-entries" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="bibtex-entries"><span class="header-section-number">1.4</span> 3. BibTeX Entries</h2>
-<p>For LaTeX users, you can use the following BibTeX entries:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">netsense_dataset_2026</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span>       = {Striegel, Aaron and Hachen, David and Poellabauer, Christian and Lizardo, Omar},</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span>        = {The {NetSense} Study: A Multiwave Dataset of Student Social Networks, Demographics, and Bluetooth Proximity at Notre Dame},</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>         = {2026},</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">version</span>      = {2.0},</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">publisher</span>    = {University of Notre Dame},</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">howpublished</span> = {<span class="ch">\url</span>{https://github.com/your-username/your-repository-name}},</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span>         = {De-identified and consolidated public release}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">@software{netsense_codebook_2026,</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">  author       = {{NetSense Research Team}},</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">  title        = {{NetSense} Study Interactive Codebook and Standardized Data Website},</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">  year         = {2026},</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">  version      = {2.0},</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">  howpublished = {\url{https://your-username.github.io/your-repository-name/}},</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">  note         = {An interactive Quarto-based documentation portal}</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="funding-and-acknowledgments" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="funding-and-acknowledgments"><span class="header-section-number">1.5</span> 4. Funding and Acknowledgments</h2>
-<p>The NetSense study was supported by grants from the National Science Foundation (NSF) and the University of Notre Dame. Any publication or report utilizing these data should include the following standard acknowledgment:</p>
-<blockquote class="blockquote">
-<p><em>“The data used in this research were collected as part of the NetSense study at the University of Notre Dame, which was supported by the National Science Foundation (Grant No.&nbsp;CNS-1028269, CNS-1028271, and IIS-1247696). The views, findings, and conclusions expressed here are those of the authors and do not necessarily reflect those of the National Science Foundation or the University of Notre Dame.”</em></p>
-</blockquote>
+<section id="quiz-responses-master" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="quiz-responses-master"><span class="header-section-number">1.4</span> Quiz Responses (Master)</h2>
+<p>In addition to the main demographic surveys, the study administered a series of quizzes to participants. These quizzes capture high-frequency assessments of student health, emotional well-being, political discussions, and feedback on their smartphone performance.</p>
+<p><a href="Data/Quizzes/Quiz_Responses_Master.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Quiz CSV (.csv)</a> <a href="Data/Quizzes/Quiz_Responses_Master.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Quiz Stata (.dta)</a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>PII Scrubbing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The raw quiz datasets originally tracked participants using raw 10-digit phone numbers. These have been securely mapped to the standard <code>egoid</code> identifier and the raw phone numbers have been completely dropped to maintain anonymity.</p>
+</div>
+</div>
+<p>The consolidated quiz dataset contains responses from 197 students across 146 specialized survey items, all of which are documented in the <a href="./catalog.html">Searchable Variable Catalog</a>.</p>
 
 
 </section>
