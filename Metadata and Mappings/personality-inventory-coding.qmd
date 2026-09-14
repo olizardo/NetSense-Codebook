@@ -1,7 +1,0 @@
-# Personality Inventory Coding
-
-This document contains the scoring and coding keys for the Big Five personality inventory. Because the original document is a scanned image, the text cannot be extracted, but you can view the document below. 
-
-[Download Personality Inventory Coding (PDF)](personality-inventory-coding.pdf)
-
-<iframe src="personality-inventory-coding.pdf" width="100%" height="800px"></iframe>
