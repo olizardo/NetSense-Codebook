@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -74,10 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c3d1e225d849e29a5da9db11878cc23d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-241f72a3f48c5c8316acd5d095cd9a82.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -106,6 +109,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -215,6 +247,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
   </li>
   <li class="nav-item">
+    <a class="nav-link" href="./materials.html"> 
+<span class="menu-text">Reports &amp; Talks</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./citation.html"> 
 <span class="menu-text">Citation</span></a>
   </li>  
@@ -252,9 +288,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#relationship-duration" id="toc-relationship-duration" class="nav-link" data-scroll-target="#relationship-duration"><span class="header-section-number">1.4.2</span> Relationship Duration</a></li>
   <li><a href="#emotional-profiles-of-social-ties" id="toc-emotional-profiles-of-social-ties" class="nav-link" data-scroll-target="#emotional-profiles-of-social-ties"><span class="header-section-number">1.4.3</span> Emotional Profiles of Social Ties</a></li>
   </ul></li>
+  <li><a href="#sec-alter-alter" id="toc-sec-alter-alter" class="nav-link" data-scroll-target="#sec-alter-alter"><span class="header-section-number">1.5</span> Perceived Alter-to-Alter Networks &amp; Ego Metrics</a>
+  <ul class="collapse">
+  <li><a href="#download-datasets" id="toc-download-datasets" class="nav-link" data-scroll-target="#download-datasets"><span class="header-section-number">1.5.1</span> Download Datasets</a></li>
+  <li><a href="#variable-schemas-codebook" id="toc-variable-schemas-codebook" class="nav-link" data-scroll-target="#variable-schemas-codebook"><span class="header-section-number">1.5.2</span> Variable Schemas &amp; Codebook</a></li>
+  <li><a href="#longitudinal-alter-network-summary-by-wave" id="toc-longitudinal-alter-network-summary-by-wave" class="nav-link" data-scroll-target="#longitudinal-alter-network-summary-by-wave"><span class="header-section-number">1.5.3</span> Longitudinal Alter Network Summary by Wave</a></li>
+  </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="networks.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -443,6 +485,285 @@ Figure&nbsp;2: Relationship Durations Across Categories
 Figure&nbsp;3: Proportions of Positive Emotions Felt in Relationships
 </figcaption>
 </figure>
+</div>
+<hr>
+</section>
+</section>
+<section id="sec-alter-alter" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="sec-alter-alter"><span class="header-section-number">1.5</span> Perceived Alter-to-Alter Networks &amp; Ego Metrics</h2>
+<p>In addition to direct ego-to-alter nominations, the NetSense network surveys administered an alter-by-alter matrix asking each participant whether their nominated alters knew one another:</p>
+<blockquote class="blockquote">
+<p><em>“As far as you know, does [Alter Name] know any of your other contacts that are listed below? If you think they do, please check the boxes to indicate which of your other contacts they know. Leave boxes blank if you think [Alter Name] does not know that person.”</em></p>
+</blockquote>
+<p>Originally captured across 190 conditional matrix questions per wave with wave-varying LimeSurvey naming patterns (<code>alter{i}relsq{k}</code>, <code>alter{i}rel_sq{k}</code>, and <code>alter{i}rel{k}_sq</code>), these variables have been parsed and structured into two standardized data files:</p>
+<ol type="1">
+<li><strong>Alter-to-Alter Edge List (<code>Data/alter_alter_ties_longitudinal.*</code>)</strong>: A dyadic edge list containing all 29,473 perceived ties between nominated alters across waves.</li>
+<li><strong>Ego-Network Structural Metrics (<code>Data/ego_network_metrics_longitudinal.*</code>)</strong>: An ego-wave summary panel (<span class="math inline">\(N = 804\)</span> networks) providing nominated alters (<span class="math inline">\(k\)</span>), possible pairs (<span class="math inline">\(\binom{k}{2}\)</span>), reported ties, and personal network density / local clustering coefficients.</li>
+</ol>
+<section id="download-datasets" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="download-datasets"><span class="header-section-number">1.5.1</span> Download Datasets</h3>
+<p><strong>Alter-to-Alter Edge List:</strong></p>
+<p><a href="Data/alter_alter_ties_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Alter-Alter CSV (.csv)</a> <a href="Data/alter_alter_ties_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download Alter-Alter R (.rds)</a> <a href="Data/alter_alter_ties_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Alter-Alter Stata (.dta)</a></p>
+<p><strong>Ego-Network Summary Metrics:</strong></p>
+<p><a href="Data/ego_network_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Ego Metrics CSV (.csv)</a> <a href="Data/ego_network_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download Ego Metrics R (.rds)</a> <a href="Data/ego_network_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Ego Metrics Stata (.dta)</a></p>
+</section>
+<section id="variable-schemas-codebook" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="variable-schemas-codebook"><span class="header-section-number">1.5.2</span> Variable Schemas &amp; Codebook</h3>
+<section id="alter-to-alter-edge-list-schema" class="level4" data-number="1.5.2.1">
+<h4 data-number="1.5.2.1" class="anchored" data-anchor-id="alter-to-alter-edge-list-schema"><span class="header-section-number">1.5.2.1</span> Alter-to-Alter Edge List Schema</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>egoid</code></td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Primary 5-digit participant ID of the respondent (ego)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>sender</code></td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Study survey / phone identifier of ego</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>wave</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Survey wave number (Waves 1, 2, 3, 4, 5, 7, 8)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>alter1_pos</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Position rank of Alter 1 in ego’s nomination roster (<span class="math inline">\(1 \le \text{pos}_1 \le 19\)</span>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>alter2_pos</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Position rank of Alter 2 in ego’s nomination roster (<span class="math inline">\(2 \le \text{pos}_2 \le 20\)</span>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>alter1_id</code></td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Survey nomination identifier of Alter 1 (<code>NA</code> if unmapped outside alter)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>alter2_id</code></td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Survey nomination identifier of Alter 2 (<code>NA</code> if unmapped outside alter)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>alter1_egoid</code></td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">5-digit participant ID if Alter 1 is a study participant (<code>NA</code> if non-participant)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>alter2_egoid</code></td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">5-digit participant ID if Alter 2 is a study participant (<code>NA</code> if non-participant)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>perceived_tie</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Indicator (<code>1</code>) that ego reported Alter 1 and Alter 2 know each other</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ego-network-metrics-schema" class="level4" data-number="1.5.2.2">
+<h4 data-number="1.5.2.2" class="anchored" data-anchor-id="ego-network-metrics-schema"><span class="header-section-number">1.5.2.2</span> Ego-Network Metrics Schema</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>egoid</code></td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Primary 5-digit participant ID</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>sender</code></td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Survey identifier of ego</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>wave</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Survey wave number</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>alters_nominated</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Total nominated alters (<span class="math inline">\(k\)</span>) in ego’s network for that wave</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>potential_pairs</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Maximum possible pairs among alters: <span class="math inline">\(\binom{k}{2} = \frac{k(k-1)}{2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>evaluated_pairs</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Total pairs evaluated in the survey matrix</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>perceived_ties</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">Total count of alter-to-alter connections reported by ego</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>density</code></td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Alter network density / ego’s local clustering coefficient: <span class="math inline">\(\frac{\text{perceived\_ties}}{\text{potential\_pairs}}\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="longitudinal-alter-network-summary-by-wave" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="longitudinal-alter-network-summary-by-wave"><span class="header-section-number">1.5.3</span> Longitudinal Alter Network Summary by Wave</h3>
+<p>The table below summarizes ego network size, alter-alter tie counts, and average network density across all waves:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>metrics_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Data/ego_network_metrics_longitudinal.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>metrics_df <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(<span class="at">Wave =</span> wave) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Ego Networks</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">n</span>(),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Mean Alters (k)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(alters_nominated, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">1</span>),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Total Alter Ties</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sum</span>(perceived_ties, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Mean Alter Ties</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(perceived_ties, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">1</span>),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Mean Density</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(density, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="dv">3</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Wave) <span class="sc">|&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Perceived Alter-to-Alter Networks: Longitudinal Descriptives by Survey Wave"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-alter-alter-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-alter-alter-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Perceived Alter-to-Alter Networks: Longitudinal Descriptives by Survey Wave
+</figcaption>
+<div aria-describedby="tbl-alter-alter-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 16%">
+<col style="width: 19%">
+<col style="width: 21%">
+<col style="width: 19%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Wave</th>
+<th style="text-align: right;">Ego Networks</th>
+<th style="text-align: right;">Mean Alters (k)</th>
+<th style="text-align: right;">Total Alter Ties</th>
+<th style="text-align: right;">Mean Alter Ties</th>
+<th style="text-align: right;">Mean Density</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">15.5</td>
+<td style="text-align: right;">1185</td>
+<td style="text-align: right;">69.7</td>
+<td style="text-align: right;">0.610</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">165</td>
+<td style="text-align: right;">14.5</td>
+<td style="text-align: right;">7849</td>
+<td style="text-align: right;">47.6</td>
+<td style="text-align: right;">0.497</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">13.1</td>
+<td style="text-align: right;">7390</td>
+<td style="text-align: right;">43.5</td>
+<td style="text-align: right;">0.536</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;">11.6</td>
+<td style="text-align: right;">4074</td>
+<td style="text-align: right;">33.1</td>
+<td style="text-align: right;">0.463</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">10.8</td>
+<td style="text-align: right;">4257</td>
+<td style="text-align: right;">31.8</td>
+<td style="text-align: right;">0.591</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">9.5</td>
+<td style="text-align: right;">2135</td>
+<td style="text-align: right;">23.0</td>
+<td style="text-align: right;">0.570</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">9.6</td>
+<td style="text-align: right;">2583</td>
+<td style="text-align: right;">25.3</td>
+<td style="text-align: right;">0.602</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Methodological Note on Wave 6 (Summer 2013)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Perceived alter-to-alter tie data is absent for <strong>Wave 6 (Summer 2013)</strong>. This is not a data loss or processing error: the alter-by-alter matrix (<code>alter1.rel</code> through <code>alter19.rel</code>) was deliberately excluded from the Wave 6 survey instrument to reduce respondent burden during the summer break (streamlining the questionnaire from 70 down to 44 items) while students were dispersed off-campus and transitioning to the junior-year study renewal. The alter-to-alter matrix battery was fully reinstated in subsequent rounds (Waves 7 and 8).</p>
+</div>
 </div>
 
 
