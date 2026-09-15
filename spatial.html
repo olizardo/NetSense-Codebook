@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>download – The NetSense Project</title>
+<title>Spatial Mobility &amp; Campus Zones – The NetSense Project</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -164,7 +199,7 @@ window.Quarto = {
 <span class="menu-text">Interactive Catalog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./download.html" aria-current="page"> 
+    <a class="nav-link" href="./download.html"> 
 <span class="menu-text">Data Download</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -270,143 +305,505 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-download" id="toc-sec-download" class="nav-link active" data-scroll-target="#sec-download"><span class="header-section-number">1</span> Data Download</a>
+  <li><a href="#sec-spatial" id="toc-sec-spatial" class="nav-link active" data-scroll-target="#sec-spatial"><span class="header-section-number">1</span> Spatial Mobility &amp; Campus Zones</a>
   <ul class="collapse">
-  <li><a href="#longitudinal-social-network-surveys" id="toc-longitudinal-social-network-surveys" class="nav-link" data-scroll-target="#longitudinal-social-network-surveys"><span class="header-section-number">1.1</span> Longitudinal Social Network Surveys</a></li>
-  <li><a href="#perceived-alter-to-alter-network-ties" id="toc-perceived-alter-to-alter-network-ties" class="nav-link" data-scroll-target="#perceived-alter-to-alter-network-ties"><span class="header-section-number">1.2</span> Perceived Alter-to-Alter Network Ties</a></li>
-  <li><a href="#ego-network-structural-metrics" id="toc-ego-network-structural-metrics" class="nav-link" data-scroll-target="#ego-network-structural-metrics"><span class="header-section-number">1.3</span> Ego-Network Structural Metrics</a></li>
-  <li><a href="#longitudinal-demographic-behavioral-surveys" id="toc-longitudinal-demographic-behavioral-surveys" class="nav-link" data-scroll-target="#longitudinal-demographic-behavioral-surveys"><span class="header-section-number">1.4</span> Longitudinal Demographic &amp; Behavioral Surveys</a></li>
-  <li><a href="#high-frequency-quiz-responses-master" id="toc-high-frequency-quiz-responses-master" class="nav-link" data-scroll-target="#high-frequency-quiz-responses-master"><span class="header-section-number">1.5</span> High-Frequency Quiz Responses (Master)</a></li>
-  <li><a href="#longitudinal-communication-ego-networks-calls-sms" id="toc-longitudinal-communication-ego-networks-calls-sms" class="nav-link" data-scroll-target="#longitudinal-communication-ego-networks-calls-sms"><span class="header-section-number">1.6</span> Longitudinal Communication Ego Networks (Calls &amp; SMS)</a></li>
-  <li><a href="#longitudinal-email-ego-networks" id="toc-longitudinal-email-ego-networks" class="nav-link" data-scroll-target="#longitudinal-email-ego-networks"><span class="header-section-number">1.7</span> Longitudinal Email Ego Networks</a></li>
-  <li><a href="#address-book-ego-networks-contact-dynamics" id="toc-address-book-ego-networks-contact-dynamics" class="nav-link" data-scroll-target="#address-book-ego-networks-contact-dynamics"><span class="header-section-number">1.8</span> Address Book Ego Networks &amp; Contact Dynamics</a></li>
-  <li><a href="#academic-performance-classroom-co-enrollment-networks" id="toc-academic-performance-classroom-co-enrollment-networks" class="nav-link" data-scroll-target="#academic-performance-classroom-co-enrollment-networks"><span class="header-section-number">1.9</span> Academic Performance &amp; Classroom Co-Enrollment Networks</a></li>
-  <li><a href="#longitudinal-spatial-mobility-campus-zones" id="toc-longitudinal-spatial-mobility-campus-zones" class="nav-link" data-scroll-target="#longitudinal-spatial-mobility-campus-zones"><span class="header-section-number">1.10</span> Longitudinal Spatial Mobility &amp; Campus Zones</a></li>
-  <li><a href="#physical-proximity-networks-bluetooth" id="toc-physical-proximity-networks-bluetooth" class="nav-link" data-scroll-target="#physical-proximity-networks-bluetooth"><span class="header-section-number">1.11</span> Physical Proximity Networks (Bluetooth)</a></li>
-  <li><a href="#variable-catalog-mapping-dictionaries" id="toc-variable-catalog-mapping-dictionaries" class="nav-link" data-scroll-target="#variable-catalog-mapping-dictionaries"><span class="header-section-number">1.12</span> Variable Catalog &amp; Mapping Dictionaries</a></li>
+  <li><a href="#download-datasets" id="toc-download-datasets" class="nav-link" data-scroll-target="#download-datasets"><span class="header-section-number">1.1</span> Download Datasets</a>
+  <ul class="collapse">
+  <li><a href="#spatial-mobility-metrics-ego-level" id="toc-spatial-mobility-metrics-ego-level" class="nav-link" data-scroll-target="#spatial-mobility-metrics-ego-level"><span class="header-section-number">1.1.1</span> 1. Spatial Mobility Metrics (Ego-Level)</a></li>
+  <li><a href="#categorical-campus-zones-ego-level" id="toc-categorical-campus-zones-ego-level" class="nav-link" data-scroll-target="#categorical-campus-zones-ego-level"><span class="header-section-number">1.1.2</span> 2. Categorical Campus Zones (Ego-Level)</a></li>
+  </ul></li>
+  <li><a href="#metric-definitions" id="toc-metric-definitions" class="nav-link" data-scroll-target="#metric-definitions"><span class="header-section-number">1.2</span> Metric Definitions</a>
+  <ul class="collapse">
+  <li><a href="#spatial-mobility-indicators" id="toc-spatial-mobility-indicators" class="nav-link" data-scroll-target="#spatial-mobility-indicators"><span class="header-section-number">1.2.1</span> Spatial Mobility Indicators</a></li>
+  </ul></li>
+  <li><a href="#categorical-campus-zones" id="toc-categorical-campus-zones" class="nav-link" data-scroll-target="#categorical-campus-zones"><span class="header-section-number">1.3</span> Categorical Campus Zones</a>
+  <ul class="collapse">
+  <li><a href="#zone-panel-schema" id="toc-zone-panel-schema" class="nav-link" data-scroll-target="#zone-panel-schema"><span class="header-section-number">1.3.1</span> Zone Panel Schema</a></li>
+  </ul></li>
+  <li><a href="#sample-data-overview" id="toc-sample-data-overview" class="nav-link" data-scroll-target="#sample-data-overview"><span class="header-section-number">1.4</span> Sample Data Overview</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Spatial Mobility &amp; Campus Zones</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="sec-download" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Data Download</h1>
-<p>The cleaned, de-identified datasets from the NetSense study are available for open academic research. All files have been programmatically scrubbed of sensitive personal identifiers (including student names, email addresses, NetIDs, and raw telephone numbers).</p>
-<hr>
-<section id="longitudinal-social-network-surveys" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="longitudinal-social-network-surveys"><span class="header-section-number">1.1</span> Longitudinal Social Network Surveys</h2>
-<p>Longitudinal panel tracking dyadic nominations between students across Waves 1–8 (<span class="math inline">\(N = 11,818\)</span> nominations). Includes subjective closeness, relationship duration, tie categories, contact frequencies, and emotional profiles.</p>
-<p><a href="Data/network_surveys_longitudinal_clean.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> CSV Dataset (.csv, 33 MB)</a> <a href="Data/network_surveys_longitudinal_clean.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 600 KB)</a> <a href="Data/network_surveys_longitudinal_clean.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 89 MB)</a></p>
-<hr>
-</section>
-<section id="perceived-alter-to-alter-network-ties" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="perceived-alter-to-alter-network-ties"><span class="header-section-number">1.2</span> Perceived Alter-to-Alter Network Ties</h2>
-<p>Dyadic edge list capturing all perceived acquaintance ties between nominated alters within each participant’s personal network across Waves 1–5, 7, and 8 (<span class="math inline">\(N = 29,473\)</span> perceived ties).</p>
-<p><a href="Data/alter_alter_ties_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Alter-Alter Ties (.csv, 1.4 MB)</a> <a href="Data/alter_alter_ties_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Alter-Alter Ties (.rds, 180 KB)</a> <a href="Data/alter_alter_ties_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Alter-Alter Ties (.dta, 2.1 MB)</a></p>
-<div class="callout callout-style-default callout-note callout-titled">
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-spatial" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Spatial Mobility &amp; Campus Zones</h1>
+<p>This section describes the longitudinal <strong>Spatial Mobility</strong> and <strong>Categorical Campus Zone</strong> datasets extracted from over 11.5 million passive GPS and network location fixes collected across study weeks 7 through 192 (spanning all four undergraduate years: 2011–2015, <span class="math inline">\(N = 16,144\)</span> student-week observations across 188 students).</p>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Wave 6 Survey Design
+<span class="screen-reader-only">Important</span>Privacy &amp; Anonymity Guarantee
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Perceived alter-to-alter tie data was deliberately omitted from the Wave 6 (Summer 2013) survey instrument to reduce respondent burden during summer break. Full alter-to-alter batteries were reinstated in Waves 7 and 8.</p>
+<p>To protect participant privacy and comply with IRB requirements, <strong>no raw geographic coordinates (latitude/longitude), exact timestamps, or phone numbers are released</strong>. All spatial coordinates have been aggregated into weekly ego-level mobility indicators and coarse categorical campus zones.</p>
 </div>
 </div>
 <hr>
+<section id="download-datasets" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="download-datasets"><span class="header-section-number">1.1</span> Download Datasets</h2>
+<section id="spatial-mobility-metrics-ego-level" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="spatial-mobility-metrics-ego-level"><span class="header-section-number">1.1.1</span> 1. Spatial Mobility Metrics (Ego-Level)</h3>
+<p>Longitudinal panel (<span class="math inline">\(N = 16,144\)</span> ego-weeks) tracking weekly radius of gyration, spatial mobility entropy, predictability of daily movement patterns, and time spent on campus.</p>
+<p><a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Download Compressed Mobility (.csv.gz, 321 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Spatial Mobility (.csv, 895 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 294 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 1.4 MB)</a></p>
 </section>
-<section id="ego-network-structural-metrics" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="ego-network-structural-metrics"><span class="header-section-number">1.3</span> Ego-Network Structural Metrics</h2>
-<p>Longitudinal summary panel (<span class="math inline">\(N = 804\)</span> ego-waves) tracking personal network size (<span class="math inline">\(k\)</span>), potential alter pairs (<span class="math inline">\(\binom{k}{2}\)</span>), reported ties, and personal network density / local clustering coefficients.</p>
-<p><a href="Data/ego_network_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Metrics (.csv, 42 KB)</a> <a href="Data/ego_network_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Ego Metrics (.rds, 10 KB)</a> <a href="Data/ego_network_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Ego Metrics (.dta, 85 KB)</a></p>
+<section id="categorical-campus-zones-ego-level" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="categorical-campus-zones-ego-level"><span class="header-section-number">1.1.2</span> 2. Categorical Campus Zones (Ego-Level)</h3>
+<p>Longitudinal panel (<span class="math inline">\(N = 16,144\)</span> ego-weeks) tracking percentage of time allocated across 6 coarse campus and geographic zones.</p>
+<p><a href="Data/weekly_campus_zones_ego_metrics_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Download Compressed Zones (.csv.gz, 222 KB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Campus Zones (.csv, 1.0 MB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 193 KB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 1.8 MB)</a></p>
 <hr>
 </section>
-<section id="longitudinal-demographic-behavioral-surveys" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="longitudinal-demographic-behavioral-surveys"><span class="header-section-number">1.4</span> Longitudinal Demographic &amp; Behavioral Surveys</h2>
-<p>Wide individual-level panel (<span class="math inline">\(N = 203\)</span> students, 1,556 variables) tracking demographic backgrounds, Big Five personality inventories, GPAs, lifestyles, sleep habits, musical tastes, and activities across Waves 1–6.</p>
-<p><a href="Surveys/demographics_longitudinal_clean.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> CSV Dataset (.csv, 2.7 MB)</a> <a href="Surveys/demographics_longitudinal_clean.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 280 KB)</a> <a href="Surveys/demographics_longitudinal_clean.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 6.2 MB)</a></p>
+</section>
+<section id="metric-definitions" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="metric-definitions"><span class="header-section-number">1.2</span> Metric Definitions</h2>
+<section id="spatial-mobility-indicators" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="spatial-mobility-indicators"><span class="header-section-number">1.2.1</span> Spatial Mobility Indicators</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>egoid</code></td>
+<td>Integer</td>
+<td>Standard 5-digit student participant identifier</td>
+</tr>
+<tr class="even">
+<td><code>study_week</code></td>
+<td>Integer</td>
+<td>Continuous study week index (Week 1 = Aug 22, 2011)</td>
+</tr>
+<tr class="odd">
+<td><code>year</code></td>
+<td>Integer</td>
+<td>Calendar year</td>
+</tr>
+<tr class="even">
+<td><code>iso_week</code></td>
+<td>Integer</td>
+<td>ISO 8601 calendar week number</td>
+</tr>
+<tr class="odd">
+<td><code>radius_of_gyration_km</code></td>
+<td>Numeric</td>
+<td>Root-mean-square distance (<span class="math inline">\(r_g\)</span> in km) from the student’s center of mass during that week: <span class="math inline">\(\sqrt{\frac{1}{N}\sum (\mathbf{r}_i - \bar{\mathbf{r}})^2}\)</span></td>
+</tr>
+<tr class="even">
+<td><code>mobility_entropy</code></td>
+<td>Numeric</td>
+<td>Shannon entropy (<span class="math inline">\(S = -\sum p_j \log_2 p_j\)</span> in bits) across <span class="math inline">\(\approx 200\text{m}\)</span> spatial grid cells visited. Higher entropy indicates dispersed, exploratory movement; lower entropy indicates routine, concentrated locations</td>
+</tr>
+<tr class="odd">
+<td><code>normalized_entropy</code></td>
+<td>Numeric</td>
+<td>Mobility entropy normalized by maximum possible entropy: <span class="math inline">\(S / \log_2(K)\)</span> (<span class="math inline">\(0.0\)</span> to <span class="math inline">\(1.0\)</span>)</td>
+</tr>
+<tr class="even">
+<td><code>time_on_campus_pct</code></td>
+<td>Numeric</td>
+<td>Percentage of recorded location fixes located within the Notre Dame campus perimeter (<span class="math inline">\(0.0\%\)</span> to <span class="math inline">\(100.0\%\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><code>distinct_locations_count</code></td>
+<td>Integer</td>
+<td>Count of distinct <span class="math inline">\(\approx 200\text{m}\)</span> spatial grid cells visited during the week</td>
+</tr>
+<tr class="even">
+<td><code>max_distance_from_campus_km</code></td>
+<td>Numeric</td>
+<td>Peak distance reached in kilometers from the Notre Dame Golden Dome center</td>
+</tr>
+<tr class="odd">
+<td><code>total_location_records</code></td>
+<td>Integer</td>
+<td>Total valid GPS and network fixes recorded for that student-week</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
-<section id="high-frequency-quiz-responses-master" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="high-frequency-quiz-responses-master"><span class="header-section-number">1.5</span> High-Frequency Quiz Responses (Master)</h2>
-<p>High-frequency survey check-ins across semesters (<span class="math inline">\(N = 194\)</span> students, 146 variables) measuring student emotional well-being, health, and campus engagement.</p>
-<p><a href="Data/Quizzes/Quiz_Responses_Master.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Quiz CSV (.csv, 65 KB)</a> <a href="Data/Quizzes/Quiz_Responses_Master.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Quiz Stata (.dta, 320 KB)</a></p>
+</section>
+<section id="categorical-campus-zones" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="categorical-campus-zones"><span class="header-section-number">1.3</span> Categorical Campus Zones</h2>
+<p>Raw coordinate readings are projected into six coarse, mutually exclusive campus and geographic zones using spatial bounding boxes:</p>
+<ol type="1">
+<li><strong><code>Dorm</code></strong>: Residential quads and student dormitories (North Quad, South Quad, West Quad, Mod Quad, Carroll Hall).</li>
+<li><strong><code>Academic Buildings</code></strong>: Main campus core, classrooms, lecture halls, departmental buildings, and laboratories (Main Quad / Golden Dome, DeBartolo Hall, Mendoza College of Business, Jordan Hall of Science, Fitzpatrick/Cushing Engineering, Nieuwland Science Hall).</li>
+<li><strong><code>Library</code></strong>: Hesburgh Library and immediate surrounding academic plaza.</li>
+<li><strong><code>Athletic Facilities</code></strong>: Notre Dame Stadium, Joyce Center / Purcell Pavilion, Compton Family Ice Arena, Rolfs Athletics, Guglielmino Complex, Loftus Sports Center, and outdoor athletic fields.</li>
+<li><strong><code>Off-Campus / South Bend</code></strong>: Greater South Bend and Mishawaka areas outside the campus perimeter (<span class="math inline">\(\le 15\text{ km}\)</span> from campus center, e.g.&nbsp;Eddy Street Commons, off-campus apartments, downtown South Bend).</li>
+<li><strong><code>Traveling / Away</code></strong>: Locations <span class="math inline">\(&gt; 15\text{ km}\)</span> from campus (e.g.&nbsp;hometown visits, breaks, internships, study trips).</li>
+</ol>
+<section id="zone-panel-schema" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="zone-panel-schema"><span class="header-section-number">1.3.1</span> Zone Panel Schema</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>egoid</code></td>
+<td>Integer</td>
+<td>Standard 5-digit student participant identifier</td>
+</tr>
+<tr class="even">
+<td><code>study_week</code></td>
+<td>Integer</td>
+<td>Continuous study week index</td>
+</tr>
+<tr class="odd">
+<td><code>year</code></td>
+<td>Integer</td>
+<td>Calendar year</td>
+</tr>
+<tr class="even">
+<td><code>iso_week</code></td>
+<td>Integer</td>
+<td>ISO calendar week number</td>
+</tr>
+<tr class="odd">
+<td><code>pct_dorm</code></td>
+<td>Numeric</td>
+<td>Percentage of weekly fixes recorded in student dormitories (<span class="math inline">\(0.0\%\)</span> to <span class="math inline">\(100.0\%\)</span>)</td>
+</tr>
+<tr class="even">
+<td><code>pct_academic</code></td>
+<td>Numeric</td>
+<td>Percentage of weekly fixes recorded in academic buildings &amp; core (<span class="math inline">\(0.0\%\)</span> to <span class="math inline">\(100.0\%\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><code>pct_library</code></td>
+<td>Numeric</td>
+<td>Percentage of weekly fixes recorded in Hesburgh Library (<span class="math inline">\(0.0\%\)</span> to <span class="math inline">\(100.0\%\)</span>)</td>
+</tr>
+<tr class="even">
+<td><code>pct_athletics</code></td>
+<td>Numeric</td>
+<td>Percentage of weekly fixes recorded in athletic facilities &amp; stadiums (<span class="math inline">\(0.0\%\)</span> to <span class="math inline">\(100.0\%\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><code>pct_off_campus</code></td>
+<td>Numeric</td>
+<td>Percentage of weekly fixes recorded in Off-Campus / South Bend area (<span class="math inline">\(0.0\%\)</span> to <span class="math inline">\(100.0\%\)</span>)</td>
+</tr>
+<tr class="even">
+<td><code>pct_traveling</code></td>
+<td>Numeric</td>
+<td>Percentage of weekly fixes recorded while Traveling / Away from South Bend (<span class="math inline">\(0.0\%\)</span> to <span class="math inline">\(100.0\%\)</span>)</td>
+</tr>
+<tr class="odd">
+<td><code>primary_zone</code></td>
+<td>Character</td>
+<td>The single most frequented zone for the student during that week</td>
+</tr>
+<tr class="even">
+<td><code>total_zone_records</code></td>
+<td>Integer</td>
+<td>Total location observations evaluated for zone allocation</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
-<section id="longitudinal-communication-ego-networks-calls-sms" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="longitudinal-communication-ego-networks-calls-sms"><span class="header-section-number">1.6</span> Longitudinal Communication Ego Networks (Calls &amp; SMS)</h2>
-<p>De-identified dyadic communication panel tracking phone calls and text messages across 158 continuous academic weeks (2011–2014, <span class="math inline">\(N = 383,895\)</span> dyad-week interaction records). Captures communication volumes with both enrolled study peers and outside alters (family, high school friends, etc.) using consistent, irreversible salted pseudonyms.</p>
-<p><strong>Dyadic Communication Panel:</strong></p>
-<p><a href="Data/weekly_communication_dyads_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Dyadic Panel (.csv.gz, 2.7 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Dyadic Panel (.csv, 11 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 1.8 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 12 MB)</a></p>
-<p><strong>Ego-Level Weekly Summary Metrics:</strong></p>
-<p>Longitudinal summary metrics (<span class="math inline">\(N = 19,598\)</span> ego-weeks) tracking active indegree, outdegree, total SMS inflow/outflow, and total voice call inflow/outflow per participant week.</p>
-<p><a href="Data/weekly_communication_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Weekly Metrics (.csv, 860 KB)</a> <a href="Data/weekly_communication_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 270 KB)</a> <a href="Data/weekly_communication_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.0 MB)</a></p>
-<hr>
 </section>
-<section id="longitudinal-email-ego-networks" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="longitudinal-email-ego-networks"><span class="header-section-number">1.7</span> Longitudinal Email Ego Networks</h2>
-<p>De-identified longitudinal email interaction panel tracking sent and received emails across 158 study weeks (<span class="math inline">\(N = 676,717\)</span> dyad-week interaction records from over 1 million parsed emails). Email addresses are completely pseudonymized via salted cryptographic hashes and classified into Notre Dame peer/individual, personal webmail, campus listservs, and automated commercial notifications.</p>
-<p><strong>Dyadic Email Panel:</strong></p>
-<p><a href="Data/weekly_email_dyads_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Dyadic Email Panel (.csv.gz, 3.7 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Dyadic Email Panel (.csv, 33 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 3.3 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 57 MB)</a></p>
-<p><strong>Ego-Level Weekly Summary Metrics:</strong></p>
-<p>Weekly summary metrics (<span class="math inline">\(N = 14,320\)</span> ego-weeks) tracking interpersonal email degree, person-to-person email volumes, Notre Dame peer emails, campus course/club listserv emails, and automated commercial emails.</p>
-<p><a href="Data/weekly_email_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Weekly Email Metrics (.csv, 520 KB)</a> <a href="Data/weekly_email_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 140 KB)</a> <a href="Data/weekly_email_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.3 MB)</a></p>
-<hr>
-</section>
-<section id="address-book-ego-networks-contact-dynamics" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="address-book-ego-networks-contact-dynamics"><span class="header-section-number">1.8</span> Address Book Ego Networks &amp; Contact Dynamics</h2>
-<p>Standardized longitudinal datasets derived from periodic smartphone address book snapshots (Weeks 37 to 192, spanning 2012–2015). Tracks address book size, contact acquisition rates, and dyadic retention.</p>
-<p><strong>Dyadic Saved-Contacts Roster:</strong></p>
-<p>Dyadic panel (<span class="math inline">\(N = 30,802\)</span> saved ego-alter pairs) tracking every person saved in participants’ phone address books, their earliest observed week, last observed week, and total weeks retained in the phone. Fully cross-referenced with communication alter pseudonyms.</p>
-<p><a href="Data/dyadic_contacts_roster_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Contacts Roster (.csv.gz, 215 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Contacts Roster (.csv, 940 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 220 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.6 MB)</a></p>
-<p><strong>Ego-Level Weekly Address Book Metrics:</strong></p>
-<p>Longitudinal summary metrics (<span class="math inline">\(N = 6,384\)</span> ego-weeks) tracking total address book size (<code>total_contacts_in_phone</code>), number of enrolled study peers saved (<code>study_peers_saved</code>), outside contacts saved (<code>external_contacts_saved</code>), and rate of adding new contacts (<code>new_contacts_added</code>).</p>
-<p><a href="Data/weekly_contacts_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Contact Metrics (.csv, 205 KB)</a> <a href="Data/weekly_contacts_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 45 KB)</a> <a href="Data/weekly_contacts_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 450 KB)</a></p>
-<hr>
-</section>
-<section id="academic-performance-classroom-co-enrollment-networks" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="academic-performance-classroom-co-enrollment-networks"><span class="header-section-number">1.9</span> Academic Performance &amp; Classroom Co-Enrollment Networks</h2>
-<p>Official registrar academic performance records, term-by-term GPAs, and shared classroom course co-enrollment dyads across participants’ four-year college trajectories (2011–2015).</p>
-<p><strong>Course Letter Grades &amp; Credits:</strong></p>
-<p>Longitudinal course enrollment records (<span class="math inline">\(N = 5,779\)</span>) tracking semester course enrollments, course reference numbers (CRNs), official registrar letter grades, numeric grade points (4.0 scale), and AP/transfer credit flags across freshman through senior years.</p>
-<p><a href="Data/academic_grades_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Course Grades (.csv, 330 KB)</a> <a href="Data/academic_grades_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 32 KB)</a> <a href="Data/academic_grades_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 450 KB)</a></p>
-<p><strong>Classroom Course Co-Enrollment Dyads:</strong></p>
-<p>Dyadic network panel (<span class="math inline">\(N = 979\)</span> shared course dyads) identifying which NetSense students shared the exact same course sections and classroom lectures each semester.</p>
-<p><a href="Data/academic_classroom_dyads_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Classroom Dyads (.csv, 54 KB)</a> <a href="Data/academic_classroom_dyads_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 6 KB)</a> <a href="Data/academic_classroom_dyads_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 70 KB)</a></p>
-<p><strong>Semester-by-Semester GPA Summary:</strong></p>
-<p>Student-by-term summary panel (<span class="math inline">\(N = 898\)</span> student-semesters) tracking courses enrolled, courses passed, and term Grade Point Average (GPA) across all terms.</p>
-<p><a href="Data/academic_term_summary_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Term GPA Summary (.csv, 49 KB)</a> <a href="Data/academic_term_summary_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 5 KB)</a> <a href="Data/academic_term_summary_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 80 KB)</a></p>
-<hr>
-</section>
-<section id="longitudinal-spatial-mobility-campus-zones" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="longitudinal-spatial-mobility-campus-zones"><span class="header-section-number">1.10</span> Longitudinal Spatial Mobility &amp; Campus Zones</h2>
-<p>De-identified longitudinal spatial mobility and campus zone panels (<span class="math inline">\(N = 16,144\)</span> ego-weeks across 188 students) extracted from over 11.5 million passive location fixes across study weeks 7 to 192 (2011–2015). Raw coordinates are completely scrubbed and converted into weekly mobility indicators and coarse categorical zone distributions.</p>
-<p><strong>Spatial Mobility Indicators:</strong></p>
-<p>Longitudinal panel tracking weekly radius of gyration (<span class="math inline">\(r_g\)</span> in km), spatial mobility entropy (bits), normalized entropy (<span class="math inline">\(0.0\)</span> to <span class="math inline">\(1.0\)</span>), time on Notre Dame campus percentage, distinct locations visited count, and peak distance from campus.</p>
-<p><a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Mobility (.csv.gz, 321 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Spatial Mobility (.csv, 895 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 294 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.4 MB)</a></p>
-<p><strong>Categorical Campus Zones:</strong></p>
-<p>Longitudinal panel tracking percentage of weekly time allocated across 6 coarse campus and geographic zones (<code>Dorm</code>, <code>Academic Buildings</code>, <code>Library</code>, <code>Athletic Facilities</code>, <code>Off-Campus / South Bend</code>, <code>Traveling / Away</code>) and primary frequented zone.</p>
-<p><a href="Data/weekly_campus_zones_ego_metrics_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Campus Zones (.csv.gz, 222 KB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Campus Zones (.csv, 1.0 MB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 193 KB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.8 MB)</a></p>
-<hr>
-</section>
-<section id="physical-proximity-networks-bluetooth" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="physical-proximity-networks-bluetooth"><span class="header-section-number">1.11</span> Physical Proximity Networks (Bluetooth)</h2>
-<p>Aggregated undirected weekly contact networks (<span class="math inline">\(N = 267,629\)</span> dyad-weeks) based on over 10.9 million high-resolution Bluetooth proximity pings across academic weeks 8 through 191 (spanning all four undergraduate years: 2011–2015).</p>
-<p><a href="Data/weekly_contact_networks_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Contact Networks (.csv.gz, 2.3 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Contact Networks (.csv, 8.7 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 2.0 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 15 MB)</a> <a href="Metadata and Mappings/BT_egoid_mapping.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Bluetooth-to-EgoID Key (.csv, 3 KB)</a></p>
-<hr>
-</section>
-<section id="variable-catalog-mapping-dictionaries" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="variable-catalog-mapping-dictionaries"><span class="header-section-number">1.12</span> Variable Catalog &amp; Mapping Dictionaries</h2>
-<p>Comprehensive machine-readable dictionary covering all survey variables, survey questions, and response value labels.</p>
-<p><a href="Metadata and Mappings/variable_catalog.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Full Variable Catalog (.csv, 450 KB)</a> <a href="Metadata and Mappings/Dorm Distances.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-spreadsheet"></i> Dorm Distances Matrix (.csv, 2 KB)</a> <a href="Metadata and Mappings/Semester Dates.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-spreadsheet"></i> Semester Dates (.csv, 1 KB)</a></p>
+<section id="sample-data-overview" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="sample-data-overview"><span class="header-section-number">1.4</span> Sample Data Overview</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Show Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>mob <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Data/weekly_spatial_mobility_ego_metrics_longitudinal.csv"</span>, <span class="at">n_max =</span> <span class="dv">6</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(mob, <span class="at">caption =</span> <span class="st">"Sample Rows: Weekly Spatial Mobility Metrics"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>zones <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Data/weekly_campus_zones_ego_metrics_longitudinal.csv"</span>, <span class="at">n_max =</span> <span class="dv">6</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(zones, <span class="at">caption =</span> <span class="st">"Sample Rows: Weekly Campus Zones Panel"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-spatial-sample" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-spatial-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Sample Rows: Weekly Campus Zones Panel
+</figcaption>
+<div aria-describedby="tbl-spatial-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 5%">
+<col style="width: 2%">
+<col style="width: 4%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 15%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">egoid</th>
+<th style="text-align: right;">study_week</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">iso_week</th>
+<th style="text-align: right;">radius_of_gyration_km</th>
+<th style="text-align: right;">mobility_entropy</th>
+<th style="text-align: right;">normalized_entropy</th>
+<th style="text-align: right;">time_on_campus_pct</th>
+<th style="text-align: right;">distinct_locations_count</th>
+<th style="text-align: right;">max_distance_from_campus_km</th>
+<th style="text-align: right;">total_location_records</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.73</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">72.0705</td>
+<td style="text-align: right;">1.5581</td>
+<td style="text-align: right;">0.5194</td>
+<td style="text-align: right;">74.40</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">166.94</td>
+<td style="text-align: right;">1914</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">67.4701</td>
+<td style="text-align: right;">2.4155</td>
+<td style="text-align: right;">0.8604</td>
+<td style="text-align: right;">20.42</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">166.94</td>
+<td style="text-align: right;">2243</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">2.0211</td>
+<td style="text-align: right;">1.9573</td>
+<td style="text-align: right;">0.6972</td>
+<td style="text-align: right;">77.30</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">16.64</td>
+<td style="text-align: right;">2220</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">0.2496</td>
+<td style="text-align: right;">1.8389</td>
+<td style="text-align: right;">0.6550</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0.76</td>
+<td style="text-align: right;">2517</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">0.0042</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">2231</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 7%">
+<col style="width: 3%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">egoid</th>
+<th style="text-align: right;">study_week</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">iso_week</th>
+<th style="text-align: right;">pct_dorm</th>
+<th style="text-align: right;">pct_academic</th>
+<th style="text-align: right;">pct_library</th>
+<th style="text-align: right;">pct_athletics</th>
+<th style="text-align: right;">pct_off_campus</th>
+<th style="text-align: right;">pct_traveling</th>
+<th style="text-align: left;">primary_zone</th>
+<th style="text-align: right;">total_zone_records</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: left;">Academic Buildings</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">2.30</td>
+<td style="text-align: right;">72.10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">25.08</td>
+<td style="text-align: left;">Academic Buildings</td>
+<td style="text-align: right;">1914</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">20.42</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">79.58</td>
+<td style="text-align: left;">Traveling / Away</td>
+<td style="text-align: right;">2243</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;">6.13</td>
+<td style="text-align: right;">71.17</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">21.31</td>
+<td style="text-align: right;">1.40</td>
+<td style="text-align: left;">Academic Buildings</td>
+<td style="text-align: right;">2220</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">83.67</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">15.81</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: left;">Academic Buildings</td>
+<td style="text-align: right;">2517</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: left;">Academic Buildings</td>
+<td style="text-align: right;">2231</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
 
 
 </section>

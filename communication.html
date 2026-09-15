@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>download – The NetSense Project</title>
+<title>Communication &amp; Phone Telemetry – The NetSense Project</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -164,7 +199,7 @@ window.Quarto = {
 <span class="menu-text">Interactive Catalog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./download.html" aria-current="page"> 
+    <a class="nav-link" href="./download.html"> 
 <span class="menu-text">Data Download</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -270,143 +305,473 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-download" id="toc-sec-download" class="nav-link active" data-scroll-target="#sec-download"><span class="header-section-number">1</span> Data Download</a>
+  <li><a href="#sec-communication" id="toc-sec-communication" class="nav-link active" data-scroll-target="#sec-communication"><span class="header-section-number">1</span> Communication &amp; Phone Telemetry</a>
   <ul class="collapse">
-  <li><a href="#longitudinal-social-network-surveys" id="toc-longitudinal-social-network-surveys" class="nav-link" data-scroll-target="#longitudinal-social-network-surveys"><span class="header-section-number">1.1</span> Longitudinal Social Network Surveys</a></li>
-  <li><a href="#perceived-alter-to-alter-network-ties" id="toc-perceived-alter-to-alter-network-ties" class="nav-link" data-scroll-target="#perceived-alter-to-alter-network-ties"><span class="header-section-number">1.2</span> Perceived Alter-to-Alter Network Ties</a></li>
-  <li><a href="#ego-network-structural-metrics" id="toc-ego-network-structural-metrics" class="nav-link" data-scroll-target="#ego-network-structural-metrics"><span class="header-section-number">1.3</span> Ego-Network Structural Metrics</a></li>
-  <li><a href="#longitudinal-demographic-behavioral-surveys" id="toc-longitudinal-demographic-behavioral-surveys" class="nav-link" data-scroll-target="#longitudinal-demographic-behavioral-surveys"><span class="header-section-number">1.4</span> Longitudinal Demographic &amp; Behavioral Surveys</a></li>
-  <li><a href="#high-frequency-quiz-responses-master" id="toc-high-frequency-quiz-responses-master" class="nav-link" data-scroll-target="#high-frequency-quiz-responses-master"><span class="header-section-number">1.5</span> High-Frequency Quiz Responses (Master)</a></li>
-  <li><a href="#longitudinal-communication-ego-networks-calls-sms" id="toc-longitudinal-communication-ego-networks-calls-sms" class="nav-link" data-scroll-target="#longitudinal-communication-ego-networks-calls-sms"><span class="header-section-number">1.6</span> Longitudinal Communication Ego Networks (Calls &amp; SMS)</a></li>
-  <li><a href="#longitudinal-email-ego-networks" id="toc-longitudinal-email-ego-networks" class="nav-link" data-scroll-target="#longitudinal-email-ego-networks"><span class="header-section-number">1.7</span> Longitudinal Email Ego Networks</a></li>
-  <li><a href="#address-book-ego-networks-contact-dynamics" id="toc-address-book-ego-networks-contact-dynamics" class="nav-link" data-scroll-target="#address-book-ego-networks-contact-dynamics"><span class="header-section-number">1.8</span> Address Book Ego Networks &amp; Contact Dynamics</a></li>
-  <li><a href="#academic-performance-classroom-co-enrollment-networks" id="toc-academic-performance-classroom-co-enrollment-networks" class="nav-link" data-scroll-target="#academic-performance-classroom-co-enrollment-networks"><span class="header-section-number">1.9</span> Academic Performance &amp; Classroom Co-Enrollment Networks</a></li>
-  <li><a href="#longitudinal-spatial-mobility-campus-zones" id="toc-longitudinal-spatial-mobility-campus-zones" class="nav-link" data-scroll-target="#longitudinal-spatial-mobility-campus-zones"><span class="header-section-number">1.10</span> Longitudinal Spatial Mobility &amp; Campus Zones</a></li>
-  <li><a href="#physical-proximity-networks-bluetooth" id="toc-physical-proximity-networks-bluetooth" class="nav-link" data-scroll-target="#physical-proximity-networks-bluetooth"><span class="header-section-number">1.11</span> Physical Proximity Networks (Bluetooth)</a></li>
-  <li><a href="#variable-catalog-mapping-dictionaries" id="toc-variable-catalog-mapping-dictionaries" class="nav-link" data-scroll-target="#variable-catalog-mapping-dictionaries"><span class="header-section-number">1.12</span> Variable Catalog &amp; Mapping Dictionaries</a></li>
+  <li><a href="#download-datasets" id="toc-download-datasets" class="nav-link" data-scroll-target="#download-datasets"><span class="header-section-number">1.1</span> Download Datasets</a>
+  <ul class="collapse">
+  <li><a href="#longitudinal-dyadic-communication-panel-calls-sms" id="toc-longitudinal-dyadic-communication-panel-calls-sms" class="nav-link" data-scroll-target="#longitudinal-dyadic-communication-panel-calls-sms"><span class="header-section-number">1.1.1</span> 1. Longitudinal Dyadic Communication Panel (Calls &amp; SMS)</a></li>
+  <li><a href="#longitudinal-weekly-communication-ego-metrics" id="toc-longitudinal-weekly-communication-ego-metrics" class="nav-link" data-scroll-target="#longitudinal-weekly-communication-ego-metrics"><span class="header-section-number">1.1.2</span> 2. Longitudinal Weekly Communication Ego Metrics</a></li>
+  <li><a href="#longitudinal-email-ego-networks" id="toc-longitudinal-email-ego-networks" class="nav-link" data-scroll-target="#longitudinal-email-ego-networks"><span class="header-section-number">1.1.3</span> 3. Longitudinal Email Ego Networks</a></li>
+  <li><a href="#phone-address-book-rosters-dynamics" id="toc-phone-address-book-rosters-dynamics" class="nav-link" data-scroll-target="#phone-address-book-rosters-dynamics"><span class="header-section-number">1.1.4</span> 4. Phone Address Book Rosters &amp; Dynamics</a></li>
+  </ul></li>
+  <li><a href="#data-schema-variables" id="toc-data-schema-variables" class="nav-link" data-scroll-target="#data-schema-variables"><span class="header-section-number">1.2</span> Data Schema &amp; Variables</a>
+  <ul class="collapse">
+  <li><a href="#dyadic-communication-panel" id="toc-dyadic-communication-panel" class="nav-link" data-scroll-target="#dyadic-communication-panel"><span class="header-section-number">1.2.1</span> Dyadic Communication Panel</a></li>
+  <li><a href="#weekly-communication-ego-metrics" id="toc-weekly-communication-ego-metrics" class="nav-link" data-scroll-target="#weekly-communication-ego-metrics"><span class="header-section-number">1.2.2</span> Weekly Communication Ego Metrics</a></li>
+  </ul></li>
+  <li><a href="#sample-data-overview" id="toc-sample-data-overview" class="nav-link" data-scroll-target="#sample-data-overview"><span class="header-section-number">1.3</span> Sample Data Overview</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Communication &amp; Phone Telemetry</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="sec-download" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Data Download</h1>
-<p>The cleaned, de-identified datasets from the NetSense study are available for open academic research. All files have been programmatically scrubbed of sensitive personal identifiers (including student names, email addresses, NetIDs, and raw telephone numbers).</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="sec-communication" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Communication &amp; Phone Telemetry</h1>
+<p>This section describes the longitudinal multi-modal communication and address book datasets passively collected from participant smartphones across 158 continuous academic study weeks (2011–2014).</p>
+<p>All communication events have been programmatically de-identified: study peers are linked using standard 5-digit <code>egoid</code>s, while out-of-network contacts (family, high school friends, non-study contacts) are protected using irreversible salted cryptographic pseudonyms (<code>ext_XXXXXXXX</code> and <code>em_XXXXXXXX</code>).</p>
 <hr>
-<section id="longitudinal-social-network-surveys" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="longitudinal-social-network-surveys"><span class="header-section-number">1.1</span> Longitudinal Social Network Surveys</h2>
-<p>Longitudinal panel tracking dyadic nominations between students across Waves 1–8 (<span class="math inline">\(N = 11,818\)</span> nominations). Includes subjective closeness, relationship duration, tie categories, contact frequencies, and emotional profiles.</p>
-<p><a href="Data/network_surveys_longitudinal_clean.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> CSV Dataset (.csv, 33 MB)</a> <a href="Data/network_surveys_longitudinal_clean.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 600 KB)</a> <a href="Data/network_surveys_longitudinal_clean.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 89 MB)</a></p>
+<section id="download-datasets" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="download-datasets"><span class="header-section-number">1.1</span> Download Datasets</h2>
+<section id="longitudinal-dyadic-communication-panel-calls-sms" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="longitudinal-dyadic-communication-panel-calls-sms"><span class="header-section-number">1.1.1</span> 1. Longitudinal Dyadic Communication Panel (Calls &amp; SMS)</h3>
+<p>Dyadic interaction panel (<span class="math inline">\(N = 383,895\)</span> dyad-week observations across 158 weeks) tracking directional phone calls and text messages exchanged between participants and their social contacts.</p>
+<p><a href="Data/weekly_communication_dyads_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Download Compressed Dyads (.csv.gz, 2.7 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Dyadic Panel (.csv, 11 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 1.8 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 12 MB)</a></p>
+</section>
+<section id="longitudinal-weekly-communication-ego-metrics" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="longitudinal-weekly-communication-ego-metrics"><span class="header-section-number">1.1.2</span> 2. Longitudinal Weekly Communication Ego Metrics</h3>
+<p>Ego-level weekly summary panel (<span class="math inline">\(N = 19,598\)</span> ego-weeks) tracking communication degree, total incoming/outgoing SMS volume, and total incoming/outgoing voice call duration.</p>
+<p><a href="Data/weekly_communication_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Ego Metrics (.csv, 860 KB)</a> <a href="Data/weekly_communication_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 270 KB)</a> <a href="Data/weekly_communication_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 1.0 MB)</a></p>
+</section>
+<section id="longitudinal-email-ego-networks" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="longitudinal-email-ego-networks"><span class="header-section-number">1.1.3</span> 3. Longitudinal Email Ego Networks</h3>
+<p>Longitudinal email interaction panel (<span class="math inline">\(N = 676,717\)</span> dyad-weeks from over 1 million parsed emails) classified into peer, personal webmail, campus listservs, and automated commercial notifications.</p>
+<p><a href="Data/weekly_email_dyads_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Download Compressed Email Dyads (.csv.gz, 3.7 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Email Dyads (.csv, 33 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 3.3 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 57 MB)</a></p>
+<p><a href="Data/weekly_email_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Ego Email Metrics (.csv, 520 KB)</a> <a href="Data/weekly_email_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 140 KB)</a> <a href="Data/weekly_email_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 680 KB)</a></p>
+</section>
+<section id="phone-address-book-rosters-dynamics" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="phone-address-book-rosters-dynamics"><span class="header-section-number">1.1.4</span> 4. Phone Address Book Rosters &amp; Dynamics</h3>
+<p>Dyadic address book roster (<span class="math inline">\(N = 30,802\)</span> saved contacts) and weekly ego metrics (<span class="math inline">\(N = 6,384\)</span> ego-weeks) tracking contact retention and new social ties added to student smartphones.</p>
+<p><a href="Data/dyadic_contacts_roster_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Download Compressed Contacts Roster (.csv.gz, 210 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Contacts Roster (.csv, 820 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 150 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 920 KB)</a></p>
+<p><a href="Data/weekly_contacts_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Weekly Contacts Metrics (.csv, 340 KB)</a> <a href="Data/weekly_contacts_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 75 KB)</a> <a href="Data/weekly_contacts_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 460 KB)</a></p>
 <hr>
 </section>
-<section id="perceived-alter-to-alter-network-ties" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="perceived-alter-to-alter-network-ties"><span class="header-section-number">1.2</span> Perceived Alter-to-Alter Network Ties</h2>
-<p>Dyadic edge list capturing all perceived acquaintance ties between nominated alters within each participant’s personal network across Waves 1–5, 7, and 8 (<span class="math inline">\(N = 29,473\)</span> perceived ties).</p>
-<p><a href="Data/alter_alter_ties_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Alter-Alter Ties (.csv, 1.4 MB)</a> <a href="Data/alter_alter_ties_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Alter-Alter Ties (.rds, 180 KB)</a> <a href="Data/alter_alter_ties_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Alter-Alter Ties (.dta, 2.1 MB)</a></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</section>
+<section id="data-schema-variables" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="data-schema-variables"><span class="header-section-number">1.2</span> Data Schema &amp; Variables</h2>
+<section id="dyadic-communication-panel" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="dyadic-communication-panel"><span class="header-section-number">1.2.1</span> Dyadic Communication Panel</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>egoid</code></td>
+<td>Integer</td>
+<td>Standard 5-digit student participant identifier</td>
+</tr>
+<tr class="even">
+<td><code>alter_id</code></td>
+<td>Character</td>
+<td>Alter identifier: 5-digit <code>egoid</code> if enrolled peer; salted pseudonym <code>ext_XXXXXXXX</code> if outside contact</td>
+</tr>
+<tr class="odd">
+<td><code>is_study_peer</code></td>
+<td>Binary</td>
+<td><code>1</code> = Alter is an enrolled NetSense peer; <code>0</code> = External alter</td>
+</tr>
+<tr class="even">
+<td><code>study_week</code></td>
+<td>Integer</td>
+<td>Continuous study week index (Week 1 = Aug 22, 2011)</td>
+</tr>
+<tr class="odd">
+<td><code>stata_week</code></td>
+<td>Integer</td>
+<td>Stata calendar week index</td>
+</tr>
+<tr class="even">
+<td><code>flow_in</code></td>
+<td>Numeric</td>
+<td>Total incoming communication events from alter to ego that week</td>
+</tr>
+<tr class="odd">
+<td><code>flow_out</code></td>
+<td>Numeric</td>
+<td>Total outgoing communication events from ego to alter that week</td>
+</tr>
+<tr class="even">
+<td><code>total_flow</code></td>
+<td>Numeric</td>
+<td>Total communication events exchanged (<code>flow_in + flow_out</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>is_saved_in_contacts</code></td>
+<td>Binary</td>
+<td><code>1</code> = Alter was saved in ego’s smartphone address book; <code>0</code> = Unsaved contact</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="weekly-communication-ego-metrics" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="weekly-communication-ego-metrics"><span class="header-section-number">1.2.2</span> Weekly Communication Ego Metrics</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>egoid</code></td>
+<td>Integer</td>
+<td>Standard 5-digit student participant identifier</td>
+</tr>
+<tr class="even">
+<td><code>study_week</code></td>
+<td>Integer</td>
+<td>Continuous study week index</td>
+</tr>
+<tr class="odd">
+<td><code>indegree</code></td>
+<td>Integer</td>
+<td>Count of unique alters who initiated communication to ego that week</td>
+</tr>
+<tr class="even">
+<td><code>outdegree</code></td>
+<td>Integer</td>
+<td>Count of unique alters ego initiated communication to that week</td>
+</tr>
+<tr class="odd">
+<td><code>total_degree</code></td>
+<td>Integer</td>
+<td>Count of total distinct communication partners that week</td>
+</tr>
+<tr class="even">
+<td><code>sms_in</code></td>
+<td>Integer</td>
+<td>Count of incoming SMS text messages</td>
+</tr>
+<tr class="odd">
+<td><code>sms_out</code></td>
+<td>Integer</td>
+<td>Count of outgoing SMS text messages</td>
+</tr>
+<tr class="even">
+<td><code>total_sms</code></td>
+<td>Integer</td>
+<td>Total SMS text messages exchanged</td>
+</tr>
+<tr class="odd">
+<td><code>voice_in</code></td>
+<td>Numeric</td>
+<td>Total duration (seconds) of incoming phone calls</td>
+</tr>
+<tr class="even">
+<td><code>voice_out</code></td>
+<td>Numeric</td>
+<td>Total duration (seconds) of outgoing phone calls</td>
+</tr>
+<tr class="odd">
+<td><code>total_voice</code></td>
+<td>Numeric</td>
+<td>Total duration (seconds) of phone calls</td>
+</tr>
+<tr class="even">
+<td><code>total_communication</code></td>
+<td>Numeric</td>
+<td>Multi-modal communication volume (<code>total_sms + total_voice</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="sample-data-overview" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sample-data-overview"><span class="header-section-number">1.3</span> Sample Data Overview</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Show Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>comm_sample <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Data/weekly_communication_dyads_longitudinal.csv"</span>, <span class="at">n_max =</span> <span class="dv">6</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(comm_sample, <span class="at">caption =</span> <span class="st">"Sample Rows: Longitudinal Communication Dyads"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ego_sample <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"Data/weekly_communication_ego_metrics_longitudinal.csv"</span>, <span class="at">n_max =</span> <span class="dv">6</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(ego_sample, <span class="at">caption =</span> <span class="st">"Sample Rows: Weekly Communication Ego Metrics"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-comm-sample" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comm-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Sample Rows: Weekly Communication Ego Metrics
+</figcaption>
+<div aria-describedby="tbl-comm-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 9%">
+<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">egoid</th>
+<th style="text-align: right;">alter_id</th>
+<th style="text-align: right;">is_study_peer</th>
+<th style="text-align: right;">study_week</th>
+<th style="text-align: right;">stata_week</th>
+<th style="text-align: right;">flow_in</th>
+<th style="text-align: right;">flow_out</th>
+<th style="text-align: right;">total_flow</th>
+<th style="text-align: right;">is_saved_in_contacts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">62560</td>
+<td style="text-align: right;">176422</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">2683</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">143943</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10353</td>
+<td style="text-align: right;">110922</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10353</td>
+<td style="text-align: right;">111498</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10353</td>
+<td style="text-align: right;">114644</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10353</td>
+<td style="text-align: right;">122333</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Wave 6 Survey Design
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">egoid</th>
+<th style="text-align: right;">study_week</th>
+<th style="text-align: right;">stata_week</th>
+<th style="text-align: right;">indegree</th>
+<th style="text-align: right;">outdegree</th>
+<th style="text-align: right;">total_degree</th>
+<th style="text-align: right;">sms_in</th>
+<th style="text-align: right;">sms_out</th>
+<th style="text-align: right;">total_sms</th>
+<th style="text-align: right;">voice_in</th>
+<th style="text-align: right;">voice_out</th>
+<th style="text-align: right;">total_voice</th>
+<th style="text-align: right;">total_communication</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">62560</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">2683</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10353</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">111</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10841</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">71</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11692</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">13116</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2684</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">266</td>
+<td style="text-align: right;">491</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">647</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Perceived alter-to-alter tie data was deliberately omitted from the Wave 6 (Summer 2013) survey instrument to reduce respondent burden during summer break. Full alter-to-alter batteries were reinstated in Waves 7 and 8.</p>
+</figure>
 </div>
 </div>
-<hr>
-</section>
-<section id="ego-network-structural-metrics" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="ego-network-structural-metrics"><span class="header-section-number">1.3</span> Ego-Network Structural Metrics</h2>
-<p>Longitudinal summary panel (<span class="math inline">\(N = 804\)</span> ego-waves) tracking personal network size (<span class="math inline">\(k\)</span>), potential alter pairs (<span class="math inline">\(\binom{k}{2}\)</span>), reported ties, and personal network density / local clustering coefficients.</p>
-<p><a href="Data/ego_network_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Metrics (.csv, 42 KB)</a> <a href="Data/ego_network_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Ego Metrics (.rds, 10 KB)</a> <a href="Data/ego_network_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Ego Metrics (.dta, 85 KB)</a></p>
-<hr>
-</section>
-<section id="longitudinal-demographic-behavioral-surveys" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="longitudinal-demographic-behavioral-surveys"><span class="header-section-number">1.4</span> Longitudinal Demographic &amp; Behavioral Surveys</h2>
-<p>Wide individual-level panel (<span class="math inline">\(N = 203\)</span> students, 1,556 variables) tracking demographic backgrounds, Big Five personality inventories, GPAs, lifestyles, sleep habits, musical tastes, and activities across Waves 1–6.</p>
-<p><a href="Surveys/demographics_longitudinal_clean.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> CSV Dataset (.csv, 2.7 MB)</a> <a href="Surveys/demographics_longitudinal_clean.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 280 KB)</a> <a href="Surveys/demographics_longitudinal_clean.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 6.2 MB)</a></p>
-<hr>
-</section>
-<section id="high-frequency-quiz-responses-master" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="high-frequency-quiz-responses-master"><span class="header-section-number">1.5</span> High-Frequency Quiz Responses (Master)</h2>
-<p>High-frequency survey check-ins across semesters (<span class="math inline">\(N = 194\)</span> students, 146 variables) measuring student emotional well-being, health, and campus engagement.</p>
-<p><a href="Data/Quizzes/Quiz_Responses_Master.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Quiz CSV (.csv, 65 KB)</a> <a href="Data/Quizzes/Quiz_Responses_Master.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Quiz Stata (.dta, 320 KB)</a></p>
-<hr>
-</section>
-<section id="longitudinal-communication-ego-networks-calls-sms" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="longitudinal-communication-ego-networks-calls-sms"><span class="header-section-number">1.6</span> Longitudinal Communication Ego Networks (Calls &amp; SMS)</h2>
-<p>De-identified dyadic communication panel tracking phone calls and text messages across 158 continuous academic weeks (2011–2014, <span class="math inline">\(N = 383,895\)</span> dyad-week interaction records). Captures communication volumes with both enrolled study peers and outside alters (family, high school friends, etc.) using consistent, irreversible salted pseudonyms.</p>
-<p><strong>Dyadic Communication Panel:</strong></p>
-<p><a href="Data/weekly_communication_dyads_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Dyadic Panel (.csv.gz, 2.7 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Dyadic Panel (.csv, 11 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 1.8 MB)</a> <a href="Data/weekly_communication_dyads_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 12 MB)</a></p>
-<p><strong>Ego-Level Weekly Summary Metrics:</strong></p>
-<p>Longitudinal summary metrics (<span class="math inline">\(N = 19,598\)</span> ego-weeks) tracking active indegree, outdegree, total SMS inflow/outflow, and total voice call inflow/outflow per participant week.</p>
-<p><a href="Data/weekly_communication_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Weekly Metrics (.csv, 860 KB)</a> <a href="Data/weekly_communication_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 270 KB)</a> <a href="Data/weekly_communication_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.0 MB)</a></p>
-<hr>
-</section>
-<section id="longitudinal-email-ego-networks" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="longitudinal-email-ego-networks"><span class="header-section-number">1.7</span> Longitudinal Email Ego Networks</h2>
-<p>De-identified longitudinal email interaction panel tracking sent and received emails across 158 study weeks (<span class="math inline">\(N = 676,717\)</span> dyad-week interaction records from over 1 million parsed emails). Email addresses are completely pseudonymized via salted cryptographic hashes and classified into Notre Dame peer/individual, personal webmail, campus listservs, and automated commercial notifications.</p>
-<p><strong>Dyadic Email Panel:</strong></p>
-<p><a href="Data/weekly_email_dyads_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Dyadic Email Panel (.csv.gz, 3.7 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Dyadic Email Panel (.csv, 33 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 3.3 MB)</a> <a href="Data/weekly_email_dyads_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 57 MB)</a></p>
-<p><strong>Ego-Level Weekly Summary Metrics:</strong></p>
-<p>Weekly summary metrics (<span class="math inline">\(N = 14,320\)</span> ego-weeks) tracking interpersonal email degree, person-to-person email volumes, Notre Dame peer emails, campus course/club listserv emails, and automated commercial emails.</p>
-<p><a href="Data/weekly_email_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Weekly Email Metrics (.csv, 520 KB)</a> <a href="Data/weekly_email_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 140 KB)</a> <a href="Data/weekly_email_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.3 MB)</a></p>
-<hr>
-</section>
-<section id="address-book-ego-networks-contact-dynamics" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="address-book-ego-networks-contact-dynamics"><span class="header-section-number">1.8</span> Address Book Ego Networks &amp; Contact Dynamics</h2>
-<p>Standardized longitudinal datasets derived from periodic smartphone address book snapshots (Weeks 37 to 192, spanning 2012–2015). Tracks address book size, contact acquisition rates, and dyadic retention.</p>
-<p><strong>Dyadic Saved-Contacts Roster:</strong></p>
-<p>Dyadic panel (<span class="math inline">\(N = 30,802\)</span> saved ego-alter pairs) tracking every person saved in participants’ phone address books, their earliest observed week, last observed week, and total weeks retained in the phone. Fully cross-referenced with communication alter pseudonyms.</p>
-<p><a href="Data/dyadic_contacts_roster_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Contacts Roster (.csv.gz, 215 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Contacts Roster (.csv, 940 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 220 KB)</a> <a href="Data/dyadic_contacts_roster_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.6 MB)</a></p>
-<p><strong>Ego-Level Weekly Address Book Metrics:</strong></p>
-<p>Longitudinal summary metrics (<span class="math inline">\(N = 6,384\)</span> ego-weeks) tracking total address book size (<code>total_contacts_in_phone</code>), number of enrolled study peers saved (<code>study_peers_saved</code>), outside contacts saved (<code>external_contacts_saved</code>), and rate of adding new contacts (<code>new_contacts_added</code>).</p>
-<p><a href="Data/weekly_contacts_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Ego Contact Metrics (.csv, 205 KB)</a> <a href="Data/weekly_contacts_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 45 KB)</a> <a href="Data/weekly_contacts_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 450 KB)</a></p>
-<hr>
-</section>
-<section id="academic-performance-classroom-co-enrollment-networks" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="academic-performance-classroom-co-enrollment-networks"><span class="header-section-number">1.9</span> Academic Performance &amp; Classroom Co-Enrollment Networks</h2>
-<p>Official registrar academic performance records, term-by-term GPAs, and shared classroom course co-enrollment dyads across participants’ four-year college trajectories (2011–2015).</p>
-<p><strong>Course Letter Grades &amp; Credits:</strong></p>
-<p>Longitudinal course enrollment records (<span class="math inline">\(N = 5,779\)</span>) tracking semester course enrollments, course reference numbers (CRNs), official registrar letter grades, numeric grade points (4.0 scale), and AP/transfer credit flags across freshman through senior years.</p>
-<p><a href="Data/academic_grades_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Course Grades (.csv, 330 KB)</a> <a href="Data/academic_grades_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 32 KB)</a> <a href="Data/academic_grades_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 450 KB)</a></p>
-<p><strong>Classroom Course Co-Enrollment Dyads:</strong></p>
-<p>Dyadic network panel (<span class="math inline">\(N = 979\)</span> shared course dyads) identifying which NetSense students shared the exact same course sections and classroom lectures each semester.</p>
-<p><a href="Data/academic_classroom_dyads_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Classroom Dyads (.csv, 54 KB)</a> <a href="Data/academic_classroom_dyads_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 6 KB)</a> <a href="Data/academic_classroom_dyads_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 70 KB)</a></p>
-<p><strong>Semester-by-Semester GPA Summary:</strong></p>
-<p>Student-by-term summary panel (<span class="math inline">\(N = 898\)</span> student-semesters) tracking courses enrolled, courses passed, and term Grade Point Average (GPA) across all terms.</p>
-<p><a href="Data/academic_term_summary_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Term GPA Summary (.csv, 49 KB)</a> <a href="Data/academic_term_summary_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 5 KB)</a> <a href="Data/academic_term_summary_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 80 KB)</a></p>
-<hr>
-</section>
-<section id="longitudinal-spatial-mobility-campus-zones" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="longitudinal-spatial-mobility-campus-zones"><span class="header-section-number">1.10</span> Longitudinal Spatial Mobility &amp; Campus Zones</h2>
-<p>De-identified longitudinal spatial mobility and campus zone panels (<span class="math inline">\(N = 16,144\)</span> ego-weeks across 188 students) extracted from over 11.5 million passive location fixes across study weeks 7 to 192 (2011–2015). Raw coordinates are completely scrubbed and converted into weekly mobility indicators and coarse categorical zone distributions.</p>
-<p><strong>Spatial Mobility Indicators:</strong></p>
-<p>Longitudinal panel tracking weekly radius of gyration (<span class="math inline">\(r_g\)</span> in km), spatial mobility entropy (bits), normalized entropy (<span class="math inline">\(0.0\)</span> to <span class="math inline">\(1.0\)</span>), time on Notre Dame campus percentage, distinct locations visited count, and peak distance from campus.</p>
-<p><a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Mobility (.csv.gz, 321 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Spatial Mobility (.csv, 895 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 294 KB)</a> <a href="Data/weekly_spatial_mobility_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.4 MB)</a></p>
-<p><strong>Categorical Campus Zones:</strong></p>
-<p>Longitudinal panel tracking percentage of weekly time allocated across 6 coarse campus and geographic zones (<code>Dorm</code>, <code>Academic Buildings</code>, <code>Library</code>, <code>Athletic Facilities</code>, <code>Off-Campus / South Bend</code>, <code>Traveling / Away</code>) and primary frequented zone.</p>
-<p><a href="Data/weekly_campus_zones_ego_metrics_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Campus Zones (.csv.gz, 222 KB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Campus Zones (.csv, 1.0 MB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 193 KB)</a> <a href="Data/weekly_campus_zones_ego_metrics_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 1.8 MB)</a></p>
-<hr>
-</section>
-<section id="physical-proximity-networks-bluetooth" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="physical-proximity-networks-bluetooth"><span class="header-section-number">1.11</span> Physical Proximity Networks (Bluetooth)</h2>
-<p>Aggregated undirected weekly contact networks (<span class="math inline">\(N = 267,629\)</span> dyad-weeks) based on over 10.9 million high-resolution Bluetooth proximity pings across academic weeks 8 through 191 (spanning all four undergraduate years: 2011–2015).</p>
-<p><a href="Data/weekly_contact_networks_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Contact Networks (.csv.gz, 2.3 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Contact Networks (.csv, 8.7 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 2.0 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 15 MB)</a> <a href="Metadata and Mappings/BT_egoid_mapping.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Bluetooth-to-EgoID Key (.csv, 3 KB)</a></p>
-<hr>
-</section>
-<section id="variable-catalog-mapping-dictionaries" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="variable-catalog-mapping-dictionaries"><span class="header-section-number">1.12</span> Variable Catalog &amp; Mapping Dictionaries</h2>
-<p>Comprehensive machine-readable dictionary covering all survey variables, survey questions, and response value labels.</p>
-<p><a href="Metadata and Mappings/variable_catalog.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Full Variable Catalog (.csv, 450 KB)</a> <a href="Metadata and Mappings/Dorm Distances.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-spreadsheet"></i> Dorm Distances Matrix (.csv, 2 KB)</a> <a href="Metadata and Mappings/Semester Dates.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-spreadsheet"></i> Semester Dates (.csv, 1 KB)</a></p>
 
 
 </section>
