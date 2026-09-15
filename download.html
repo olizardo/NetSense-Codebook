@@ -270,7 +270,6 @@ window.Quarto = {
   <li><a href="#academic-performance-classroom-co-enrollment-networks" id="toc-academic-performance-classroom-co-enrollment-networks" class="nav-link" data-scroll-target="#academic-performance-classroom-co-enrollment-networks"><span class="header-section-number">1.8</span> Academic Performance &amp; Classroom Co-Enrollment Networks</a></li>
   <li><a href="#physical-proximity-networks-bluetooth" id="toc-physical-proximity-networks-bluetooth" class="nav-link" data-scroll-target="#physical-proximity-networks-bluetooth"><span class="header-section-number">1.9</span> Physical Proximity Networks (Bluetooth)</a></li>
   <li><a href="#variable-catalog-mapping-dictionaries" id="toc-variable-catalog-mapping-dictionaries" class="nav-link" data-scroll-target="#variable-catalog-mapping-dictionaries"><span class="header-section-number">1.10</span> Variable Catalog &amp; Mapping Dictionaries</a></li>
-  <li><a href="#communication-telemetry-data" id="toc-communication-telemetry-data" class="nav-link" data-scroll-target="#communication-telemetry-data"><span class="header-section-number">1.11</span> Communication Telemetry Data</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -364,32 +363,14 @@ window.Quarto = {
 </section>
 <section id="physical-proximity-networks-bluetooth" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="physical-proximity-networks-bluetooth"><span class="header-section-number">1.9</span> Physical Proximity Networks (Bluetooth)</h2>
-<p>Aggregated undirected weekly contact networks (<span class="math inline">\(N = 165,967\)</span> dyad-weeks) based on high-resolution Bluetooth proximity episodes across academic weeks 8–41.</p>
-<p><a href="Data/weekly_contact_networks_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Weekly Contact Networks (.csv, 6.7 MB)</a> <a href="Metadata and Mappings/BT_egoid_mapping.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Bluetooth-to-EgoID Key (.csv, 3 KB)</a></p>
+<p>Aggregated undirected weekly contact networks (<span class="math inline">\(N = 267,629\)</span> dyad-weeks) based on over 10.9 million high-resolution Bluetooth proximity pings across academic weeks 8 through 191 (spanning all four undergraduate years: 2011–2015).</p>
+<p><a href="Data/weekly_contact_networks_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Compressed Contact Networks (.csv.gz, 2.3 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Contact Networks (.csv, 8.7 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> R Dataset (.rds, 2.0 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Stata Dataset (.dta, 15 MB)</a> <a href="Metadata and Mappings/BT_egoid_mapping.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Bluetooth-to-EgoID Key (.csv, 3 KB)</a></p>
 <hr>
 </section>
 <section id="variable-catalog-mapping-dictionaries" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="variable-catalog-mapping-dictionaries"><span class="header-section-number">1.10</span> Variable Catalog &amp; Mapping Dictionaries</h2>
 <p>Comprehensive machine-readable dictionary covering all survey variables, survey questions, and response value labels.</p>
 <p><a href="Metadata and Mappings/variable_catalog.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Full Variable Catalog (.csv, 450 KB)</a> <a href="Metadata and Mappings/Dorm Distances.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-spreadsheet"></i> Dorm Distances Matrix (.csv, 2 KB)</a> <a href="Metadata and Mappings/Semester Dates.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-spreadsheet"></i> Semester Dates (.csv, 1 KB)</a></p>
-<hr>
-</section>
-<section id="communication-telemetry-data" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="communication-telemetry-data"><span class="header-section-number">1.11</span> Communication Telemetry Data</h2>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Restricted Access
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Due to institutional review board (IRB) privacy restrictions and massive data volumes (exceeding 25 GB), raw and fine-grained communication telemetry logs (phone call duration logs, SMS message timestamps, and email traffic) cannot be hosted directly for public web download.</p>
-<p>Aggregated weekly communication volumes (indegree, outdegree, and weekly text/voice flows) are available in <code>Data/weekly_aggregated_metrics/</code>. Researchers interested in accessing de-identified communication logs for replication purposes should contact the study investigators at <strong>netsense@nd.edu</strong>.</p>
-</div>
-</div>
 
 
 </section>
