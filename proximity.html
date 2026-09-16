@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>proximity – The NetSense Project</title>
+<title>Bluetooth Proximity Logs – The NetSense Project</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -80,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-241f72a3f48c5c8316acd5d095cd9a82.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-57cbada1f65ec8923689c8ecbfed9913.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -307,39 +307,228 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-proximity" id="toc-sec-proximity" class="nav-link active" data-scroll-target="#sec-proximity"><span class="header-section-number">1</span> Bluetooth Proximity Logs</a>
   <ul class="collapse">
-  <li><a href="#proximity-logging-mechanics" id="toc-proximity-logging-mechanics" class="nav-link" data-scroll-target="#proximity-logging-mechanics"><span class="header-section-number">1.1</span> Proximity Logging Mechanics</a></li>
-  <li><a href="#proximity-sample-data" id="toc-proximity-sample-data" class="nav-link" data-scroll-target="#proximity-sample-data"><span class="header-section-number">1.2</span> Proximity Sample Data</a></li>
-  <li><a href="#linking-proximity-to-surveys" id="toc-linking-proximity-to-surveys" class="nav-link" data-scroll-target="#linking-proximity-to-surveys"><span class="header-section-number">1.3</span> Linking Proximity to Surveys</a></li>
-  <li><a href="#passive-mobile-sensor-telemetry-communication-logs" id="toc-passive-mobile-sensor-telemetry-communication-logs" class="nav-link" data-scroll-target="#passive-mobile-sensor-telemetry-communication-logs"><span class="header-section-number">1.4</span> Passive Mobile Sensor Telemetry &amp; Communication Logs</a>
+  <li><a href="#longitudinal-contact-networks" id="toc-longitudinal-contact-networks" class="nav-link" data-scroll-target="#longitudinal-contact-networks"><span class="header-section-number">1.1</span> Longitudinal Contact Networks</a>
   <ul class="collapse">
-  <li><a href="#raw-bluetooth-proximity-scans-raw_telemetry_databluetooth" id="toc-raw-bluetooth-proximity-scans-raw_telemetry_databluetooth" class="nav-link" data-scroll-target="#raw-bluetooth-proximity-scans-raw_telemetry_databluetooth"><span class="header-section-number">1.4.1</span> 1. Raw Bluetooth Proximity Scans (<code>Raw_Telemetry_Data/Bluetooth/</code>)</a></li>
-  <li><a href="#smstext-messaging-metadata-raw_telemetry_datasms" id="toc-smstext-messaging-metadata-raw_telemetry_datasms" class="nav-link" data-scroll-target="#smstext-messaging-metadata-raw_telemetry_datasms"><span class="header-section-number">1.4.2</span> 2. SMS/Text Messaging Metadata (<code>Raw_Telemetry_Data/SMS/</code>)</a></li>
-  <li><a href="#voice-call-logs-raw_telemetry_dataphonecall" id="toc-voice-call-logs-raw_telemetry_dataphonecall" class="nav-link" data-scroll-target="#voice-call-logs-raw_telemetry_dataphonecall"><span class="header-section-number">1.4.3</span> 3. Voice Call logs (<code>Raw_Telemetry_Data/PhoneCall/</code>)</a></li>
-  <li><a href="#emailmail-metadata-raw_telemetry_datamail" id="toc-emailmail-metadata-raw_telemetry_datamail" class="nav-link" data-scroll-target="#emailmail-metadata-raw_telemetry_datamail"><span class="header-section-number">1.4.4</span> 4. Email/Mail Metadata (<code>Raw_Telemetry_Data/Mail/</code>)</a></li>
-  <li><a href="#locationgps-telemetry-raw_telemetry_datalocation" id="toc-locationgps-telemetry-raw_telemetry_datalocation" class="nav-link" data-scroll-target="#locationgps-telemetry-raw_telemetry_datalocation"><span class="header-section-number">1.4.5</span> 5. Location/GPS Telemetry (<code>Raw_Telemetry_Data/Location/</code>)</a></li>
-  <li><a href="#address-bookcontacts-scrapes-raw_telemetry_datacontacts" id="toc-address-bookcontacts-scrapes-raw_telemetry_datacontacts" class="nav-link" data-scroll-target="#address-bookcontacts-scrapes-raw_telemetry_datacontacts"><span class="header-section-number">1.4.6</span> 6. Address Book/Contacts Scrapes (<code>Raw_Telemetry_Data/Contacts/</code>)</a></li>
+  <li><a href="#variable-dictionary" id="toc-variable-dictionary" class="nav-link" data-scroll-target="#variable-dictionary"><span class="header-section-number">1.1.1</span> Variable Dictionary</a></li>
+  <li><a href="#sample-data-overview" id="toc-sample-data-overview" class="nav-link" data-scroll-target="#sample-data-overview"><span class="header-section-number">1.1.2</span> Sample Data Overview</a></li>
   </ul></li>
+  <li><a href="#proximity-logging-mechanics" id="toc-proximity-logging-mechanics" class="nav-link" data-scroll-target="#proximity-logging-mechanics"><span class="header-section-number">1.2</span> Proximity Logging Mechanics</a></li>
+  <li><a href="#linking-bluetooth-pseudonyms-to-participant-ids" id="toc-linking-bluetooth-pseudonyms-to-participant-ids" class="nav-link" data-scroll-target="#linking-bluetooth-pseudonyms-to-participant-ids"><span class="header-section-number">1.3</span> Linking Bluetooth Pseudonyms to Participant IDs</a></li>
+  <li><a href="#relation-to-other-passive-mobile-sensing-streams" id="toc-relation-to-other-passive-mobile-sensing-streams" class="nav-link" data-scroll-target="#relation-to-other-passive-mobile-sensing-streams"><span class="header-section-number">1.4</span> Relation to Other Passive Mobile Sensing Streams</a></li>
   <li><a href="#technical-appendix-sensor-calibration-footnotes" id="toc-technical-appendix-sensor-calibration-footnotes" class="nav-link" data-scroll-target="#technical-appendix-sensor-calibration-footnotes"><span class="header-section-number">1.5</span> Technical Appendix: Sensor Calibration &amp; Footnotes</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bluetooth Proximity Logs</h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="sec-proximity" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Bluetooth Proximity Logs</h1>
 <p>This section describes the longitudinal Bluetooth physical proximity datasets collected passively across academic weeks 8 through 191 (spanning all four undergraduate years: 2011–2015, <span class="math inline">\(N = 267,629\)</span> dyad-week contact observations).</p>
-<p><a href="Data/weekly_contact_networks_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Download Compressed Networks (.csv.gz, 2.3 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Contact Networks (.csv, 8.7 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 2.0 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 15 MB)</a> <a href="Metadata and Mappings/BT_egoid_mapping.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Bluetooth ID Mapping Key (.csv, 3 KB)</a> <a href="Metadata and Mappings/ND-academic-calendar-2011_2012.pdf" class="download-btn download-rds"><i class="bi bi-calendar-event"></i> Download Academic Calendar (PDF)</a></p>
+<p><a href="Data/weekly_contact_networks_longitudinal.csv.gz" class="download-btn download-csv"><i class="bi bi-file-earmark-zip"></i> Download Compressed Networks (.csv.gz, 2.3 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Contact Networks (.csv, 8.7 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.rds" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Download R Dataset (.rds, 2.0 MB)</a> <a href="Data/weekly_contact_networks_longitudinal.dta" class="download-btn download-dta"><i class="bi bi-file-earmark-binary"></i> Download Stata Dataset (.dta, 15 MB)</a> <a href="Metadata and Mappings/BT_egoid_mapping.csv" class="download-btn download-rds"><i class="bi bi-file-earmark-code"></i> Bluetooth ID Mapping Key (.csv, 3 KB)</a></p>
 <p>Unlike the self-reported survey waves, the Bluetooth proximity data was automatically and passively logged by smartphones carried by the students, capturing continuous face-to-face proximity across their entire college trajectory.</p>
 <hr>
-<section id="proximity-logging-mechanics" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="proximity-logging-mechanics"><span class="header-section-number">1.1</span> Proximity Logging Mechanics</h2>
-<p>The smartphones were configured to run a continuous background service that scans for other nearby participants’ Bluetooth hardware beacons. When two devices detect each other within physical range (typically ~10 meters), a <strong>proximity episode</strong> is recorded.</p>
-<p>Each episode is described by 10 standardized columns:</p>
+<section id="longitudinal-contact-networks" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="longitudinal-contact-networks"><span class="header-section-number">1.1</span> Longitudinal Contact Networks</h2>
+<p>The primary public dataset is the aggregated longitudinal weekly contact network (<code>Data/weekly_contact_networks_longitudinal.*</code>). It condenses over 10.9 million high-resolution proximity pings into weekly dyadic contact summaries. Interacting students are already mapped to standard 5-digit student <code>egoid</code>s.</p>
+<section id="variable-dictionary" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="variable-dictionary"><span class="header-section-number">1.1.1</span> Variable Dictionary</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ego1</code></td>
+<td>Integer</td>
+<td>Standard 5-digit student identifier for the first participant (guaranteed <code>ego1 &lt; ego2</code>)</td>
+</tr>
+<tr class="even">
+<td><code>ego2</code></td>
+<td>Integer</td>
+<td>Standard 5-digit student identifier for the second participant</td>
+</tr>
+<tr class="odd">
+<td><code>week</code></td>
+<td>Integer</td>
+<td>Continuous study week index (Weeks 8 through 191, spanning Fall 2011 to Spring 2015)</td>
+</tr>
+<tr class="even">
+<td><code>total_duration_sec</code></td>
+<td>Numeric</td>
+<td>Combined duration of face-to-face contact in seconds during the week</td>
+</tr>
+<tr class="odd">
+<td><code>contact_count</code></td>
+<td>Integer</td>
+<td>Total number of separate physical proximity episodes between the dyad that week</td>
+</tr>
+<tr class="even">
+<td><code>mean_RSSI</code></td>
+<td>Numeric</td>
+<td>Average Received Signal Strength Indicator (RSSI in dBm) across all proximity episodes</td>
+</tr>
+<tr class="odd">
+<td><code>max_RSSI</code></td>
+<td>Numeric</td>
+<td>Peak physical closeness recorded (highest RSSI in dBm) during the week</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sample-data-overview" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="sample-data-overview"><span class="header-section-number">1.1.2</span> Sample Data Overview</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Show Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load sample aggregated contact network observations</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>net_file <span class="ot">&lt;-</span> <span class="st">"Data/weekly_contact_networks_longitudinal.csv"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(net_file)) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  sample_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(net_file, <span class="at">n_max =</span> <span class="dv">6</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  sample_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">ego1 =</span> <span class="fu">c</span>(<span class="dv">10060</span>, <span class="dv">10060</span>, <span class="dv">10060</span>, <span class="dv">10060</span>, <span class="dv">10060</span>, <span class="dv">10060</span>),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">ego2 =</span> <span class="fu">c</span>(<span class="dv">10281</span>, <span class="dv">10353</span>, <span class="dv">13116</span>, <span class="dv">13799</span>, <span class="dv">13882</span>, <span class="dv">13896</span>),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_duration_sec =</span> <span class="fu">c</span>(<span class="dv">1218</span>, <span class="dv">138</span>, <span class="dv">360</span>, <span class="dv">2399</span>, <span class="dv">60</span>, <span class="dv">451</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">contact_count =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">9</span>, <span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_RSSI =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">81.83</span>, <span class="sc">-</span><span class="fl">85.00</span>, <span class="sc">-</span><span class="fl">80.40</span>, <span class="sc">-</span><span class="fl">82.56</span>, <span class="sc">-</span><span class="fl">82.00</span>, <span class="sc">-</span><span class="fl">78.50</span>),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">max_RSSI =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">77.0</span>, <span class="sc">-</span><span class="fl">85.0</span>, <span class="sc">-</span><span class="fl">80.4</span>, <span class="sc">-</span><span class="fl">75.0</span>, <span class="sc">-</span><span class="fl">82.0</span>, <span class="sc">-</span><span class="fl">76.0</span>),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">week =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(sample_df, <span class="at">caption =</span> <span class="st">"Sample Aggregated Weekly Contact Observations"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="tbl-proximity-aggregated" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-proximity-aggregated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Sample Aggregated Weekly Contact Observations
+</figcaption>
+<div aria-describedby="tbl-proximity-aggregated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 27%">
+<col style="width: 20%">
+<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">ego1</th>
+<th style="text-align: right;">ego2</th>
+<th style="text-align: right;">total_duration_sec</th>
+<th style="text-align: right;">contact_count</th>
+<th style="text-align: right;">mean_RSSI</th>
+<th style="text-align: right;">max_RSSI</th>
+<th style="text-align: right;">week</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">10281</td>
+<td style="text-align: right;">1218</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-81.83</td>
+<td style="text-align: right;">-77.0</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">10353</td>
+<td style="text-align: right;">138</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-85.00</td>
+<td style="text-align: right;">-85.0</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">13116</td>
+<td style="text-align: right;">360</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-80.40</td>
+<td style="text-align: right;">-80.4</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">13799</td>
+<td style="text-align: right;">2399</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">-82.56</td>
+<td style="text-align: right;">-75.0</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">13882</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-82.00</td>
+<td style="text-align: right;">-82.0</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10060</td>
+<td style="text-align: right;">13896</td>
+<td style="text-align: right;">451</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-78.50</td>
+<td style="text-align: right;">-76.0</td>
+<td style="text-align: right;">8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="proximity-logging-mechanics" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="proximity-logging-mechanics"><span class="header-section-number">1.2</span> Proximity Logging Mechanics</h2>
+<p>The smartphones were configured to run a continuous background service that scanned for nearby participants’ Bluetooth hardware beacons. When two devices detected each other within physical range (typically ~10 meters), a <strong>proximity episode</strong> was recorded.</p>
+<p>In the underlying episode-level files (<code>Weekly Data/week*.csv</code>), each interaction episode is described by 10 standardized columns:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -357,12 +546,12 @@ window.Quarto = {
 <tr class="odd">
 <td><code>btnamej</code></td>
 <td>Character</td>
-<td>Bluetooth pseudonym of device j (e.g., <code>socs043</code>)</td>
+<td>Bluetooth pseudonym of device <span class="math inline">\(j\)</span> (e.g., <code>socs043</code>)</td>
 </tr>
 <tr class="even">
 <td><code>btnamei</code></td>
 <td>Character</td>
-<td>Bluetooth pseudonym of device i (e.g., <code>socs018</code>)</td>
+<td>Bluetooth pseudonym of device <span class="math inline">\(i\)</span> (e.g., <code>socs018</code>)</td>
 </tr>
 <tr class="odd">
 <td><code>episode</code></td>
@@ -406,56 +595,47 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<hr>
-</section>
-<section id="proximity-sample-data" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="proximity-sample-data"><span class="header-section-number">1.2</span> Proximity Sample Data</h2>
-<p>Below is a sample of the first few rows of <code>Weekly Data/week8.csv</code> to illustrate the structure of the automated logs.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Missing Weekly Data in Public Repository
+<span class="screen-reader-only">Note</span>High-Resolution Episode Files
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Due to size limitations and IRB restrictions, the raw high-resolution Bluetooth proximity files (<code>Weekly Data/week*.csv</code>) are excluded from the public git repository. However, the compiled longitudinal networks are available, and the codebook is built with representative sample data if the raw files are not present.</p>
+<p>Due to repository size considerations, high-resolution second-by-second episode logs (<code>Weekly Data/week*.csv</code>) are maintained in local project storage, while the compiled 4-year longitudinal contact network (<code>Data/weekly_contact_networks_longitudinal.*</code>) is distributed directly with the open data releases.</p>
 </div>
 </div>
 <div class="cell">
 <details class="code-fold">
 <summary>Show Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a sample week or use mock data if file is missing (e.g. on GitHub Actions)</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"Weekly Data/week8.csv"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(file_path)) {</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  week_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(file_path, <span class="at">n_max =</span> <span class="dv">8</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Generate representative mock data for compilation/GitHub Pages rendering</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  week_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">btnamej =</span> <span class="fu">c</span>(<span class="st">"socs043"</span>, <span class="st">"socs018"</span>, <span class="st">"socs012"</span>, <span class="st">"socs043"</span>, <span class="st">"socs031"</span>, <span class="st">"socs018"</span>, <span class="st">"socs009"</span>, <span class="st">"socs012"</span>),</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">btnamei =</span> <span class="fu">c</span>(<span class="st">"socs018"</span>, <span class="st">"socs012"</span>, <span class="st">"socs043"</span>, <span class="st">"socs031"</span>, <span class="st">"socs009"</span>, <span class="st">"socs009"</span>, <span class="st">"socs018"</span>, <span class="st">"socs031"</span>),</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">episode =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>),</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">freq =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">8</span>, <span class="dv">22</span>, <span class="dv">5</span>, <span class="dv">14</span>, <span class="dv">11</span>, <span class="dv">7</span>, <span class="dv">19</span>),</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_RSSI =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">74.5</span>, <span class="sc">-</span><span class="fl">82.1</span>, <span class="sc">-</span><span class="fl">68.4</span>, <span class="sc">-</span><span class="fl">88.0</span>, <span class="sc">-</span><span class="fl">79.2</span>, <span class="sc">-</span><span class="fl">75.0</span>, <span class="sc">-</span><span class="fl">84.3</span>, <span class="sc">-</span><span class="fl">71.1</span>),</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd_RSSI =</span> <span class="fu">c</span>(<span class="fl">4.2</span>, <span class="fl">5.1</span>, <span class="fl">3.8</span>, <span class="fl">6.0</span>, <span class="fl">4.5</span>, <span class="fl">3.9</span>, <span class="fl">5.2</span>, <span class="fl">4.1</span>),</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">s_timestamp =</span> <span class="fu">c</span>(<span class="dv">1315483200</span>, <span class="dv">1315483600</span>, <span class="dv">1315484000</span>, <span class="dv">1315484600</span>, <span class="dv">1315485000</span>, <span class="dv">1315485500</span>, <span class="dv">1315486000</span>, <span class="dv">1315486500</span>),</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">e_timestamp =</span> <span class="fu">c</span>(<span class="dv">1315483500</span>, <span class="dv">1315483900</span>, <span class="dv">1315484500</span>, <span class="dv">1315484800</span>, <span class="dv">1315485400</span>, <span class="dv">1315485900</span>, <span class="dv">1315486200</span>, <span class="dv">1315487000</span>),</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">dur =</span> <span class="fu">c</span>(<span class="dv">300</span>, <span class="dv">300</span>, <span class="dv">500</span>, <span class="dv">200</span>, <span class="dv">400</span>, <span class="dv">400</span>, <span class="dv">200</span>, <span class="dv">500</span>),</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">waitingtime =</span> <span class="fu">c</span>(<span class="fl">2.4</span>, <span class="fl">1.1</span>, <span class="fl">0.5</span>, <span class="fl">3.2</span>, <span class="fl">1.8</span>, <span class="fl">0.9</span>, <span class="fl">4.0</span>, <span class="fl">1.2</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(week_df, <span class="at">caption =</span> <span class="st">"Sample Bluetooth Proximity Episodes (Week 8)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a sample week or use mock data if file is missing (e.g. on GitHub Actions)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"Weekly Data/week8.csv"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(file_path)) {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  week_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(file_path, <span class="at">n_max =</span> <span class="dv">6</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  week_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">btnamej =</span> <span class="fu">c</span>(<span class="st">"socs043"</span>, <span class="st">"socs018"</span>, <span class="st">"socs012"</span>, <span class="st">"socs043"</span>, <span class="st">"socs031"</span>, <span class="st">"socs018"</span>),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">btnamei =</span> <span class="fu">c</span>(<span class="st">"socs018"</span>, <span class="st">"socs012"</span>, <span class="st">"socs043"</span>, <span class="st">"socs031"</span>, <span class="st">"socs009"</span>, <span class="st">"socs009"</span>),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">episode =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">freq =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">8</span>, <span class="dv">22</span>, <span class="dv">5</span>, <span class="dv">14</span>, <span class="dv">11</span>),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">avg_RSSI =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">74.5</span>, <span class="sc">-</span><span class="fl">82.1</span>, <span class="sc">-</span><span class="fl">68.4</span>, <span class="sc">-</span><span class="fl">88.0</span>, <span class="sc">-</span><span class="fl">79.2</span>, <span class="sc">-</span><span class="fl">75.0</span>),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">sd_RSSI =</span> <span class="fu">c</span>(<span class="fl">4.2</span>, <span class="fl">5.1</span>, <span class="fl">3.8</span>, <span class="fl">6.0</span>, <span class="fl">4.5</span>, <span class="fl">3.9</span>),</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">s_timestamp =</span> <span class="fu">c</span>(<span class="dv">1315483200</span>, <span class="dv">1315483600</span>, <span class="dv">1315484000</span>, <span class="dv">1315484600</span>, <span class="dv">1315485000</span>, <span class="dv">1315485500</span>),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">e_timestamp =</span> <span class="fu">c</span>(<span class="dv">1315483500</span>, <span class="dv">1315483900</span>, <span class="dv">1315484500</span>, <span class="dv">1315484800</span>, <span class="dv">1315485400</span>, <span class="dv">1315485900</span>),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">dur =</span> <span class="fu">c</span>(<span class="dv">300</span>, <span class="dv">300</span>, <span class="dv">500</span>, <span class="dv">200</span>, <span class="dv">400</span>, <span class="dv">400</span>),</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">waitingtime =</span> <span class="fu">c</span>(<span class="fl">2.4</span>, <span class="fl">1.1</span>, <span class="fl">0.5</span>, <span class="fl">3.2</span>, <span class="fl">1.8</span>, <span class="fl">0.9</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(week_df, <span class="at">caption =</span> <span class="st">"Sample Bluetooth Proximity Episodes (Week 8)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="tbl-proximity-sample" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-proximity-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Sample Bluetooth Proximity Episodes (Week 8)
+Table&nbsp;2: Sample Bluetooth Proximity Episodes (Week 8)
 </figcaption>
 <div aria-describedby="tbl-proximity-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -559,30 +739,6 @@ Table&nbsp;1: Sample Bluetooth Proximity Episodes (Week 8)
 <td style="text-align: right;">400</td>
 <td style="text-align: right;">0.9</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">socs009</td>
-<td style="text-align: left;">socs018</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: right;">-84.3</td>
-<td style="text-align: right;">5.2</td>
-<td style="text-align: right;">1315486000</td>
-<td style="text-align: right;">1315486200</td>
-<td style="text-align: right;">200</td>
-<td style="text-align: right;">4.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">socs012</td>
-<td style="text-align: left;">socs031</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">19</td>
-<td style="text-align: right;">-71.1</td>
-<td style="text-align: right;">4.1</td>
-<td style="text-align: right;">1315486500</td>
-<td style="text-align: right;">1315487000</td>
-<td style="text-align: right;">500</td>
-<td style="text-align: right;">1.2</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -592,34 +748,30 @@ Table&nbsp;1: Sample Bluetooth Proximity Episodes (Week 8)
 </div>
 <hr>
 </section>
-<section id="linking-proximity-to-surveys" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="linking-proximity-to-surveys"><span class="header-section-number">1.3</span> Linking Proximity to Surveys</h2>
-<p>To link these Bluetooth pseudonyms to standard student ego IDs used in demographic and network survey databases, use the mapping table:</p>
+<section id="linking-bluetooth-pseudonyms-to-participant-ids" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="linking-bluetooth-pseudonyms-to-participant-ids"><span class="header-section-number">1.3</span> Linking Bluetooth Pseudonyms to Participant IDs</h2>
+<p>In the distributed longitudinal dataset, all devices have already been converted to standard 5-digit student <code>egoid</code>s (<code>ego1</code> and <code>ego2</code>). For researchers working with raw episode files or legacy scripts, the hardware pseudonym crosswalk is available:</p>
 <p><a href="Metadata and Mappings/BT_egoid_mapping.csv" class="download-btn download-csv"><i class="bi bi-file-earmark-spreadsheet"></i> Download Bluetooth-to-EgoID Mapping (.csv)</a></p>
-<p>The mapping contains a simple two-column crosswalk:</p>
+<p>The mapping contains a simple two-column crosswalk between Bluetooth hardware names and student <code>egoid</code>s:</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Bluetooth mapping key or use mock data if file is missing</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>map_path <span class="ot">&lt;-</span> <span class="st">"Metadata and Mappings/BT_egoid_mapping.csv"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(map_path)) {</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  map_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(map_path, <span class="at">n_max =</span> <span class="dv">5</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  map_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">btname =</span> <span class="fu">c</span>(<span class="st">"socs001"</span>, <span class="st">"socs002"</span>, <span class="st">"socs003"</span>, <span class="st">"socs004"</span>, <span class="st">"socs005"</span>),</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">egoid =</span> <span class="fu">c</span>(<span class="dv">1001</span>, <span class="dv">1002</span>, <span class="dv">1003</span>, <span class="dv">1004</span>, <span class="dv">1005</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(map_df, <span class="at">caption =</span> <span class="st">"Bluetooth-to-EgoID Crosswalk Sample"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>map_path <span class="ot">&lt;-</span> <span class="st">"Metadata and Mappings/BT_egoid_mapping.csv"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(map_path)) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  map_df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(map_path, <span class="at">n_max =</span> <span class="dv">5</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  map_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">btname =</span> <span class="fu">c</span>(<span class="st">"socs001"</span>, <span class="st">"socs002"</span>, <span class="st">"socs003"</span>, <span class="st">"socs004"</span>, <span class="st">"socs005"</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">egoid =</span> <span class="fu">c</span>(<span class="dv">1001</span>, <span class="dv">1002</span>, <span class="dv">1003</span>, <span class="dv">1004</span>, <span class="dv">1005</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(map_df, <span class="at">caption =</span> <span class="st">"Bluetooth-to-EgoID Crosswalk Sample"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div id="tbl-mapping-sample" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mapping-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Bluetooth-to-EgoID Crosswalk Sample
+Table&nbsp;3: Bluetooth-to-EgoID Crosswalk Sample
 </figcaption>
 <div aria-describedby="tbl-mapping-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -658,38 +810,18 @@ Table&nbsp;2: Bluetooth-to-EgoID Crosswalk Sample
 </figure>
 </div>
 </div>
-<p>Using this table, researchers can map <code>btnamej</code> and <code>btnamei</code> to standard numeric student <code>egoid</code> values, allowing them to integrate high-resolution face-to-face physical contact networks with rich longitudinal surveys!</p>
 <hr>
 </section>
-<section id="passive-mobile-sensor-telemetry-communication-logs" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="passive-mobile-sensor-telemetry-communication-logs"><span class="header-section-number">1.4</span> Passive Mobile Sensor Telemetry &amp; Communication Logs</h2>
-<p>In addition to the cleaned, aggregated Bluetooth proximity episodes, the <strong>NetSense Complete Raw Data</strong> contains continuous, passive mobile sensor telemetry streams. These datasets offer an exceptionally rich, longitudinal, multi-channel view of participant behavior across several academic semesters (2011 to 2015).</p>
-<p>To protect participant privacy under Institutional Review Board (IRB) guidelines, these raw streams are kept in a secure, Git-ignored symbolic directory (<code>Raw_Telemetry_Data/</code>). Below is the technical methodology and data schema describing each of these passive telemetry channels.</p>
-<section id="raw-bluetooth-proximity-scans-raw_telemetry_databluetooth" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="raw-bluetooth-proximity-scans-raw_telemetry_databluetooth"><span class="header-section-number">1.4.1</span> 1. Raw Bluetooth Proximity Scans (<code>Raw_Telemetry_Data/Bluetooth/</code>)</h3>
-<p>Unlike the aggregated episode-level dyads, the raw Bluetooth directory contains continuous, second-by-second background scan records of the wireless environment: - <strong>Mechanics</strong>: Participant smartphones executed continuous background scans for Bluetooth beacons. It captured any nearby broadcasting Bluetooth hardware. - <strong>Raw Schema</strong>: <code>[Scanning Ego Phone Number], [Unix Timestamp], [Friendly Device Name], [Hardware MAC Address], [RSSI Signal Strength]</code> - <strong>Privacy Masking Note</strong>: The raw logs capture un-de-identified MAC addresses and “Friendly Device Names” (e.g., <code>Ego’s MacBook Pro</code>, <code>Alter’s Laptop</code>), which frequently contain participants’ real first and last names. In the clean files, these are programmatically scrubbed and mapped to standard numeric <code>egoid</code> values using the hardware crosswalk key.</p>
-</section>
-<section id="smstext-messaging-metadata-raw_telemetry_datasms" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="smstext-messaging-metadata-raw_telemetry_datasms"><span class="header-section-number">1.4.2</span> 2. SMS/Text Messaging Metadata (<code>Raw_Telemetry_Data/SMS/</code>)</h3>
-<p>Tracks the continuous exchange of text messages sent and received by participants’ devices: - <strong>Mechanics</strong>: Passenger smartphone operating systems passively recorded SMS transaction events (both inbound and outbound), logging connection endpoints and character volumes. - <strong>Raw Schema</strong>: <code>[Sender Phone Number], [Unix Timestamp], [Receiver Phone Number], [Communication Category ID], [SMS Character Length]</code> - <strong>Sociometric Utility</strong>: This allows researchers to model the exact temporal rhythm of text-messaging communication (burstiness, circadian patterns, response latency) and correlate text traffic with self-reported friendship closeness.</p>
-</section>
-<section id="voice-call-logs-raw_telemetry_dataphonecall" class="level3" data-number="1.4.3">
-<h3 data-number="1.4.3" class="anchored" data-anchor-id="voice-call-logs-raw_telemetry_dataphonecall"><span class="header-section-number">1.4.3</span> 3. Voice Call logs (<code>Raw_Telemetry_Data/PhoneCall/</code>)</h3>
-<p>Logs voice communications, detailing phone conversations and connection attempts: - <strong>Mechanics</strong>: Records incoming, outgoing, and missed call events directly from the phone’s communication stack. - <strong>Raw Schema</strong>: <code>[Caller Phone Number], [Unix Timestamp], [Callee Phone Number], [Call Direction/Status (Inbound/Outbound/Missed)], [Call Duration (Seconds)]</code> - <strong>Sociometric Utility</strong>: Voice call durations represent a highly intensive dimension of social tie maintenance, capturing active verbal interactions which contrast with passive Bluetooth co-presence or short text messages.</p>
-</section>
-<section id="emailmail-metadata-raw_telemetry_datamail" class="level3" data-number="1.4.4">
-<h3 data-number="1.4.4" class="anchored" data-anchor-id="emailmail-metadata-raw_telemetry_datamail"><span class="header-section-number">1.4.4</span> 4. Email/Mail Metadata (<code>Raw_Telemetry_Data/Mail/</code>)</h3>
-<p>Logs email transactions sent and received through participants’ official Notre Dame NetID email accounts: - <strong>Mechanics</strong>: Passively captures metadata headers of incoming and outgoing emails routed through the university’s mail exchange servers. - <strong>Raw Schema</strong>: <code>[Sender ID/Phone Number], [Unix Timestamp], [Sender Email Address], [Receiver Email/Listserv Address]</code> - <em>Example</em>: <code>5550100101, 1320120074, sender.1@nd.edu, listserv@listserv.nd.edu</code> - <strong>Sociometric Utility</strong>: Traces academic and listserv email networks, allowing researchers to study how official, institutional communications overlay on peer-level face-to-face and text messaging networks.</p>
-</section>
-<section id="locationgps-telemetry-raw_telemetry_datalocation" class="level3" data-number="1.4.5">
-<h3 data-number="1.4.5" class="anchored" data-anchor-id="locationgps-telemetry-raw_telemetry_datalocation"><span class="header-section-number">1.4.5</span> 5. Location/GPS Telemetry (<code>Raw_Telemetry_Data/Location/</code>)</h3>
-<p>Captures high-frequency geographic coordinate streams tracking physical mobility: - <strong>Mechanics</strong>: Devices logged cellular, Wi-Fi, and GPS coordinates at regular background intervals. - <strong>Raw Schema</strong>: <code>[Participant Phone Number], [Unix Timestamp], [Latitude], [Longitude], [Altitude], [Accuracy (Meters)]</code> - <strong>Sociometric Utility</strong>: Enables spatial density mapping, co-location clustering, and the calculation of spatial co-presence matrices (identifying dyads who spend time in the same physical locations like dormitories, dining halls, or lecture theatres).</p>
-</section>
-<section id="address-bookcontacts-scrapes-raw_telemetry_datacontacts" class="level3" data-number="1.4.6">
-<h3 data-number="1.4.6" class="anchored" data-anchor-id="address-bookcontacts-scrapes-raw_telemetry_datacontacts"><span class="header-section-number">1.4.6</span> 6. Address Book/Contacts Scrapes (<code>Raw_Telemetry_Data/Contacts/</code>)</h3>
-<p>Represents periodic backups/scrapes of the local address book directories stored on the participant devices: - <strong>Mechanics</strong>: Periodically backed up the list of saved phone contacts, capturing the active, known personal directory of each participant. - <strong>Raw Schema</strong>: <code>[Ego Phone Number], [Unix Timestamp], [Contact Email/NetID], [Contact Name String]</code> - <em>Example</em>: <code>5550100102, 1355893215, contact.15@nd.edu, :contact.15@nd.edu</code> - <strong>Sociometric Utility</strong>: Maps the cognitive “potential” network of each participant—showing whom they have officially saved in their directory, which serves as a powerful baseline comparison against self-reported survey nominations and actual contact events.</p>
+<section id="relation-to-other-passive-mobile-sensing-streams" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="relation-to-other-passive-mobile-sensing-streams"><span class="header-section-number">1.4</span> Relation to Other Passive Mobile Sensing Streams</h2>
+<p>Bluetooth proximity captures physical, face-to-face co-presence. In addition to Bluetooth proximity, the NetSense smartphone deployment captured continuous, multi-channel behavioral telemetry streams across participants’ undergraduate careers.</p>
+<p>All mobile sensor telemetry datasets have been de-identified in strict adherence to Institutional Review Board (IRB) protocols: participant identities are represented by standard 5-digit <code>egoid</code>s, external alters are cryptographically pseudonymized, and raw telephone numbers, email addresses, and fine-grained GPS coordinates are never released.</p>
+<p>For documentation and downloads of these complementary passive sensing streams, see:</p>
+<ul>
+<li><a href="./communication.html"><strong>Communication &amp; Phone Telemetry</strong></a>: Longitudinal panels of directional voice calls and SMS text messages (383,895 dyad-weeks), longitudinal university email networks (676,717 dyad-weeks), and phone address book growth and retention dynamics.</li>
+<li><a href="./spatial.html"><strong>Spatial Mobility &amp; Campus Zones</strong></a>: Weekly radius of gyration (<span class="math inline">\(r_g\)</span>), Shannon mobility entropy, Notre Dame campus occupancy rates, and time allocation across categorical campus zones derived from 11.5 million passive location fixes.</li>
+</ul>
 <hr>
-</section>
 </section>
 <section id="technical-appendix-sensor-calibration-footnotes" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="technical-appendix-sensor-calibration-footnotes"><span class="header-section-number">1.5</span> Technical Appendix: Sensor Calibration &amp; Footnotes</h2>
