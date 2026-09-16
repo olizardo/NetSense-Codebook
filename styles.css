@@ -91,3 +91,33 @@ h1, h2, h3 {
 .sidebar {
   font-size: 0.9rem;
 }
+
+/* Responsive improvements for tables and download buttons */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .download-btn {
+    white-space: normal;
+    word-break: break-word;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 576px) {
+  .download-btn {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.6rem;
+    text-align: center;
+  }
+  
+  .hero-badge-container {
+    justify-content: center;
+  }
+}

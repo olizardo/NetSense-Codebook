@@ -80,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-57cbada1f65ec8923689c8ecbfed9913.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7e56a93e1f3d7d1961fd446d31558e91.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -285,7 +285,7 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/olizardo/NetSense"> <i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/olizardo/NetSense-Codebook"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -322,7 +322,7 @@ window.Quarto = {
   <li><a href="#funding-and-acknowledgments" id="toc-funding-and-acknowledgments" class="nav-link" data-scroll-target="#funding-and-acknowledgments"><span class="header-section-number">1.5</span> 4. Funding and Acknowledgments</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/olizardo/NetSense-Codebook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
@@ -370,23 +370,121 @@ window.Quarto = {
 <td>Waves 1 to 8 (Panel)</td>
 </tr>
 <tr class="odd">
-<td><strong>Proximity Networks</strong></td>
-<td><code>weekly_contact_networks_longitudinal.csv</code></td>
-<td>Undirected dyad-week (<span class="math inline">\(N = 165,967\)</span>)</td>
-<td>7 attributes</td>
-<td>Weeks 8 to 41 (34 academic weeks)</td>
+<td><strong>Perceived Alter-Alter Ties</strong></td>
+<td><code>alter_alter_ties_longitudinal.csv</code></td>
+<td>Dyadic alter pair (<span class="math inline">\(N = 29,473\)</span>)</td>
+<td>10 attributes</td>
+<td>Waves 1 to 5, 7, and 8</td>
 </tr>
 <tr class="even">
-<td><strong>Bluetooth Mapping</strong></td>
+<td><strong>Ego-Network Density Metrics</strong></td>
+<td><code>ego_network_metrics_longitudinal.csv</code></td>
+<td>Ego-wave network summary (<span class="math inline">\(N = 804\)</span>)</td>
+<td>8 attributes</td>
+<td>Waves 1 to 5, 7, and 8</td>
+</tr>
+<tr class="odd">
+<td><strong>Proximity Networks</strong></td>
+<td><code>weekly_contact_networks_longitudinal.csv</code></td>
+<td>Undirected dyad-week (<span class="math inline">\(N = 267,629\)</span>)</td>
+<td>7 attributes</td>
+<td>Weeks 8 to 191 (4 academic years)</td>
+</tr>
+<tr class="even">
+<td><strong>Spatial Mobility Metrics</strong></td>
+<td><code>weekly_spatial_mobility_ego_metrics_longitudinal.csv</code></td>
+<td>Ego-week summary (<span class="math inline">\(N = 16,144\)</span>)</td>
+<td>11 attributes</td>
+<td>Weeks 7 to 192 (188 students)</td>
+</tr>
+<tr class="odd">
+<td><strong>Campus Zones Ecology</strong></td>
+<td><code>weekly_campus_zones_ego_metrics_longitudinal.csv</code></td>
+<td>Ego-week summary (<span class="math inline">\(N = 16,144\)</span>)</td>
+<td>11 attributes</td>
+<td>Weeks 7 to 192 (188 students)</td>
+</tr>
+<tr class="even">
+<td><strong>Communication Dyads (Calls/SMS)</strong></td>
+<td><code>weekly_communication_dyads_longitudinal.csv</code></td>
+<td>Dyadic weekly interaction (<span class="math inline">\(N = 383,895\)</span>)</td>
+<td>9 attributes</td>
+<td>Weeks 1 to 158 (3 academic years)</td>
+</tr>
+<tr class="odd">
+<td><strong>Communication Ego Metrics</strong></td>
+<td><code>weekly_communication_ego_metrics_longitudinal.csv</code></td>
+<td>Ego-week summary (<span class="math inline">\(N = 19,598\)</span>)</td>
+<td>10 attributes</td>
+<td>Weeks 1 to 158 (3 academic years)</td>
+</tr>
+<tr class="even">
+<td><strong>Email Interaction Dyads</strong></td>
+<td><code>weekly_email_dyads_longitudinal.csv</code></td>
+<td>Dyadic weekly email (<span class="math inline">\(N = 676,717\)</span>)</td>
+<td>7 attributes</td>
+<td>Weeks 1 to 158 (3 academic years)</td>
+</tr>
+<tr class="odd">
+<td><strong>Email Ego Metrics</strong></td>
+<td><code>weekly_email_ego_metrics_longitudinal.csv</code></td>
+<td>Ego-week summary (<span class="math inline">\(N = 14,320\)</span>)</td>
+<td>7 attributes</td>
+<td>Weeks 1 to 158 (3 academic years)</td>
+</tr>
+<tr class="even">
+<td><strong>Saved-Contacts Roster</strong></td>
+<td><code>dyadic_contacts_roster_longitudinal.csv</code></td>
+<td>Dyadic saved contact (<span class="math inline">\(N = 30,802\)</span>)</td>
+<td>6 attributes</td>
+<td>Weeks 37 to 192 (Address books)</td>
+</tr>
+<tr class="odd">
+<td><strong>Weekly Contacts Ego Metrics</strong></td>
+<td><code>weekly_contacts_ego_metrics_longitudinal.csv</code></td>
+<td>Ego-week summary (<span class="math inline">\(N = 6,384\)</span>)</td>
+<td>7 attributes</td>
+<td>Weeks 37 to 192 (Address books)</td>
+</tr>
+<tr class="even">
+<td><strong>Course Grades &amp; Credits</strong></td>
+<td><code>academic_grades_longitudinal.csv</code></td>
+<td>Course enrollment (<span class="math inline">\(N = 5,779\)</span>)</td>
+<td>9 attributes</td>
+<td>Semesters 2011–2015 (Registrar)</td>
+</tr>
+<tr class="odd">
+<td><strong>Classroom Co-Enrollments</strong></td>
+<td><code>academic_classroom_dyads_longitudinal.csv</code></td>
+<td>Shared course section dyad (<span class="math inline">\(N = 979\)</span>)</td>
+<td>7 attributes</td>
+<td>Semesters 2011–2015 (Classrooms)</td>
+</tr>
+<tr class="even">
+<td><strong>Semester GPA Summaries</strong></td>
+<td><code>academic_term_summary_longitudinal.csv</code></td>
+<td>Student-semester (<span class="math inline">\(N = 898\)</span>)</td>
+<td>6 attributes</td>
+<td>Semesters 2011–2015 (GPAs)</td>
+</tr>
+<tr class="odd">
+<td><strong>Quiz Responses (Master)</strong></td>
+<td><code>Quiz_Responses_Master.csv</code></td>
+<td>Student check-in (<span class="math inline">\(N = 194\)</span>)</td>
+<td>146 attributes</td>
+<td>High-frequency surveys</td>
+</tr>
+<tr class="even">
+<td><strong>Bluetooth Mapping Key</strong></td>
 <td><code>BT_egoid_mapping.csv</code></td>
-<td>Individual (<span class="math inline">\(N = 189\)</span> devices)</td>
+<td>Individual device (<span class="math inline">\(N = 189\)</span>)</td>
 <td>2 attributes</td>
 <td>Device-to-ID Crosswalk</td>
 </tr>
 <tr class="odd">
 <td><strong>Variable Catalog</strong></td>
 <td><code>variable_catalog.csv</code></td>
-<td>Attribute (<span class="math inline">\(N = 3,651\)</span> variables)</td>
+<td>Survey variable (<span class="math inline">\(N = 3,651\)</span>)</td>
 <td>3 attributes</td>
 <td>Compiled metadata dictionary</td>
 </tr>
@@ -400,13 +498,13 @@ window.Quarto = {
 <section id="apa-7th-edition" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="apa-7th-edition"><span class="header-section-number">1.2.1</span> APA 7th Edition</h3>
 <blockquote class="blockquote">
-<p>Striegel, A., Hachen, D., Poellabauer, C., &amp; Lizardo, O. (2026). <em>The NetSense Project: A Multiwave Dataset of Student Social Networks, Demographics, and Bluetooth Proximity at Notre Dame</em> (Version 2.0) [Data set]. University of Notre Dame. https://github.com/olizardo/NetSense</p>
+<p>Striegel, A., Hachen, D., Poellabauer, C., &amp; Lizardo, O. (2026). <em>The NetSense Project: A Multiwave Dataset of Student Social Networks, Demographics, and Bluetooth Proximity at Notre Dame</em> (Version 2.0) [Data set]. University of Notre Dame. https://github.com/olizardo/NetSense-Codebook</p>
 </blockquote>
 </section>
 <section id="chicago-manual-of-style-author-date" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="chicago-manual-of-style-author-date"><span class="header-section-number">1.2.2</span> Chicago Manual of Style (Author-Date)</h3>
 <blockquote class="blockquote">
-<p>Striegel, Aaron, David Hachen, Christian Poellabauer, and Omar Lizardo. 2026. <em>The NetSense Project: A Multiwave Dataset of Student Social Networks, Demographics, and Bluetooth Proximity at Notre Dame</em>. Version 2.0. Dataset. University of Notre Dame. https://github.com/olizardo/NetSense.</p>
+<p>Striegel, Aaron, David Hachen, Christian Poellabauer, and Omar Lizardo. 2026. <em>The NetSense Project: A Multiwave Dataset of Student Social Networks, Demographics, and Bluetooth Proximity at Notre Dame</em>. Version 2.0. Dataset. University of Notre Dame. https://github.com/olizardo/NetSense-Codebook.</p>
 </blockquote>
 <hr>
 </section>
@@ -437,7 +535,7 @@ window.Quarto = {
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>         = {2026},</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">version</span>      = {2.0},</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">publisher</span>    = {University of Notre Dame},</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">howpublished</span> = {<span class="ch">\url</span>{https://github.com/olizardo/NetSense}},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">howpublished</span> = {<span class="ch">\url</span>{https://github.com/olizardo/NetSense-Codebook}},</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span>         = {De-identified and consolidated public release}</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
@@ -536,7 +634,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/olizardo\.github\.io\/NetSense-Codebook\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -876,7 +974,7 @@ window.Quarto = {
     </div>   
     <div class="nav-footer-center">
 <p>© 2026 NetSense Research Team</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/olizardo/NetSense/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/olizardo/NetSense-Codebook/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
